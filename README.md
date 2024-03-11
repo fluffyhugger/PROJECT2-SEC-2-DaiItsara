@@ -1,29 +1,41 @@
-# my-project
+# PROJECT2-SEC-2-DaiItsara
 
-This template should help get you started developing with Vue 3 in Vite.
+## ComputerSpecBuilder WebApplication💻
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## Contributor:
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>StudentID</th>
+      <th>Github</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sirakran Kranjanawilasgul</td>
+      <td>65130500079</td>
+      <td>Chocolaz</td>
+    </tr>
+    <tr>
+      <td>Sirapob Wuthithein</td>
+      <td>65130500085</td>
+      <td>fluffyhugger</td>
+    </tr>
+    <tr>
+      <td>Aismat Boonmalert</td>
+      <td>65130500091</td>
+      <td>mattiiee</td>
+    </tr>
+    <tr>
+      <td>Nisarat Aunrueanngam</td>
+      <td>65130500107</td>
+      <td>Nisarat-A</td>
+    </tr>
+    <tr>
+      <td>Threepoom Ngamsirisomsakul</td>
+      <td>65130500122</td>
+      <td>Threepoom</td>
+    </tr>
+  </tbody>
+</table>
