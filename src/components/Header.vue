@@ -1,14 +1,16 @@
 <template>
   <header>
     <div class="flex">
-      <h1 class="text-3xl font-bold">PC BUILDER</h1>
+      <RouterLink to="/">
+        <h1 class="text-3xl font-bold :hover cursor-pointer">PC BUILDER</h1>
+      </RouterLink>
       <details class="dropdown ml-10 pt-2">
         <summary class="m-1">Custom Spec</summary>
         <ul
           class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
         >
-          <li><a href="">Modified Your PC</a></li>
-          <li><a href="">Top PC Ranking </a></li>
+          <li><RouterLink to="/build">Modified Your PC</RouterLink></li>
+          <li><RouterLink to="/ranking">Top PC Ranking </RouterLink></li>
         </ul>
       </details>
       <details class="dropdown ml-10 pt-2">
@@ -16,10 +18,10 @@
         <ul
           class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
         >
-          <li><a>News</a></li>
-          <li><a>Promotion</a></li>
-          <li><a>How to</a></li>
-          <li><a>Tips &</a></li>
+          <li><RouterLink to="/news">News</RouterLink></li>
+          <li><RouterLink to="/promotion">Promotion</RouterLink></li>
+          <li><RouterLink to="/howto">How to</RouterLink></li>
+          <li><RouterLink to="/tiptrick">Tips & Tricks</RouterLink></li>
         </ul>
       </details>
       <div
