@@ -1,10 +1,10 @@
 <script setup>
-import Header from "./components/Header.vue"
-import Footer from "./components/Footer.vue"
+import Header from "./views/Header.vue"
+import Footer from "./views/Footer.vue";
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="max-w-7xl mx-auto">
     <Header />
     <RouterView />
     <Footer />

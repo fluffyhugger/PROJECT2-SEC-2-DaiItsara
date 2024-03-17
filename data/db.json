@@ -1,79 +1,89 @@
 {
   "cpu": [
     {
-      "Brand": "Intel",
-      "Series": "Core i7",
-      "Model": "12700K",
-      "Price": 11840,
-      "Socket": "INTEL LGA1700",
-      "ChipsetSupport": "Intel B660",
-      "Cores": 12,
-      "Threads": 20,
-      "L2Cache": "12MB",
-      "L3Cache": "25MB"
+      "id":1,
+      "name":"Intel Core i7 12700K",
+      "brand": "Intel",
+      "series": "Core i7",
+      "model": "12700K",
+      "price": 11840,
+      "socket": "INTEL LGA1700",
+      "chipsetSupport": "Intel B660",
+      "cores": 12,
+      "threads": 20,
+      "l2Cache": "12MB",
+      "l3Cache": "25MB"
     },
     {
-      "Brand": "AMD",
-      "Series": "Ryzen 5",
-      "Model": "5600G",
-      "Price": 5265,
-      "Socket": "AM4",
-      "ChipsetSupport": "AMD A520",
-      "Cores": 6,
-      "Threads": 12,
-      "L2Cache": "3MB",
-      "L3Cache": "16MB"
+      "id":2,
+      "name":"AMD Ryzen 5 5600G",
+      "brand": "AMD",
+      "series": "Ryzen 5",
+      "model": "5600G",
+      "price": 5265,
+      "socket": "AM4",
+      "chipsetSupport": "AMD A520",
+      "cores": 6,
+      "threads": 12,
+      "l2Cache": "3MB",
+      "l3Cache": "16MB"
     },
     {
-      "Brand": "Intel",
-      "Series": "Core i5",
-      "Model": "10400F",
-      "Price": 3830,
-      "Socket": "INTEL LGA1200",
-      "ChipsetSupport": "Intel B460",
-      "Cores": 6,
-      "Threads": 12,
-      "L2Cache": "1.5MB",
-      "L3Cache": "12MB"
+      "id":3,
+      "name": "Intel Core i5 10400F",
+      "brand": "Intel",
+      "series": "Core i5",
+      "model": "10400F",
+      "price": 3830,
+      "socket": "INTEL LGA1200",
+      "chipsetSupport": "Intel B460",
+      "cores": 6,
+      "threads": 12,
+      "l2Cache": "1.5MB",
+      "l3Cache": "12MB"
     }
   ],
   "ram": [
     {
-      "Brand": "Apacer",
-      "Model": "PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
-      "MemoryType": "DDR5",
-      "MemorySize": "32GB (16GBx2)",
-      "MemorySpeed": "5200 MHz",
+      "id":1,
+      "brand": "Apacer",
+      "model": "PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
+      "memoryType": "DDR5",
+      "memorySize": "32GB (16GBx2)",
+      "memorySpeed": "5200 MHz",
       "CASLatency": 38,
-      "Voltage": "1.1 V",
-      "Color": "Black",
-      "Price": 4290
+      "voltage": "1.1 V",
+      "color": "Black",
+      "price": 4290
     },
     {
-      "Brand": "PNY",
-      "Model": "XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
-      "MemoryType": "DDR5",
-      "MemorySize": "32GB (16GBx2)",
-      "MemorySpeed": "6000 MHz",
+      "id":2,
+      "brand": "PNY",
+      "model": "XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
+      "memoryType": "DDR5",
+      "memorySize": "32GB (16GBx2)",
+      "memorySpeed": "6000 MHz",
       "CASLatency": 40,
-      "Voltage": "1.4 V",
-      "Color": "White",
-      "Price": 4590
+      "voltage": "1.4 V",
+      "color": "White",
+      "price": 4590
     },
     {
-      "Brand": "KINGSTON",
-      "Model": "FURY Renegade RGB DDR5 32GB (16GBx2) 8000",
-      "MemoryType": "DDR5",
-      "MemorySize": "32GB (16GBx2)",
-      "MemorySpeed": "8000 MHz",
+      "id":3,
+      "brand": "KINGSTON",
+      "model": "FURY Renegade RGB DDR5 32GB (16GBx2) 8000",
+      "memoryType": "DDR5",
+      "memorySize": "32GB (16GBx2)",
+      "memorySpeed": "8000 MHz",
       "CASLatency": 48,
-      "Voltage": "1.45 V",
-      "Color": "-",
-      "Price": 16900
+      "voltage": "1.45 V",
+      "color": "-",
+      "price": 16900
     }
   ],
   "gpu": [
     {
+      "id":1,
       "brand": "ASUS",
       "series": "GeForce RTX 40 Series",
       "model": "TUF Gaming GeForce RTX 4060 Ti OC",
@@ -99,6 +109,7 @@
       "price": 16320
     },
     {
+      "id":2,
       "brand": "GIGABYTE",
       "series": "Radeon RX 7000 Series",
       "model": "Radeon RX 7600 Gaming OC 8G",
@@ -122,6 +133,7 @@
       "price": 9800
     },
     {
+      "id":3,
       "brand": "Zotac",
       "series": "GeForce RTX 30 Series",
       "model": "GeForce RTX 3080 Trinity OC",
@@ -149,62 +161,66 @@
   ],
   "ssd": [
     {
-      "ID": "SSD2024_00001",
-      "BRAND": "CORSAIR",
-      "MODEL": "Force Series MP600 Pro LPX Black 1TB",
-      "Form factor": "M.2",
-      "Capacity": "1TB",
-      "Interface": "M.2 PCIe",
-      "Read/write": "Up to 7100 / 5800 MB/s",
-      "Max 4K Random": "-",
-      "Memory Modules": "TLC",
-      "Endurance (TBW)": "700 TB",
-      "Technology": "3D-NAND TLC, Kioxia, 96 Layer (BiCS4), SLC-Cached, PS5 Support",
-      "Controller": "Phison PS5018-E18, 8 channels",
-      "Protocol": "NVMe",
+      "id":1,
+      "modelId": "SSD2024_00001",
+      "brand": "CORSAIR",
+      "model": "Force Series MP600 Pro LPX Black 1TB",
+      "form factor": "M.2",
+      "capacity": "1TB",
+      "interface": "M.2 PCIe",
+      "read/write": "Up to 7100 / 5800 MB/s",
+      "max 4K Random": "-",
+      "memory Modules": "TLC",
+      "endurance (TBW)": "700 TB",
+      "technology": "3D-NAND TLC, Kioxia, 96 Layer (BiCS4), SLC-Cached, PS5 Support",
+      "controller": "Phison PS5018-E18, 8 channels",
+      "protocol": "NVMe",
       "LED Lighting": "-",
-      "Warranty": "5 years",
-      "Price_Baht": 3100
+      "warranty": "5 years",
+      "price": 3100
     },
     {
-      "ID": "SSD2024_00005",
-      "BRAND": "HIKVISION",
-      "MODEL": "E2000 2TB",
-      "Form factor": "M.2",
-      "Capacity": "2TB",
-      "Interface": "M.2 PCIe",
-      "Read/write": "Up to 3500 / 3000 MB/s",
-      "Max 4K Random": "-",
-      "Memory Modules": "TLC",
-      "Endurance (TBW)": "-",
-      "Technology": "-",
-      "Controller": "-",
-      "Protocol": "NVMe",
+      "id":2,
+      "modelId": "SSD2024_00005",
+      "brand": "HIKVISION",
+      "model": "E2000 2TB",
+      "form factor": "M.2",
+      "capacity": "2TB",
+      "interface": "M.2 PCIe",
+      "read/write": "Up to 3500 / 3000 MB/s",
+      "max 4K Random": "-",
+      "memory Modules": "TLC",
+      "endurance (TBW)": "-",
+      "technology": "-",
+      "controller": "-",
+      "protocol": "NVMe",
       "LED Lighting": "-",
-      "Warranty": "3 years",
-      "Price_Baht": 2890
+      "warranty": "3 years",
+      "price": 2890
     },
     {
-      "ID": "SSD2024_00006",
-      "BRAND": "Apacer",
-      "MODEL": "AS2280Q4U 512GB",
-      "Form factor": "M.2",
-      "Capacity": "512GB",
-      "Interface": "M.2 PCIe",
-      "Read/write": "Up to 2400 / 1800 MB/s",
-      "Max 4K Random": "Up to 180,000 IOPS : 150,000 IOPS",
-      "Memory Modules": "-",
-      "Endurance (TBW)": "260TB",
-      "Technology": "3D-NAND",
-      "Controller": "-",
-      "Protocol": "NVMe",
+      "id":3,
+      "modelId": "SSD2024_00006",
+      "brand": "Apacer",
+      "model": "AS2280Q4U 512GB",
+      "form factor": "M.2",
+      "capacity": "512GB",
+      "interface": "M.2 PCIe",
+      "read/write": "Up to 2400 / 1800 MB/s",
+      "max 4K Random": "Up to 180,000 IOPS : 150,000 IOPS",
+      "memory Modules": "-",
+      "endurance (TBW)": "260TB",
+      "technology": "3D-NAND",
+      "controller": "-",
+      "protocol": "NVMe",
       "LED Lighting": "0",
-      "Warranty": "5 years",
-      "Price_Baht": 1965
+      "warranty": "5 years",
+      "price": 1965
     }
   ],
   "hdd": [
     {
+      "id":1,
       "Brand": "Seagate",
       "Model": "IronWolf 4TB",
       "Price": 4250,
@@ -215,6 +231,7 @@
       "Buffer": "256MB"
     },
     {
+      "id":2,
       "Brand": "Western Digital",
       "Model": "Red Plus Nas 4TB",
       "Price": 4550,
@@ -225,7 +242,8 @@
       "Buffer": "128MB"
     },
     {
-      "Brand": "Toshiba",
+      "id":3,
+      "brand": "Toshiba",
       "Model": "X300 Performance 6TB",
       "Price": 6410,
       "FormFactor": "3.5",
@@ -237,6 +255,7 @@
   ],
   "psu": [
     {
+      "id":1,
       "brand": "AEROCOOL",
       "series": "Superb",
       "model": "Superb 600W",
@@ -256,6 +275,7 @@
       "price": 790
     },
     {
+      "id":2,
       "brand": "THERMALTAKE",
       "series": "Toughpower GF",
       "model": "Toughpower GF 850W",
@@ -275,6 +295,7 @@
       "price": 3650
     },
     {
+      "id":3,
       "brand": "ASUS",
       "series": "ROG Strix",
       "model": "Rog Thor Platinum II EVA Edition 1000P2",
@@ -296,7 +317,8 @@
   ],
   "case": [
     {
-      "ID": "CASE2024_001",
+      "id":1,
+      "modelID": "CASE2024_001",
       "Brand": "NZXT",
       "Model": "H5 Elite White",
       "Form Factor": "Mid Tower",
@@ -330,10 +352,11 @@
       "Max CPU Coolers height": 165,
       "Max VGA Length": 365,
       "Warranty": "3 years",
-      "Price_Baht": 5150
+      "price": 5150
     },
     {
-      "ID": "CASE2024_002",
+      "id":2,
+      "modelID": "CASE2024_002",
       "Brand": "NZXT",
       "Model": "H9 Elite Black",
       "Form Factor": "Mid Tower",
@@ -363,10 +386,11 @@
       "Max CPU Coolers height": 165,
       "Max VGA Length": 435,
       "Warranty": "2 years",
-      "Price_Baht": 8790
+      "price": 8790
     },
     {
-      "ID": "CASE2024_003",
+      "id":3,
+      "modelID": "CASE2024_003",
       "Brand": "THERMALTAKE",
       "Model": "Core P6 Turquoise",
       "Form Factor": "Full Tower",
@@ -401,11 +425,12 @@
       "Max CPU Coolers height": 180,
       "Max VGA Length": 458,
       "Warranty": "2 years",
-      "Price_Baht": 5890
+      "price": 5890
     }
   ],
   "monitor": [
     {
+      "id":1,
       "Brand": "LG",
       "Series": "-",
       "Model": "24MK600M-B",
@@ -418,6 +443,7 @@
       "RefreshRate": "75Hz"
     },
     {
+      "id":2,
       "Brand": "SAMSUNG",
       "Series": "LS28",
       "Model": "LS28BG700EEXXT",
@@ -430,6 +456,7 @@
       "RefreshRate": "144Hz"
     },
     {
+      "id":3,
       "Brand": "GIGABYTE",
       "Series": "G27F",
       "Model": "G27F 2",
@@ -444,6 +471,7 @@
   ],
   "mainboard": [
     {
+      "id":1,
       "Brand": "GIGABYTE",
       "Model": "Z790 AORUS Elite",
       "Chipset": "Intel Z790",
@@ -477,6 +505,7 @@
       "Price": 9300
     },
     {
+      "id":2,
       "Brand": "ASUS",
       "Model": "Prime Z790-A WIFI-CSM",
       "Chipset": "Intel Z790",
@@ -511,6 +540,7 @@
       "Price": 10890
     },
     {
+      "id":3,
       "Brand": "GIGABYTE",
       "Model": "B650 Gaming X AX",
       "Chipset": "AMD B650",
@@ -543,6 +573,7 @@
   ],
   "cooler": [
     {
+      "id":1,
       "brand": "ASUS",
       "series": "TUF Gaming",
       "model": "TUF Gaming LC 120 ARGB Black",
@@ -558,6 +589,7 @@
       "price": 2650
     },
     {
+      "id":2,
       "brand": "ASUS",
       "series": "ROG Strix",
       "model": "ROG Strix LC II 240 RGB White Edition",
@@ -583,6 +615,7 @@
       "price": 7390
     },
     {
+      "id":3,
       "brand": "COOLER MASTER",
       "series": "MasterLiquid",
       "model": "MasterLiquid ML240L ARGB Illusion white",
