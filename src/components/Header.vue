@@ -5,7 +5,7 @@
         <h1 class="text-3xl font-bold :hover cursor-pointer">PC BUILDER</h1>
       </RouterLink>
       <details class="dropdown ml-10 pt-2">
-        <summary class="m-1">Custom Spec</summary>
+        <summary class="m-1 font-bold">Custom Spec</summary>
         <ul
           class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
         >
@@ -14,7 +14,7 @@
         </ul>
       </details>
       <details class="dropdown ml-10 pt-2">
-        <summary class="m-1">Articles</summary>
+        <summary class="m-1 font-bold">Articles</summary>
         <ul
           class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
         >
@@ -24,7 +24,12 @@
           <li><RouterLink to="/tiptrick">Tips & Tricks</RouterLink></li>
         </ul>
       </details>
-      <div
+      <div class="ml-10 pt-3">
+        <RouterLink to="/contact" class="m-1 font-bold :hover cursor-pointer"
+          >Contacts Us</RouterLink
+        >
+      </div>
+      <!-- <div
         v-if="userLoggedIn"
         class="mt-3 ml-auto flex items-center h-5 hover:cursor-pointer"
         @click="logout"
@@ -33,20 +38,12 @@
       </div>
       <div v-else class="mt-3 ml-auto">
         <a class="hover:cursor-pointer" to="/login">Login</a>
-      </div>
+      </div> -->
     </div>
   </header>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-let userLoggedIn = ref(false)
-
-const logout = () => {
-  userLoggedIn.value = false
-}
-</script>
+<script setup></script>
 
 <style scoped>
 /* Header styles */
