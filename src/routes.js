@@ -30,6 +30,7 @@ const routes = [
     path: '/new/macbook',
     component: () => import('./components/Article/ArticlesMacbook.vue'),
   },
+  
 ]
 
 const router = createRouter({

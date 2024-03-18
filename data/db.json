@@ -1,4 +1,32 @@
 {
+  "pc_builds": [
+    {
+      "builder_name": "anonymous",
+      "cpu": {},
+      "ram": {},
+      "gpu": {},
+      "ssd": {},
+      "hdd": {},
+      "psu": {},
+      "case": {},
+      "monitor": {},
+      "mainboard": {},
+      "cooler": {}
+    },
+    {
+      "builder_name": "Builder_Name",
+      "cpu": { "cpu_spec": {} },
+      "ram": { "ram_spec": {} },
+      "gpu": { "gpu_spec": {} },
+      "ssd": { "ssd_spec": {} },
+      "hdd": { "hdd_spec": {} },
+      "psu": { "psu_spec": {} },
+      "case": { "case_spec": {} },
+      "monitor": { "monitor_spec": {} },
+      "mainboard": { "mainboard_spec": {} },
+      "cooler": { "cooler_spec": {} }
+    }
+  ],
   "cpu": [
     {
       "Brand": "Intel",
@@ -37,6 +65,7 @@
       "L3Cache": "12MB"
     }
   ],
+  
   "ram": [
     {
       "Brand": "Apacer",

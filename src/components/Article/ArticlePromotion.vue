@@ -13,7 +13,7 @@ const loadMore = () => {
       <RouterLink to="new/meow">
         <div class="image-container">
           <img
-            src="../assets/news/meowbook.jpeg"
+            src="/../assets/news/meowbook.jpeg"
             alt=""
             class="image-style"
             style="height: 450px"
@@ -30,7 +30,7 @@ const loadMore = () => {
       <RouterLink to="new/redmi">
         <div class="image-container">
           <img
-            src="../assets/news/xiomiBook.jpg"
+            src="/../assets/news/xiomiBook.jpg"
             alt=""
             class="image-style"
             style="height: 450px"
@@ -46,7 +46,7 @@ const loadMore = () => {
     <div class="col-span-2">
       <div class="image-container">
         <img
-          src="../assets/news/geforceRtx.jpg"
+          src="/../assets/news/geforceRtx.jpg"
           alt=""
           class="image-style"
           style="height: 250px; width: 300px"
@@ -74,7 +74,7 @@ const loadMore = () => {
   </div>
   <div>
     <div class="flex ml-32 h-30 mt-12">
-      <img src="../assets/news/geforceRtx.jpg" class="w-64 h-40" />
+      <img src="/../assets/news/geforceRtx.jpg" class="w-64 h-40" />
       <div class="mt-5">
         <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
         <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
@@ -107,7 +107,7 @@ const loadMore = () => {
       </div>
     </div>
     <div class="flex ml-32 h-30 mt-12">
-      <img src="../assets/news/geforceRtx.jpg" class="w-64 h-40" />
+      <img src="/../assets/news/geforceRtx.jpg" class="w-64 h-40" />
       <div class="mt-5">
         <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
         <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
@@ -124,7 +124,7 @@ const loadMore = () => {
         :key="index"
         class="flex ml-32 h-30 mt-12"
       >
-        <img src="../assets/news/geforceRtx.jpg" class="w-64 h-40" />
+        <img src="/../assets/news/geforceRtx.jpg" class="w-64 h-40" />
         <div class="mt-5">
           <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
           <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
