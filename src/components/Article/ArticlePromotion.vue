@@ -12,15 +12,10 @@ const loadMore = () => {
     <div class="bg-white col-span-3 row-span-1">
       <RouterLink to="new/meow">
         <div class="image-container">
-          <img
-            src="/../assets/news/meowbook.jpeg"
-            alt=""
-            class="image-style"
-            style="height: 450px"
-          />
+          <img alt="" class="image-style" style="height: 450px" />
           <div class="image-overlay">
             <div class="image-text text-orange-400 font-extrabold text-9xl">
-              MeowBook
+              This Information is coming soon.....
             </div>
           </div>
         </div>
@@ -29,15 +24,10 @@ const loadMore = () => {
     <div class="bg-white col-span-2 row-span-1">
       <RouterLink to="new/redmi">
         <div class="image-container">
-          <img
-            src="/../assets/news/xiomiBook.jpg"
-            alt=""
-            class="image-style"
-            style="height: 450px"
-          />
+          <img alt="" class="image-style" style="height: 450px" />
           <div class="image-overlay">
             <div class="image-text text-red-800 font-extrabold text-9xl">
-              XiaomiBook
+              This Information is coming soon.....
             </div>
           </div>
         </div>
@@ -45,28 +35,18 @@ const loadMore = () => {
     </div>
     <div class="col-span-2">
       <div class="image-container">
-        <img
-          src="/../assets/news/geforceRtx.jpg"
-          alt=""
-          class="image-style"
-          style="height: 250px; width: 300px"
-        />
+        <img alt="" class="image-style" style="height: 250px; width: 300px" />
         <div class="image-overlay" style="width: 75%">
           <div class="image-text text-green-600 font-extrabold text-9xl">
-            GeforeRTX 4060 TI
+            This Information is coming soon.....
           </div>
         </div>
       </div>
       <div class="image-container">
-        <img
-          src="../assets/news/macbook.jpeg"
-          alt=""
-          class="image-style"
-          style="height: 200px; width: 300px"
-        />
+        <img alt="" class="image-style" style="height: 200px; width: 300px" />
         <div class="image-overlay" style="width: 76%">
           <div class="image-text text-white font-extrabold text-9xl">
-            Macbook
+            This Information is coming soon.....
           </div>
         </div>
       </div>
@@ -76,70 +56,38 @@ const loadMore = () => {
     <div class="flex ml-32 h-30 mt-12">
       <img src="/../assets/news/geforceRtx.jpg" class="w-64 h-40" />
       <div class="mt-5">
-        <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
+        <h1 class="font-bold text-orange-500 ml-10">???????????</h1>
         <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
-          ลือ!! NVIDIA GeForce RTX 4060 Ti กินไฟเพียง 160W TDP
-          ซึ่งใช้พลังงานน้อยกว่า 3060 Ti รุ่นเดิม
+          ???????????????????????????????????????????????????????
         </h1>
-        <h1 class="ml-10 mt-3 font-bold text-sm">DaiItsara 17 มี.ค 2567</h1>
+        <h1 class="ml-10 mt-3 font-bold text-sm">???????????</h1>
       </div>
     </div>
     <div class="flex ml-32 h-30 mt-12">
       <img src="../assets/news/geforceRtx.jpg" class="w-64 h-40" />
       <div class="mt-5">
-        <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
+        <h1 class="font-bold text-orange-500 ml-10">???????????</h1>
         <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
-          ลือ!! NVIDIA GeForce RTX 4060 Ti กินไฟเพียง 160W TDP
-          ซึ่งใช้พลังงานน้อยกว่า 3060 Ti รุ่นเดิม
+          ???????????????????????????????????????????????????????
         </h1>
-        <h1 class="ml-10 mt-3 font-bold text-sm">DaiItsara 17 มี.ค 2567</h1>
-      </div>
-    </div>
-    <div class="flex ml-32 h-30 mt-12">
-      <img src="../assets/news/geforceRtx.jpg" class="w-64 h-40" />
-      <div class="mt-5">
-        <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
-        <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
-          ลือ!! NVIDIA GeForce RTX 4060 Ti กินไฟเพียง 160W TDP
-          ซึ่งใช้พลังงานน้อยกว่า 3060 Ti รุ่นเดิม
-        </h1>
-        <h1 class="ml-10 mt-3 font-bold text-sm">DaiItsara 17 มี.ค 2567</h1>
-      </div>
-    </div>
-    <div class="flex ml-32 h-30 mt-12">
-      <img src="/../assets/news/geforceRtx.jpg" class="w-64 h-40" />
-      <div class="mt-5">
-        <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
-        <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
-          ลือ!! NVIDIA GeForce RTX 4060 Ti กินไฟเพียง 160W TDP
-          ซึ่งใช้พลังงานน้อยกว่า 3060 Ti รุ่นเดิม
-        </h1>
-        <h1 class="ml-10 mt-3 font-bold text-sm">DaiItsara 17 มี.ค 2567</h1>
+        <h1 class="ml-10 mt-3 font-bold text-sm">???????????</h1>
       </div>
     </div>
     <div>
       <!-- Render items based on itemsToShow -->
-      <div
-        v-for="index in itemsToShow"
-        :key="index"
-        class="flex ml-32 h-30 mt-12"
-      >
-        <img src="/../assets/news/geforceRtx.jpg" class="w-64 h-40" />
+      <div v-for="index in itemsToShow" :key="index" class="flex ml-32 h-30 mt-12">
+        <img class="w-64 h-40" />
         <div class="mt-5">
-          <h1 class="font-bold text-orange-500 ml-10">IT NEWS</h1>
+          <h1 class="font-bold text-orange-500 ml-10">?????????</h1>
           <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
-            ลือ!! NVIDIA GeForce RTX 4060 Ti กินไฟเพียง 160W TDP
-            ซึ่งใช้พลังงานน้อยกว่า 3060 Ti รุ่นเดิม
+            ????????????????????????????????????????
           </h1>
-          <h1 class="ml-10 mt-3 font-bold text-sm">DaiItsara 17 มี.ค 2567</h1>
+          <h1 class="ml-10 mt-3 font-bold text-sm">????????????????</h1>
         </div>
       </div>
       <!-- Render the "Load More" button if there are more items to show -->
       <div v-if="itemsToShow < totalItems" class="flex justify-center mt-5">
-        <button
-          @click="loadMore"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-32 rounded"
-        >
+        <button @click="loadMore" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-32 rounded">
           More Posts
         </button>
       </div>
@@ -212,6 +160,7 @@ const loadMore = () => {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 /* Text Style */
 .image-text {
   text-align: center;
