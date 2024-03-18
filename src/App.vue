@@ -12,3 +12,4 @@ import Footer from './components/Footer.vue'
 </template>
 
 <style scoped></style>
+./components/Util/Header.vue./components/Util/Footer.vue

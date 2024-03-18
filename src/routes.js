@@ -6,29 +6,29 @@ const routes = [
   { path: '/build', component: () => import('./components/BuildSpec.vue') },
   {
     path: '/tiptrick',
-    component: () => import('./components/ArticleTipTrick.vue'),
+    component: () => import('./components/Article/ArticleTipTrick.vue'),
   },
   {
     path: '/promotion',
-    component: () => import('./components/ArticlePromotion.vue'),
+    component: () => import('./components/Article/ArticlePromotion.vue'),
   },
-  { path: '/news', component: () => import('./components/ArticleNews.vue') },
-  { path: '/howto', component: () => import('./components/ArticleHowTo.vue') },
+  { path: '/news', component: () => import('./components/Article/ArticleNews.vue') },
+  { path: '/howto', component: () => import('./components/Article/ArticleHowTo.vue') },
   {
     path: '/new/meow',
-    component: () => import('./components/ArticlesNewsMeow.vue'),
+    component: () => import('./components/Article/ArticlesNewsMeow.vue'),
   },
   {
     path: '/new/redmi',
-    component: () => import('./components/ArticleNewsRedMi.vue'),
+    component: () => import('./components/Article/ArticleNewsRedMi.vue'),
   },
   {
     path: '/new/geforce',
-    component: () => import('./components/ArticlesNewsGefore.vue'),
+    component: () => import('./components/Article/ArticlesNewsGefore.vue'),
   },
   {
     path: '/new/macbook',
-    component: () => import('./components/ArticlesMacbook.vue'),
+    component: () => import('./components/Article/ArticlesMacbook.vue'),
   },
 ]
 
