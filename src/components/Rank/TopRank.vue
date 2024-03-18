@@ -3,13 +3,13 @@
 </script>
  
 <template>
-<div class="toprank">
-    <h1 class="font-bold">#1</h1>
-    <h1>Lorem ipsum dolor sit amet.</h1>
- <div id="top1">
-    
- </div>
-</div>
+    <div class="toprank">
+        <h1>PC SPEC - RANKING</h1>
+        <div id="top1">
+            <div class="w-15 h-25 pt-5 pl-5"> #1 </div>
+            
+        </div>
+    </div>
 </template>
  
 <style scoped>
