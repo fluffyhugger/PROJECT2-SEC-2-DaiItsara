@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   { path: '/', component: () => import('./components/HomePage.vue') },
-  { path: '/ranking', component: () => import('./components/RankingSpec.vue') },
+  { path: '/ranking', component: () => import('./components/Ranking/RankingSpec.vue') },
   { path: '/build', component: () => import('./components/BuildSpec.vue') },
   {
     path: '/tiptrick',
