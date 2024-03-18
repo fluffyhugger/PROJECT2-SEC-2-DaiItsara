@@ -1,9 +1,9 @@
 <script setup>
-import Header from './components/Util/Header.vue'
+// import Header from "../Util/Header.vue"
 </script>
 <template>
-  <Header/>
-
+  <!-- <Header /> -->
+  <h1>ranking spec</h1>
 </template>
 
 <style scoped></style>

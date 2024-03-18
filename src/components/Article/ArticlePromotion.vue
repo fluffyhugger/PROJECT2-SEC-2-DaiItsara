@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue"
 
 const itemsToShow = ref(4) // Initial number of items to show
 const totalItems = 8 // Total number of items available
@@ -54,7 +54,7 @@ const loadMore = () => {
   </div>
   <div>
     <div class="flex ml-32 h-30 mt-12">
-      <img src="/../assets/news/geforceRtx.jpg" class="w-64 h-40" />
+      <img src="../../assets/news/geforceRtx.jpg" class="w-64 h-40" />
       <div class="mt-5">
         <h1 class="font-bold text-orange-500 ml-10">???????????</h1>
         <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
@@ -64,7 +64,7 @@ const loadMore = () => {
       </div>
     </div>
     <div class="flex ml-32 h-30 mt-12">
-      <img src="../assets/news/geforceRtx.jpg" class="w-64 h-40" />
+      <img src="../../assets/news/geforceRtx.jpg" class="w-64 h-40" />
       <div class="mt-5">
         <h1 class="font-bold text-orange-500 ml-10">???????????</h1>
         <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
@@ -75,7 +75,11 @@ const loadMore = () => {
     </div>
     <div>
       <!-- Render items based on itemsToShow -->
-      <div v-for="index in itemsToShow" :key="index" class="flex ml-32 h-30 mt-12">
+      <div
+        v-for="index in itemsToShow"
+        :key="index"
+        class="flex ml-32 h-30 mt-12"
+      >
         <img class="w-64 h-40" />
         <div class="mt-5">
           <h1 class="font-bold text-orange-500 ml-10">?????????</h1>
@@ -87,7 +91,10 @@ const loadMore = () => {
       </div>
       <!-- Render the "Load More" button if there are more items to show -->
       <div v-if="itemsToShow < totalItems" class="flex justify-center mt-5">
-        <button @click="loadMore" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-32 rounded">
+        <button
+          @click="loadMore"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-32 rounded"
+        >
           More Posts
         </button>
       </div>
