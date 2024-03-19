@@ -39,7 +39,7 @@
       "Threads": 20,
       "L2Cache": "12MB",
       "L3Cache": "25MB",
-      "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
+      "Picture": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png"
     },
     {
       "ID": "CPU_00002",
@@ -53,7 +53,7 @@
       "Threads": 12,
       "L2Cache": "3MB",
       "L3Cache": "16MB",
-      "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
+      "Picture": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png"
     },
     {
       "ID": "CPU_00003",
@@ -67,7 +67,7 @@
       "Threads": 12,
       "L2Cache": "1.5MB",
       "L3Cache": "12MB",
-      "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
+      "Picture": "https://cdn.inet.se/product/1600x900/5303147_3.jpg"
     }
   ] ,
 "ram": [

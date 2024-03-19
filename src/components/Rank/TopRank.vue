@@ -34,15 +34,14 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 
 <style scoped>
 .top {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
-
-
 </style>
