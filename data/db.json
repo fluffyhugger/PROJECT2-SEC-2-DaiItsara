@@ -70,10 +70,9 @@
       "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     }
   ] ,
-
 "ram": [
     {
-      "ID": "APACER_PANTHER_32GB_5200_BLACK",
+      "ID": "RAM_00001",
       "Brand": "APACER",
       "Model": "PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
       "MemoryType": "DDR5",
@@ -85,7 +84,7 @@
       "Price": 4290
     },
     {
-      "ID": "PNY_XLR8_MAKO_EPIX-X_32GB_6000_WHITE",
+      "ID": "RAM_00002",
       "Brand": "PNY",
       "Model": "XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
       "MemoryType": "DDR5",
@@ -97,7 +96,7 @@
       "Price": 4590
     },
     {
-      "ID": "KINGSTON_FURY_RENEGADE_32GB_8000",
+      "ID": "RAM_00003",
       "Brand": "KINGSTON",
       "Model": "FURY Renegade RGB DDR5 32GB (16GBx2) 8000",
       "MemoryType": "DDR5",
@@ -108,7 +107,8 @@
       "Color": "-",
       "Price": 16900
     }
-  ] , "gpu": [
+]
+, "gpu": [
     {
       "ID": "GPU_00001",
       "Brand": "ASUS",
