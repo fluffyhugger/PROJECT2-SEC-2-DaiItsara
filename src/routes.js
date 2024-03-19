@@ -11,6 +11,11 @@ const routes = [
     component: () => import("./components/BuildSpec.vue"),
   },
   {
+    //Pc component's info
+    path: "/build/:ID",
+    component: () => import("./components/Util/PcComponentsInfo.vue"),
+  },
+  {
     path: "/tiptrick",
     component: () => import("./components/Article/ArticleTipTrick.vue"),
   },

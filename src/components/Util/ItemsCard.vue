@@ -13,11 +13,13 @@ defineProps({
       <img class="rounded-t-lg" :src="cpu.Picture" :alt="cpu.Series" />
     </div>
     <div class="p-5">
-      <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-      >
-        {{ cpu.ID }} {{ cpu.Cores }} {{ cpu.Threads }}
-      </h5>
+      <RouterLink :to="`/build/${cpu.ID}`">
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ cpu.Brand }} {{ cpu.Series }} {{ cpu.Model }}
+        </h5>
+      </RouterLink>
       <span class="mr-4"> {{ cpu.Price }} Baht</span>
     </div>
   </div>
