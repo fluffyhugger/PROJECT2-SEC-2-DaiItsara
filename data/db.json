@@ -81,7 +81,8 @@
       "CASLatency": 38,
       "Voltage": "1.1 V",
       "Color": "Black",
-      "Price": 4290
+      "Price": 4290,
+      "Picture": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png"
     },
     {
       "ID": "RAM_00002",
@@ -93,20 +94,24 @@
       "CASLatency": 40,
       "Voltage": "1.4 V",
       "Color": "White",
-      "Price": 4590
+      "Price": 4600,
+      "Picture": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947"
+
     },
     {
-      "ID": "RAM_00003",
-      "Brand": "KINGSTON",
-      "Model": "FURY Renegade RGB DDR5 32GB (16GBx2) 8000",
-      "MemoryType": "DDR5",
-      "MemorySize": "32GB (16GBx2)",
-      "MemorySpeed": "8000 MHz",
-      "CASLatency": 48,
-      "Voltage": "1.45 V",
-      "Color": "-",
-      "Price": 16900
-    }
+  "ID": "RAM_00003",
+  "Brand": "KINGSTON",
+  "Model": "HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
+  "MemoryType": "DDR4",
+  "MemorySize": "16GB (16GBx1)",
+  "MemorySpeed": "3200 MHz",
+  "CASLatency": "16-18-18-38",
+  "Voltage": "1.35 V",
+  "Color": "-",
+  "Price": 2300,
+  "Picture":"https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png"
+}
+
 ]
 , "gpu": [
     {
