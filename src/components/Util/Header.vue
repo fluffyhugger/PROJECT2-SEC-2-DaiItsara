@@ -37,16 +37,17 @@
         <img src="../assets/door.png" alt="" class="size-10 mb-2" />
       </div>
       <div v-else class="mt-3 ml-auto">
-        <a class="hover:cursor-pointer" to="/login">Login</a>
+        <RouterLink class="hover:cursor-pointer" to="/login">Login</RouterLink>
       </div> -->
     </div>
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+import { RouterLink } from "vue-router"
+</script>
 
 <style scoped>
-/* Header styles */
 header {
   background-color: #ffff;
   color: #727171;

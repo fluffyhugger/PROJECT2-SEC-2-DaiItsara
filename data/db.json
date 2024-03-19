@@ -29,6 +29,7 @@
   ],
   "cpu": [
     {
+      "ID": "Intel_Core_i7_12700K_LGA1700",
       "Brand": "Intel",
       "Series": "Core i7",
       "Model": "12700K",
@@ -38,9 +39,11 @@
       "Cores": 12,
       "Threads": 20,
       "L2Cache": "12MB",
-      "L3Cache": "25MB"
+      "L3Cache": "25MB",
+      "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     },
     {
+      "ID": "AMD_Ryzen_5_5600G_AM4",
       "Brand": "AMD",
       "Series": "Ryzen 5",
       "Model": "5600G",
@@ -50,9 +53,11 @@
       "Cores": 6,
       "Threads": 12,
       "L2Cache": "3MB",
-      "L3Cache": "16MB"
+      "L3Cache": "16MB",
+      "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     },
     {
+      "ID": "Intel_Core_i5_10400F_LGA1200",
       "Brand": "Intel",
       "Series": "Core i5",
       "Model": "10400F",
@@ -62,10 +67,10 @@
       "Cores": 6,
       "Threads": 12,
       "L2Cache": "1.5MB",
-      "L3Cache": "12MB"
+      "L3Cache": "12MB",
+      "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     }
   ],
-  
   "ram": [
     {
       "Brand": "Apacer",

@@ -3,8 +3,9 @@ import Header from './components/Util/Header.vue'
 import TopRank from './TopRank.vue';
 </script>
 <template>
-  <Header/>
-
+<Header />
+<TopRank />
+  <h1>ranking spec</h1>
 </template>
 
 <style scoped></style>
