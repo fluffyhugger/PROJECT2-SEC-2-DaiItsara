@@ -26,7 +26,8 @@
       "mainboard": { "mainboard_spec": {} },
       "cooler": { "cooler_spec": {} }
     }
-  ],"cpu": [
+  ],
+  "cpu": [
     {
       "ID": "CPU_00001",
       "Brand": "Intel",
@@ -46,7 +47,7 @@
       "Brand": "AMD",
       "Series": "Ryzen 5",
       "Model": "5600G",
-      "Price": 5265,
+      "Price": 5290,
       "Socket": "AM4",
       "ChipsetSupport": "AMD A520",
       "Cores": 6,
@@ -69,8 +70,8 @@
       "L3Cache": "12MB",
       "Picture": "https://cdn.inet.se/product/1600x900/5303147_3.jpg"
     }
-  ] ,
-"ram": [
+  ],
+  "ram": [
     {
       "ID": "RAM_00001",
       "Brand": "APACER",
@@ -96,24 +97,22 @@
       "Color": "White",
       "Price": 4600,
       "Picture": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947"
-
     },
     {
-  "ID": "RAM_00003",
-  "Brand": "KINGSTON",
-  "Model": "HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
-  "MemoryType": "DDR4",
-  "MemorySize": "16GB (16GBx1)",
-  "MemorySpeed": "3200 MHz",
-  "CASLatency": "16-18-18-38",
-  "Voltage": "1.35 V",
-  "Color": "-",
-  "Price": 2300,
-  "Picture":"https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png"
-}
-
-]
-, "gpu": [
+      "ID": "RAM_00003",
+      "Brand": "KINGSTON",
+      "Model": "HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
+      "MemoryType": "DDR4",
+      "MemorySize": "16GB (16GBx1)",
+      "MemorySpeed": "3200 MHz",
+      "CASLatency": "16-18-18-38",
+      "Voltage": "1.35 V",
+      "Color": "-",
+      "Price": 2300,
+      "Picture": "https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png"
+    }
+  ],
+  "gpu": [
     {
       "ID": "GPU_00001",
       "Brand": "ASUS",
@@ -138,7 +137,8 @@
       "DisplayPorts": 3,
       "PowerConnector": "8 Pin",
       "PowerRequirements": "550 W",
-      "Price": 16320
+      "Price": 16320,
+      "Picture": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png"
     },
     {
       "ID": "GPU_00002",
@@ -162,7 +162,8 @@
       "ShaderModel": "6.7",
       "HDMIPorts": 2,
       "DisplayPorts": 2,
-      "Price": 9800
+      "Price": 9800,
+      "Picture": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png"
     },
     {
       "ID": "GPU_00003",
@@ -188,10 +189,10 @@
       "DisplayPorts": 3,
       "PowerConnector": "8 Pin + 8 Pin",
       "PowerRequirements": "700 W",
-      "Price": 29230
+      "Price": 29230,
+      "Picture": "https://notebookspec.com/storage/pc-vga/vga_1292_20201006-104957_1.png"
     }
-  ]
-,
+  ],
   "ssd": [
     {
       "ID": "SSD_00001",
@@ -209,25 +210,27 @@
       "Protocol": "NVMe",
       "LED Lighting": "-",
       "Warranty": "5 years",
-      "Price_Baht": 3100
+      "Price_Baht": 3790,
+      "Picture": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png"
     },
     {
       "ID": "SSD_00002",
-      "Brand": "HIKVISION",
-      "Model": "E2000 2TB",
+      "Brand": "Addlink",
+      "Model": "S95 1TB M.2",
       "FormFactor": "M.2",
-      "Capacity": "2TB",
+      "Capacity": "1TB",
       "Interface": "M.2 PCIe",
-      "Read/write": "Up to 3500 / 3000 MB/s",
+      "Read/write": "Up to 7000 / 6000 MB/s",
       "Max 4K Random": "-",
-      "Memory Modules": "TLC",
+      "Memory Modules": "3D-NAND TLC",
       "Endurance (TBW)": "-",
-      "Technology": "-",
+      "Technology": "Phison",
       "Controller": "-",
       "Protocol": "NVMe",
-      "LED Lighting": "-",
-      "Warranty": "3 years",
-      "Price_Baht": 2890
+      "LED Lighting": "0",
+      "Warranty": "5 years",
+      "Price_Baht": 8200,
+      "Picture": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fd12fa42-c69e-4166-90cb-46601174cffb.__CR0,0,200,225_PT0_SX200_V1___.png"
     },
     {
       "ID": "SSD_00003",
@@ -245,10 +248,11 @@
       "Protocol": "NVMe",
       "LED Lighting": "0",
       "Warranty": "5 years",
-      "Price_Baht": 1965
+      "Price_Baht": 1965,
+      "Picture": "https://gzhls.at/i/75/20/2827520-l0.png"
     }
   ],
-"hdd": [
+  "hdd": [
     {
       "ID": "HDD_00001",
       "Brand": "Seagate",
@@ -258,7 +262,8 @@
       "Capacity": "4TB",
       "Interface": "SATA 6Gb/s",
       "RotationalSpeed": "5400 RPM",
-      "Buffer": "256MB"
+      "Buffer": "256MB",
+      "Picture":"https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png"
     },
     {
       "ID": "HDD_00002",
@@ -269,7 +274,8 @@
       "Capacity": "4TB",
       "Interface": "SATA 6Gb/s",
       "RotationalSpeed": "5400 RPM",
-      "Buffer": "128MB"
+      "Buffer": "128MB",
+      "Picture":"https://notebookspec.com/storage/pc-hdd/hdd_222_20210311-114658_1.png"
     },
     {
       "ID": "HDD_00003",
@@ -280,10 +286,11 @@
       "Capacity": "6TB",
       "Interface": "SATA 6Gb/s",
       "RotationalSpeed": "7200 RPM",
-      "Buffer": "256MB"
+      "Buffer": "256MB",
+      "Picture":"https://notebookspec.com/storage/pc-hdd/hdd_202_20201012-111555_1.png"
     }
-  ]
-,"psu": [
+  ],
+  "psu": [
     {
       "ID": "PSU_00001",
       "brand": "AEROCOOL",
@@ -302,7 +309,8 @@
       "pciEConnector": "1 x 6+2 Pin",
       "sataConnector": "3",
       "molexConnector": "-",
-      "price": 790
+      "price": 790,
+      "Picture" : "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png"
     },
     {
       "ID": "PSU_00002",
@@ -322,7 +330,8 @@
       "pciEConnector": "6 x 6+2-Pin",
       "sataConnector": "12",
       "molexConnector": "-",
-      "price": 3650
+      "price": 3650,
+      "Picture" : ""
     },
     {
       "ID": "PSU_00003",
@@ -454,8 +463,8 @@
       "Warranty": "2 years",
       "Price_Baht": 5890
     }
-  ]
-,"monitor": [
+  ],
+  "monitor": [
     {
       "ID": "MONITOR_00001",
       "Brand": "LG",
@@ -495,8 +504,8 @@
       "AspectRatio": "16:9",
       "RefreshRate": "165Hz"
     }
-  ]
-,"mainboard": [
+  ],
+  "mainboard": [
     {
       "ID": "MAINBOARD_00001",
       "Brand": "GIGABYTE",
@@ -597,8 +606,8 @@
       "Dimensions (W x L)": "30.5 x 24.4 cm",
       "Price": 10890
     }
-  ]
-,"cooler": [
+  ],
+  "cooler": [
     {
       "ID": "COOLER_00001",
       "brand": "ASUS",
@@ -667,5 +676,4 @@
       "price": 3890
     }
   ]
-
 }
