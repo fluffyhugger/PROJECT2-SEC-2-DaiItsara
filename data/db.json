@@ -331,7 +331,7 @@
       "sataConnector": "12",
       "molexConnector": "-",
       "price": 3650,
-      "Picture" : ""
+      "Picture" : "https://www.jib.co.th/img_master/uploads/Content/2310393011/ToughpowerGF_850_1.png"
     },
     {
       "ID": "PSU_00003",
@@ -351,7 +351,8 @@
       "pciEConnector": "8 x 6+2 Pin",
       "sataConnector": "12",
       "molexConnector": "-",
-      "price": 13690
+      "price": 13690,
+      "Picture": "https://storage.googleapis.com/file-computeandmore/images/d031c53f-1d1f-4ae5-ab07-5529824f95bb.png"
     }
   ],
   "case": [
@@ -390,7 +391,8 @@
       "Max CPU Coolers height": 165,
       "Max VGA Length": 365,
       "Warranty": "3 years",
-      "Price_Baht": 5150
+      "Price_Baht": 5150,
+      "Picture": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png"
     },
     {
       "ID": "CASE_00002",
@@ -423,7 +425,8 @@
       "Max CPU Coolers height": 165,
       "Max VGA Length": 435,
       "Warranty": "2 years",
-      "Price_Baht": 8790
+      "Price_Baht": 8790,
+      "Picture":"https://www.autonetpc.com/wp-content/uploads/2023/01/1672294382-h9-elite-open-black.png"
     },
     {
       "ID": "CASE_00003",
@@ -461,7 +464,8 @@
       "Max CPU Coolers height": 180,
       "Max VGA Length": 458,
       "Warranty": "2 years",
-      "Price_Baht": 5890
+      "Price_Baht": 5890,
+      "Picture":"https://m.media-amazon.com/images/I/61-BLsQQc7L._AC_UF1000,1000_QL80_.jpg"
     }
   ],
   "monitor": [
@@ -476,7 +480,8 @@
       "PanelType": "IPS",
       "MaxResolution": "1920 x 1080",
       "AspectRatio": "16:9",
-      "RefreshRate": "75Hz"
+      "RefreshRate": "75Hz",
+      "Picture":"https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png"
     },
     {
       "ID": "MONITOR_00002",
@@ -489,7 +494,8 @@
       "PanelType": "IPS",
       "MaxResolution": "3840 x 2160",
       "AspectRatio": "16:9",
-      "RefreshRate": "144Hz"
+      "RefreshRate": "144Hz",
+      "Picture":"https://www.neoshop.co.th/wp-content/uploads/2023/08/th-gaming-ls32bg702eexxt-ls-bg-e.webp"
     },
     {
       "ID": "MONITOR_00003",
@@ -502,7 +508,8 @@
       "PanelType": "IPS",
       "MaxResolution": "1920 x 1080",
       "AspectRatio": "16:9",
-      "RefreshRate": "165Hz"
+      "RefreshRate": "165Hz",
+      "Picture":"https://www.gigabyte.com/FileUpload/Global/KeyFeature/1470/innergigabyteimages//bg1.png"
     }
   ],
   "mainboard": [
@@ -538,7 +545,8 @@
       "Form Factor": "ATX",
       "Power Pin": "24+8+8 Pin",
       "Dimesions (W x L)": "30.5 x 24.4 cm",
-      "Price": 9300
+      "Price": 9300,
+      "Picture" : "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png"
     },
     {
       "ID": "MAINBOARD_00002",
@@ -573,7 +581,8 @@
       "Form Factor": "ATX",
       "Power Pin": "24+8 Pin",
       "Dimensions (W x L)": "30.5 x 24.4 cm",
-      "Price": 10890
+      "Price": 10890,
+      "Picture":"https://storage.googleapis.com/file-computeandmore/images/7b361b3e-bd80-4bcd-bfdb-a718b3a827da.png"
     },
     {
       "ID": "MAINBOARD_00003",
@@ -604,7 +613,8 @@
       "Form Factor": "ATX",
       "Power Pin": "24+8+4 PIN",
       "Dimensions (W x L)": "30.5 x 24.4 cm",
-      "Price": 10890
+      "Price": 10890,
+      "Picture": "https://c1.neweggimages.com/BizIntell/item/MB/Motherboards%20-%20AMD/13-145-449/23.jpg"
     }
   ],
   "cooler": [
