@@ -1,11 +1,20 @@
 <script setup>
-import Header from './components/Util/Header.vue'
-import TopRank from './TopRank.vue';
+import Header from "../Util/Header.vue";
+import TopRank from "./TopRank.vue";
 </script>
+
 <template>
-<Header />
-<TopRank />
-  <h1>ranking spec</h1>
+  <div class="bg-gray-100 dark:bg-slate-800 p-4 md:p-12">
+    <h1 class="text-3xl md:text-3xl font-bold  text-gray-900 dark:text-white mb-8">Ranking Spec</h1>
+    <TopRank />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* Adjusting padding for different screen sizes */
+@media (min-width: 768px) {
+  .bg-gray-100 {
+    padding: 24px;
+  }
+}
+</style>

@@ -1,17 +1,29 @@
-<script setup>
-
-</script>
- 
 <template>
-    <div class="toprank">
-        <h1>PC SPEC - RANKING</h1>
-        <div id="top1">
-            <div class="w-15 h-25 pt-5 pl-5"> #1 </div>
-            
+    <div class="top">
+        <div class="rank border-solid bg-lime-300">
+            1
+        </div>
+        <div class="rank border-solid bg-lime-300">
+            2
+        </div>
+        <div class="rank border-solid bg-lime-300">
+            3
         </div>
     </div>
 </template>
- 
-<style scoped>
 
+<style scoped>
+.top {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.rank {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>
