@@ -29,7 +29,7 @@
   ],
   "cpu": [
     {
-      "ID": "Intel_Core_i7_12700K_LGA1700",
+      "ID": "I7_12700K_LGA1700",
       "Brand": "Intel",
       "Series": "Core i7",
       "Model": "12700K",
@@ -43,7 +43,7 @@
       "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     },
     {
-      "ID": "AMD_Ryzen_5_5600G_AM4",
+      "ID": "R5_5600G_AM4",
       "Brand": "AMD",
       "Series": "Ryzen 5",
       "Model": "5600G",
@@ -57,7 +57,7 @@
       "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     },
     {
-      "ID": "Intel_Core_i5_10400F_LGA1200",
+      "ID": "I5_10400F_LGA1200",
       "Brand": "Intel",
       "Series": "Core i5",
       "Model": "10400F",
