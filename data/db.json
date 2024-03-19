@@ -26,10 +26,9 @@
       "mainboard": { "mainboard_spec": {} },
       "cooler": { "cooler_spec": {} }
     }
-  ],
-  "cpu": [
+  ],"cpu": [
     {
-      "ID": "I7_12700K_LGA1700",
+      "ID": "CPU_00001",
       "Brand": "Intel",
       "Series": "Core i7",
       "Model": "12700K",
@@ -43,7 +42,7 @@
       "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     },
     {
-      "ID": "R5_5600G_AM4",
+      "ID": "CPU_00002",
       "Brand": "AMD",
       "Series": "Ryzen 5",
       "Model": "5600G",
@@ -57,7 +56,7 @@
       "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     },
     {
-      "ID": "I5_10400F_LGA1200",
+      "ID": "CPU_00003",
       "Brand": "Intel",
       "Series": "Core i5",
       "Model": "10400F",
@@ -70,10 +69,12 @@
       "L3Cache": "12MB",
       "Picture": "../src/assets/ComponentsPictures/cpu-demo.jpg"
     }
-  ],
-  "ram": [
+  ] ,
+
+"ram": [
     {
-      "Brand": "Apacer",
+      "ID": "APACER_PANTHER_32GB_5200_BLACK",
+      "Brand": "APACER",
       "Model": "PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
       "MemoryType": "DDR5",
       "MemorySize": "32GB (16GBx2)",
@@ -84,6 +85,7 @@
       "Price": 4290
     },
     {
+      "ID": "PNY_XLR8_MAKO_EPIX-X_32GB_6000_WHITE",
       "Brand": "PNY",
       "Model": "XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
       "MemoryType": "DDR5",
@@ -95,6 +97,7 @@
       "Price": 4590
     },
     {
+      "ID": "KINGSTON_FURY_RENEGADE_32GB_8000",
       "Brand": "KINGSTON",
       "Model": "FURY Renegade RGB DDR5 32GB (16GBx2) 8000",
       "MemoryType": "DDR5",
@@ -105,88 +108,91 @@
       "Color": "-",
       "Price": 16900
     }
-  ],
-  "gpu": [
+  ] , "gpu": [
     {
-      "brand": "ASUS",
-      "series": "GeForce RTX 40 Series",
-      "model": "TUF Gaming GeForce RTX 4060 Ti OC",
-      "gpuChipset": "NVIDIA",
-      "gpuName": "AD106-350-A1",
-      "gpuClock": "2310 MHz",
-      "boostClock": "2655 MHz",
-      "architecture": "Ada Lovelace",
-      "technology": "5 nm",
-      "memoryClock": "18000 MHz",
-      "memorySize": "8 GB",
-      "memoryInterface": "128 bit",
-      "memoryType": "GDDR6",
-      "busInterface": "PCI Express 4.0 x8",
-      "multiGpuSupports": "-",
-      "directX": "12.2",
-      "openGL": "4.6",
-      "shaderModel": "6.7",
-      "hdmiPorts": 1,
-      "displayPorts": 3,
-      "powerConnector": "8 Pin",
-      "powerRequirements": "550 W",
-      "price": 16320
+      "ID": "GPU_00001",
+      "Brand": "ASUS",
+      "Series": "GeForce RTX 40 Series",
+      "Model": "TUF Gaming GeForce RTX 4060 Ti OC",
+      "GPUChipset": "NVIDIA",
+      "GPUName": "AD106-350-A1",
+      "GPUClock": "2310 MHz",
+      "BoostClock": "2655 MHz",
+      "Architecture": "Ada Lovelace",
+      "Technology": "5 nm",
+      "MemoryClock": "18000 MHz",
+      "MemorySize": "8 GB",
+      "MemoryInterface": "128 bit",
+      "MemoryType": "GDDR6",
+      "BusInterface": "PCI Express 4.0 x8",
+      "MultiGPUSupports": "-",
+      "DirectX": "12.2",
+      "OpenGL": "4.6",
+      "ShaderModel": "6.7",
+      "HDMIPorts": 1,
+      "DisplayPorts": 3,
+      "PowerConnector": "8 Pin",
+      "PowerRequirements": "550 W",
+      "Price": 16320
     },
     {
-      "brand": "GIGABYTE",
-      "series": "Radeon RX 7000 Series",
-      "model": "Radeon RX 7600 Gaming OC 8G",
-      "gpuChipset": "AMD",
-      "gpuName": "Navi 33 XL",
-      "gpuClock": "1720 MHz",
-      "boostClock": "2755 MHz",
-      "architecture": "RDNA 3",
-      "technology": "6 nm",
-      "memoryClock": "18000 MHz",
-      "memorySize": "8 GB",
-      "memoryInterface": "128 bit",
-      "memoryType": "GDDR6",
-      "busInterface": "PCI Express 4.0 x16",
-      "multiGpuSupports": "-",
-      "directX": "12.2",
-      "openGL": "4.6",
-      "shaderModel": "6.7",
-      "hdmiPorts": 2,
-      "displayPorts": 2,
-      "price": 9800
+      "ID": "GPU_00002",
+      "Brand": "GIGABYTE",
+      "Series": "Radeon RX 7000 Series",
+      "Model": "Radeon RX 7600 Gaming OC 8G",
+      "GPUChipset": "AMD",
+      "GPUName": "Navi 33 XL",
+      "GPUClock": "1720 MHz",
+      "BoostClock": "2755 MHz",
+      "Architecture": "RDNA 3",
+      "Technology": "6 nm",
+      "MemoryClock": "18000 MHz",
+      "MemorySize": "8 GB",
+      "MemoryInterface": "128 bit",
+      "MemoryType": "GDDR6",
+      "BusInterface": "PCI Express 4.0 x16",
+      "MultiGPUSupports": "-",
+      "DirectX": "12.2",
+      "OpenGL": "4.6",
+      "ShaderModel": "6.7",
+      "HDMIPorts": 2,
+      "DisplayPorts": 2,
+      "Price": 9800
     },
     {
-      "brand": "Zotac",
-      "series": "GeForce RTX 30 Series",
-      "model": "GeForce RTX 3080 Trinity OC",
-      "gpuChipset": "NVIDIA",
-      "gpuName": "GA102",
-      "gpuClock": "1440 MHz",
-      "boostClock": "1725 MHz",
-      "architecture": "Ampere",
-      "technology": "8nm",
-      "memoryClock": "19000 MHz",
-      "memorySize": "10GB",
-      "memoryInterface": "320bit",
-      "memoryType": "GDDR6X",
-      "busInterface": "PCI Express 4.0 x16",
-      "multiGpuSupports": "-",
-      "directX": "12",
-      "openGL": "3.0",
-      "shaderModel": "6.5",
-      "hdmiPorts": 1,
-      "displayPorts": 3,
-      "powerConnector": "8 Pin + 8 Pin",
-      "powerRequirements": "700 W",
-      "price": 29230
+      "ID": "GPU_00003",
+      "Brand": "Zotac",
+      "Series": "GeForce RTX 30 Series",
+      "Model": "GeForce RTX 3080 Trinity OC",
+      "GPUChipset": "NVIDIA",
+      "GPUName": "GA102",
+      "GPUClock": "1440 MHz",
+      "BoostClock": "1725 MHz",
+      "Architecture": "Ampere",
+      "Technology": "8nm",
+      "MemoryClock": "19000 MHz",
+      "MemorySize": "10GB",
+      "MemoryInterface": "320bit",
+      "MemoryType": "GDDR6X",
+      "BusInterface": "PCI Express 4.0 x16",
+      "MultiGPUSupports": "-",
+      "DirectX": "12",
+      "OpenGL": "3.0",
+      "ShaderModel": "6.5",
+      "HDMIPorts": 1,
+      "DisplayPorts": 3,
+      "PowerConnector": "8 Pin + 8 Pin",
+      "PowerRequirements": "700 W",
+      "Price": 29230
     }
-  ],
+  ]
+,
   "ssd": [
     {
-      "ID": "SSD2024_00001",
-      "BRAND": "CORSAIR",
-      "MODEL": "Force Series MP600 Pro LPX Black 1TB",
-      "Form factor": "M.2",
+      "ID": "SSD_00001",
+      "Brand": "CORSAIR",
+      "Model": "Force Series MP600 Pro LPX Black 1TB",
+      "FormFactor": "M.2",
       "Capacity": "1TB",
       "Interface": "M.2 PCIe",
       "Read/write": "Up to 7100 / 5800 MB/s",
@@ -201,10 +207,10 @@
       "Price_Baht": 3100
     },
     {
-      "ID": "SSD2024_00005",
-      "BRAND": "HIKVISION",
-      "MODEL": "E2000 2TB",
-      "Form factor": "M.2",
+      "ID": "SSD_00002",
+      "Brand": "HIKVISION",
+      "Model": "E2000 2TB",
+      "FormFactor": "M.2",
       "Capacity": "2TB",
       "Interface": "M.2 PCIe",
       "Read/write": "Up to 3500 / 3000 MB/s",
@@ -219,10 +225,10 @@
       "Price_Baht": 2890
     },
     {
-      "ID": "SSD2024_00006",
-      "BRAND": "Apacer",
-      "MODEL": "AS2280Q4U 512GB",
-      "Form factor": "M.2",
+      "ID": "SSD_00003",
+      "Brand": "Apacer",
+      "Model": "AS2280Q4U 512GB",
+      "FormFactor": "M.2",
       "Capacity": "512GB",
       "Interface": "M.2 PCIe",
       "Read/write": "Up to 2400 / 1800 MB/s",
@@ -237,8 +243,9 @@
       "Price_Baht": 1965
     }
   ],
-  "hdd": [
+"hdd": [
     {
+      "ID": "HDD_00001",
       "Brand": "Seagate",
       "Model": "IronWolf 4TB",
       "Price": 4250,
@@ -249,6 +256,7 @@
       "Buffer": "256MB"
     },
     {
+      "ID": "HDD_00002",
       "Brand": "Western Digital",
       "Model": "Red Plus Nas 4TB",
       "Price": 4550,
@@ -259,6 +267,7 @@
       "Buffer": "128MB"
     },
     {
+      "ID": "HDD_00003",
       "Brand": "Toshiba",
       "Model": "X300 Performance 6TB",
       "Price": 6410,
@@ -268,9 +277,10 @@
       "RotationalSpeed": "7200 RPM",
       "Buffer": "256MB"
     }
-  ],
-  "psu": [
+  ]
+,"psu": [
     {
+      "ID": "PSU_00001",
       "brand": "AEROCOOL",
       "series": "Superb",
       "model": "Superb 600W",
@@ -290,6 +300,7 @@
       "price": 790
     },
     {
+      "ID": "PSU_00002",
       "brand": "THERMALTAKE",
       "series": "Toughpower GF",
       "model": "Toughpower GF 850W",
@@ -309,6 +320,7 @@
       "price": 3650
     },
     {
+      "ID": "PSU_00003",
       "brand": "ASUS",
       "series": "ROG Strix",
       "model": "Rog Thor Platinum II EVA Edition 1000P2",
@@ -330,7 +342,7 @@
   ],
   "case": [
     {
-      "ID": "CASE2024_001",
+      "ID": "CASE_00001",
       "Brand": "NZXT",
       "Model": "H5 Elite White",
       "Form Factor": "Mid Tower",
@@ -367,7 +379,7 @@
       "Price_Baht": 5150
     },
     {
-      "ID": "CASE2024_002",
+      "ID": "CASE_00002",
       "Brand": "NZXT",
       "Model": "H9 Elite Black",
       "Form Factor": "Mid Tower",
@@ -400,7 +412,7 @@
       "Price_Baht": 8790
     },
     {
-      "ID": "CASE2024_003",
+      "ID": "CASE_00003",
       "Brand": "THERMALTAKE",
       "Model": "Core P6 Turquoise",
       "Form Factor": "Full Tower",
@@ -437,9 +449,10 @@
       "Warranty": "2 years",
       "Price_Baht": 5890
     }
-  ],
-  "monitor": [
+  ]
+,"monitor": [
     {
+      "ID": "MONITOR_00001",
       "Brand": "LG",
       "Series": "-",
       "Model": "24MK600M-B",
@@ -452,6 +465,7 @@
       "RefreshRate": "75Hz"
     },
     {
+      "ID": "MONITOR_00002",
       "Brand": "SAMSUNG",
       "Series": "LS28",
       "Model": "LS28BG700EEXXT",
@@ -464,6 +478,7 @@
       "RefreshRate": "144Hz"
     },
     {
+      "ID": "MONITOR_00003",
       "Brand": "GIGABYTE",
       "Series": "G27F",
       "Model": "G27F 2",
@@ -475,9 +490,10 @@
       "AspectRatio": "16:9",
       "RefreshRate": "165Hz"
     }
-  ],
-  "mainboard": [
+  ]
+,"mainboard": [
     {
+      "ID": "MAINBOARD_00001",
       "Brand": "GIGABYTE",
       "Model": "Z790 AORUS Elite",
       "Chipset": "Intel Z790",
@@ -511,6 +527,7 @@
       "Price": 9300
     },
     {
+      "ID": "MAINBOARD_00002",
       "Brand": "ASUS",
       "Model": "Prime Z790-A WIFI-CSM",
       "Chipset": "Intel Z790",
@@ -545,6 +562,7 @@
       "Price": 10890
     },
     {
+      "ID": "MAINBOARD_00003",
       "Brand": "GIGABYTE",
       "Model": "B650 Gaming X AX",
       "Chipset": "AMD B650",
@@ -574,9 +592,10 @@
       "Dimensions (W x L)": "30.5 x 24.4 cm",
       "Price": 10890
     }
-  ],
-  "cooler": [
+  ]
+,"cooler": [
     {
+      "ID": "COOLER_00001",
       "brand": "ASUS",
       "series": "TUF Gaming",
       "model": "TUF Gaming LC 120 ARGB Black",
@@ -592,6 +611,7 @@
       "price": 2650
     },
     {
+      "ID": "COOLER_00002",
       "brand": "ASUS",
       "series": "ROG Strix",
       "model": "ROG Strix LC II 240 RGB White Edition",
@@ -617,6 +637,7 @@
       "price": 7390
     },
     {
+      "ID": "COOLER_00003",
       "brand": "COOLER MASTER",
       "series": "MasterLiquid",
       "model": "MasterLiquid ML240L ARGB Illusion white",
@@ -641,4 +662,5 @@
       "price": 3890
     }
   ]
+
 }
