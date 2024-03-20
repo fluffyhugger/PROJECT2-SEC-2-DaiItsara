@@ -1,32 +1,81 @@
 {
-  "pc_builds": [
-    {
-      "builder_name": "anonymous",
-      "cpu": {},
-      "ram": {},
-      "gpu": {},
-      "ssd": {},
-      "hdd": {},
-      "psu": {},
-      "case": {},
-      "monitor": {},
-      "mainboard": {},
-      "cooler": {}
-    },
-    {
-      "builder_name": "Builder_Name",
-      "cpu": { "cpu_spec": {} },
-      "ram": { "ram_spec": {} },
-      "gpu": { "gpu_spec": {} },
-      "ssd": { "ssd_spec": {} },
-      "hdd": { "hdd_spec": {} },
-      "psu": { "psu_spec": {} },
-      "case": { "case_spec": {} },
-      "monitor": { "monitor_spec": {} },
-      "mainboard": { "mainboard_spec": {} },
-      "cooler": { "cooler_spec": {} }
-    }
-  ],
+  "pc_build": [ {
+    "builder_id": 1,
+    "builder_name": "anonymous",
+    "build_date": "2024-03-20T10:30:00",
+    "components": [
+      {
+        "cpu": {
+          "name": "i7-13700H",
+          "image_url": "https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png",
+          "price": 9500
+        }
+      },
+      {
+        "ram": {
+          "name": "Corsair Vengeance LPX 16GB",
+          "image_url": "https://example.com/ram_image.jpg",
+          "price": 3600
+        }
+      },
+      {
+        "gpu": {
+          "name": "NVIDIA GeForce RTX 3080",
+          "image_url": "https://example.com/gpu_image.jpg",
+          "price": 24000
+        }
+      },
+      {
+        "ssd": {
+          "name": "Samsung 970 EVO Plus 1TB",
+          "image_url": "https://example.com/ssd_image.jpg",
+          "price": 6000
+        }
+      },
+      {
+        "hdd": {
+          "name": "Seagate Barracuda 2TB",
+          "image_url": "https://example.com/hdd_image.jpg",
+          "price": 2400
+        }
+      },
+      {
+        "psu": {
+          "name": "EVGA SuperNOVA 850 G3",
+          "image_url": "https://example.com/psu_image.jpg",
+          "price": 4500
+        }
+      },
+      {
+        "case": {
+          "name": "NZXT H510",
+          "image_url": "https://example.com/case_image.jpg",
+          "price": 1750
+        }
+      },
+      {
+        "monitor": {
+          "name": "ASUS ROG Swift PG279QM",
+          "image_url": "https://www.commartthailand.com/wp-content/uploads/2022/03/h525.png",
+          "price": 39900
+        }
+      },
+      {
+        "mainboard": {
+          "name": "MSI MPG Z590 GAMING PLUS",
+          "image_url": "https://www.jib.co.th/img_master/uploads/Content/0201038239/pre-installed-pd_(1).png",
+          "price": 6900
+        }
+      },
+      {
+        "cooler": {
+          "name": "Cooler Master Hyper 212 RGB Black Edition",
+          "image_url": "https://example.com/cooler_image.jpg",
+          "price": 1250
+        }
+      }
+    ]
+  }],
   "cpu": [
     {
       "ID": "CPU_00001",
