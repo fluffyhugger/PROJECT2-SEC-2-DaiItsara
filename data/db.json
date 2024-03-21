@@ -1,695 +1,705 @@
 {
-  "pc_build": [ {
-    "builder_id": 1,
-    "builder_name": "anonymous",
-    "build_date": "2024-03-20T10:30:00",
-    "components": [
-      {
-        "cpu": {
-          "name": "i7-13700H",
-          "image_url": "https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png",
-          "price": 9500
+  "pc-build": [
+    {
+      "builder-id": 1,
+      "builder-name": "anonymous",
+      "build-date": "2024-03-20T10:30:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "i7-13700H",
+            "image-url": "https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png",
+            "price": 9500
+          }
+        },
+        {
+          "ram": {
+            "name": "Corsair Vengeance LPX 16GB",
+            "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2024/02/Product/corsair-vengeance-lpx-black-ddr4-16gb-3200mhz-ram-front-view.jpg",
+            "price": 3600
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3080",
+            "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152146/A0152146OK_BIG_1.jpg",
+            "price": 24000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 970 EVO Plus 1TB",
+            "image-url": "https://www.jib.co.th/img_master/product/original/2019052214582033879_1.png",
+            "price": 6000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate Barracuda 2TB",
+            "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0127509/A0127509OK_BIG_1.jpg",
+            "price": 2400
+          }
+        },
+        {
+          "psu": {
+            "name": "EVGA SuperNOVA 850 G3",
+            "image-url": "https://example.com/psu_image.jpg",
+            "price": 4500
+          }
+        },
+        {
+          "case": {
+            "name": "NZXT H510",
+            "image-url": "https://i.ebayimg.com/images/g/wE0AAOSwdRBkMRIn/s-l1600.jpg",
+            "price": 1750
+          }
+        },
+        {
+          "monitor": {
+            "name": "ASUS ROG Swift PG279QM",
+            "image-url": "https://www.commartthailand.com/wp-content/uploads/2022/03/h525.png",
+            "price": 39900
+          }
+        },
+        {
+          "mainboard": {
+            "name": "MSI MPG Z590 GAMING PLUS",
+            "image-url": "https://www.jib.co.th/img_master/uploads/Content/0201038239/pre-installed-pd_(1).png",
+            "price": 6900
+          }
+        },
+        {
+          "cooler": {
+            "name": "Cooler Master Hyper 212 RGB Black Edition",
+            "image-url": "https://cdn.coolermaster.com/media/assets/1041/h212rgb_g13-image.png",
+            "price": 1250
+          }
         }
-      },
-      {
-        "ram": {
-          "name": "Corsair Vengeance LPX 16GB",
-          "image_url": "https://example.com/ram_image.jpg",
-          "price": 3600
-        }
-      },
-      {
-        "gpu": {
-          "name": "NVIDIA GeForce RTX 3080",
-          "image_url": "https://example.com/gpu_image.jpg",
-          "price": 24000
-        }
-      },
-      {
-        "ssd": {
-          "name": "Samsung 970 EVO Plus 1TB",
-          "image_url": "https://example.com/ssd_image.jpg",
-          "price": 6000
-        }
-      },
-      {
-        "hdd": {
-          "name": "Seagate Barracuda 2TB",
-          "image_url": "https://example.com/hdd_image.jpg",
-          "price": 2400
-        }
-      },
-      {
-        "psu": {
-          "name": "EVGA SuperNOVA 850 G3",
-          "image_url": "https://example.com/psu_image.jpg",
-          "price": 4500
-        }
-      },
-      {
-        "case": {
-          "name": "NZXT H510",
-          "image_url": "https://example.com/case_image.jpg",
-          "price": 1750
-        }
-      },
-      {
-        "monitor": {
-          "name": "ASUS ROG Swift PG279QM",
-          "image_url": "https://www.commartthailand.com/wp-content/uploads/2022/03/h525.png",
-          "price": 39900
-        }
-      },
-      {
-        "mainboard": {
-          "name": "MSI MPG Z590 GAMING PLUS",
-          "image_url": "https://www.jib.co.th/img_master/uploads/Content/0201038239/pre-installed-pd_(1).png",
-          "price": 6900
-        }
-      },
-      {
-        "cooler": {
-          "name": "Cooler Master Hyper 212 RGB Black Edition",
-          "image_url": "https://example.com/cooler_image.jpg",
-          "price": 1250
-        }
-      }
-    ]
-  }],
+      ]
+    }
+  ],
   "cpu": [
     {
-      "ID": "CPU_00001",
-      "Brand": "Intel",
-      "Series": "Core i7",
-      "Model": "12700K",
-      "Price": 11840,
-      "Socket": "INTEL LGA1700",
-      "ChipsetSupport": "Intel B660",
-      "Cores": 12,
-      "Threads": 20,
-      "L2Cache": "12MB",
-      "L3Cache": "25MB",
-      "Picture": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png"
+      "id": "CPU_00001",
+      "brand": "Intel",
+      "series": "Core i7",
+      "model": "12700K",
+      "price": 11840,
+      "socket": "INTEL LGA1700",
+      "chipset-support": "Intel B660",
+      "cores": 12,
+      "threads": 20,
+      "l2-cache": "12MB",
+      "l3-cache": "25MB",
+      "picture": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png"
     },
     {
-      "ID": "CPU_00002",
-      "Brand": "AMD",
-      "Series": "Ryzen 5",
-      "Model": "5600G",
-      "Price": 5290,
-      "Socket": "AM4",
-      "ChipsetSupport": "AMD A520",
-      "Cores": 6,
-      "Threads": 12,
-      "L2Cache": "3MB",
-      "L3Cache": "16MB",
-      "Picture": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png"
+      "id": "CPU_00002",
+      "brand": "AMD",
+      "series": "Ryzen 5",
+      "model": "5600G",
+      "price": 5290,
+      "socket": "AM4",
+      "chipset-support": "AMD A520",
+      "cores": 6,
+      "threads": 12,
+      "l2-cache": "3MB",
+      "l3-cache": "16MB",
+      "picture": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png"
     },
     {
-      "ID": "CPU_00003",
-      "Brand": "Intel",
-      "Series": "Core i5",
-      "Model": "10400F",
-      "Price": 3830,
-      "Socket": "INTEL LGA1200",
-      "ChipsetSupport": "Intel B460",
-      "Cores": 6,
-      "Threads": 12,
-      "L2Cache": "1.5MB",
-      "L3Cache": "12MB",
-      "Picture": "https://cdn.inet.se/product/1600x900/5303147_3.jpg"
+      "id": "CPU_00003",
+      "brand": "Intel",
+      "series": "Core i5",
+      "model": "10400F",
+      "price": 3830,
+      "socket": "INTEL LGA1200",
+      "chipset-support": "Intel B460",
+      "cores": 6,
+      "threads": 12,
+      "l2-cache": "1.5MB",
+      "l3-cache": "12MB",
+      "picture": "https://cdn.inet.se/product/1600x900/5303147_3.jpg"
     }
   ],
   "ram": [
     {
-      "ID": "RAM_00001",
-      "Brand": "APACER",
-      "Model": "PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
-      "MemoryType": "DDR5",
-      "MemorySize": "32GB (16GBx2)",
-      "MemorySpeed": "5200 MHz",
-      "CASLatency": 38,
-      "Voltage": "1.1 V",
-      "Color": "Black",
-      "Price": 4290,
-      "Picture": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png"
+      "id": "RAM_00001",
+      "brand": "APACER",
+      "model": "PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
+      "memorytype": "DDR5",
+      "memory-size": "32GB (16GBx2)",
+      "memory-speed": "5200 MHz",
+      "cas-latency": 38,
+      "voltage": "1.1 V",
+      "color": "Black",
+      "price": 4290,
+      "picture": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png"
     },
     {
-      "ID": "RAM_00002",
-      "Brand": "PNY",
-      "Model": "XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
-      "MemoryType": "DDR5",
-      "MemorySize": "32GB (16GBx2)",
-      "MemorySpeed": "6000 MHz",
-      "CASLatency": 40,
-      "Voltage": "1.4 V",
-      "Color": "White",
-      "Price": 4600,
-      "Picture": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947"
+      "id": "RAM_00002",
+      "brand": "PNY",
+      "model": "XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
+      "memorytype": "DDR5",
+      "memory-size": "32GB (16GBx2)",
+      "memory-speed": "6000 MHz",
+      "cas-latency": 40,
+      "voltage": "1.4 V",
+      "color": "White",
+      "price": 4600,
+      "picture": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947"
     },
     {
-      "ID": "RAM_00003",
-      "Brand": "KINGSTON",
-      "Model": "HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
-      "MemoryType": "DDR4",
-      "MemorySize": "16GB (16GBx1)",
-      "MemorySpeed": "3200 MHz",
-      "CASLatency": "16-18-18-38",
-      "Voltage": "1.35 V",
-      "Color": "-",
-      "Price": 2300,
-      "Picture": "https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png"
+      "id": "RAM_00003",
+      "brand": "KINGSTON",
+      "model": "HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
+      "memorytype": "DDR4",
+      "memory-size": "16GB (16GBx1)",
+      "memory-speed": "3200 MHz",
+      "cas-latency": "16-18-18-38",
+      "voltage": "1.35 V",
+      "color": "-",
+      "price": 2300,
+      "picture": "https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png"
     }
   ],
+
   "gpu": [
     {
-      "ID": "GPU_00001",
-      "Brand": "ASUS",
-      "Series": "GeForce RTX 40 Series",
-      "Model": "TUF Gaming GeForce RTX 4060 Ti OC",
-      "GPUChipset": "NVIDIA",
-      "GPUName": "AD106-350-A1",
-      "GPUClock": "2310 MHz",
-      "BoostClock": "2655 MHz",
-      "Architecture": "Ada Lovelace",
-      "Technology": "5 nm",
-      "MemoryClock": "18000 MHz",
-      "MemorySize": "8 GB",
-      "MemoryInterface": "128 bit",
-      "MemoryType": "GDDR6",
-      "BusInterface": "PCI Express 4.0 x8",
-      "MultiGPUSupports": "-",
-      "DirectX": "12.2",
-      "OpenGL": "4.6",
-      "ShaderModel": "6.7",
-      "HDMIPorts": 1,
-      "DisplayPorts": 3,
-      "PowerConnector": "8 Pin",
-      "PowerRequirements": "550 W",
-      "Price": 16320,
-      "Picture": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png"
+      "id": "GPU_00001",
+      "brand": "ASUS",
+      "series": "GeForce RTX 40 Series",
+      "model": "TUF Gaming GeForce RTX 4060 Ti OC",
+      "gpu-chipset": "NVIDIA",
+      "gpu-name": "AD106-350-A1",
+      "gpu-clock": "2310 MHz",
+      "boost-clock": "2655 MHz",
+      "architecture": "Ada Lovelace",
+      "technology": "5 nm",
+      "memory-clock": "18000 MHz",
+      "memory-size": "8 GB",
+      "memory-interface": "128 bit",
+      "memory-type": "GDDR6",
+      "bus-interface": "PCI Express 4.0 x8",
+      "multi-gpu-supports": "-",
+      "directx": "12.2",
+      "opengl": "4.6",
+      "shader-model": "6.7",
+      "hdmi-ports": 1,
+      "display-ports": 3,
+      "power-connector": "8 Pin",
+      "power-requirements": "550 W",
+      "price": 16320,
+      "picture": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png"
     },
     {
-      "ID": "GPU_00002",
-      "Brand": "GIGABYTE",
-      "Series": "Radeon RX 7000 Series",
-      "Model": "Radeon RX 7600 Gaming OC 8G",
-      "GPUChipset": "AMD",
-      "GPUName": "Navi 33 XL",
-      "GPUClock": "1720 MHz",
-      "BoostClock": "2755 MHz",
-      "Architecture": "RDNA 3",
-      "Technology": "6 nm",
-      "MemoryClock": "18000 MHz",
-      "MemorySize": "8 GB",
-      "MemoryInterface": "128 bit",
-      "MemoryType": "GDDR6",
-      "BusInterface": "PCI Express 4.0 x16",
-      "MultiGPUSupports": "-",
-      "DirectX": "12.2",
-      "OpenGL": "4.6",
-      "ShaderModel": "6.7",
-      "HDMIPorts": 2,
-      "DisplayPorts": 2,
-      "Price": 9800,
-      "Picture": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png"
+      "id": "GPU_00002",
+      "brand": "GIGABYTE",
+      "series": "Radeon RX 7000 Series",
+      "model": "Radeon RX 7600 Gaming OC 8G",
+      "gpu-chipset": "AMD",
+      "gpu-name": "Navi 33 XL",
+      "gpu-clock": "1720 MHz",
+      "boost-clock": "2755 MHz",
+      "architecture": "RDNA 3",
+      "technology": "6 nm",
+      "memory-clock": "18000 MHz",
+      "memory-size": "8 GB",
+      "memory-interface": "128 bit",
+      "memory-type": "GDDR6",
+      "bus-interface": "PCI Express 4.0 x16",
+      "multi-gpu-supports": "-",
+      "directx": "12.2",
+      "opengl": "4.6",
+      "shader-model": "6.7",
+      "hdmi-ports": 2,
+      "display-ports": 2,
+      "price": 9800,
+      "picture": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png"
     },
     {
-      "ID": "GPU_00003",
-      "Brand": "Zotac",
-      "Series": "GeForce RTX 30 Series",
-      "Model": "GeForce RTX 3080 Trinity OC",
-      "GPUChipset": "NVIDIA",
-      "GPUName": "GA102",
-      "GPUClock": "1440 MHz",
-      "BoostClock": "1725 MHz",
-      "Architecture": "Ampere",
-      "Technology": "8nm",
-      "MemoryClock": "19000 MHz",
-      "MemorySize": "10GB",
-      "MemoryInterface": "320bit",
-      "MemoryType": "GDDR6X",
-      "BusInterface": "PCI Express 4.0 x16",
-      "MultiGPUSupports": "-",
-      "DirectX": "12",
-      "OpenGL": "3.0",
-      "ShaderModel": "6.5",
-      "HDMIPorts": 1,
-      "DisplayPorts": 3,
-      "PowerConnector": "8 Pin + 8 Pin",
-      "PowerRequirements": "700 W",
-      "Price": 29230,
-      "Picture": "https://notebookspec.com/storage/pc-vga/vga_1292_20201006-104957_1.png"
+      "id": "GPU_00003",
+      "brand": "Zotac",
+      "series": "GeForce RTX 30 Series",
+      "model": "GeForce RTX 3080 Trinity OC",
+      "gpu-chipset": "NVIDIA",
+      "gpu-name": "GA102",
+      "gpu-clock": "1440 MHz",
+      "boost-clock": "1725 MHz",
+      "architecture": "Ampere",
+      "technology": "8nm",
+      "memory-clock": "19000 MHz",
+      "memory-size": "10GB",
+      "memory-interface": "320bit",
+      "memory-type": "GDDR6X",
+      "bus-interface": "PCI Express 4.0 x16",
+      "multi-gpu-supports": "-",
+      "directx": "12",
+      "opengl": "3.0",
+      "shader-model": "6.5",
+      "hdmi-ports": 1,
+      "display-ports": 3,
+      "power-connector": "8 Pin + 8 Pin",
+      "power-requirements": "700 W",
+      "price": 29230,
+      "picture": "https://notebookspec.com/storage/pc-vga/vga_1292_20201006-104957_1.png"
     }
   ],
+
   "ssd": [
     {
-      "ID": "SSD_00001",
-      "Brand": "CORSAIR",
-      "Model": "Force Series MP600 Pro LPX Black 1TB",
-      "FormFactor": "M.2",
-      "Capacity": "1TB",
-      "Interface": "M.2 PCIe",
-      "Read/write": "Up to 7100 / 5800 MB/s",
-      "Max 4K Random": "-",
-      "Memory Modules": "TLC",
-      "Endurance (TBW)": "700 TB",
-      "Technology": "3D-NAND TLC, Kioxia, 96 Layer (BiCS4), SLC-Cached, PS5 Support",
-      "Controller": "Phison PS5018-E18, 8 channels",
-      "Protocol": "NVMe",
-      "LED Lighting": "-",
-      "Warranty": "5 years",
-      "Price_Baht": 3790,
-      "Picture": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png"
+      "id": "SSD_00001",
+      "brand": "CORSAIR",
+      "model": "Force Series MP600 Pro LPX Black 1TB",
+      "form-factor": "M.2",
+      "capacity": "1TB",
+      "interface": "M.2 PCIe",
+      "read/write": "Up to 7100 / 5800 MB/s",
+      "max4k-random": "-",
+      "memory-modules": "TLC",
+      "endurance (tbw)": "700 TB",
+      "technology": "3D-NAND TLC, Kioxia, 96 Layer (BiCS4), SLC-Cached, PS5 Support",
+      "controller": "Phison PS5018-E18, 8 channels",
+      "protocol": "NVMe",
+      "led-lighting": "-",
+      "warranty": "5 years",
+      "price_baht": 3790,
+      "picture": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png"
     },
     {
-      "ID": "SSD_00002",
-      "Brand": "Addlink",
-      "Model": "S95 1TB M.2",
-      "FormFactor": "M.2",
-      "Capacity": "1TB",
-      "Interface": "M.2 PCIe",
-      "Read/write": "Up to 7000 / 6000 MB/s",
-      "Max 4K Random": "-",
-      "Memory Modules": "3D-NAND TLC",
-      "Endurance (TBW)": "-",
-      "Technology": "Phison",
-      "Controller": "-",
-      "Protocol": "NVMe",
-      "LED Lighting": "0",
-      "Warranty": "5 years",
-      "Price_Baht": 8200,
-      "Picture": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fd12fa42-c69e-4166-90cb-46601174cffb.__CR0,0,200,225_PT0_SX200_V1___.png"
+      "id": "SSD_00002",
+      "brand": "Addlink",
+      "model": "S95 1TB M.2",
+      "form-factor": "M.2",
+      "capacity": "1TB",
+      "interface": "M.2 PCIe",
+      "read/write": "Up to 7000 / 6000 MB/s",
+      "max4k-random": "-",
+      "memory-modules": "3D-NAND TLC",
+      "endurance (tbw)": "-",
+      "technology": "Phison",
+      "controller": "-",
+      "protocol": "NVMe",
+      "led-lighting": "0",
+      "warranty": "5 years",
+      "price_baht": 8200,
+      "picture": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fd12fa42-c69e-4166-90cb-46601174cffb.__CR0,0,200,225_PT0_SX200_V1___.png"
     },
     {
-      "ID": "SSD_00003",
-      "Brand": "Apacer",
-      "Model": "AS2280Q4U 512GB",
-      "FormFactor": "M.2",
-      "Capacity": "512GB",
-      "Interface": "M.2 PCIe",
-      "Read/write": "Up to 2400 / 1800 MB/s",
-      "Max 4K Random": "Up to 180,000 IOPS : 150,000 IOPS",
-      "Memory Modules": "-",
-      "Endurance (TBW)": "260TB",
-      "Technology": "3D-NAND",
-      "Controller": "-",
-      "Protocol": "NVMe",
-      "LED Lighting": "0",
-      "Warranty": "5 years",
-      "Price_Baht": 1965,
-      "Picture": "https://gzhls.at/i/75/20/2827520-l0.png"
+      "id": "SSD_00003",
+      "brand": "Apacer",
+      "model": "AS2280Q4U 512GB",
+      "form-factor": "M.2",
+      "capacity": "512GB",
+      "interface": "M.2 PCIe",
+      "read/write": "Up to 2400 / 1800 MB/s",
+      "max4k-random": "Up to 180,000 IOPS : 150,000 IOPS",
+      "memory-modules": "-",
+      "endurance (tbw)": "260TB",
+      "technology": "3D-NAND",
+      "controller": "-",
+      "protocol": "NVMe",
+      "led-lighting": "0",
+      "warranty": "5 years",
+      "price_baht": 1965,
+      "picture": "https://gzhls.at/i/75/20/2827520-l0.png"
     }
   ],
   "hdd": [
     {
-      "ID": "HDD_00001",
-      "Brand": "Seagate",
-      "Model": "IronWolf 4TB",
-      "Price": 4250,
-      "FormFactor": "3.5",
-      "Capacity": "4TB",
-      "Interface": "SATA 6Gb/s",
-      "RotationalSpeed": "5400 RPM",
-      "Buffer": "256MB",
-      "Picture":"https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png"
+      "id": "HDD_00001",
+      "brand": "Seagate",
+      "model": "IronWolf 4TB",
+      "price": 4250,
+      "form-factor": "3.5",
+      "capacity": "4TB",
+      "interface": "SATA 6Gb/s",
+      "rotational-speed": "5400 RPM",
+      "buffer": "256MB",
+      "picture": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png"
     },
     {
-      "ID": "HDD_00002",
-      "Brand": "Western Digital",
-      "Model": "Red Plus Nas 4TB",
-      "Price": 4550,
-      "FormFactor": "3.5",
-      "Capacity": "4TB",
-      "Interface": "SATA 6Gb/s",
-      "RotationalSpeed": "5400 RPM",
-      "Buffer": "128MB",
-      "Picture":"https://notebookspec.com/storage/pc-hdd/hdd_222_20210311-114658_1.png"
+      "id": "HDD_00002",
+      "brand": "Western Digital",
+      "model": "Red Plus Nas 4TB",
+      "price": 4550,
+      "form-factor": "3.5",
+      "capacity": "4TB",
+      "interface": "SATA 6Gb/s",
+      "rotational-speed": "5400 RPM",
+      "buffer": "128MB",
+      "picture": "https://notebookspec.com/storage/pc-hdd/hdd_222_20210311-114658_1.png"
     },
     {
-      "ID": "HDD_00003",
-      "Brand": "Toshiba",
-      "Model": "X300 Performance 6TB",
-      "Price": 6410,
-      "FormFactor": "3.5",
-      "Capacity": "6TB",
-      "Interface": "SATA 6Gb/s",
-      "RotationalSpeed": "7200 RPM",
-      "Buffer": "256MB",
-      "Picture":"https://notebookspec.com/storage/pc-hdd/hdd_202_20201012-111555_1.png"
+      "id": "HDD_00003",
+      "brand": "Toshiba",
+      "model": "X300 Performance 6TB",
+      "price": 6410,
+      "form-factor": "3.5",
+      "capacity": "6TB",
+      "interface": "SATA 6Gb/s",
+      "rotational-speed": "7200 RPM",
+      "buffer": "256MB",
+      "picture": "https://notebookspec.com/storage/pc-hdd/hdd_202_20201012-111555_1.png"
     }
   ],
+
   "psu": [
     {
-      "ID": "PSU_00001",
+      "id": "PSU_00001",
       "brand": "AEROCOOL",
       "series": "Superb",
       "model": "Superb 600W",
-      "formFactor": "ATX",
-      "maximumPower": "600W",
+      "form-factor": "ATX",
+      "maximum-power": "600W",
       "modular": "Fully Modular",
       "fans": "1 x 120mm Fan",
       "certificates": "-",
-      "inputVoltage": "90 - 264 V",
-      "inputFrequency": "47/63 Hz",
+      "input-voltage": "90 - 264 V",
+      "input-frequency": "47/63 Hz",
       "dimensions": "x x",
-      "ledLighting": "-",
-      "mainPower": "20+4 Pin",
-      "pciEConnector": "1 x 6+2 Pin",
-      "sataConnector": "3",
-      "molexConnector": "-",
+      "led-lighting": "-",
+      "main-power": "20+4 Pin",
+      "pcie-connector": "1 x 6+2 Pin",
+      "sata-connector": "3",
+      "molex-connector": "-",
       "price": 790,
-      "Picture" : "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png"
+      "picture": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png"
     },
     {
-      "ID": "PSU_00002",
+      "id": "PSU_00002",
       "brand": "THERMALTAKE",
       "series": "Toughpower GF",
       "model": "Toughpower GF 850W",
-      "formFactor": "ATX",
-      "maximumPower": "850W",
+      "form-factor": "ATX",
+      "maximum-power": "850W",
       "modular": "Fully Modular",
       "fans": "1 x 140mm Fan",
       "certificates": "80 PLUS Gold",
-      "inputVoltage": "100 - 240 V",
-      "inputFrequency": "47/63 Hz",
+      "input-voltage": "100 - 240 V",
+      "input-frequency": "47/63 Hz",
       "dimensions": "150 x 86 x 160",
-      "ledLighting": "-",
-      "mainPower": "20+4 Pin",
-      "pciEConnector": "6 x 6+2-Pin",
-      "sataConnector": "12",
-      "molexConnector": "-",
+      "led-lighting": "-",
+      "main-power": "20+4 Pin",
+      "pcie-connector": "6 x 6+2-Pin",
+      "sata-connector": "12",
+      "molex-connector": "-",
       "price": 3650,
-      "Picture" : "https://www.jib.co.th/img_master/uploads/Content/2310393011/ToughpowerGF_850_1.png"
+      "picture": "https://www.jib.co.th/img_master/uploads/Content/2310393011/ToughpowerGF_850_1.png"
     },
     {
-      "ID": "PSU_00003",
+      "id": "PSU_00003",
       "brand": "ASUS",
       "series": "ROG Strix",
       "model": "Rog Thor Platinum II EVA Edition 1000P2",
-      "formFactor": "ATX",
-      "maximumPower": "1000W",
+      "form-factor": "ATX",
+      "maximum-power": "1000W",
       "modular": "Fully Modular",
       "fans": "1 x 135mm Fan",
       "certificates": "80 PLUS Platinum",
-      "inputVoltage": "100 - 240 V",
-      "inputFrequency": "47/63 Hz",
+      "input-voltage": "100 - 240 V",
+      "input-frequency": "47/63 Hz",
       "dimensions": "190 x 86 x 150",
-      "ledLighting": "-",
-      "mainPower": "20+4 Pin",
-      "pciEConnector": "8 x 6+2 Pin",
-      "sataConnector": "12",
-      "molexConnector": "-",
+      "led-lighting": "-",
+      "main-power": "20+4 Pin",
+      "pcie-connector": "8 x 6+2 Pin",
+      "sata-connector": "12",
+      "molex-connector": "-",
       "price": 13690,
-      "Picture": "https://storage.googleapis.com/file-computeandmore/images/d031c53f-1d1f-4ae5-ab07-5529824f95bb.png"
+      "picture": "https://storage.googleapis.com/file-computeandmore/images/d031c53f-1d1f-4ae5-ab07-5529824f95bb.png"
     }
   ],
+
   "case": [
     {
-      "ID": "CASE_00001",
-      "Brand": "NZXT",
-      "Model": "H5 Elite White",
-      "Form Factor": "Mid Tower",
-      "Mainboard Support": "Mini-ITX, Micro-ATX, ATX, E-ATX",
-      "Material": "Steel, Plastic, Tempered Glass",
-      "Color": "White",
-      "Weight": "8.1kg",
-      "Dimension": "227mm x 464mm x 446mm",
-      "I/O Ports": [
+      "id": "CASE_00001",
+      "brand": "NZXT",
+      "model": "H5 Elite White",
+      "form-factor": "Mid Tower",
+      "mainboard-support": "Mini-ITX, Micro-ATX, ATX, E-ATX",
+      "material": "Steel, Plastic, Tempered Glass",
+      "color": "White",
+      "weight": "8.1kg",
+      "dimension": "227mm x 464mm x 446mm",
+      "i/o-ports": [
         "1 x USB 3.1 Type C",
         "1 x USB 3.2 Type A",
         "1 x Audio Header"
       ],
-      "Cooling Support": {
-        "Fan Support": {
-          "Front": "120mm/140mm x 2",
-          "Top": "120mm x 2",
-          "Rear": "120mm x 1",
-          "Side": "-",
-          "Bottom": "-"
+      "cooling-support": {
+        "fan-support": {
+          "front": "120mm/140mm x 2",
+          "top": "120mm x 2",
+          "rear": "120mm x 1",
+          "side": "-",
+          "bottom": "-"
         },
-        "Radiator Support": {
-          "Front": "280mm",
-          "Top": "240mm",
-          "Rear": "120mm",
-          "Side": "-",
-          "Bottom": "-"
+        "radiator-support": {
+          "front": "280mm",
+          "top": "240mm",
+          "rear": "120mm",
+          "side": "-",
+          "bottom": "-"
         }
       },
-      "LED Lighting": "-",
-      "Max CPU Coolers height": 165,
-      "Max VGA Length": 365,
-      "Warranty": "3 years",
-      "Price_Baht": 5150,
-      "Picture": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png"
+      "led-lighting": "-",
+      "max-cpu-coolers-height": 165,
+      "max-vga-length": 365,
+      "warranty": "3 years",
+      "price_baht": 5150,
+      "picture": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png"
     },
     {
-      "ID": "CASE_00002",
-      "Brand": "NZXT",
-      "Model": "H9 Elite Black",
-      "Form Factor": "Mid Tower",
-      "Mainboard Support": "Mini-ITX, Micro-ATX, ATX",
-      "Material": "SGCC Steel, Ultra-clear Tempered Glass, Dark Tinted Tempered Glass (Black only)",
-      "Color": "Black",
-      "Weight": "13.1Kg",
-      "Dimension": "290 x 495 x 466",
-      "I/O Ports": ["1x USB-C 3.1", "2x USB-A 3.0", "1x headphone/microphone"],
-      "Cooling Support": {
-        "Fan Support": {
-          "Front": "-",
-          "Top": "3 x 120mm (optional) or 2 x 140mm (optional)",
-          "Rear": "1 x 120mm",
-          "Side": "3 x 120mm",
-          "Bottom": "3 x 120mm (optional) or 2 x 140mm (optional)"
+      "id": "CASE_00002",
+      "brand": "NZXT",
+      "model": "H9 Elite Black",
+      "form-factor": "Mid Tower",
+      "mainboard-support": "Mini-ITX, Micro-ATX, ATX",
+      "material": "SGCC Steel, Ultra-clear Tempered Glass, Dark Tinted Tempered Glass (Black only)",
+      "color": "Black",
+      "weight": "13.1Kg",
+      "dimension": "290 x 495 x 466",
+      "i/o-ports": ["1x USB-C 3.1", "2x USB-A 3.0", "1x headphone/microphone"],
+      "cooling-support": {
+        "fan-support": {
+          "front": "-",
+          "top": "3 x 120mm (optional) or 2 x 140mm (optional)",
+          "rear": "1 x 120mm",
+          "side": "3 x 120mm",
+          "bottom": "3 x 120mm (optional) or 2 x 140mm (optional)"
         },
-        "Radiator Support": {
-          "Front": "-",
-          "Top": "120/140/240/280/360mm",
-          "Rear": "120mm",
-          "Side": "120/240/360mm",
-          "Bottom": "-"
+        "radiator-support": {
+          "front": "-",
+          "top": "120/140/240/280/360mm",
+          "rear": "120mm",
+          "side": "120/240/360mm",
+          "bottom": "-"
         }
       },
-      "LED Lighting": "RGB-Header, integrated LED control",
-      "Max CPU Coolers height": 165,
-      "Max VGA Length": 435,
-      "Warranty": "2 years",
-      "Price_Baht": 8790,
-      "Picture":"https://www.autonetpc.com/wp-content/uploads/2023/01/1672294382-h9-elite-open-black.png"
+      "led-lighting": "RGB-Header, integrated LED control",
+      "max-cpu-coolers-height": 165,
+      "max-vga-length": 435,
+      "warranty": "2 years",
+      "price_baht": 8790,
+      "picture": "https://www.autonetpc.com/wp-content/uploads/2023/01/1672294382-h9-elite-open-black.png"
     },
     {
-      "ID": "CASE_00003",
-      "Brand": "THERMALTAKE",
-      "Model": "Core P6 Turquoise",
-      "Form Factor": "Full Tower",
-      "Mainboard Support": "Mini-ITX, Micro-ATX, ATX",
-      "Material": "Steel, Plastic, Tempered Glass",
-      "Color": "Green",
-      "Weight": "17.84Kg",
-      "Dimension": "255mm x 530mm x 565mm",
-      "I/O Ports": [
+      "id": "CASE_00003",
+      "brand": "THERMALTAKE",
+      "model": "Core P6 Turquoise",
+      "form-factor": "Full Tower",
+      "mainboard-support": "Mini-ITX, Micro-ATX, ATX",
+      "material": "Steel, Plastic, Tempered Glass",
+      "color": "Green",
+      "weight": "17.84Kg",
+      "dimension": "255mm x 530mm x 565mm",
+      "i/o-ports": [
         "2 x USB 2.0",
         "2 x USB 3.0",
         "1 x USB Typte-C",
         "1 x Audio Header"
       ],
-      "Cooling Support": {
-        "Fan Support": {
-          "Front": "120mm x 3/ 140mm x 2",
-          "Top": "120mm x 3/ 140mm x 2",
-          "Rear": "120mm x 1",
-          "Side": "120mm x 3/ 140mm x 2",
-          "Bottom": "120mm x 3/ 140mm x 2"
+      "cooling-support": {
+        "fan-support": {
+          "front": "120mm x 3/ 140mm x 2",
+          "top": "120mm x 3/ 140mm x 2",
+          "rear": "120mm x 1",
+          "side": "120mm x 3/ 140mm x 2",
+          "bottom": "120mm x 3/ 140mm x 2"
         },
-        "Radiator Support": {
-          "Front": "360mm",
-          "Top": "360mm",
-          "Rear": "120mm",
-          "Side": "360mm",
-          "Bottom": "240mm"
+        "radiator-support": {
+          "front": "360mm",
+          "top": "360mm",
+          "rear": "120mm",
+          "side": "360mm",
+          "bottom": "240mm"
         }
       },
-      "LED Lighting": "-",
-      "Max CPU Coolers height": 180,
-      "Max VGA Length": 458,
-      "Warranty": "2 years",
-      "Price_Baht": 5890,
-      "Picture":"https://m.media-amazon.com/images/I/61-BLsQQc7L._AC_UF1000,1000_QL80_.jpg"
+      "led-lighting": "-",
+      "max-cpu-coolers-height": 180,
+      "max-vga-length": 458,
+      "warranty": "2 years",
+      "price_baht": 5890,
+      "picture": "https://m.media-amazon.com/images/I/61-BLsQQc7L._AC_UF1000,1000_QL80_.jpg"
     }
   ],
+
   "monitor": [
     {
-      "ID": "MONITOR_00001",
-      "Brand": "LG",
-      "Series": "-",
-      "Model": "24MK600M-B",
-      "Price": 3715,
-      "DisplaySize": "23.8 inches",
-      "MonitorType": "Strandard",
-      "PanelType": "IPS",
-      "MaxResolution": "1920 x 1080",
-      "AspectRatio": "16:9",
-      "RefreshRate": "75Hz",
-      "Picture":"https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png"
+      "id": "MONITOR-00001",
+      "brand": "LG",
+      "series": "-",
+      "model": "24MK600M-B",
+      "price": 3715,
+      "display-size": "23.8 inches",
+      "monitor-type": "Strandard",
+      "panel-type": "IPS",
+      "max-resolution": "1920 x 1080",
+      "aspect-ratio": "16:9",
+      "refresh-rate": "75Hz",
+      "picture": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png"
     },
     {
-      "ID": "MONITOR_00002",
-      "Brand": "SAMSUNG",
-      "Series": "LS28",
-      "Model": "LS28BG700EEXXT",
-      "Price": 16500,
-      "DisplaySize": "28 inches",
-      "MonitorType": "Gaming",
-      "PanelType": "IPS",
-      "MaxResolution": "3840 x 2160",
-      "AspectRatio": "16:9",
-      "RefreshRate": "144Hz",
-      "Picture":"https://www.neoshop.co.th/wp-content/uploads/2023/08/th-gaming-ls32bg702eexxt-ls-bg-e.webp"
+      "id": "MONITOR-00002",
+      "brand": "SAMSUNG",
+      "series": "LS28",
+      "model": "LS28BG700EEXXT",
+      "price": 16500,
+      "display-size": "28 inches",
+      "monitor-type": "Gaming",
+      "panel-type": "IPS",
+      "max-resolution": "3840 x 2160",
+      "aspect-ratio": "16:9",
+      "refresh-rate": "144Hz",
+      "picture": "https://www.neoshop.co.th/wp-content/uploads/2023/08/th-gaming-ls32bg702eexxt-ls-bg-e.webp"
     },
     {
-      "ID": "MONITOR_00003",
-      "Brand": "GIGABYTE",
-      "Series": "G27F",
-      "Model": "G27F 2",
-      "Price": 5690,
-      "DisplaySize": "27 inches",
-      "MonitorType": "Gaming",
-      "PanelType": "IPS",
-      "MaxResolution": "1920 x 1080",
-      "AspectRatio": "16:9",
-      "RefreshRate": "165Hz",
-      "Picture":"https://www.gigabyte.com/FileUpload/Global/KeyFeature/1470/innergigabyteimages//bg1.png"
+      "id": "MONITOR-00003",
+      "brand": "GIGABYTE",
+      "series": "G27F",
+      "model": "G27F 2",
+      "price": 5690,
+      "display-size": "27 inches",
+      "monitor-type": "Gaming",
+      "panel-type": "IPS",
+      "max-resolution": "1920 x 1080",
+      "aspect-ratio": "16:9",
+      "refresh-rate": "165Hz",
+      "picture": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1470/innergigabyteimages//bg1.png"
     }
   ],
+
   "mainboard": [
     {
-      "ID": "MAINBOARD_00001",
-      "Brand": "GIGABYTE",
-      "Model": "Z790 AORUS Elite",
-      "Chipset": "Intel Z790",
-      "CPU Socket": "INTEL LGA1700",
-      "CPU Support": "Intel 12th Generation Intel Core / Intel 13th Generation Intel Core / Pentium / Celeron processors",
-      "Memory Slots": "4 Slots",
-      "Memory Max": "128GB",
-      "Memory Support": "Dual Channel DDR5 4000 MHz Up to 7600 (OC) MHz",
-      "Onboard Graphics": "Integrated Graphics Processor",
-      "Audio Chipset": "Realtek ALC897 Audio Codec",
-      "Audio Channels": "7.1 Channels HD Audio",
-      "LAN Chipset": "1x 2.5GBase-T Realtek RTL8125BG",
-      "LAN Speed": "10/100/1000/2500Mbps",
-      "Wireless LAN": "None",
-      "Bluetooth": "None",
-      "PCI Slots": [
+      "id": "MAINBOARD-00001",
+      "brand": "GIGABYTE",
+      "model": "Z790 AORUS Elite",
+      "chipset": "Intel Z790",
+      "cpu-socket": "INTEL LGA1700",
+      "cpu-support": "Intel 12th Generation Intel Core / Intel 13th Generation Intel Core / Pentium / Celeron processors",
+      "memory-slots": "4 Slots",
+      "memory-max": "128GB",
+      "memory-support": "Dual Channel DDR5 4000 MHz Up to 7600 (OC) MHz",
+      "onboard-graphics": "Integrated Graphics Processor",
+      "audio-chipset": "Realtek ALC897 Audio Codec",
+      "audio-channels": "7.1 Channels HD Audio",
+      "lan-chipset": "1x 2.5GBase-T Realtek RTL8125BG",
+      "lan-speed": "10/100/1000/2500Mbps",
+      "wireless-lan": "None",
+      "bluetooth": "None",
+      "pci-slots": [
         "1 Slot PCI Express 5.0 x16",
         "1 Slot PCI Express 4.0 x16",
         "1 Slot PCI Express 3.0 x16"
       ],
-      "SATA3 Slots": "6 slot",
-      "M.2 Slots": "4 slot",
-      "M.2 Supports type": "M Key Type 2280/22110",
-      "RAID Support": "0/1/5/10",
-      "USB Ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
-      "HDMI Ports": "1x HDMI",
-      "Audio Ports": "2x Audio Ports",
-      "Form Factor": "ATX",
-      "Power Pin": "24+8+8 Pin",
-      "Dimesions (W x L)": "30.5 x 24.4 cm",
-      "Price": 9300,
-      "Picture" : "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png"
+      "sata3-slots": "6 slot",
+      "m.2-slots": "4 slot",
+      "m.2-supports-type": "M Key Type 2280/22110",
+      "raid-support": "0/1/5/10",
+      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "hdmi-ports": "1x HDMI",
+      "audio-ports": "2x Audio Ports",
+      "form-factor": "ATX",
+      "power-pin": "24+8+8 Pin",
+      "dimensions": "30.5 x 24.4 cm",
+      "price": 9300,
+      "picture": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png"
     },
     {
-      "ID": "MAINBOARD_00002",
-      "Brand": "ASUS",
-      "Model": "Prime Z790-A WIFI-CSM",
-      "Chipset": "Intel Z790",
-      "CPU Socket": "INTEL LGA1700",
-      "CPU Support": "Intel 12th Generation Intel Core / Intel 13th Generation Intel Core/ Pentium / Celeron processors",
-      "Memory Slots": "4 Slots",
-      "Memory Max": "192GB",
-      "Memory Support": "Dual Channel DDR5 4000 MHz Up to 7200 (OC) MHz",
-      "Onboard Graphics": "Integrated Graphics Processor",
-      "Audio Chipset": "Realtek ALC1220 Audio Codec",
-      "Audio Channels": "7.1 Channels HD Audio",
-      "LAN Chipset": "1 x 2.5GBase-T Intel I226-V",
-      "LAN Speed": "10/100/1000/2500Mbps",
-      "Wireless LAN": "WLAN 802.11a/​b/​g/​n/​ac/​ax",
-      "Bluetooth": "Bluetooth 5.3",
-      "PCI Slots": [
+      "id": "MAINBOARD-00002",
+      "brand": "ASUS",
+      "model": "Prime Z790-A WIFI-CSM",
+      "chipset": "Intel Z790",
+      "cpu-socket": "INTEL LGA1700",
+      "cpu-support": "Intel 12th Generation Intel Core / Intel 13th Generation Intel Core/ Pentium / Celeron processors",
+      "memory-slots": "4 Slots",
+      "memory-max": "192GB",
+      "memory-support": "Dual Channel DDR5 4000 MHz Up to 7200 (OC) MHz",
+      "onboard-graphics": "Integrated Graphics Processor",
+      "audio-chipset": "Realtek ALC1220 Audio Codec",
+      "audio-channels": "7.1 Channels HD Audio",
+      "lan-chipset": "1 x 2.5GBase-T Intel I226-V",
+      "lan-speed": "10/100/1000/2500Mbps",
+      "wireless-lan": "WLAN 802.11a/​b/​g/​n/​ac/​ax",
+      "bluetooth": "Bluetooth 5.3",
+      "pci-slots": [
         "1 Slot PCI Express 5.0 x16",
         "1 Slot PCI Express 4.0 x16",
         "1 Slot PCI Express 4.0 x4",
         "2 Slot PCI Express 3.0 x1"
       ],
-      "SATA3 Slots": "4 slot",
-      "M.2 Slots": "4 slot",
-      "M.2 Supports type": "2242/2260/2280/22110",
-      "RAID Support": "0/1/5/10",
-      "USB Ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
-      "HDMI Ports": "1x HDMI",
-      "Audio Ports": "3x Audio Ports",
-      "Form Factor": "ATX",
-      "Power Pin": "24+8 Pin",
-      "Dimensions (W x L)": "30.5 x 24.4 cm",
-      "Price": 10890,
-      "Picture":"https://storage.googleapis.com/file-computeandmore/images/7b361b3e-bd80-4bcd-bfdb-a718b3a827da.png"
+      "sata3-slots": "4 slot",
+      "m.2-slots": "4 slot",
+      "m.2-supports-type": "2242/2260/2280/22110",
+      "raid-support": "0/1/5/10",
+      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
+      "hdmi-ports": "1x HDMI",
+      "audio-ports": "3x Audio Ports",
+      "form-factor": "ATX",
+      "power-pin": "24+8 Pin",
+      "dimensions": "30.5 x 24.4 cm",
+      "price": 10890,
+      "picture": "https://storage.googleapis.com/file-computeandmore/images/7b361b3e-bd80-4bcd-bfdb-a718b3a827da.png"
     },
     {
-      "ID": "MAINBOARD_00003",
-      "Brand": "GIGABYTE",
-      "Model": "B650 Gaming X AX",
-      "Chipset": "AMD B650",
-      "CPU Socket": "AMD AM5",
-      "CPU Support": "AMD Ryzen 7000 / AMD Ryzen with Radeon Vega Graphics",
-      "Memory Slots": "4 Slots",
-      "Memory Max": "128GB",
-      "Memory Support": "Dual Channel DDR5 4400 MHz Up to 6400(OC) MHz",
-      "Onboard Graphics": "Integrated Graphics Processor",
-      "Audio Chipset": "Realtek Audio CODEC",
-      "Audio Channels": "7.1 Channels HD Audio",
-      "LAN Chipset": "Realtek Gigabit LAN",
-      "LAN Speed": "10/100/1000Mbps",
-      "Wireless LAN": "Yes",
-      "Bluetooth": "Yes",
-      "PCI Slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
-      "SATA3 Slots": "4 slot",
-      "M.2 Slots": "3 slot",
-      "M.2 Supports type": "2280/22110",
-      "RAID Support": "0/1/5/10",
-      "USB Ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
-      "HDMI Ports": "1x HDMI",
-      "Audio Ports": "3x Audio Ports",
-      "PS/2 Port": "1x PS/2 Port",
-      "Form Factor": "ATX",
-      "Power Pin": "24+8+4 PIN",
-      "Dimensions (W x L)": "30.5 x 24.4 cm",
-      "Price": 10890,
-      "Picture": "https://c1.neweggimages.com/BizIntell/item/MB/Motherboards%20-%20AMD/13-145-449/23.jpg"
+      "id": "MAINBOARD-00003",
+      "brand": "GIGABYTE",
+      "model": "B650 Gaming X AX",
+      "chipset": "AMD B650",
+      "cpu-socket": "AMD AM5",
+      "cpu-support": "AMD Ryzen 7000 / AMD Ryzen with Radeon Vega Graphics",
+      "memory-slots": "4 Slots",
+      "memory-max": "128GB",
+      "memory-support": "Dual Channel DDR5 4400 MHz Up to 6400(OC) MHz",
+      "onboard-graphics": "Integrated Graphics Processor",
+      "audio-chipset": "Realtek Audio CODEC",
+      "audio-channels": "7.1 Channels HD Audio",
+      "lan-chipset": "Realtek Gigabit LAN",
+      "lan-speed": "10/100/1000Mbps",
+      "wireless-lan": "Yes",
+      "bluetooth": "Yes",
+      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
+      "sata3-slots": "4 slot",
+      "m.2-slots": "3 slot",
+      "m.2-supports-type": "2280/22110",
+      "raid-support": "0/1/5/10",
+      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "hdmi-ports": "1x HDMI",
+      "audio-ports": "3x Audio Ports",
+      "ps/2-port": "1x PS/2 Port",
+      "form-factor": "ATX",
+      "power-pin": "24+8+4 PIN",
+      "dimensions": "30.5 x 24.4 cm",
+      "price": 10890,
+      "picture": "https://c1.neweggimages.com/BizIntell/item/MB/Motherboards%20-%20AMD/13-145-449/23.jpg"
     }
   ],
+
   "cooler": [
     {
-      "ID": "COOLER_00001",
+      "id": "COOLER-00001",
       "brand": "ASUS",
       "series": "TUF Gaming",
       "model": "TUF Gaming LC 120 ARGB Black",
-      "formFactor": "Liquid Cooler",
-      "socketSupport": {
+      "form-factor": "Liquid Cooler",
+      "socket-support": {
         "intel": ["LGA1700", "1366", "1156", "1155", "1151", "1150"],
         "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
       },
-      "radiatorDimension": "150mmx122mmx27mm mm.",
-      "radiatorMaterial": "Aluminum, copper, plastic",
-      "fanBuiltIn": "120mm x 1",
-      "ledLighting": "RGB",
-      "price": 2650
+      "radiator-dimension": "150mmx122mmx27mm mm.",
+      "radiator-material": "Aluminum, copper, plastic",
+      "fan-built-in": "120mm x 1",
+      "led-lighting": "RGB",
+      "price": 2650,
+      "picture": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328"
     },
     {
-      "ID": "COOLER_00002",
+      "id": "COOLER-00002",
       "brand": "ASUS",
       "series": "ROG Strix",
       "model": "ROG Strix LC II 240 RGB White Edition",
-      "formFactor": "Liquid Cooler",
-      "socketSupport": {
+      "form-factor": "Liquid Cooler",
+      "socket-support": {
         "intel": [
           "LGA2066",
           "2011-v3",
@@ -703,19 +713,20 @@
         ],
         "amd": ["TR4/​sTRX4/​sWRX8/​SP3", "AM4"]
       },
-      "radiatorDimension": "120mmx272mmx27mm mm.",
-      "radiatorMaterial": "Aluminum, copper, plastic",
-      "fanBuiltIn": "120mm x 2",
-      "ledLighting": "RGB",
-      "price": 7390
+      "radiator-dimension": "120mmx272mmx27mm mm.",
+      "radiator-material": "Aluminum, copper, plastic",
+      "fan-built-in": "120mm x 2",
+      "led-lighting": "RGB",
+      "price": 7390,
+      "picture": "https://dlcdnwebimgs.asus.com/gain/5831EF72-B837-424D-AE04-7AF9DECDA035/w717/h525"
     },
     {
-      "ID": "COOLER_00003",
+      "id": "COOLER-00003",
       "brand": "COOLER MASTER",
       "series": "MasterLiquid",
       "model": "MasterLiquid ML240L ARGB Illusion white",
-      "formFactor": "Liquid Cooler",
-      "socketSupport": {
+      "form-factor": "Liquid Cooler",
+      "socket-support": {
         "intel": [
           "LGA2066",
           "2011-v3",
@@ -728,11 +739,12 @@
         ],
         "amd": ["AM4", "AM3+", "AM3", "AM2+", "FM2+", "FM2", "FM1"]
       },
-      "radiatorDimension": "277x119x27 mm.",
-      "radiatorMaterial": "Aluminum",
-      "fanBuiltIn": "120mm x 2",
-      "ledLighting": "RGB",
-      "price": 3890
+      "radiator-dimension": "277x119x27 mm.",
+      "radiator-material": "Aluminum",
+      "fan-built-in": "120mm x 2",
+      "led-lighting": "RGB",
+      "price": 3890,
+      "picture": "https://chininter.co.th/wp-content/uploads/2021/07/masterliquid-ml240-illusion-white-gallery-0-zoom_1000x1000.png"
     }
   ]
 }
