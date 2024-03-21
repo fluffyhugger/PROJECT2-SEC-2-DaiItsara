@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  cpu: Object,
+  item: Object,
 })
 </script>
 
@@ -10,17 +10,17 @@ defineProps({
   >
     <!-- Image section! -->
     <div class="flex justify-center pt-3">
-      <img class="rounded-t-lg" :src="cpu.Picture" :alt="cpu.Series" />
+      <img class="rounded-t-lg" :src="item.picture" :alt="item.series" />
     </div>
     <div class="p-5">
-      <RouterLink :to="`/build/${cpu.ID}`">
+      <RouterLink :to="`/build/${item.id}`">
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
         >
-          {{ cpu.Brand }} {{ cpu.Series }} {{ cpu.Model }}
+          {{ item.brand }} {{ item.series }} {{ item.model }}
         </h5>
       </RouterLink>
-      <span class="mr-4"> {{ cpu.Price }} Baht</span>
+      <span class="mr-4"> {{ item.price }} Baht</span>
     </div>
   </div>
 </template>

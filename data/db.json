@@ -263,7 +263,7 @@
       "protocol": "NVMe",
       "led-lighting": "-",
       "warranty": "5 years",
-      "price_baht": 3790,
+      "price": 3790,
       "picture": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png"
     },
     {
@@ -282,7 +282,7 @@
       "protocol": "NVMe",
       "led-lighting": "0",
       "warranty": "5 years",
-      "price_baht": 8200,
+      "price": 8200,
       "picture": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fd12fa42-c69e-4166-90cb-46601174cffb.__CR0,0,200,225_PT0_SX200_V1___.png"
     },
     {
@@ -301,7 +301,7 @@
       "protocol": "NVMe",
       "led-lighting": "0",
       "warranty": "5 years",
-      "price_baht": 1965,
+      "price": 1965,
       "picture": "https://gzhls.at/i/75/20/2827520-l0.png"
     }
   ],
@@ -446,7 +446,7 @@
       "max-cpu-coolers-height": 165,
       "max-vga-length": 365,
       "warranty": "3 years",
-      "price_baht": 5150,
+      "price": 5150,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png"
     },
     {
@@ -480,7 +480,7 @@
       "max-cpu-coolers-height": 165,
       "max-vga-length": 435,
       "warranty": "2 years",
-      "price_baht": 8790,
+      "price": 8790,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2023/01/1672294382-h9-elite-open-black.png"
     },
     {
@@ -519,7 +519,7 @@
       "max-cpu-coolers-height": 180,
       "max-vga-length": 458,
       "warranty": "2 years",
-      "price_baht": 5890,
+      "price": 5890,
       "picture": "https://m.media-amazon.com/images/I/61-BLsQQc7L._AC_UF1000,1000_QL80_.jpg"
     }
   ],
