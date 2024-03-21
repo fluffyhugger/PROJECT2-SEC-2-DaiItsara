@@ -1,5 +1,5 @@
 <script setup>
-import Header from "./components/Util/Header.vue"
+import Header from './components/Util/Header.vue'
 // import Footer from "./components/Util/Footer.vue"
 </script>
 
@@ -7,7 +7,7 @@ import Header from "./components/Util/Header.vue"
   <div id="app">
     <Header></Header>
     <!-- <div class="max-w-7xl mx-auto"> -->
-      <div>
+    <div>
       <RouterView />
     </div>
     <!-- <Footer /> -->
