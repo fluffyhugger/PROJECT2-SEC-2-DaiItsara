@@ -6,13 +6,14 @@ const calledComponent = ref({})
 const isLoading = ref(true)
 const route = useRoute()
 
-const CpuComponent = ref(null)
+const itemComponent = ref(null)
 
 // Define an async function to use await inside the setup
 const fetchData = async () => {
+  console.log(route.params.type)
   try {
     const result = await fetch(
-      `http://localhost:5000/cpu/?ID=${route.params.ID}`
+      `http://localhost:5000/${route.params.type}/?id=${route.params.ID}`
     )
 
     if (!result.ok) {
@@ -21,11 +22,10 @@ const fetchData = async () => {
 
     const response = await result.json()
     calledComponent.value = response
-    CpuComponent.value = JSON.parse(JSON.stringify(calledComponent.value[0]))
-    console.log(CpuComponent.value.ID)
+    itemComponent.value = JSON.parse(JSON.stringify(calledComponent.value[0]))
     isLoading.value = false
   } catch (error) {
-    console.error('Error fetching CPU data:', error)
+    console.error('Error fetching item data:', error)
     // Optionally, you can set an error message or handle the error in your UI
   }
 }
@@ -45,26 +45,26 @@ onBeforeMount(async () => {
         <h2
           class="text-3xl font-bold tracking-tight text-black xl:text-4xl mb-5"
         >
-          {{ CpuComponent.Brand }} {{ CpuComponent.Series }}
-          {{ CpuComponent.Model }}
+          {{ itemComponent.brand }} {{ itemComponent.series }}
+          {{ itemComponent.model }}
         </h2>
       </div>
       <div class="flex justify-between">
         <img
           class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-md"
-          :src="CpuComponent.Picture"
-          :alt="CpuComponent.ID"
+          :src="itemComponent.picture"
+          :alt="itemComponent.id"
         />
         <div class="flex flex-col ml-4">
           <!-- Removed justify-between -->
           <div class="border-2 border-black rounded-md p-2 mb-2">
             <!-- Added border, rounded, padding, and margin bottom -->
             <div class="font-extrabold text-black text-center">
-              {{ CpuComponent.Brand }} {{ CpuComponent.Series }}
-              {{ CpuComponent.Model }}
+              {{ itemComponent.brand }} {{ itemComponent.series }}
+              {{ itemComponent.model }}
             </div>
             <div class="font-extrabold text-black text-center">
-              {{ CpuComponent.Price }} Bath
+              {{ itemComponent.price }} Bath
             </div>
             <RouterLink :to="'/build'">
               <button
@@ -78,46 +78,46 @@ onBeforeMount(async () => {
         </div>
       </div>
       <ul class="list-disc list-inside ml-5">
-        <li class="font-bold">{{ CpuComponent.Series }}</li>
-        <li class="font-bold">{{ CpuComponent.Socket }}</li>
-        <li class="font-bold">{{ CpuComponent.ChipsetSupport }}</li>
+        <li class="font-bold">{{ itemComponent.series }}</li>
+        <li class="font-bold">{{ itemComponent.socket }}</li>
+        <li class="font-bold">{{ itemComponent['chipset-support'] }}</li>
       </ul>
     </div>
   </section>
   <section class="bg-white w-full h-full ml-6 p-8">
     <div class="text-2xl font-bold text-black">SPECIFICATIONS</div>
     <div class="mt-4 font-extrabold text-black">
-      {{ CpuComponent.Brand }} {{ CpuComponent.Series }}
-      {{ CpuComponent.Model }}
+      {{ itemComponent.brand }} {{ itemComponent.series }}
+      {{ itemComponent.model }}
     </div>
     <div class="mt-4 font-extrabold text-black mb-4">Model</div>
     <div class="grid grid-cols-3">
       <div class="font-bold bg-slate-300 p-3 text-black">Brand</div>
       <div class="col-span-2 p-3 border-solid border-2">
-        {{ CpuComponent.Brand }}
+        {{ itemComponent.brand }}
       </div>
       <div class="font-bold bg-slate-300 p-3 text-black">Series</div>
       <div class="col-span-2 p-3 border-solid border-2">
-        {{ CpuComponent.Series }}
+        {{ itemComponent.series }}
       </div>
       <div class="font-bold bg-slate-300 p-3 text-black">Model</div>
       <div class="col-span-2 p-3 border-solid border-2">
-        {{ CpuComponent.Model }}
+        {{ itemComponent.model }}
       </div>
     </div>
     <!-- <div class="text-2xl font-bold text-black mt-4 mb-4">SPECIFICATIONS</div>
     <div class="grid grid-cols-3">
       <div class="font-bold bg-slate-300 p-3 text-black">Brand</div>
       <div class="col-span-2 p-3 border-solid border-2">
-        {{ CpuComponent.Brand }}
+        {{ itemComponent.Brand }}
       </div>
       <div class="font-bold bg-slate-300 p-3 text-black">Series</div>
       <div class="col-span-2 p-3 border-solid border-2">
-        {{ CpuComponent.Series }}
+        {{ itemComponent.Series }}
       </div>
       <div class="font-bold bg-slate-300 p-3 text-black">Model</div>
       <div class="col-span-2 p-3 border-solid border-2">
-        {{ CpuComponent.Model }}
+        {{ itemComponent.Model }}
       </div>
     </div> -->
   </section>

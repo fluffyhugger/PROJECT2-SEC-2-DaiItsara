@@ -1,6 +1,7 @@
 <script setup>
 defineProps({
   item: Object,
+  listName: String,
 })
 </script>
 
@@ -13,7 +14,7 @@ defineProps({
       <img class="rounded-t-lg" :src="item.picture" :alt="item.series" />
     </div>
     <div class="p-5">
-      <RouterLink :to="`/build/${item.id}`">
+      <RouterLink :to="`/build/${listName}/${item.id}`">
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
         >

@@ -1,9 +1,9 @@
 <script setup>
-import { onMounted, ref } from "vue"
-import ItemsCard from "./Util/ItemsCard.vue"
+import { onMounted, ref } from 'vue'
+import ItemsCard from './Util/ItemsCard.vue'
 const itemList = ref([])
 const isLoading = ref(true)
-const selectedOption = ref("cpu")
+const selectedOption = ref('cpu')
 
 onMounted(async () => {
   await fetchData()
@@ -41,7 +41,12 @@ const fetchData = async () => {
     <span class="text-2xl font-bold text-indigo-700">Loading...</span>
   </div>
   <div class="grid grid-cols-3 gap-4" v-else>
-    <ItemsCard v-for="item in itemList" :key="item.id" :item="item"></ItemsCard>
+    <ItemsCard
+      v-for="item in itemList"
+      :key="item.id"
+      :item="item"
+      :listName="selectedOption"
+    ></ItemsCard>
   </div>
 </template>
 
