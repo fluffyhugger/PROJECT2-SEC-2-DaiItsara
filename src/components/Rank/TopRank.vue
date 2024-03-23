@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted ,defineProps, watch,defineEmits } from "vue";
+import { ref, onMounted, defineProps, watch, defineEmits } from "vue";
 import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -14,7 +14,7 @@ let autoSlideInterval;
 const containerRef = ref(null);
 let scrollDirection = 1;
 // Define a prop to receive the selected option from the parent
-const props = defineProps(['selectedOption']);
+const props = defineProps(['selectedOption', 'products', 'isLoading']);
 
 const emit = defineEmits(['update:selectedOption']);
 // Define a reactive property to hold the selected option
@@ -59,6 +59,15 @@ onMounted(() => {
   startAutoSlide();
   containerRef.value.addEventListener("scroll", handleScroll);
 });
+const sortByProducts = () => {
+  if (props.selectedOption === SortBy.Price) {
+    return [...props.products].sort((a, b) => b['total-price'] - a['total-price']).slice(0, 3);
+  } else if (props.selectedOption === SortBy.Latest) {
+    return [...props.products].sort((a, b) => new Date(b['build-date']) - new Date(a['build-date'])).slice(0, 3);
+  } else {
+    return props.products.slice(0, 3);
+  }
+};
 </script>
 <template>
   <div class="top-container pt-5">
@@ -71,65 +80,45 @@ onMounted(() => {
             <option v-for="(value, key) in SortBy" :value="value" :key="key">{{ key }}</option>
           </select>
         </div>
-        Selected option: {{ selectedOption }}
       </div>
     </div>
     <div class="controls-container">
       <div class="control left" @click="
-        stopAutoSlide();
-      slide(-1);
-      startAutoSlide();
-      ">
+            stopAutoSlide();
+          slide(-1);
+          startAutoSlide();
+          ">
         <font-awesome-icon :icon="['fas', 'chevron-left']" />
       </div>
       <div class="top">
         <div class="container" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" ref="containerRef">
-          <div class="card">
+          <<div v-for="product in sortByProducts()" :key="product.id" class="card">
             <figure>
-              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" />
+              <img :src="product['components'][6].case['image-url']" alt="car!" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Life hack</h2>
-              <p>How to park your car at your garage?</p>
+              <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>
+              <div v-if="selectedOption === SortBy.Price">
+                price : {{ product['total-price'] }}
+              </div>
+              <div v-else-if="selectedOption === SortBy.Latest">
+                build-date : {{ Date(product['build-date']) }}
+              </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Learn now!</button>
+                <button class="btn btn-primary">BuyNow !</button>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <figure>
-              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Life hack</h2>
-              <p>How to park your car at your garage?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Learn now!</button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <figure>
-              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Life hack</h2>
-              <p>How to park your car at your garage?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Learn now!</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <div class="control right" @click="
-        stopAutoSlide();
-      slide(1);
-      startAutoSlide();
-      ">
-      <font-awesome-icon :icon="['fas', 'chevron-right']" />
-    </div>
+  </div>
+  <div class="control right" @click="
+            stopAutoSlide();
+          slide(1);
+          startAutoSlide();
+          ">
+    <font-awesome-icon :icon="['fas', 'chevron-right']" />
+  </div>
   </div>
 </template>
 <style scoped>
