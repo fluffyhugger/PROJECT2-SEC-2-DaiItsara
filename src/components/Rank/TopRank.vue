@@ -65,29 +65,18 @@ onMounted(() => {
       </div>
     </div>
     <div class="controls-container">
-      <div
-        class="control left"
-        @click="
-          stopAutoSlide();
-          slide(-1);
-          startAutoSlide();
-        "
-      >
+      <div class="control left" @click="
+        stopAutoSlide();
+      slide(-1);
+      startAutoSlide();
+      ">
         <font-awesome-icon :icon="['fas', 'chevron-left']" />
       </div>
       <div class="top">
-        <div
-          class="container"
-          @mouseenter="stopAutoSlide()"
-          @mouseleave="startAutoSlide()"
-          ref="containerRef"
-        >
+        <div class="container" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" ref="containerRef">
           <div class="card">
             <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="car!"
-              />
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Life hack</h2>
@@ -99,10 +88,7 @@ onMounted(() => {
           </div>
           <div class="card">
             <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="car!"
-              />
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Life hack</h2>
@@ -114,10 +100,7 @@ onMounted(() => {
           </div>
           <div class="card">
             <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="car!"
-              />
+              <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Life hack</h2>
@@ -130,14 +113,11 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div
-      class="control right"
-      @click="
+    <div class="control right" @click="
         stopAutoSlide();
-        slide(1);
-        startAutoSlide();
-      "
-    >
+      slide(1);
+      startAutoSlide();
+      ">
       <font-awesome-icon :icon="['fas', 'chevron-right']" />
     </div>
   </div>
@@ -157,6 +137,7 @@ onMounted(() => {
     transform: scale(1.05);
   }
 }
+
 select {
   color: black;
   background-color: transparent;
@@ -183,7 +164,6 @@ select {
 
 .head-toprank {
   margin-right: 1rem;
-  /* Add margin to create space */
 }
 
 .container {
@@ -209,24 +189,27 @@ select {
   margin-right: 10px;
   border-radius: 5px;
   overflow: hidden;
-    position: relative;
+  position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-z-index: 1;
-transition: transform 0.3s ease, opacity 0.3s ease, z-index 0s linear 0.3s;
+  z-index: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease, z-index 0s linear 0.3s;
 }
+
 .card:hover {
   animation-name: hoverEffect;
 
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-    z-index: 2;
+  z-index: 2;
 }
 
 .control {
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding-right: 12px;
+  padding: 2.5px;
 }
 
 .left {
@@ -250,6 +233,7 @@ transition: transform 0.3s ease, opacity 0.3s ease, z-index 0s linear 0.3s;
     max-width: 200px;
   }
 }
+
 .head-toprank-container {
   margin-right: 1rem;
   /* Adjust as needed */
@@ -260,7 +244,7 @@ transition: transform 0.3s ease, opacity 0.3s ease, z-index 0s linear 0.3s;
   align-items: center;
 }
 
-.controls-container > .control {
+.controls-container>.control {
   margin: 0 0.5rem;
 }
 </style>
