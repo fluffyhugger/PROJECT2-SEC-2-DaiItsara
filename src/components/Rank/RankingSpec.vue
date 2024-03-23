@@ -1,5 +1,8 @@
 <script setup>
 import TopRank from "./TopRank.vue";
+import RankTable from "./RankTable.vue"
+import { ref } from 'vue';
+let selectedOption = ref('overall');
 </script>
 
 <template>
@@ -7,8 +10,8 @@ import TopRank from "./TopRank.vue";
     <h1 class="text-3xl font-bold tracking-wide ">
       PC RANKING
     </h1>
-    <TopRank />
-
+    <TopRank  v-model:selectedOption="selectedOption"/>
+    <RankTable :selectedOption="selectedOption" />
   </div>
 </template>
 

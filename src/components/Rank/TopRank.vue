@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted ,defineProps, watch,defineEmits } from "vue";
 import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -12,6 +12,17 @@ library.add(faChevronLeft, faChevronRight);
 let autoSlideInterval;
 const containerRef = ref(null);
 let scrollDirection = 1;
+// Define a prop to receive the selected option from the parent
+const props = defineProps(['selectedOption']);
+
+const emit = defineEmits(['update:selectedOption']);
+// Define a reactive property to hold the selected option
+const selectedOption = ref(props.selectedOption);
+
+// Watch for changes to the selected option and emit an update
+watch(selectedOption, (newValue) => {
+  emit('update:selectedOption', newValue);
+});
 
 const slide = (direction) => {
   const container = containerRef.value;
@@ -55,13 +66,14 @@ onMounted(() => {
         <h1 class="top-ranking">TOP RANKING</h1>
         <br />
         <div class="dropdown-container">
-          <select name="sort" id="rank" class="dropdown">
-            <option value="overall">Over All</option>
+          <select v-model="selectedOption" name="sort" id="rank" class="dropdown">
+            <option value="overall">overall</option>
             <option value="price">price</option>
             <option value="popular">popular</option>
             <option value="latest">latest</option>
           </select>
         </div>
+        Selected option: {{ selectedOption }}
       </div>
     </div>
     <div class="controls-container">
