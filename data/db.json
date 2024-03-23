@@ -43,7 +43,7 @@
         {
           "psu": {
             "name": "EVGA SuperNOVA 850 G3",
-            "image-url": "https://example.com/psu_image.jpg",
+            "image-url": "https://cdn.mos.cms.futurecdn.net/a6BR5kVuSCqqg4wRyWuEXF.jpg",
             "price": 4500
           }
         },
@@ -76,1166 +76,932 @@
           }
         }
       ]
-    }
-    ,{
-  "builder-id": 2,
-  "builder-name": "TechGuru",
-  "build-date": "2024-03-22T16:45:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "AMD Ryzen 7 5800X",
-        "image-url": "https://www.amd.com/system/files/2020-09/610952-amd-ryzen-7-5800x-pib-1260x709.png",
-        "price": 4200
-      }
-    },
-    {
-      "ram": {
-        "name": "G.Skill Ripjaws V Series 32GB (2 x 16GB)",
-        "image-url": "https://www.gskill.com/wysiwyg/download/ripjaws_v_ddr4_module_10.png",
-        "price": 3800
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3070 Ti",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152158/A0152158OK_BIG_1.jpg",
-        "price": 18000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Crucial P5 Plus 2TB NVMe SSD",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/main/P5-01.png",
-        "price": 4800
-      }
-    },
-    {
-      "hdd": {
-        "name": "Western Digital WD Red 4TB",
-        "image-url": "https://shop.westerndigital.com/content/dam/store/en-us/assets/products/internal-hdd/wd-red-hdd/product.png",
-        "price": 3000
-      }
-    },
-    {
-      "psu": {
-        "name": "Seasonic Focus GX-850",
-        "image-url": "https://www.seasonic.com/fileadmin/user_upload/product-images/psu/focus-gx/3-1-FOCUS-GX-850-B.png",
-        "price": 4200
-      }
-    },
-    {
-      "case": {
-        "name": "Phanteks Eclipse P400A",
-        "image-url": "https://www.phanteks.com/assets/images/product/cases/400A_RGB/02.png",
-        "price": 1500
-      }
-    },
-    {
-      "monitor": {
-        "name": "Dell S3222DGM 32\" Curved Gaming Monitor",
-        "image-url": "https://i.dell.com/sites/csimages/Product_Images/dell_monitors/s3222dgm/hero/large__shl4.png",
-        "price": 28000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "GIGABYTE B550 AORUS PRO",
-        "image-url": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1251/global_51/images/keyfeature.png",
-        "price": 5000
-      }
-    },
-    {
-      "cooler": {
-        "name": "Noctua NH-D15",
-        "image-url": "https://noctua.at/media/catalog/product/cache/5/image/2560x2560/602f0fa2c1f0d1ba5e241f914e856ff9/n/h/nh-d15_front_quarter_bottom.png",
-        "price": 3000
-      }
-    }
-  ]
-},
-{
-  "builder-id": 3,
-  "builder-name": "PCMastermind",
-  "build-date": "2024-03-22T17:30:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i9-12900K",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i9-12900k-2x.png",
-        "price": 6500
-      }
-    },
-    {
-      "ram": {
-        "name": "Crucial Ballistix RGB 32GB (2 x 16GB)",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/large/ram-bl-16.png",
-        "price": 4200
-      }
-    },
-    {
-      "gpu": {
-        "name": "AMD Radeon RX 6800 XT",
-        "image-url": "https://www.amd.com/system/files/2021-04/656881-rx-6800-xt-3d-1260x709.png",
-        "price": 22000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Sabrent Rocket 4 Plus 2TB NVMe PCIe 4.0 SSD",
-        "image-url": "https://cdn.shopify.com/s/files/1/2817/7832/products/Rocket4Plus_3_1500x.png",
-        "price": 7000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate IronWolf Pro 4TB NAS Internal Hard Drive HDD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWFujw?ver=de9c",
-        "price": 3500
-      }
-    },
-    {
-      "psu": {
-        "name": "Corsair RM1000x",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h71/h5b/9065797018142/-CP-9020155-EU-Gallery-RM1000x-PSU-V2-750W-V2.png",
-        "price": 5500
-      }
-    },
-    {
-      "case": {
-        "name": "NZXT H710i",
-        "image-url": "https://www.nzxt.com/assets/cms/1229/h710i_smart_black_mg_0030.png",
-        "price": 2200
-      }
-    },
-    {
-      "monitor": {
-        "name": "LG 34GN850-B 34\" UltraGear Curved Gaming Monitor",
-        "image-url": "https://www.lg.com/us/images/monitors/md07519459/gallery/desktop-01.jpg",
-        "price": 45000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Maximus Z690 Hero",
-        "image-url": "https://www.asus.com/media/global/products/a3O0b9hcmJ4LfPbZ/P_setting_000_1_90_end_500.png",
-        "price": 7500
-      }
-    },
-    {
-      "cooler": {
-        "name": "NZXT Kraken Z73",
-        "image-url": "https://www.nzxt.com/assets/cms/1209/krakenz73_image.png",
-        "price": 3200
-      }
-    }
-  ]
-}
-,
-{
-  "builder-id": 3,
-  "builder-name": "PCMastermind",
-  "build-date": "2024-03-22T17:30:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i9-12900K",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i9-12900k-2x.png",
-        "price": 6500
-      }
-    },
-    {
-      "ram": {
-        "name": "Crucial Ballistix RGB 32GB (2 x 16GB)",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/large/ram-bl-16.png",
-        "price": 4200
-      }
-    },
-    {
-      "gpu": {
-        "name": "AMD Radeon RX 6800 XT",
-        "image-url": "https://www.amd.com/system/files/2021-04/656881-rx-6800-xt-3d-1260x709.png",
-        "price": 22000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Sabrent Rocket 4 Plus 2TB NVMe PCIe 4.0 SSD",
-        "image-url": "https://cdn.shopify.com/s/files/1/2817/7832/products/Rocket4Plus_3_1500x.png",
-        "price": 7000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate IronWolf Pro 4TB NAS Internal Hard Drive HDD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWFujw?ver=de9c",
-        "price": 3500
-      }
-    },
-    {
-      "psu": {
-        "name": "Corsair RM1000x",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h71/h5b/9065797018142/-CP-9020155-EU-Gallery-RM1000x-PSU-V2-750W-V2.png",
-        "price": 5500
-      }
-    },
-    {
-      "case": {
-        "name": "NZXT H710i",
-        "image-url": "https://www.nzxt.com/assets/cms/1229/h710i_smart_black_mg_0030.png",
-        "price": 2200
-      }
-    },
-    {
-      "monitor": {
-        "name": "LG 34GN850-B 34\" UltraGear Curved Gaming Monitor",
-        "image-url": "https://www.lg.com/us/images/monitors/md07519459/gallery/desktop-01.jpg",
-        "price": 45000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Maximus Z690 Hero",
-        "image-url": "https://www.asus.com/media/global/products/a3O0b9hcmJ4LfPbZ/P_setting_000_1_90_end_500.png",
-        "price": 7500
-      }
-    },
-    {
-      "cooler": {
-        "name": "NZXT Kraken Z73",
-        "image-url": "https://www.nzxt.com/assets/cms/1209/krakenz73_image.png",
-        "price": 3200
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 4,
-  "builder-name": "TechWhiz",
-  "build-date": "2024-03-22T18:15:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "AMD Ryzen 5 5600X",
-        "image-url": "https://www.amd.com/system/files/2020-10/615135-amd-ryzen-5-5600x-pib-1260x709.png",
-        "price": 2500
-      }
-    },
-    {
-      "ram": {
-        "name": "Corsair Dominator Platinum RGB 32GB (2 x 16GB)",
-        "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2024/01/Product/corsair-dominator-platinum-rgb-3200mhz-32gb-2x16gb-ddr4-ram-white-2pcs-front-view.jpg",
-        "price": 5200
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3060 Ti",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152147/A0152147OK_BIG_1.jpg",
-        "price": 15000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Samsung 980 PRO 1TB NVMe SSD",
-        "image-url": "https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-1tb-mz-v8p1t0bw/gallery/_pu000001_000002/980-Pro-1TB-PCIe-Gen-4.0-NVMe-Internal-Gaming-SSD-MZ-V8P1T0B-Back-Blue-1600x1200.jpg",
-        "price": 5500
-      }
-    },
-    {
-      "hdd": {
-        "name": "Western Digital WD Blue 2TB",
-        "image-url": "https://shop.westerndigital.com/content/dam/store/en-us/assets/products/internal-hdd/wd-blue-hdd/product.png",
-        "price": 2000
-      }
-    },
-    {
-      "psu": {
-        "name": "Seasonic Focus PX-750",
-        "image-url": "https://www.seasonic.com/fileadmin/user_upload/product-images/psu/focus-px/3-1-Focus-PX-750.png",
-        "price": 3800
-      }
-    },
-    {
-      "case": {
-        "name": "Corsair 4000D Airflow",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h15/h8c/9112683874846/4000D-Airflow-White-Gallery-01.png",
-        "price": 1200
-      }
-    },
-    {
-      "monitor": {
-        "name": "Acer Predator XB273U GX 27\" QHD Gaming Monitor",
-        "image-url": "https://www.acer.com/ac/en/US/content/predator-series/predatorxb3/predatorxb273u-gx/gallery/predatorxb273ugx-gallery-1.png",
-        "price": 35000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASRock B550 Steel Legend",
-        "image-url": "https://www.asrock.com/mb/photo/B550%20Steel%20Legend(LR).png",
-        "price": 3000
-      }
-    },
-    {
-      "cooler": {
-        "name": "be quiet! Dark Rock Pro 4",
-        "image-url": "https://www.bequiet.com/typo3temp/assets/_processed_/csm_Dark_Rock_Pro_4_01_2100x2100_5ec96f3837.png",
-        "price": 2800
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 5,
-  "builder-name": "PCGenius",
-  "build-date": "2024-03-22T19:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i5-12600K",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i5-12600k-2x.png",
-        "price": 3200
-      }
-    },
-    {
-      "ram": {
-        "name": "Team T-FORCE XTREEM ARGB 16GB (2 x 8GB)",
-        "image-url": "https://www.teamgroupinc.com/en/images/products/pic/t-force_xtreem_argb_ddr4_module_10.png",
-        "price": 2800
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3050 Ti",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152148/A0152148OK_BIG_1.jpg",
-        "price": 9000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Crucial P2 1TB NVMe SSD",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/large/ram-p2.png",
-        "price": 3000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Toshiba N300 4TB NAS Internal Hard Drive HDD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWNEKW?ver=73a6",
-        "price": 2500
-      }
-    },
-    {
-      "psu": {
-        "name": "Corsair TX650M",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h27/h71/9248689784862/-CP-9020132-NA-Gallery-TX650M-PSU-V2-750W-V2.png",
-        "price": 2800
-      }
-    },
-    {
-      "case": {
-        "name": "Cooler Master MasterBox MB511 ARGB",
-        "image-url": "https://www.coolermaster.com/microsite/masterbox-mb511-argb/img/section01.png",
-        "price": 1500
-      }
-    },
-    {
-      "monitor": {
-        "name": "ViewSonic ELITE XG270QG 27\" QHD Gaming Monitor",
-        "image-url": "https://www.viewsonic.com/library/wp-content/uploads/2021/01/XG270QG_gallery_01.jpg",
-        "price": 30000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "MSI B660M PRO-VDH WIFI",
-        "image-url": "https://asset.msi.com/resize/image/global/product/product_1_20220318174733_645f77cbbe4e96c7fe899a6f06fba149.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
-        "price": 2000
-      }
-    },
-    {
-      "cooler": {
-        "name": "ARCTIC Freezer 34 eSports DUO",
-        "image-url": "https://www.arctic.de/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/a/r/arctic_freezer_34_esports_duo_black_angle_2_1.png",
-        "price": 1800
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 6,
-  "builder-name": "PCEnthusiast",
-  "build-date": "2024-03-22T20:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "AMD Ryzen 9 5900X",
-        "image-url": "https://www.amd.com/system/files/2020-09/611075-amd-ryzen-9-5900x-pib-1260x709.png",
-        "price": 5500
-      }
-    },
-    {
-      "ram": {
-        "name": "Corsair Vengeance RGB Pro 32GB (2 x 16GB)",
-        "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2022/11/Product/corsair-vengeance-rgb-pro-16gb-ddr4-3200mhz-c16-black.jpg",
-        "price": 4500
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3090",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152150/A0152150OK_BIG_1.jpg",
-        "price": 35000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Western Digital WD_BLACK SN850 2TB NVMe SSD",
-        "image-url": "https://shop.westerndigital.com/content/dam/store/en-us/assets/products/internal-ssd/wd_black_sn850_nvme_ssd/product.png",
-        "price": 8500
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate IronWolf 6TB NAS Internal Hard Drive HDD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWlNqL?ver=2604",
-        "price": 4500
-      }
-    },
-    {
-      "psu": {
-        "name": "EVGA SuperNOVA 1000 G5",
-        "image-url": "https://www.evga.com/products/images/gallery/220-G5-0850-X3_LG_2.jpg",
-        "price": 5500
-      }
-    },
-    {
-      "case": {
-        "name": "Lian Li Lancool II Mesh",
-        "image-url": "https://www.lian-li.com/wp-content/uploads/2020/12/09-5.png",
-        "price": 2000
-      }
-    },
-    {
-      "monitor": {
-        "name": "Samsung Odyssey G9 49\" Curved Gaming Monitor",
-        "image-url": "https://images.samsung.com/is/image/samsung/ph-gaming-monitor-g9-lc49g95tssexxd-lperspectiveblack-309733098?$720_576_PNG$",
-        "price": 60000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Crosshair VIII Dark Hero",
-        "image-url": "https://www.asus.com/media/global/products/RKgqpO1BBH7cczjt/P_setting_000_1_90_end_500.png",
-        "price": 9000
-      }
-    },
-    {
-      "cooler": {
-        "name": "NZXT Kraken Z73",
-        "image-url": "https://www.nzxt.com/assets/cms/1209/krakenz73_image.png",
-        "price": 3200
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 7,
-  "builder-name": "TechMaster",
-  "build-date": "2024-03-22T21:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i9-13900K",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i9-13900k-2x.png",
-        "price": 7000
-      }
-    },
-    {
-      "ram": {
-        "name": "G.Skill Trident Z Royal 64GB (4 x 16GB)",
-        "image-url": "https://www.gskill.com/wysiwyg/download/trident_z_royal_ddr4_module_10.png",
-        "price": 9000
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3080 Ti",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152159/A0152159OK_BIG_1.jpg",
-        "price": 28000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Samsung 980 PRO 2TB NVMe SSD",
-        "image-url": "https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-2tb-mz-v8p2t0bw/gallery/_pu000001_000002/980-Pro-2TB-PCIe-Gen-4.0-NVMe-Internal-Gaming-SSD-MZ-V8P2T0B-Back-Blue-1600x1200.jpg",
-        "price": 10000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate FireCuda 520 4TB NVMe SSD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWpKu4?ver=87cf",
-        "price": 6000
-      }
-    },
-    {
-      "psu": {
-        "name": "Seasonic Prime TX-1000",
-        "image-url": "https://www.seasonic.com/fileadmin/user_upload/product-images/psu/prime-tx/3-1-Prime-TX-1000.png",
-        "price": 8000
-      }
-    },
-    {
-      "case": {
-        "name": "Fractal Design Define 7 XL",
-        "image-url": "https://www.fractal-design.com/wp-content/uploads/2020/04/Fractal-Design-Define-7-XL-White.png",
-        "price": 2500
-      }
-    },
-    {
-      "monitor": {
-        "name": "Alienware AW3420DW 34\" Curved Gaming Monitor",
-        "image-url": "https://i.dell.com/sites/csimages/Video_Imagery/all/alienware-aw3420dw-overview-video-still-2-v1.jpg",
-        "price": 45000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Strix Z790-E Gaming",
-        "image-url": "https://rog.asus.com/media/1638400409923.jpg",
-        "price": 12000
-      }
-    },
-    {
-      "cooler": {
-        "name": "Corsair H150i Elite Capellix",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h7f/h06/9252811453982/-CW-9060054-WW-Gallery-H150i-Elite-Capellix-360mm-RGB-AIO-Cooler-V2-750W-V2.png",
-        "price": 3500
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 8,
-  "builder-name": "TechWizard",
-  "build-date": "2024-03-22T22:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "AMD Ryzen 7 5800X",
-        "image-url": "https://www.amd.com/system/files/2020-10/615137-amd-ryzen-7-5800x-pib-1260x709.png",
-        "price": 4000
-      }
-    },
-    {
-      "ram": {
-        "name": "Crucial Ballistix MAX RGB 32GB (2 x 16GB)",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/large/ram-bl-17.png",
-        "price": 5000
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3070",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152145/A0152145OK_BIG_1.jpg",
-        "price": 18000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Sabrent Rocket 4 Plus 1TB NVMe SSD",
-        "image-url": "https://cdn.shopify.com/s/files/1/2817/7832/products/Rocket4Plus_3_1500x.png",
-        "price": 4000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate Barracuda 4TB",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0127495/A0127495OK_BIG_1.jpg",
-        "price": 3000
-      }
-    },
-    {
-      "psu": {
-        "name": "Corsair RM850x",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h64/hf3/9066594953278/-CP-9020180-NA-Gallery-RM850x-PSU-V2-750W-V2.png",
-        "price": 4500
-      }
-    },
-    {
-      "case": {
-        "name": "NZXT H710",
-        "image-url": "https://www.nzxt.com/assets/cms/1229/h710-white-model-hro.png",
-        "price": 2200
-      }
-    },
-    {
-      "monitor": {
-        "name": "LG 27GN950-B 27\" UltraGear 4K Gaming Monitor",
-        "image-url": "https://www.lg.com/us/images/monitors/md07520743/gallery/desktop-01.jpg",
-        "price": 55000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS TUF Gaming X570-Plus",
-        "image-url": "https://www.asus.com/media/global/products/qI84Nl8PPJXWzPzS/P_setting_000_1_90_end_500.png",
-        "price": 3500
-      }
-    },
-    {
-      "cooler": {
-        "name": "Cooler Master MasterLiquid ML360R ARGB",
-        "image-url": "https://www.coolermaster.com/microsite/masterliquid-ml-argb-rgb/img/section01.png",
-        "price": 3200
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 9,
-  "builder-name": "TechSavvy",
-  "build-date": "2024-03-22T23:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i5-12600KF",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i5-12600k-2x.png",
-        "price": 3000
-      }
-    },
-    {
-      "ram": {
-        "name": "G.Skill Trident Z Neo 32GB (2 x 16GB)",
-        "image-url": "https://www.gskill.com/wysiwyg/download/trident_z_neo_ddr4_module_10.png",
-        "price": 4000
-      }
-    },
-    {
-      "gpu": {
-        "name": "AMD Radeon RX 6700 XT",
-        "image-url": "https://www.amd.com/system/files/2021-03/653475-radeon-rx-6700xt-pib-1260x709.png",
-        "price": 15000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Crucial P5 Plus 2TB NVMe SSD",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/large/ram-p5.png",
-        "price": 6000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Western Digital WD Blue 4TB",
-        "image-url": "https://shop.westerndigital.com/content/dam/store/en-us/assets/products/internal-hdd/wd-blue-hdd/product.png",
-        "price": 2500
-      }
-    },
-    {
-      "psu": {
-        "name": "Seasonic Focus GX-750",
-        "image-url": "https://www.seasonic.com/fileadmin/user_upload/product-images/psu/focus-gx/3-1-Focus-GX-750.png",
-        "price": 3000
-      }
-    },
-    {
-      "case": {
-        "name": "Phanteks Eclipse P400A Digital",
-        "image-url": "https://www.phanteks.com/assets/Chassis/P400A/05.png",
-        "price": 1500
-      }
-    },
-    {
-      "monitor": {
-        "name": "Dell S2721DGF 27\" QHD Gaming Monitor",
-        "image-url": "https://i.dell.com/sites/csimages/Video_Imagery/all/s-series-s2721dgf-gaming-monitor-overview-video-still-4-v1.jpg",
-        "price": 30000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASRock B660 Phantom Gaming 4",
-        "image-url": "https://www.asrock.com/mb/photo/B660%20Phantom%20Gaming%204(LR).png",
-        "price": 2000
-      }
-    },
-    {
-      "cooler": {
-        "name": "Noctua NH-D15 chromax.black",
-        "image-url": "https://noctua.at/media/catalog/product/n/h/nh-d15_chromax.black_top-view_1.png",
-        "price": 3500
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 10,
-  "builder-name": "TechMastermind",
-  "build-date": "2024-03-23T00:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "AMD Ryzen 9 5900X",
-        "image-url": "https://www.amd.com/system/files/2020-09/611075-amd-ryzen-9-5900x-pib-1260x709.png",
-        "price": 5500
-      }
-    },
-    {
-      "ram": {
-        "name": "Corsair Vengeance RGB Pro 64GB (4 x 16GB)",
-        "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2022/11/Product/corsair-vengeance-rgb-pro-16gb-ddr4-3200mhz-c16-black.jpg",
-        "price": 8000
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3080 Ti",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152150/A0152150OK_BIG_1.jpg",
-        "price": 35000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Samsung 980 PRO 2TB NVMe SSD",
-        "image-url": "https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-2tb-mz-v8p2t0bw/gallery/_pu000001_000002/980-Pro-2TB-PCIe-Gen-4.0-NVMe-Internal-Gaming-SSD-MZ-V8P2T0B-Back-Blue-1600x1200.jpg",
-        "price": 10000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate IronWolf Pro 8TB NAS Internal Hard Drive HDD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWpKu4?ver=87cf",
-        "price": 8000
-      }
-    },
-    {
-      "psu": {
-        "name": "Corsair RM1000x",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h64/hf3/9066594953278/-CP-9020180-NA-Gallery-RM850x-PSU-V2-750W-V2.png",
-        "price": 5000
-      }
-    },
-    {
-      "case": {
-        "name": "NZXT H710i",
-        "image-url": "https://www.nzxt.com/assets/cms/1229/h710-white-model-hro.png",
-        "price": 2500
-      }
-    },
-    {
-      "monitor": {
-        "name": "ASUS ROG Swift PG32UQX 32\" Mini LED 4K Gaming Monitor",
-        "image-url": "https://www.asus.com/media/global/products/qI84Nl8PPJXWzPzS/P_setting_000_1_90_end_500.png",
-        "price": 65000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Strix X570-E Gaming",
-        "image-url": "https://www.asus.com/media/global/products/qI84Nl8PPJXWzPzS/P_setting_000_1_90_end_500.png",
-        "price": 12000
-      }
-    },
-    {
-      "cooler": {
-        "name": "NZXT Kraken Z73",
-        "image-url": "https://www.nzxt.com/assets/cms/1209/krakenz73_image.png",
-        "price": 3200
-      }
-    }
-  ]
-}
-,{
-  "builder-id": 11,
-  "builder-name": "PCMaestro",
-  "build-date": "2024-03-23T01:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i9-12900K",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i9-12900k-2x.png",
-        "price": 8000
-      }
-    },
-    {
-      "ram": {
-        "name": "HyperX Predator RGB 64GB (4 x 16GB)",
-        "image-url": "https://hyperxgaming.com/pub/media/catalog/product/h/x/hx432c16pb3ak4_32.png",
-        "price": 9000
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3090 Ti",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152152/A0152152OK_BIG_1.jpg",
-        "price": 50000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Samsung 980 PRO 4TB NVMe SSD",
-        "image-url": "https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-2tb-mz-v8p2t0bw/gallery/_pu000001_000002/980-Pro-2TB-PCIe-Gen-4.0-NVMe-Internal-Gaming-SSD-MZ-V8P2T0B-Back-Blue-1600x1200.jpg",
-        "price": 18000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Western Digital WD Black 6TB",
-        "image-url": "https://shop.westerndigital.com/content/dam/store/en-us/assets/products/internal-hdd/wd-black-hdd/product.png",
-        "price": 4000
-      }
-    },
-    {
-      "psu": {
-        "name": "EVGA SuperNOVA 1600 T2",
-        "image-url": "https://www.evga.com/products/images/gallery/220-T2-1600-X3_LG_5.jpg",
-        "price": 10000
-      }
-    },
-    {
-      "case": {
-        "name": "Corsair Obsidian 1000D",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h6a/hdb/9220269144094/-CC-9011148-WW-Gallery-Obsidian-1000D-Super-Tower-V2-750W-V2.png",
-        "price": 5000
-      }
-    },
-    {
-      "monitor": {
-        "name": "Acer Predator X34 GS 34\" Ultrawide Gaming Monitor",
-        "image-url": "https://www.acer.com/ac/en/US/content/predator-model/UM.CX0AA.S01",
-        "price": 35000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Maximus Z790 Hero",
-        "image-url": "https://www.asus.com/media/global/products/Qs8zpNrWyDUPFZJ4/P_setting_000_1_90_end_500.png",
-        "price": 15000
-      }
-    },
-    {
-      "cooler": {
-        "name": "NZXT Kraken X73",
-        "image-url": "https://www.nzxt.com/assets/cms/1209/krakenx73_image.png",
-        "price": 3500
-      }
-    }
-  ]
-}
-,
-{
-  "builder-id": 12,
-  "builder-name": "PCGuru",
-  "build-date": "2024-03-23T02:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "AMD Ryzen 9 5950X",
-        "image-url": "https://www.amd.com/system/files/2020-10/615137-amd-ryzen-9-5950x-pib-1260x709.png",
-        "price": 7000
-      }
-    },
-    {
-      "ram": {
-        "name": "G.Skill Trident Z RGB 128GB (4 x 32GB)",
-        "image-url": "https://www.gskill.com/wysiwyg/download/trident_z_rgb_ddr4_module_10.png",
-        "price": 12000
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 4090",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152153/A0152153OK_BIG_1.jpg",
-        "price": 80000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Samsung 980 PRO 8TB NVMe SSD",
-        "image-url": "https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-2tb-mz-v8p2t0bw/gallery/_pu000001_000002/980-Pro-2TB-PCIe-Gen-4.0-NVMe-Internal-Gaming-SSD-MZ-V8P2T0B-Back-Blue-1600x1200.jpg",
-        "price": 30000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate IronWolf Pro 12TB NAS Internal Hard Drive HDD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWpKu4?ver=87cf",
-        "price": 12000
-      }
-    },
-    {
-      "psu": {
-        "name": "Seasonic Prime PX-1300",
-        "image-url": "https://www.seasonic.com/fileadmin/user_upload/product-images/psu/prime-px/3-1-Prime-PX-1300.png",
-        "price": 7000
-      }
-    },
-    {
-      "case": {
-        "name": "Lian Li O11 Dynamic XL",
-        "image-url": "https://www.lian-li.com/wp-content/uploads/2021/01/07-3-1.png",
-        "price": 3500
-      }
-    },
-    {
-      "monitor": {
-        "name": "LG OLED48C1 48\" OLED Gaming Monitor",
-        "image-url": "https://www.lg.com/us/images/tvs/md07703698/gallery/desktop-01.jpg",
-        "price": 50000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Crosshair XVII Extreme",
-        "image-url": "https://www.asus.com/media/global/products/9m2c8bxh3bfrxktq/P_setting_000_1_90_end_500.png",
-        "price": 25000
-      }
-    },
-    {
-      "cooler": {
-        "name": "NZXT Kraken Z73",
-        "image-url": "https://www.nzxt.com/assets/cms/1209/krakenz73_image.png",
-        "price": 3200
-      }
-    }
-  ]
-}
-,
-{
-  "builder-id": 13,
-  "builder-name": "TechEnthusiast",
-  "build-date": "2024-03-23T03:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i9-13900K",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i9-13900k-2x.png",
-        "price": 8000
-      }
-    },
-    {
-      "ram": {
-        "name": "Corsair Dominator Platinum RGB 128GB (4 x 32GB)",
-        "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2023/01/Product/corsair-dominator-platinum-rgb-32gb-ddr4-3600mhz-1.jpg",
-        "price": 14000
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 4080 Ti",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152155/A0152155OK_BIG_1.jpg",
-        "price": 75000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Sabrent Rocket 4 Plus 4TB NVMe SSD",
-        "image-url": "https://cdn.shopify.com/s/files/1/2817/7832/products/Rocket4Plus_3_1500x.png",
-        "price": 20000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate IronWolf Pro 16TB NAS Internal Hard Drive HDD",
-        "image-url": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWpKu4?ver=87cf",
-        "price": 20000
-      }
-    },
-    {
-      "psu": {
-        "name": "Corsair AX1600i",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h8e/h21/9255632302110/CP-9020087-NA-Gallery-AX1600i-PSU-1600W-V2-750W-V2.png",
-        "price": 4000
-      }
-    },
-    {
-      "case": {
-        "name": "Phanteks Enthoo Elite",
-        "image-url": "https://www.phanteks.com/assets/Chassis/Enthoo-Elite/02.png",
-        "price": 9000
-      }
-    },
-    {
-      "monitor": {
-        "name": "Acer Predator X38 Pbmiphzx 38\" Ultrawide Gaming Monitor",
-        "image-url": "https://www.acer.com/ac/en/US/content/predator-model/UM.TX8AA.P01",
-        "price": 45000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Maximus XVIII Extreme",
-        "image-url": "https://www.asus.com/media/global/products/qI84Nl8PPJXWzPzS/P_setting_000_1_90_end_500.png",
-        "price": 25000
-      }
-    },
-    {
-      "cooler": {
-        "name": "Corsair H150i Elite Capellix",
-        "image-url": "https://www.corsair.com/medias/sys_master/images/images/h7f/h06/9252811453982/-CW-9060054-WW-Gallery-H150i-Elite-Capellix-360mm-RGB-AIO-Cooler-V2-750W-V2.png",
-        "price": 3500
-      }
-    }
-  ]
-},{
-  "builder-id": 14,
-  "builder-name": "PCWhiz",
-  "build-date": "2024-03-23T04:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "AMD Ryzen 7 5800X",
-        "image-url": "https://www.amd.com/system/files/2020-10/615137-amd-ryzen-7-5800x-pib-1260x709.png",
-        "price": 4000
-      }
-    },
-    {
-      "ram": {
-        "name": "Crucial Ballistix MAX RGB 32GB (2 x 16GB)",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/large/ram-bl-17.png",
-        "price": 5000
-      }
-    },
-    {
-      "gpu": {
-        "name": "NVIDIA GeForce RTX 3080",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152146/A0152146OK_BIG_1.jpg",
-        "price": 24000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Samsung 970 EVO Plus 2TB NVMe SSD",
-        "image-url": "https://www.jib.co.th/img_master/product/original/2019052214582033879_1.png",
-        "price": 8000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Western Digital WD Blue 6TB",
-        "image-url": "https://shop.westerndigital.com/content/dam/store/en-us/assets/products/internal-hdd/wd-blue-hdd/product.png",
-        "price": 3000
-      }
-    },
-    {
-      "psu": {
-        "name": "Seasonic Focus GX-850",
-        "image-url": "https://www.seasonic.com/fileadmin/user_upload/product-images/psu/focus-gx/3-1-Focus-GX-850.png",
-        "price": 4500
-      }
-    },
-    {
-      "case": {
-        "name": "NZXT H510 Elite",
-        "image-url": "https://i.ebayimg.com/images/g/wE0AAOSwdRBkMRIn/s-l1600.jpg",
-        "price": 2500
-      }
-    },
-    {
-      "monitor": {
-        "name": "LG 27GN950-B 27\" UltraGear 4K Gaming Monitor",
-        "image-url": "https://www.lg.com/us/images/monitors/md07520743/gallery/desktop-01.jpg",
-        "price": 55000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "ASUS ROG Strix B550-F Gaming",
-        "image-url": "https://www.asus.com/media/global/products/9m2c8bxh3bfrxktq/P_setting_000_1_90_end_500.png",
-        "price": 8000
-      }
     },
     {
-      "cooler": {
-        "name": "NZXT Kraken X63",
-        "image-url": "https://www.nzxt.com/assets/cms/1209/krakenx63_image.png",
-        "price": 2500
-      }
-    }
-  ]
-},{
-  "builder-id": 15,
-  "builder-name": "PCMaestro",
-  "build-date": "2024-03-23T05:00:00",
-  "components": [
-    {
-      "cpu": {
-        "name": "Intel Core i7-12700K",
-        "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i7-12700k-2x.png",
-        "price": 4500
-      }
-    },
-    {
-      "ram": {
-        "name": "Corsair Vengeance LPX 32GB (2 x 16GB)",
-        "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2024/02/Product/corsair-vengeance-lpx-black-ddr4-16gb-3200mhz-ram-front-view.jpg",
-        "price": 4000
-      }
-    },
-    {
-      "gpu": {
-        "name": "AMD Radeon RX 6900 XT",
-        "image-url": "https://www.amd.com/system/files/2021-03/653475-radeon-rx-6900xt-pib-1260x709.png",
-        "price": 35000
-      }
-    },
-    {
-      "ssd": {
-        "name": "Crucial P2 1TB NVMe SSD",
-        "image-url": "https://www.crucial.com/wcsstore/CrucialSAS/images/products/large/ssd-p2_1.png",
-        "price": 2000
-      }
-    },
-    {
-      "hdd": {
-        "name": "Seagate Barracuda 4TB",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0127510/A0127510OK_BIG_1.jpg",
-        "price": 2000
-      }
+      "builder-id": 2,
+      "builder-name": "preset",
+      "build-date": "2024-03-23T00:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "i7-13700H",
+            "image-url": "https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png",
+            "price": 9500
+          }
+        },
+        {
+          "ram": {
+            "name": "Corsair Vengeance LPX 16GB",
+            "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2024/02/Product/corsair-vengeance-lpx-black-ddr4-16gb-3200mhz-ram-front-view.jpg",
+            "price": 3600
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3080",
+            "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0152146/A0152146OK_BIG_1.jpg",
+            "price": 24000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 970 EVO Plus 1TB",
+            "image-url": "https://www.jib.co.th/img_master/product/original/2019052214582033879_1.png",
+            "price": 6000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate Barracuda 2TB",
+            "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0127509/A0127509OK_BIG_1.jpg",
+            "price": 2400
+          }
+        },
+        {
+          "psu": {
+            "name": "EVGA SuperNOVA 850 G3",
+            "image-url": "https://cdn.mos.cms.futurecdn.net/a6BR5kVuSCqqg4wRyWuEXF.jpg",
+            "price": 4500
+          }
+        },
+        {
+          "case": {
+            "name": "NZXT H510",
+            "image-url": "https://i.ebayimg.com/images/g/wE0AAOSwdRBkMRIn/s-l1600.jpg",
+            "price": 1750
+          }
+        },
+        {
+          "monitor": {
+            "name": "ASUS ROG Swift PG279QM",
+            "image-url": "https://www.commartthailand.com/wp-content/uploads/2022/03/h525.png",
+            "price": 39900
+          }
+        },
+        {
+          "mainboard": {
+            "name": "MSI MPG Z590 GAMING PLUS",
+            "image-url": "https://www.jib.co.th/img_master/uploads/Content/0201038239/pre-installed-pd_(1).png",
+            "price": 6900
+          }
+        },
+        {
+          "cooler": {
+            "name": "Cooler Master Hyper 212 RGB Black Edition",
+            "image-url": "https://cdn.coolermaster.com/media/assets/1041/h212rgb_g13-image.png",
+            "price": 1250
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 3,
+      "builder-name": "Tech Guru",
+      "build-date": "2024-03-23T15:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "i7-13700H",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 9500
+          }
+        },
+        {
+          "ram": {
+            "name": "Corsair Vengeance LPX 16GB",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 3600
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3080",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 24000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 970 EVO Plus 1TB",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 6000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate Barracuda 2TB",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 2400
+          }
+        },
+        {
+          "psu": {
+            "name": "EVGA SuperNOVA 850 G3",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 4500
+          }
+        },
+        {
+          "case": {
+            "name": "NZXT H510",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 1750
+          }
+        },
+        {
+          "monitor": {
+            "name": "ASUS ROG Swift PG279QM",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 39900
+          }
+        },
+        {
+          "mainboard": {
+            "name": "MSI MPG Z590 GAMING PLUS",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 6900
+          }
+        },
+        {
+          "cooler": {
+            "name": "Cooler Master Hyper 212 RGB Black Edition",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 1250
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 4,
+      "builder-name": "PC Master",
+      "build-date": "2024-03-23T16:30:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "i7-13700H",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 9500
+          }
+        },
+        {
+          "ram": {
+            "name": "Corsair Vengeance LPX 16GB",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 3600
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3080",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 24000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 970 EVO Plus 1TB",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 6000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate Barracuda 2TB",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 2400
+          }
+        },
+        {
+          "psu": {
+            "name": "EVGA SuperNOVA 850 G3",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 4500
+          }
+        },
+        {
+          "case": {
+            "name": "NZXT H510",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 1750
+          }
+        },
+        {
+          "monitor": {
+            "name": "ASUS ROG Swift PG279QM",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 39900
+          }
+        },
+        {
+          "mainboard": {
+            "name": "MSI MPG Z590 GAMING PLUS",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 6900
+          }
+        },
+        {
+          "cooler": {
+            "name": "Cooler Master Hyper 212 RGB Black Edition",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 1250
+          }
+        }
+      ]
     },
-    {
-      "psu": {
-        "name": "EVGA SuperNOVA 750 G5",
-        "image-url": "https://www.evga.com/products/images/gallery/220-G5-0750-X1_LG_5.jpg",
-        "price": 3000
-      }
-    },
-    {
-      "case": {
-        "name": "Cooler Master MasterBox TD500 Mesh",
-        "image-url": "https://www.coolermaster.com/catalog/cases/mid-tower/masterbox-td500-mesh-white-gallery-1.jpg",
-        "price": 3000
-      }
-    },
-    {
-      "monitor": {
-        "name": "AOC CQ32G3SE 31.5\" QHD Curved Gaming Monitor",
-        "image-url": "https://us.aoc.com/sites/us/files/styles/product_big/public/2021-08/CQ32G3SE_gallery_04.png",
-        "price": 25000
-      }
-    },
-    {
-      "mainboard": {
-        "name": "MSI MAG B660 TOMAHAWK WIFI",
-        "image-url": "https://www.msi.com//file/global/NewsTest/image/product/2021/MB/MB_MSI_B660_TOMAHAWK_WIFI/overview.png",
-        "price": 4000
-      }
-    },
-    {
-      "cooler": {
-        "name": "NZXT Kraken M22",
-        "image-url": "https://www.nzxt.com/assets/cms/1211/krakenm22_image.png",
-        "price": 1500
-      }
-    }
-  ]
-}
 
-
-
+    {
+      "builder-id": 5,
+      "builder-name": "PCGenius",
+      "build-date": "2024-03-22T19:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "Intel Core i5-12600K",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 3200
+          }
+        },
+        {
+          "ram": {
+            "name": "Team T-FORCE XTREEM ARGB 16GB (2 x 8GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 2800
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3050 Ti",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 9000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Crucial P2 1TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 3000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Toshiba N300 4TB NAS Internal Hard Drive HDD",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 2500
+          }
+        },
+        {
+          "psu": {
+            "name": "Corsair TX650M",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 2800
+          }
+        },
+        {
+          "case": {
+            "name": "Cooler Master MasterBox MB511 ARGB",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 1500
+          }
+        },
+        {
+          "monitor": {
+            "name": "ViewSonic ELITE XG270QG 27\" QHD Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 30000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "MSI B660M PRO-VDH WIFI",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 2000
+          }
+        },
+        {
+          "cooler": {
+            "name": "ARCTIC Freezer 34 eSports DUO",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 1800
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 6,
+      "builder-name": "PCEnthusiast",
+      "build-date": "2024-03-22T20:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "AMD Ryzen 9 5900X",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 5500
+          }
+        },
+        {
+          "ram": {
+            "name": "Corsair Vengeance RGB Pro 32GB (2 x 16GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 4500
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3090",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 35000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Western Digital WD_BLACK SN850 2TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 8500
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate IronWolf 6TB NAS Internal Hard Drive HDD",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 4500
+          }
+        },
+        {
+          "psu": {
+            "name": "EVGA SuperNOVA 1000 G5",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 5500
+          }
+        },
+        {
+          "case": {
+            "name": "Lian Li Lancool II Mesh",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 2000
+          }
+        },
+        {
+          "monitor": {
+            "name": "Samsung Odyssey G9 49\" Curved Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 60000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASUS ROG Crosshair VIII Dark Hero",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 9000
+          }
+        },
+        {
+          "cooler": {
+            "name": "NZXT Kraken Z73",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3200
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 7,
+      "builder-name": "TechMaster",
+      "build-date": "2024-03-22T21:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "Intel Core i9-13900K",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 7000
+          }
+        },
+        {
+          "ram": {
+            "name": "G.Skill Trident Z Royal 64GB (4 x 16GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 9000
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3080 Ti",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 28000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 980 PRO 2TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 10000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate FireCuda 520 4TB NVMe SSD",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 6000
+          }
+        },
+        {
+          "psu": {
+            "name": "Seasonic Prime TX-1000",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 8000
+          }
+        },
+        {
+          "case": {
+            "name": "Fractal Design Define 7 XL",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 2500
+          }
+        },
+        {
+          "monitor": {
+            "name": "Alienware AW3420DW 34\" Curved Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 45000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASUS ROG Strix Z790-E Gaming",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 12000
+          }
+        },
+        {
+          "cooler": {
+            "name": "Corsair H150i Elite Capellix",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3500
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 8,
+      "builder-name": "TechWizard",
+      "build-date": "2024-03-22T22:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "AMD Ryzen 7 5800X",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 4000
+          }
+        },
+        {
+          "ram": {
+            "name": "Crucial Ballistix MAX RGB 32GB (2 x 16GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 5000
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3070",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 18000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Sabrent Rocket 4 Plus 1TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 4000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate Barracuda 4TB",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 3000
+          }
+        },
+        {
+          "psu": {
+            "name": "Corsair RM850x",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 4500
+          }
+        },
+        {
+          "case": {
+            "name": "NZXT H710",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 2200
+          }
+        },
+        {
+          "monitor": {
+            "name": "LG 27GN950-B 27\" UltraGear 4K Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 55000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASUS TUF Gaming X570-Plus",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 3500
+          }
+        },
+        {
+          "cooler": {
+            "name": "Cooler Master MasterLiquid ML360R ARGB",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3200
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 9,
+      "builder-name": "TechSavvy",
+      "build-date": "2024-03-22T23:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "Intel Core i5-12600KF",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 3000
+          }
+        },
+        {
+          "ram": {
+            "name": "G.Skill Trident Z Neo 32GB (2 x 16GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 4000
+          }
+        },
+        {
+          "gpu": {
+            "name": "AMD Radeon RX 6700 XT",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 15000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Crucial P5 Plus 2TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 6000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Western Digital WD Blue 4TB",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 2500
+          }
+        },
+        {
+          "psu": {
+            "name": "Seasonic Focus GX-750",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 3000
+          }
+        },
+        {
+          "case": {
+            "name": "Phanteks Eclipse P400A Digital",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 1500
+          }
+        },
+        {
+          "monitor": {
+            "name": "Dell S2721DGF 27\" QHD Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 30000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASRock B660 Phantom Gaming 4",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 2000
+          }
+        },
+        {
+          "cooler": {
+            "name": "Noctua NH-D15 chromax.black",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3500
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 10,
+      "builder-name": "TechMastermind",
+      "build-date": "2024-03-23T00:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "AMD Ryzen 9 5900X",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 5500
+          }
+        },
+        {
+          "ram": {
+            "name": "Corsair Vengeance RGB Pro 64GB (4 x 16GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 8000
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3080 Ti",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 35000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 980 PRO 2TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 10000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate IronWolf Pro 8TB NAS Internal Hard Drive HDD",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 8000
+          }
+        },
+        {
+          "psu": {
+            "name": "Corsair RM1000x",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 5000
+          }
+        },
+        {
+          "case": {
+            "name": "NZXT H710i",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 2500
+          }
+        },
+        {
+          "monitor": {
+            "name": "ASUS ROG Swift PG32UQX 32\" Mini LED 4K Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 65000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASUS ROG Strix X570-E Gaming",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 12000
+          }
+        },
+        {
+          "cooler": {
+            "name": "NZXT Kraken Z73",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3200
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 11,
+      "builder-name": "PCMaestro",
+      "build-date": "2024-03-23T01:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "Intel Core i9-12900K",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 8000
+          }
+        },
+        {
+          "ram": {
+            "name": "HyperX Predator RGB 64GB (4 x 16GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 9000
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 3090 Ti",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 50000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 980 PRO 4TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 18000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Western Digital WD Black 6TB",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 4000
+          }
+        },
+        {
+          "psu": {
+            "name": "EVGA SuperNOVA 1600 T2",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 10000
+          }
+        },
+        {
+          "case": {
+            "name": "Corsair Obsidian 1000D",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 5000
+          }
+        },
+        {
+          "monitor": {
+            "name": "Acer Predator X34 GS 34\" Ultrawide Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 35000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASUS ROG Maximus Z790 Hero",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 15000
+          }
+        },
+        {
+          "cooler": {
+            "name": "NZXT Kraken X73",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3500
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 12,
+      "builder-name": "PCGuru",
+      "build-date": "2024-03-23T02:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "AMD Ryzen 9 5950X",
+            "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
+            "price": 7000
+          }
+        },
+        {
+          "ram": {
+            "name": "G.Skill Trident Z RGB 128GB (4 x 32GB)",
+            "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+            "price": 12000
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 4090",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 80000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Samsung 980 PRO 8TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 30000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate IronWolf Pro 12TB NAS Internal Hard Drive HDD",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 12000
+          }
+        },
+        {
+          "psu": {
+            "name": "Seasonic Prime PX-1300",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 7000
+          }
+        },
+        {
+          "case": {
+            "name": "Lian Li O11 Dynamic XL",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 3500
+          }
+        },
+        {
+          "monitor": {
+            "name": "LG OLED48C1 48\" OLED Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 50000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASUS ROG Crosshair XVII Extreme",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 25000
+          }
+        },
+        {
+          "cooler": {
+            "name": "NZXT Kraken Z73",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3200
+          }
+        }
+      ]
+    },
+    {
+      "builder-id": 13,
+      "builder-name": "TechEnthusiast",
+      "build-date": "2024-03-23T03:00:00",
+      "components": [
+        {
+          "cpu": {
+            "name": "Intel Core i9-13900K",
+            "image-url": "https://www.intel.com/content/dam/products/hero/foreground/core-i9-13900k-2x.png",
+            "price": 8000
+          }
+        },
+        {
+          "ram": {
+            "name": "Corsair Dominator Platinum RGB 128GB (4 x 32GB)",
+            "image-url": "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2023/01/Product/corsair-dominator-platinum-rgb-32gb-ddr4-3600mhz-1.jpg",
+            "price": 14000
+          }
+        },
+        {
+          "gpu": {
+            "name": "NVIDIA GeForce RTX 4080 Ti",
+            "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+            "price": 75000
+          }
+        },
+        {
+          "ssd": {
+            "name": "Sabrent Rocket 4 Plus 4TB NVMe SSD",
+            "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+            "price": 20000
+          }
+        },
+        {
+          "hdd": {
+            "name": "Seagate IronWolf Pro 16TB NAS Internal Hard Drive HDD",
+            "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+            "price": 20000
+          }
+        },
+        {
+          "psu": {
+            "name": "Corsair AX1600i",
+            "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+            "price": 4000
+          }
+        },
+        {
+          "case": {
+            "name": "Phanteks Enthoo Elite",
+            "image-url": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png",
+            "price": 9000
+          }
+        },
+        {
+          "monitor": {
+            "name": "Acer Predator X38 Pbmiphzx 38\" Ultrawide Gaming Monitor",
+            "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+            "price": 45000
+          }
+        },
+        {
+          "mainboard": {
+            "name": "ASUS ROG Maximus XVIII Extreme",
+            "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+            "price": 25000
+          }
+        },
+        {
+          "cooler": {
+            "name": "Corsair H150i Elite Capellix",
+            "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+            "price": 3500
+          }
+        }
+      ]
+    }
   ],
   "cpu": [
     {
