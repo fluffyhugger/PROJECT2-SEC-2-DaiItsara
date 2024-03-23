@@ -2,7 +2,9 @@
 import TopRank from "./TopRank.vue";
 import RankTable from "./RankTable.vue"
 import { ref } from 'vue';
-let selectedOption = ref('overall');
+import { SortBy } from "./enum";
+
+let selectedOption = ref(SortBy.Price);
 </script>
 
 <template>

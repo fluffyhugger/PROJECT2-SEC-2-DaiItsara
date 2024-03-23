@@ -6,6 +6,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { SortBy } from "./enum";
 
 library.add(faChevronLeft, faChevronRight);
 
@@ -63,14 +64,11 @@ onMounted(() => {
   <div class="top-container pt-5">
     <div class="head-toprank-container">
       <div class="head-toprank pl-11">
-        <h1 class="top-ranking">TOP RANKING</h1>
+        <h1 class="top-ranking">TOP RANKING </h1>
         <br />
         <div class="dropdown-container">
           <select v-model="selectedOption" name="sort" id="rank" class="dropdown">
-            <option value="overall">overall</option>
-            <option value="price">price</option>
-            <option value="popular">popular</option>
-            <option value="latest">latest</option>
+            <option v-for="(value, key) in SortBy" :value="value" :key="key">{{ key }}</option>
           </select>
         </div>
         Selected option: {{ selectedOption }}
