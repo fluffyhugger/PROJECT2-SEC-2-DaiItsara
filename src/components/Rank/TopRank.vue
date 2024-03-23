@@ -105,7 +105,7 @@ const sortByProducts = () => {
                 build-date : {{ Date(product['build-date']) }}
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">BuyNow !</button>
+                <button class="btn btn-primary" >Info !</button>
               </div>
             </div>
         </div>
