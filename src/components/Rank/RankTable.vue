@@ -21,6 +21,12 @@ const sortByProducts = () => {
 
     <!-- Render products if data has been fetched -->
     <div v-else>
+        <table>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
         <router-link v-for="product in sortByProducts()" :key="product.id" :to="`/ranking/product-info/${product['builder-id']}`" class="class-table">
            <!-- <div class="class-table" v-for="product in sortByProducts()" :key="product.id" > -->
             <img :src="product['components'][6].case['image-url']" :alt="product.name"
