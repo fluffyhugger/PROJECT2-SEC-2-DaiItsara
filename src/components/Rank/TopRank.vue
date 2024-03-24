@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { SortBy } from "./enum";
 
+// child
 library.add(faChevronLeft, faChevronRight);
 
 let autoSlideInterval;
@@ -59,15 +60,7 @@ onMounted(() => {
   startAutoSlide();
   containerRef.value.addEventListener("scroll", handleScroll);
 });
-const sortByProducts = () => {
-  if (props.selectedOption === SortBy.Price) {
-    return [...props.products].sort((a, b) => b['total-price'] - a['total-price']).slice(0, 3);
-  } else if (props.selectedOption === SortBy.Latest) {
-    return [...props.products].sort((a, b) => new Date(b['build-date']) - new Date(a['build-date'])).slice(0, 3);
-  } else {
-    return props.products.slice(0, 3);
-  }
-};
+
 </script>
 <template>
   <div class="top-container pt-5">
@@ -92,7 +85,7 @@ const sortByProducts = () => {
       </div>
       <div class="top">
         <div class="container" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" ref="containerRef">
-          <<div v-for="product in sortByProducts()" :key="product.id" class="card">
+          <<div v-for="product in props.products.slice(0, 3)" :key="product.id" class="card">
             <figure>
               <img :src="product.case['image-url']" alt="car!" />
             </figure>
@@ -102,7 +95,7 @@ const sortByProducts = () => {
                 price : {{ product['total-price'] }}
               </div>
               <div v-else-if="selectedOption === SortBy.Latest">
-                build-date : {{ Date(product['build-date']) }}
+                build-date : {{ new Date(product['build-date']) }}
               </div>
               <div class="card-actions justify-end">
                 <button class="btn btn-primary" >Info !</button>

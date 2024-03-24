@@ -1,17 +1,8 @@
 <script setup>
-import { onMounted, ref, computed } from 'vue';
-import { SortBy } from "./enum";
-const props = defineProps(['selectedOption', 'products', 'isLoading']);
-const sortByProducts = () => {
-    if (props.selectedOption === SortBy.Price) {
-        return [...props.products].sort((a, b) => b['total-price'] - a['total-price']);
-    } else if (props.selectedOption === SortBy.Latest) {
-        return [...props.products].sort((a, b) => new Date(b['build-date']) - new Date(a['build-date']));
-    } else {
-        return props.products;
-    }
-};
+import { defineProps } from 'vue';
 
+//child
+const props = defineProps(['selectedOption', 'products', 'isLoading']);
 </script>
 
 <template>
@@ -25,7 +16,7 @@ const sortByProducts = () => {
             <tr></tr>
             <tr></tr>
         </table>
-        <router-link v-for="product in sortByProducts()" :key="product.id" :to="`/ranking/product-info/${product['builder-id']}`" class="class-table">
+        <router-link v-for="product in props.products" :key="product.id" :to="`/ranking/product-info/${product['builder-id']}`" class="class-table">
            <!-- <div class="class-table" v-for="product in sortByProducts()" :key="product.id" > -->
             <img :src="product.case['image-url']" :alt="product.name"
                 style="max-width: 200px; max-height: 200px;">
