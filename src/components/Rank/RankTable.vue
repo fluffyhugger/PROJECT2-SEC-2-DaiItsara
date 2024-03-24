@@ -11,9 +11,7 @@ const sortByProducts = () => {
         return props.products;
     }
 };
-// const productInfoRoute = (productId) => {
-//   return { name: 'productInfo', params: { id: productId } };
-// };
+
 </script>
 
 <template>
@@ -29,9 +27,9 @@ const sortByProducts = () => {
         </table>
         <router-link v-for="product in sortByProducts()" :key="product.id" :to="`/ranking/product-info/${product['builder-id']}`" class="class-table">
            <!-- <div class="class-table" v-for="product in sortByProducts()" :key="product.id" > -->
-            <img :src="product['components'][6].case['image-url']" :alt="product.name"
+            <img :src="product.case['image-url']" :alt="product.name"
                 style="max-width: 200px; max-height: 200px;">
-            <p>build-date: {{ Date(product['build-date']) }}</p>
+            <p>build-date: {{ new Date(product['build-date']) }}</p>
             <p>builder-id: {{ product['builder-id'] }}</p>
             <p>builder-name: {{ product['builder-name'] }}</p>
             <p>total Price: {{ product['total-price'] }}</p>

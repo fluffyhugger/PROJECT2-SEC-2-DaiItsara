@@ -94,7 +94,7 @@ const sortByProducts = () => {
         <div class="container" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" ref="containerRef">
           <<div v-for="product in sortByProducts()" :key="product.id" class="card">
             <figure>
-              <img :src="product['components'][6].case['image-url']" alt="car!" />
+              <img :src="product.case['image-url']" alt="car!" />
             </figure>
             <div class="card-body">
               <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>

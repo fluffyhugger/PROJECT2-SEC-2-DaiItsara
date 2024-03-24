@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-
+import {  TotalPrice } from "./enum";
 const router = useRouter();
 const productId = router.currentRoute.value.params.id;
 let product = ref(null);
@@ -24,18 +24,14 @@ onMounted(async () => {
     try {
         const result = await fetch(`http://localhost:5000/pc-build`);
         const responses = await result.json();
-        console.log(responses, productId)
         product.value = responses.filter(response => response['builder-id'].toString() === productId);
+        const prices = Object.keys(product.value[0])
+            .filter(key => componentTypes.includes(key)) // Filter out non-component keys
+            .map(key => product.value[0][key].price); // Map to the price of each component
+        product.value[0]['total-price'] = TotalPrice(...prices); // Calculate total price
         isLoading.value = false;
-        let totalPrice = 0;
-        component = product.value[0]['components']
-        component.forEach(item => {
-            const componentType = Object.keys(item)[0];
-            if (componentTypes.includes(componentType)) {
-                totalPrice += item[componentType].price;
-            }
-        })
-        product.value[0]['total-price'] = totalPrice;
+        product.value = product.value[0]
+        console.log(product.value);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -44,53 +40,50 @@ onMounted(async () => {
 
 <template>
     <div class="grid-container" v-if="!isLoading">
-        <img :src="product[0]['components'][0]['cpu']['image-url']" :alt="product.name"
+        <img :src="product['cpu']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][1]['ram']['image-url']" :alt="product.name"
+        <img :src="product['ram']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][2]['gpu']['image-url']" :alt="product.name"
+        <img :src="product['gpu']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][3]['ssd']['image-url']" :alt="product.name"
+        <img :src="product['ssd']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][4]['hdd']['image-url']" :alt="product.name"
+        <img :src="product['hdd']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][5]['psu']['image-url']" :alt="product.name"
+        <img :src="product['psu']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][6]['case']['image-url']" :alt="product.name"
+        <img :src="product['case']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][7]['monitor']['image-url']" :alt="product.name"
+        <img :src="product['monitor']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][8]['mainboard']['image-url']" :alt="product.name"
+        <img :src="product['mainboard']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
-        <img :src="product[0]['components'][9]['cooler']['image-url']" :alt="product.name"
+        <img :src="product['cooler']['image-url']" :alt="product.name"
             style="max-width: 200px; max-height: 200px;" class="grid-item">
         <div class="grid-info grid-item">
-
-            <p> CPU name:{{ component[0]['cpu']['name'] }} price {{ product[0]['components'][0]['cpu']['price'] }}</p>
+            <p> CPU name:{{ product['cpu']['name'] }} price {{ product['cpu']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> Ram name:{{ component[1]['ram']['name'] }} price {{ product[0]['components'][1]['ram']['price'] }}</p>
+            <p> Ram name:{{ product['ram']['name'] }} price {{product['ram']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> GPU name:{{ component[2]['gpu']['name'] }} price {{ product[0]['components'][2]['gpu']['price'] }}</p>
+            <p> GPU name:{{ product['gpu']['name'] }} price {{ product['gpu']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> SSD name:{{ component[3]['ssd']['name'] }} price {{ product[0]['components'][3]['ssd']['price'] }}</p>
+            <p> SSD name:{{ product['ssd']['name'] }} price {{ product['ssd']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> HDD name:{{ component[4]['hdd']['name'] }} price {{ product[0]['components'][4]['hdd']['price'] }}</p>
+            <p> HDD name:{{ product['hdd']['name'] }} price {{ product['hdd']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> PSU name:{{ component[5]['psu']['name'] }} price {{ product[0]['components'][5]['psu']['price'] }}</p>
+            <p> PSU name:{{  product['psu']['name'] }} price {{  product['psu']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> CASE name:{{ component[6]['case']['name'] }} price {{ product[0]['components'][6]['case']['price'] }}
+            <p> CASE name:{{  product['case']['name'] }} price {{  product['case']['price'] }}
             </p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> MONITOR name:{{ component[7]['monitor']['name'] }} price {{
-        product[0]['components'][7]['monitor']['price'] }}</p>
+            <p> MONITOR name:{{  product['monitor']['name'] }} price {{product['monitor']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> MAINBOARD name:{{ component[8]['mainboard']['name'] }} price {{
-        product[0]['components'][8]['mainboard']['price'] }}</p>
+            <p> MAINBOARD name:{{  product['mainboard']['name'] }} price {{ product['mainboard']['price'] }}</p>
             <br> <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-            <p> COOLER name:{{ component[9]['cooler']['name'] }} price {{ product[0]['components'][9]['cooler']['price']
+            <p> COOLER name:{{  product['cooler']['name'] }} price {{  product['cooler']['price']
                 }}</p>
             <br>
-            <p>Total Price: {{ product[0]['total-price'] }}</p>
+            <p>Total Price: {{  product['total-price'] }}</p>
         </div>
     </div>
 </template>
