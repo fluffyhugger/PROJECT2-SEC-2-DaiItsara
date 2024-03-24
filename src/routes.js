@@ -7,6 +7,11 @@ const routes = [
     component: () => import('./components/Rank/RankingSpec.vue'),
   },
   {
+    path: '/ranking/product-info/:id',
+    name:'productInfo',
+    component: () => import('./components/Rank/ProductInfo.vue'),
+  },
+  {
     path: '/build',
     component: () => import('./components/BuildSpec.vue'),
   },
