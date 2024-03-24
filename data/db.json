@@ -2107,7 +2107,7 @@
       "max-cpu-coolers-height": 165,
       "max-vga-length": 365,
       "warranty": "3 years",
-      "price_baht": 5150,
+      "price": 5150,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png"
     },
     {
@@ -2141,7 +2141,7 @@
       "max-cpu-coolers-height": 165,
       "max-vga-length": 435,
       "warranty": "2 years",
-      "price_baht": 8790,
+      "price": 8790,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2023/01/1672294382-h9-elite-open-black.png"
     },
     {
@@ -2180,7 +2180,7 @@
       "max-cpu-coolers-height": 180,
       "max-vga-length": 458,
       "warranty": "2 years",
-      "price_baht": 5890,
+      "price": 5890,
       "picture": "https://m.media-amazon.com/images/I/61-BLsQQc7L._AC_UF1000,1000_QL80_.jpg"
     },
     {
@@ -2214,7 +2214,7 @@
       "max-cpu-coolers-height": 170,
       "max-vga-length": 420,
       "warranty": "2 years",
-      "price_baht": 6990,
+      "price": 6990,
       "picture": "https://storage.googleapis.com/file-computeandmore/images/69783d95-e8aa-4c88-a376-b904cc0fc0d9.PNG"
     },
     {
@@ -2252,7 +2252,7 @@
       "max-cpu-coolers-height": 172,
       "max-vga-length": 315,
       "warranty": "2 years",
-      "price_baht": 3590,
+      "price": 3590,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2019/06/Meshify-C-TGL_1-scaled.jpg"
     },
     {
@@ -2290,7 +2290,7 @@
       "max-cpu-coolers-height": 157,
       "max-vga-length": 360,
       "warranty": "2 years",
-      "price_baht": 1990,
+      "price": 1990,
       "picture": "https://cdn.coolermaster.com/media/1036/gallery-1-min-zoom.png"
     }
   ],
