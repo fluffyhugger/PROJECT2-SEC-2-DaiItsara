@@ -17,7 +17,6 @@ const isLoading = ref(true)
 const selectedOption = ref('cpu')
 // Define reactive variable to control visibility of cart items
 const showCartPopup = ref(false)
-const cartRef = ref({}) // Assuming cart is populated elsewhere
 
 // Function to fetch data from API based on selected option
 const fetchData = async () => {
@@ -110,6 +109,7 @@ onMounted(async () => {
       <CartPopup
         v-if="showCartPopup"
         :cart="cart"
+        :builderName="builderName"
         @close="showCartPopup = false"
       />
     </teleport>
