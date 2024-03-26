@@ -770,6 +770,57 @@
         "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
         "price": 2650
       }
+    },
+    {
+      "id": "b71a",
+      "builder-id": "81",
+      "builder-name": "Jojo",
+      "build-date": "2024-03-26T19:12:44",
+      "cpu": {
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      },
+      "ram": {
+        "name": "KINGSTON undefined HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
+        "image-url": "https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png",
+        "price": 2300
+      },
+      "gpu": {
+        "name": "COLORFUL iGame GeForce RTX 30 Series iGame GeForce RTX 3060 Ultra W OC",
+        "image-url": "https://www.jib.co.th/img_master/product/original/2023070117031260597_1.png",
+        "price": 8500
+      },
+      "ssd": {
+        "name": "Apacer undefined AS2280Q4U 512GB",
+        "image-url": "https://gzhls.at/i/75/20/2827520-l0.png",
+        "price": 1965
+      },
+      "psu": {
+        "name": "AEROCOOL Superb Superb 600W",
+        "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+        "price": 790
+      },
+      "case": {
+        "name": "Cooler Master undefined MasterBox Q300L",
+        "image-url": "https://cdn.coolermaster.com/media/1036/gallery-1-min-zoom.png",
+        "price": 1990
+      },
+      "monitor": {
+        "name": "LG - 24MK600M-B",
+        "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+        "price": 3715
+      },
+      "mainboard": {
+        "name": "ASROCK undefined B650 Steel Legend",
+        "image-url": "https://storage.googleapis.com/file-computeandmore/images/9cd834bf-5683-4e44-af7b-05ce250620fc.png",
+        "price": 7990
+      },
+      "cooler": {
+        "name": "ARCTIC Freezer 34 eSports DUO Freezer 34 eSports DUO",
+        "image-url": "https://storage.googleapis.com/file-computeandmore/images/52d44178-89e8-40a5-945a-02eb534fda9c.png",
+        "price": 2590
+      }
     }
   ],
   "cpu": [
@@ -1871,7 +1922,7 @@
       "max-vga-length": 365,
       "warranty": "3 years",
       "price": 5150,
-      "picture": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png"
+      "picture": "https://i.ibb.co/5kH8t0d/CASE-00001.png"
     },
     {
       "id": "CASE_00002",
@@ -1909,7 +1960,7 @@
       "max-vga-length": 435,
       "warranty": "2 years",
       "price": 8790,
-      "picture": "https://www.autonetpc.com/wp-content/uploads/2023/01/1672294382-h9-elite-open-black.png"
+      "picture": "https://i.ibb.co/b7LyNm8/CASE-00002.png"
     },
     {
       "id": "CASE_00003",
@@ -1948,7 +1999,7 @@
       "max-vga-length": 458,
       "warranty": "2 years",
       "price": 5890,
-      "picture": "https://m.media-amazon.com/images/I/61-BLsQQc7L._AC_UF1000,1000_QL80_.jpg"
+      "picture": "https://i.ibb.co/K9RMVDW/CASE-00003.png"
     },
     {
       "id": "CASE_00004",
@@ -1986,7 +2037,7 @@
       "max-vga-length": 420,
       "warranty": "2 years",
       "price": 6990,
-      "picture": "https://storage.googleapis.com/file-computeandmore/images/69783d95-e8aa-4c88-a376-b904cc0fc0d9.PNG"
+      "picture": "https://i.ibb.co/C2PRJzq/CASE-00004.png"
     },
     {
       "id": "CASE_00005",
@@ -2024,7 +2075,7 @@
       "max-vga-length": 315,
       "warranty": "2 years",
       "price": 3590,
-      "picture": "https://www.autonetpc.com/wp-content/uploads/2019/06/Meshify-C-TGL_1-scaled.jpg"
+      "picture": "https://i.ibb.co/8Xf86v5/CASE-00005.png"
     },
     {
       "id": "CASE_00006",
@@ -2062,7 +2113,7 @@
       "max-vga-length": 360,
       "warranty": "2 years",
       "price": 1990,
-      "picture": "https://cdn.coolermaster.com/media/1036/gallery-1-min-zoom.png"
+      "picture": "https://i.ibb.co/54fgFF3/CASE-00006.png"
     }
   ],
   "monitor": [
