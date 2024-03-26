@@ -5,22 +5,20 @@
 const props = defineProps(["selectedOption", "products", "isLoading"]);
 //format date
 const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return `${date.getFullYear()}-${(date.getMonth() + 1)
-    .toString()
-    .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
+    const date = new Date(dateString);
+    return `${date.getFullYear()}-${(date.getMonth() + 1)
+        .toString()
+        .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
 };
-
 //format price ,
 const formatPrice = (price) => {
-  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 </script>
 <template>
-    <div v-if="props.isLoading">Loading...</div>
-    <div v-else>
-        <table class="product-table">
-            <thead>
+    <div class="mt-10 mb-10">
+        <table class="table ">
+            <thead class="font-bold text-xl">
                 <tr>
                     <th>#</th>
                     <th>Spec Details</th>
@@ -30,39 +28,38 @@ const formatPrice = (price) => {
                 </tr>
             </thead>
             <tbody>
-                <router-link v-for="(product, index) in props.products" :key="product.id"
-                    :to="`/ranking/pcset-info/${product['builder-id']}`" class="table-row">
-                    <tr>
-                        <td>{{ index + 1 }}</td>
-                        <td>
-                            <div class="product-image">
-                                <img :src="product.case['image-url']" :alt="product.name" />
-                            </div>
-                        </td>
-                        <td>{{ product["builder-name"] }}</td>
-                        <td>{{ formatDate(product["build-date"]) }}</td>
-                        <td>{{ formatPrice(product["total-price"]) }}</td>
-                    </tr>
-                </router-link>
+                <tr v-for="(product, index) in props.products" :key="product.id"
+                    :class="{ 'bg-gray-100': index % 2 === 0 }" :to="`/ranking/pcset-info/${product['builder-id']}` ">
+                    <td class=" text-center font-semibold">{{ index + 1 }}</td>
+                    <td>
+                        <img :src="product.case['image-url']" :alt="product.name" class="product-image w-24 h-24" />
+                        {{ product.cpu['name'] }}{{ product.gpu['name'] }}
+                    </td>
+                    <td>{{ product["builder-name"] }}</td>
+                    <td>{{ formatDate(product["build-date"]) }}</td>
+                    <td>{{ formatPrice(product["total-price"]) }}</td>
+                </tr>
             </tbody>
         </table>
     </div>
 </template>
 
 <style scoped>
-.product-table {
-    border-collapse: collapse;
+.table {
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.product-table th,
-.product-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
 }
 
-.product-table th {
+.table th {
     background-color: #f2f2f2;
 }
 
@@ -70,9 +67,10 @@ const formatPrice = (price) => {
     background-color: #f2f2f2;
 }
 
-.product-image img {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
+.product-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
 }
 </style>

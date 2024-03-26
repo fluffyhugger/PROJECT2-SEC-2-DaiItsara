@@ -85,7 +85,7 @@ onMounted(() => {
       </div>
       <div class="top">
         <div class="container" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" ref="containerRef">
-          <<div v-for="product in props.products.slice(0, 3)" :key="product.id" class="card">
+          <div v-for="product in props.products.slice(0, 3)" :key="product.id" class="card">
             <figure>
               <img :src="product.case['image-url']" alt="car!" />
             </figure>
