@@ -22,6 +22,7 @@ const formatPrice = (price) => {
                 <tr>
                     <th>#</th>
                     <th>Spec Details</th>
+                    <th>xxxxxx</th>
                     <th>Builder</th>
                     <th>Build Date</th>
                     <th>Price</th>
@@ -29,12 +30,15 @@ const formatPrice = (price) => {
             </thead>
             <tbody>
                 <tr v-for="(product, index) in props.products" :key="product.id"
-                    :class="{ 'bg-gray-100': index % 2 === 0 }" :to="`/ranking/pcset-info/${product['builder-id']}` ">
+                    :class="{ 'bg-gray-100': index % 2 === 0 }" >
                     <td class=" text-center font-semibold">{{ index + 1 }}</td>
                     <td>
+                       
                         <img :src="product.case['image-url']" :alt="product.name" class="product-image w-24 h-24" />
                         {{ product.cpu['name'] }}{{ product.gpu['name'] }}
+
                     </td>
+                    <td> <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link></td>
                     <td>{{ product["builder-name"] }}</td>
                     <td>{{ formatDate(product["build-date"]) }}</td>
                     <td>{{ formatPrice(product["total-price"]) }}</td>

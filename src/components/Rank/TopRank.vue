@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, defineProps, watch, defineEmits } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -98,7 +98,7 @@ onMounted(() => {
                 build-date : {{ new Date(product['build-date']) }}
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" >Info !</button>
+                <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
               </div>
             </div>
         </div>
