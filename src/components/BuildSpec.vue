@@ -1,9 +1,9 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-import ItemsCard from './Util/ItemsCard.vue'
+import { onMounted, ref } from "vue"
+import ItemsCard from "./Util/ItemsCard.vue"
 const itemList = ref([])
 const isLoading = ref(true)
-const selectedOption = ref('cpu')
+const selectedOption = ref("cpu")
 
 onMounted(async () => {
   await fetchData()
@@ -47,6 +47,14 @@ const fetchData = async () => {
       :item="item"
       :listName="selectedOption"
     ></ItemsCard>
+    <div>
+      <h1>Your List:</h1>
+      <button
+        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Add to Spec
+      </button>
+    </div>
   </div>
 </template>
 

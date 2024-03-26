@@ -1827,7 +1827,7 @@
       "max-cpu-coolers-height": 165,
       "max-vga-length": 365,
       "warranty": "3 years",
-      "price_baht": 5150,
+      "price": 5150,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2022/12/1666138989-h5-elite-hero-white.png"
     },
     {
@@ -1861,7 +1861,7 @@
       "max-cpu-coolers-height": 165,
       "max-vga-length": 435,
       "warranty": "2 years",
-      "price_baht": 8790,
+      "price": 8790,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2023/01/1672294382-h9-elite-open-black.png"
     },
     {
@@ -1900,7 +1900,7 @@
       "max-cpu-coolers-height": 180,
       "max-vga-length": 458,
       "warranty": "2 years",
-      "price_baht": 5890,
+      "price": 5890,
       "picture": "https://m.media-amazon.com/images/I/61-BLsQQc7L._AC_UF1000,1000_QL80_.jpg"
     },
     {
@@ -1934,7 +1934,7 @@
       "max-cpu-coolers-height": 170,
       "max-vga-length": 420,
       "warranty": "2 years",
-      "price_baht": 6990,
+      "price": 6990,
       "picture": "https://storage.googleapis.com/file-computeandmore/images/69783d95-e8aa-4c88-a376-b904cc0fc0d9.PNG"
     },
     {
@@ -1972,7 +1972,7 @@
       "max-cpu-coolers-height": 172,
       "max-vga-length": 315,
       "warranty": "2 years",
-      "price_baht": 3590,
+      "price": 3590,
       "picture": "https://www.autonetpc.com/wp-content/uploads/2019/06/Meshify-C-TGL_1-scaled.jpg"
     },
     {
@@ -2010,7 +2010,7 @@
       "max-cpu-coolers-height": 157,
       "max-vga-length": 360,
       "warranty": "2 years",
-      "price_baht": 1990,
+      "price": 1990,
       "picture": "https://cdn.coolermaster.com/media/1036/gallery-1-min-zoom.png"
     }
   ],
@@ -2739,6 +2739,154 @@
       "led-lighting": "RGB",
       "price": 1990,
       "picture": "https://cdn.coolermaster.com/media/2945/hyper-212-rgb-black-gallery-1-zoom.png"
+    }
+  ],
+  "news": [
+    {
+      "itemsToShow": 4,
+      "totalItems": 8,
+      "routeParams": "{{ route.params.articleType }}",
+      "articles": [
+        {
+          "title": "MeowBook",
+          "image": "https://gadgettendency.com/wp-content/uploads/2024/03/Colorfuls-Meowbook-goes-on-sale-25K-165Hz-screen-Ryzen-7.jpg",
+          "content": "Content for MeowBook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "news"
+        },
+        {
+          "title": "XiaomiBook",
+          "image": "https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-book-14/PC/6dd1847299283852d1d866376f265cc0.jpg",
+          "content": "Content for XiaomiBook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "news"
+        },
+        {
+          "title": "GeforeRTX 4060 TI",
+          "image": "https://img.advice.co.th/images_nas/pic_product4/A0151476/A0151476OK_BIG_1.jpg",
+          "content": "Content for GeforeRTX 4060 TI",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "news"
+        },
+        {
+          "title": "Macbook",
+          "image": "https://media.studio7thailand.com/4290/Apple-MacBook-Air-13-M1-chip8C-CPU-7C-GPU-8GB-256GB-Space-Grey-2020-1-square_medium.jpg",
+          "content": "Content for Macbook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "news"
+        }
+      ]
+    }
+  ],
+  "promotion": [
+    {
+      "itemsToShow": 4,
+      "totalItems": 8,
+      "routeParams": "{{ route.params.articleType }}",
+      "articles": [
+        {
+          "title": "MSI Promotion",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2021/03/MSI-Commart-Promotion-m5.jpg",
+          "content": "Content for MSI",
+          "date": "DaiItsara 25 มี.ค 2567",
+          "type": "promotion"
+        },
+        {
+          "title": "Printer Promotion",
+          "image": "https://mediaserver.goepson.com/ImConvServlet/imconv/67039053eaf14f1f63c44d553b7feeaf1a36bbcc/original?use=banner&assetDescr=ethepson",
+          "content": "Content for Printer",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "promotion"
+        },
+        {
+          "title": "RAM Promotion",
+          "image": "https://www.commartthailand.com/wp-content/uploads/2023/07/corsair0.jpg",
+          "content": "Content for Ram",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "promotion"
+        },
+        {
+          "title": "Macbook Promotion",
+          "image": "https://www.commartthailand.com/wp-content/uploads/2021/11/Com7.jpg",
+          "content": "Content for Macbook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "promotion"
+        }
+      ]
+    }
+  ],
+  "howto": [
+    {
+      "itemsToShow": 4,
+      "totalItems": 8,
+      "routeParams": "{{ route.params.articleType }}",
+      "articles": [
+        {
+          "title": "8 แอพแปลภาษาด้วยเสียง",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2023/12/8_app_voice_translate_2024.jpg",
+          "content": "Content for MeowBook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "howto"
+        },
+        {
+          "title": "คอมเปิดไม่ติด 7 วิธีที่ช่วยเช็ค",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2023/12/fixed_pc_can_not_boot_2023.jpg",
+          "content": "Content for XiaomiBook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "howto"
+        },
+        {
+          "title": "โปรแกรมแปลงไฟล์ pdf เป็น word ไม่เพี้ยน",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2023/11/convert_pdf_to_wod_2023_cov-1.jpg",
+          "content": "Content for GeforeRTX 4060 TI",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "howto"
+        },
+        {
+          "title": "Overclock คืออะไร",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2023/10/liquid-cooled-gaming-pc-build.jpg",
+          "content": "Content for Macbook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "howto"
+        }
+      ]
+    }
+  ],
+  "tipstrick": [
+    {
+      "itemsToShow": 4,
+      "totalItems": 8,
+      "routeParams": "{{ route.params.articleType }}",
+      "articles": [
+        {
+          "title": "แนะนำ 3 วิธีอัดหน้าจอคอม Windows 11",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2024/03/CapVedio2024.jpg",
+          "content": "Content for MeowBook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "tipstrick"
+        },
+        {
+          "title": "8 วิธีแคปหน้าจอคอม",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2022/05/NBS-200819_thumb_NBS-1-4-1s-1024x576.jpg",
+          "content": "Content for XiaomiBook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "tipstrick"
+        },
+        {
+          "title": "200 แคปชั่นน่ารัก 2024 โพสต์อ้อน เรียกยอดไลค์ ไม่ใช้ไม่ได้แล้ว",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2024/03/CuteCaption2024.jpg",
+          "content": "Content for GeforeRTX 4060 TI",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "tipstrick"
+        },
+        {
+          "title": "รวมซิมเน็ตรายปี",
+          "image": "https://notebookspec.com/web/wp-content/uploads/2024/03/AISTureDtec.jpg",
+          "content": "Content for Macbook",
+          "date": "DaiItsara 17 มี.ค 2567",
+          "type": "tipstrick"
+        }
+      ]
     }
   ]
 }

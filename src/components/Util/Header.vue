@@ -18,10 +18,9 @@
         <ul
           class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
         >
-          <li><RouterLink to="/news">News</RouterLink></li>
-          <li><RouterLink to="/promotion">Promotion</RouterLink></li>
-          <li><RouterLink to="/howto">How to</RouterLink></li>
-          <li><RouterLink to="/tiptrick">Tips & Tricks</RouterLink></li>
+          <li v-for="articleType in articleTypes" :key="articleType">
+            <RouterLink :to="`/${articleType}`">{{ articleType }}</RouterLink>
+          </li>
         </ul>
       </details>
       <div class="ml-10 pt-3">
@@ -44,7 +43,8 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router"
+import { RouterLink } from 'vue-router'
+const articleTypes = ['news', 'promotion', 'howto', 'tipstrick']
 </script>
 
 <style scoped>
