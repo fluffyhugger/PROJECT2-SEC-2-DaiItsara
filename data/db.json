@@ -6,7 +6,7 @@
       "build-date": "2024-03-20T10:30:00",
 
       "cpu": {
-        "name": "i7-13700H",
+        "name": "Intel Core i7-13700H",
         "image-url": "https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png",
         "price": 9500
       },
@@ -61,7 +61,7 @@
       "builder-name": "preset",
       "build-date": "2024-03-23T00:00:00",
       "cpu": {
-        "name": "i7-13700H",
+        "name": "Intel Core i7-13700H",
         "image-url": "https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png",
         "price": 9500
       },
@@ -117,7 +117,7 @@
       "build-date": "2024-03-23T15:00:00",
 
       "cpu": {
-        "name": "i7-13700H",
+        "name": "Intel Core i7-13700H",
         "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
         "price": 9500
       },
@@ -172,7 +172,7 @@
       "builder-name": "PC Master",
       "build-date": "2024-03-23T16:30:00",
       "cpu": {
-        "name": "i7-13700H",
+        "name": "Intel Core i7-13700H",
         "image-url": "https://www.amd.com/system/files/2020-09/616656-amd-ryzen-7-5000-series-PIB-1260x709_0.png",
         "price": 9500
       },
