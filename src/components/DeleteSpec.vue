@@ -115,26 +115,28 @@ const selectedGPUs = ref([]);
     };
 
     const deleteData = async (buliderId) => {
-    try {
-        // Send DELETE request to delete the product with buliderId
-        const response = await fetch(`http://localhost:5173/deleting/${buliderId}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-                // Add any additional headers if needed
-            }
-        });
-        // Check if deletion was successful
-        if (response.ok) {
-            // Find and remove the deleted product from the products array
-            props.products = props.products.filter(product => product.id !== buliderId);
-        } else {
-            // Handle error response
-            console.error('Error deleting product:', response.statusText);
-        }
-    } catch (error) {
-        console.error('Error deleting product:', error);
-    }
+        const intBuilderId = parseInt(buliderId)
+    // try {
+    //     // Send DELETE request to delete the product with buliderId
+    //     const response = await fetch(`http://localhost:5173/deleting/${intBuilderId}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //             // Add any additional headers if needed
+    //         }
+    //     });
+    //     // Check if deletion was successful
+    //     if (response.ok) {
+    //         // Find and remove the deleted product from the products array
+    //         props.products = props.products.filter(product => product.id !== intBuilderId);
+    //     } else {
+    //         // Handle error response
+    //         console.error('Error deleting product:', response.statusText);
+    //     }
+    // } catch (error) {
+    //     console.error('Error deleting product:', error);
+    // }
+    console.log(buliderId)
 };
 </script>
 
