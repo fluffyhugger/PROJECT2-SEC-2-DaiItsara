@@ -36,7 +36,6 @@ onMounted(async () => {
         });
         products.value = responses;
         isLoading.value = false;
-        console.log("product ",products.value)
     } catch (error) {
         console.error('Error fetching data:', error);
     }
