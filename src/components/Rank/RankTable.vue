@@ -115,25 +115,25 @@ const formatPrice = (price) => {
 
 <style scoped>
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .table th,
 .table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
 }
 
 .table th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .table-row:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .product-image {

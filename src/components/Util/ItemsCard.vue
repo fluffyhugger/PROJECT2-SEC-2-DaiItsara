@@ -1,51 +1,86 @@
 <script setup>
-import { defineProps } from "vue"
+import { defineProps, ref, onMounted } from 'vue'
 
 const props = defineProps({
   item: Object,
   listName: String,
 })
 
-const addToSpec = async (listName, component) => {
-  const result = await fetch("http://localhost:5000/pc-build")
-  let response = await result.json()
+const cart = ref(JSON.parse(localStorage.getItem('cart')) || {})
 
-  // Prompt user for builder name
-  const builderName = window.prompt("Enter builder name:")
+let builderName = ''
+
+// Prompt user for builder name when component is mounted
+onMounted(() => {
+  builderName = localStorage.getItem('builderName') || ''
   if (!builderName) {
-    alert("Builder name is required!")
-    return
+    builderName = window.prompt('Enter builder name:')
+    if (!builderName) {
+      alert('Builder name is required!')
+    } else {
+      localStorage.setItem('builderName', builderName)
+    }
   }
+})
 
-  // Generate a random builder ID
+const addToSpec = (listName, component) => {
   const builderId = Math.floor(Math.random() * 1000) + 1
+  // Generate a random builder ID
+  localStorage.setItem('builderId', builderId)
+  let buildDate = new Date().toISOString()
+
+  // Convert the Date object to a string in the specified format
+  buildDate = buildDate.substring(0, 10) + 'T' + buildDate.substring(11, 19)
+  localStorage.setItem('buildDate', buildDate)
 
   // Extract the required fields from the component
   const { brand, series, model, picture, price } = component
-
-  // Add the component as a new object to the pc-build array
-  const newBuild = {
-    "builder-id": builderId,
-    "builder-name": builderName,
-    "build-date": new Date().toISOString(),
-    [listName]: {
-      name: `${brand} ${series} ${model}`,
-      "image-url": picture,
-      price: price,
-    },
+  const newItem = {
+    name: `${brand} ${series} ${model}`,
+    'image-url': picture,
+    price: price,
   }
 
-  response.push(newBuild)
+  // Add the component to the cart based on the listName
+  switch (listName) {
+    case 'cpu':
+      cart.value.cpu = newItem
+      break
+    case 'ram':
+      cart.value.ram = newItem
+      break
+    case 'gpu':
+      cart.value.gpu = newItem
+      break
+    case 'ssd':
+      cart.value.ssd = newItem
+      break
+    case 'hdd':
+      cart.value.hdd = newItem
+      break
+    case 'psu':
+      cart.value.psu = newItem
+      break
+    case 'case':
+      cart.value.case = newItem
+      break
+    case 'monitor':
+      cart.value.monitor = newItem
+      break
+    case 'mainboard':
+      cart.value.mainboard = newItem
+      break
+    case 'cooler':
+      cart.value.cooler = newItem
+      break
+    default:
+      console.error('Invalid listName:', listName)
+  }
 
-  await fetch("http://localhost:5000/pc-build", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ "pc-build": response }),
-  })
+  // Update localStorage with the updated cart data
+  localStorage.setItem('cart', JSON.stringify(cart.value))
 
-  alert(`${brand} ${series} ${model} added to spec!`)
+  alert('Component added to cart!')
 }
 </script>
 
