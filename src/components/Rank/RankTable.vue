@@ -1,3 +1,52 @@
+<script setup>
+import { ref, defineProps } from 'vue';
+const props = defineProps({
+    selectedOption: String,
+    products: Array,
+    isLoading: Boolean
+});
+const minPrice = ref('');
+const maxPrice = ref('');
+const selectedCPUs = ref([]);
+const selectedGPUs = ref([]);
+const selectCPU = (cpu) => {
+    const index = selectedCPUs.value.indexOf(cpu);
+    if (index === -1) {
+        selectedCPUs.value.push(cpu);
+    } else {
+        selectedCPUs.value.splice(index, 1);
+    }
+    sortProducts();
+};
+const selectGPU = (gpu) => {
+    const index = selectedGPUs.value.indexOf(gpu);
+    if (index === -1) {
+        selectedGPUs.value.push(gpu);
+    } else {
+        selectedGPUs.value.splice(index, 1);
+    }
+    sortProducts();
+};
+const sortProducts = () => {
+    let sortedProducts = [...props.products];
+    if (selectedCPUs.value.length > 0) {
+        sortedProducts = sortedProducts.filter(product => selectedCPUs.value.includes(product.cpu.name));
+    }
+    if (selectedGPUs.value.length > 0) {
+        sortedProducts = sortedProducts.filter(product => selectedGPUs.value.includes(product.gpu.name));
+    }
+    props.products = sortedProducts;
+};
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return `${date.getFullYear()}-${(date.getMonth() + 1)
+        .toString()
+        .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
+};
+const formatPrice = (price) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+</script>
 <template>
     <div class="mt-10 mb-10">
         <div class="border-t solid 0.5px border-gray-300 p-4 flex flex-row items-center">
@@ -51,67 +100,6 @@
         </table>
     </div>
 </template>
-
-<script setup>
-// Import necessary functions and variables
-import { ref, defineProps } from 'vue';
-
-// Define props
-const props = defineProps({
-    selectedOption: String,
-    products: Array,
-    isLoading: Boolean
-});
-
-// Define reactive variables
-const minPrice = ref('');
-const maxPrice = ref('');
-const selectedCPUs = ref([]);
-const selectedGPUs = ref([]);
-
-// Logic to select CPU
-const selectCPU = (cpu) => {
-    // Toggle selection
-    const index = selectedCPUs.value.indexOf(cpu);
-    if (index === -1) {
-        selectedCPUs.value.push(cpu);
-    } else {
-        selectedCPUs.value.splice(index, 1);
-    }
-    // Sort products based on selected CPU
-    sortProducts();
-};
-
-// Logic to select GPU
-const selectGPU = (gpu) => {
-    const index = selectedGPUs.value.indexOf(gpu);
-    if (index === -1) {
-        selectedGPUs.value.push(gpu);
-    } else {
-        selectedGPUs.value.splice(index, 1);
-    }
-    sortProducts();
-};
-const sortProducts = () => {
-    let sortedProducts = [...props.products];
-    if (selectedCPUs.value.length > 0) {
-        sortedProducts = sortedProducts.filter(product => selectedCPUs.value.includes(product.cpu.name));
-    }
-    if (selectedGPUs.value.length > 0) {
-        sortedProducts = sortedProducts.filter(product => selectedGPUs.value.includes(product.gpu.name));
-    }
-    props.products = sortedProducts;
-};
-const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return `${date.getFullYear()}-${(date.getMonth() + 1)
-        .toString()
-        .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
-};
-const formatPrice = (price) => {
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};
-</script>
 
 <style scoped>
 .table {

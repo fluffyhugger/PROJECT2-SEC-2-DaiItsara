@@ -2,6 +2,8 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { TotalPrice } from './enum'
+
+import update from '@/components/Rank/update/update.vue'
 const router = useRouter()
 const productId = router.currentRoute.value.params.id
 let product = ref(null)
@@ -91,6 +93,7 @@ const patchPcSet = async (data,newValue,type) => {
 </script>
 
 <template>
+  <update/>
   <div class="grid-container" v-if="!isLoading">
     <img
       :src="product['cpu'] ? product['cpu']['image-url'] : ''"
@@ -205,7 +208,7 @@ const patchPcSet = async (data,newValue,type) => {
       <!-- เว้นบรรทัดด้วยแท็ก <br> -->
       <p>
         MAINBOARD name:{{
-          product['mainboard'] ? product['mainboard']['name'] : '-'
+        product['mainboard'] ? product['mainboard']['name'] : '-'
         }}
         price
         {{ product['mainboard'] ? product['mainboard']['price'] : '-' }}
