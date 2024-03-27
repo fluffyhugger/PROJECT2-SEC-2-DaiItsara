@@ -6,7 +6,11 @@ const router = useRouter()
 const productId = router.currentRoute.value.params.id
 let product = ref(null)
 const isLoading = ref(true)
-let component
+let component = {
+        'name': 'Intel Core i7-13700H',
+        'image-url': 'https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png',
+        'price': 9500
+    }
 const componentTypes = [
   'cpu',
   'ram',
@@ -20,11 +24,16 @@ const componentTypes = [
   'cooler',
 ]
 
+const getDatabase = async(domain)=>{
+  const result = await fetch(`http://localhost:5000/${domain}`)
+  const response = await result.json()
+  return response
+}
+
 onMounted(async () => {
   try {
-    const result = await fetch(`http://localhost:5000/pc-build`)
-    const responses = await result.json()
-    product.value = responses.filter(
+    const responsePcBuild = await getDatabase('pc-build')
+    product.value = responsePcBuild.filter(
       (response) => response['builder-id'].toString() === productId
     )
     const prices = Object.keys(product.value[0])
@@ -38,6 +47,46 @@ onMounted(async () => {
     console.error('Error fetching data:', error)
   }
 })
+const patchPcSet = async (data,newValue,type) => {
+  data[type] = newValue
+  try {
+    const response = await fetch(`http://localhost:5000/pc-build/${data.id}`, {
+      method: 'PATCH', // Changed method to PATCH
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data) 
+    });
+    console.log("body",response.body)
+    if (response.ok) {
+      console.log('Data updated successfully' , response)
+    } else {
+      // Handle different HTTP status codes
+      if (response.status === 400) {
+        console.error('Bad request: The server did not understand the request.');
+      } else if (response.status === 401) {
+        console.error('Unauthorized: The server requires user authentication.');
+      } else if (response.status === 404) {
+        console.error('Not found: The requested resource could not be found.');
+      } else if (response.status >= 500 && response.status < 600) {
+        console.error('Server error: Something went wrong on the server.');
+      } else {
+        console.error('Failed to update data. Status:', response.status);
+      }
+    }
+  } catch (error) {
+    
+    console.error('Error updating data:', error)
+  }
+}
+const findByComponentName = async (name,domain)=>{
+  const response = await getDatabase(domain)
+  const desiredComp = response.filter(cpu => {
+    const fullName = `${cpu.brand} ${cpu.series} ${cpu.model}`; // Combine brand, series, and model into a full name
+    return fullName === name;
+});
+  return desiredComp
+}
 </script>
 
 <template>
@@ -47,6 +96,7 @@ onMounted(async () => {
       :alt="product.name"
       style="max-width: 200px; max-height: 200px"
       class="grid-item"
+      @click="findByComponentName(product['cpu']['name'],'cpu')"
     />
     <img
       :src="product['ram'] ? product['ram']['image-url'] : ''"
@@ -170,6 +220,7 @@ onMounted(async () => {
       <p>Total Price: {{ product['total-price'] }}</p>
     </div>
   </div>
+  <button @click="patchPcSet(product,component,'cpu')">update</button>
 </template>
 
 <style scoped>
