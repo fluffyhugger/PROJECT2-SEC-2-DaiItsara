@@ -27,8 +27,8 @@ const fetchData = async () => {
   isLoading.value = false
 }
 
-// Function to post data to JSON server
-const postData = async () => {
+// Function to post data to JSON server *******************MOVE TO CartPopup.vue****************
+/*const postData = async () => {
   const currentDate = new Date().toISOString()
   const data = {
     id: Math.random().toString(36).substring(7), // Generate a random ID
@@ -58,7 +58,7 @@ const postData = async () => {
   } catch (error) {
     console.error('Error posting data:', error)
   }
-}
+}*/
 
 onMounted(async () => {
   await fetchData() // Fetch initial data when component is mounted
@@ -126,13 +126,13 @@ const toggleShowCartPopup = () => {
         @close="showCartPopup = false"
       />
     </teleport>
-    <!-- Button to confirm build spec -->
-    <button
+    <!-- Button to confirm build spec ****************MOVE TO CartPopup**********-->
+    <!-- <button
       @click="postData"
       class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded"
     >
       Confirm Build Spec
-    </button>
+    </button>-->
   </div>
 </template>
 
