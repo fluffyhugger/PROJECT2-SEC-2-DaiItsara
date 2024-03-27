@@ -79,14 +79,15 @@ const patchPcSet = async (data,newValue,type) => {
     console.error('Error updating data:', error)
   }
 }
-const findByComponentName = async (name,domain)=>{
-  const response = await getDatabase(domain)
-  const desiredComp = response.filter(cpu => {
-    const fullName = `${cpu.brand} ${cpu.series} ${cpu.model}`; // Combine brand, series, and model into a full name
-    return fullName === name;
-});
-  return desiredComp
-}
+// const findByComponentName = async (name,domain)=>{
+//   const response = await getDatabase(domain)
+//   const desiredComp = response.filter(cpu => {
+//     const fullName = `${cpu.brand} ${cpu.series} ${cpu.model}`; // Combine brand, series, and model into a full name
+//     return fullName.includes(name);
+// });
+// console.log(desiredComp)
+//   return desiredComp
+// }
 </script>
 
 <template>
