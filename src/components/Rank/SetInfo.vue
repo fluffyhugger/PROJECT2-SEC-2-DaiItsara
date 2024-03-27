@@ -2,6 +2,8 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { TotalPrice } from './enum'
+
+import update from '@/components/Rank/update/update.vue'
 const router = useRouter()
 const productId = router.currentRoute.value.params.id
 let product = ref(null)
@@ -41,67 +43,28 @@ onMounted(async () => {
 </script>
 
 <template>
+  <update/>
   <div class="grid-container" v-if="!isLoading">
-    <img
-      :src="product['cpu'] ? product['cpu']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['ram'] ? product['ram']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['gpu'] ? product['gpu']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['ssd'] ? product['ssd']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['hdd'] ? product['hdd']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['psu'] ? product['psu']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['case'] ? product['case']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['monitor'] ? product['monitor']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['mainboard'] ? product['mainboard']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['cooler'] ? product['cooler']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
+    <img :src="product['cpu'] ? product['cpu']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['ram'] ? product['ram']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['gpu'] ? product['gpu']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['ssd'] ? product['ssd']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['hdd'] ? product['hdd']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['psu'] ? product['psu']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['case'] ? product['case']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['monitor'] ? product['monitor']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['mainboard'] ? product['mainboard']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
+    <img :src="product['cooler'] ? product['cooler']['image-url'] : ''" :alt="product.name"
+      style="max-width: 200px; max-height: 200px" class="grid-item" />
     <div class="grid-info grid-item">
       <p>
         CPU name:{{ product['cpu'] ? product['cpu']['name'] : '-' }} price
@@ -154,7 +117,7 @@ onMounted(async () => {
       <!-- เว้นบรรทัดด้วยแท็ก <br> -->
       <p>
         MAINBOARD name:{{
-          product['mainboard'] ? product['mainboard']['name'] : '-'
+        product['mainboard'] ? product['mainboard']['name'] : '-'
         }}
         price
         {{ product['mainboard'] ? product['mainboard']['price'] : '-' }}
