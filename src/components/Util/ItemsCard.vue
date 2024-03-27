@@ -83,6 +83,7 @@ const addToSpec = (listName, component) => {
 
   alert('Component added to cart!')
 }
+
 </script>
 
 <template>

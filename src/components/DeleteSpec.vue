@@ -32,6 +32,7 @@
                     <th>Builder</th>
                     <th>Build Date</th>
                     <th>Price</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -46,6 +47,7 @@
                     <td>{{ product["builder-name"] }}</td>
                     <td>{{ formatDate(product["build-date"]) }}</td>
                     <td>{{ formatPrice(product["total-price"]) }}</td>
+                    <td><button type="button" class="btn bg-red-700 hover:opacity-50 text-white" @click="deleteData(product['builder-id'])">Delete</button></td>
                 </tr>
             </tbody>
         </table>
@@ -112,6 +114,30 @@ const selectedGPUs = ref([]);
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
 
+    const deleteData = async (buliderId) => {
+        const intBuilderId = parseInt(buliderId)
+    // try {
+    //     // Send DELETE request to delete the product with buliderId
+    //     const response = await fetch(`http://localhost:5173/deleting/${intBuilderId}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //             // Add any additional headers if needed
+    //         }
+    //     });
+    //     // Check if deletion was successful
+    //     if (response.ok) {
+    //         // Find and remove the deleted product from the products array
+    //         props.products = props.products.filter(product => product.id !== intBuilderId);
+    //     } else {
+    //         // Handle error response
+    //         console.error('Error deleting product:', response.statusText);
+    //     }
+    // } catch (error) {
+    //     console.error('Error deleting product:', error);
+    // }
+    console.log(buliderId)
+};
 </script>
 
 <style scoped>
