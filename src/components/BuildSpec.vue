@@ -29,10 +29,12 @@ const fetchData = async () => {
 
 // Function to post data to JSON server
 const postData = async () => {
+  const currentDate = new Date().toISOString()
   const data = {
-    'builder-id': builderId,
+    id: Math.random().toString(36).substring(7), // Generate a random ID
+    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
     'builder-name': builderName,
-    'build-date': buildDate,
+    'build-date': currentDate,
     ...cart
   }
   try {
@@ -65,6 +67,7 @@ onMounted(async () => {
 // Sync Data In localStorage by not need to refresh
 const syncCartData = () => {
   cart = JSON.parse(localStorage.getItem('cart')) || {}
+  builderName = localStorage.getItem('builderName') || '' // Update builderName from local storage
 }
 
 const toggleShowCartPopup = () => {
