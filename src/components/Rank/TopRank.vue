@@ -118,7 +118,6 @@ onMounted(() => {
 @keyframes hoverEffect {
   0% {
     transform: scale(1);
-    /* Start with original size */
   }
 
   50% {
