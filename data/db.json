@@ -834,6 +834,62 @@
         "image-url": "https://storage.googleapis.com/file-computeandmore/images/52d44178-89e8-40a5-945a-02eb534fda9c.png",
         "price": 2590
       }
+    },
+    {
+      "id": "944c",
+      "builder-id": "589",
+      "builder-name": "ing",
+      "build-date": "2024-03-27T09:39:55",
+      "cpu": {
+        "name": "Intel Core i7 12700K",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
+        "price": 11840
+      },
+      "ram": {
+        "name": "APACER PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
+        "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+        "price": 4290
+      },
+      "gpu": {
+        "name": "ASUS GeForce RTX 40 Series TUF Gaming GeForce RTX 4060 Ti OC",
+        "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+        "price": 16320
+      },
+      "ssd": {
+        "name": "CORSAIR Force Series MP600 Pro LPX Black 1TB",
+        "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+        "price": 3790
+      },
+      "hdd": {
+        "name": "Seagate IronWolf 4TB",
+        "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+        "price": 4250
+      },
+      "psu": {
+        "name": "AEROCOOL Superb Superb 600W",
+        "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+        "price": 790
+      },
+      "case": {
+        "name": "NZXT H5 Elite White",
+        "image-url": "https://i.ibb.co/5kH8t0d/CASE-00001.png",
+        "price": 5150
+      },
+      "monitor": {
+        "name": "LG - 24MK600M-B",
+        "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+        "price": 3715
+      },
+      "mainboard": {
+        "name": "GIGABYTE Z790 AORUS Elite",
+        "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+        "price": 9300
+      },
+      "cooler": {
+        "name": "ASUS TUF Gaming TUF Gaming LC 120 ARGB Black",
+        "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+        "price": 2650
+      }
     }
   ],
   "cpu": [

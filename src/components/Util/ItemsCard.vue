@@ -34,9 +34,10 @@ const addToSpec = (listName, component) => {
   localStorage.setItem('buildDate', buildDate)
 
   // Extract the required fields from the component
-  const { brand, series, model, picture, price } = component
+  const { id, brand, series, model, picture, price } = component
   const newItem = {
-    name: `${brand} ${series} ${model}`,
+    id: id,
+    name: `${brand}${series ? ` ${series}` : ''} ${model}`,
     'image-url': picture,
     price: price,
   }
