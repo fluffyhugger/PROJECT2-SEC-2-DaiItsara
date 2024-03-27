@@ -15,7 +15,11 @@ let autoSlideInterval;
 const containerRef = ref(null);
 let scrollDirection = 1;
 // Define a prop to receive the selected option from the parent
-const props = defineProps(['selectedOption', 'products', 'isLoading']);
+const props = defineProps({
+  selectedOption: String,
+  products: Array,
+  isLoading: Boolean
+});
 
 const emit = defineEmits(['update:selectedOption']);
 // Define a reactive property to hold the selected option
@@ -101,17 +105,17 @@ onMounted(() => {
                 <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="control right" @click="
+    <div class="control right" @click="
             stopAutoSlide();
           slide(1);
           startAutoSlide();
           ">
-    <font-awesome-icon :icon="['fas', 'chevron-right']" />
-  </div>
+      <font-awesome-icon :icon="['fas', 'chevron-right']" />
+    </div>
   </div>
 </template>
 <style scoped>

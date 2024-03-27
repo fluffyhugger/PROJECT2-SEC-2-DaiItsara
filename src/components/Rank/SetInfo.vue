@@ -1,18 +1,16 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onBeforeMount } from 'vue'
 import { useRouter } from 'vue-router'
 import { TotalPrice } from './enum'
-
-import update from '@/components/Rank/update/update.vue'
 const router = useRouter()
 const productId = router.currentRoute.value.params.id
 let product = ref(null)
 const isLoading = ref(true)
 let component = {
-        'name': 'Intel Core i7-13700H',
-        'image-url': 'https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png',
-        'price': 9500
-    }
+  'name': 'Intel Core i7-13700H',
+  'image-url': 'https://www.intel.com/content/dam/www/central-libraries/xl/es/images/2022-06/km-1920x1080-i7.png',
+  'price': 9500
+}
 const componentTypes = [
   'cpu',
   'ram',
@@ -26,13 +24,13 @@ const componentTypes = [
   'cooler',
 ]
 
-const getDatabase = async(domain)=>{
+const getDatabase = async (domain) => {
   const result = await fetch(`http://localhost:5000/${domain}`)
   const response = await result.json()
   return response
 }
 
-onMounted(async () => {
+onBeforeMount(async () => {
   try {
     const responsePcBuild = await getDatabase('pc-build')
     product.value = responsePcBuild.filter(
@@ -49,7 +47,7 @@ onMounted(async () => {
     console.error('Error fetching data:', error)
   }
 })
-const patchPcSet = async (data,newValue,type) => {
+const patchPcSet = async (data, newValue, type) => {
   data[type] = newValue
   try {
     const response = await fetch(`http://localhost:5000/pc-build/${data.id}`, {
@@ -57,11 +55,11 @@ const patchPcSet = async (data,newValue,type) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data) 
+      body: JSON.stringify(data)
     });
-    console.log("body",response.body)
+    console.log("body", response.body)
     if (response.ok) {
-      console.log('Data updated successfully' , response)
+      console.log('Data updated successfully', response)
     } else {
       // Handle different HTTP status codes
       if (response.status === 400) {
@@ -77,7 +75,7 @@ const patchPcSet = async (data,newValue,type) => {
       }
     }
   } catch (error) {
-    
+
     console.error('Error updating data:', error)
   }
 }
@@ -90,72 +88,130 @@ const patchPcSet = async (data,newValue,type) => {
 // console.log(desiredComp)
 //   return desiredComp
 // }
+
 </script>
 
 <template>
-  <update/>
+  <div>
+    <div class="flex flex-col w-full lg:flex-row">
+      <div class="grid flex-grow h-auto card bg-white rounded-box ">
+        <ul>
+          <li class="">
+            <div class="flex flex-row border solid 1px border-yellow-400 w-fit h-fit ">
+              <img :src="product['cpu'] ? product['cpu']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item"
+                  @click="findByComponentName(product['cpu']['name'], 'cpu')" />
+              <p>
+                CPU name:{{ product['cpu'] ? product['cpu']['name'] : '-' }} price
+                {{ product['cpu'] ? product['cpu']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['ram'] ? product['ram']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>
+                Ram name:{{ product['ram'] ? product['ram']['name'] : '-' }} price
+                {{ product['ram'] ? product['ram']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['gpu'] ? product['gpu']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>
+                GPU name:{{ product['gpu'] ? product['gpu']['name'] : '-' }} price
+                {{ product['gpu'] ? product['gpu']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['ssd'] ? product['ssd']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>
+                SSD name:{{ product['ssd'] ? product['ssd']['name'] : '-' }} price
+                {{ product['ssd'] ? product['ssd']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['hdd'] ? product['hdd']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>
+                HDD name:{{ product['hdd'] ? product['hdd']['name'] : '-' }} price
+                {{ product['hdd'] ? product['hdd']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['psu'] ? product['psu']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>
+                
+                PSU name:{{ product['psu'] ? product['psu']['name'] : '-' }} price
+                {{ product['psu'] ? product['psu']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['case'] ? product['case']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>
+                
+                CASE name:{{ product['case'] ? product['case']['name'] : '-' }} price
+                {{ product['case'] ? product['case']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['monitor'] ? product['monitor']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>    
+                MONITOR name:{{ product['monitor'] ? product['monitor']['name'] : '-' }}
+                price
+                {{ product['monitor'] ? product['monitor']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['mainboard'] ? product['mainboard']['image-url'] : ''" :alt="product.name"
+                  id="list-left" class="grid-item" />
+              <p>
+                
+                MAINBOARD name:{{
+                  product['mainboard'] ? product['mainboard']['name'] : '-'
+                }}
+                price
+                {{ product['mainboard'] ? product['mainboard']['price'] : '-' }}
+              </p>
+              <!-- เว้นบรรทัดด้วยแท็ก <br> -->
+              <img :src="product['cooler'] ? product['cooler']['image-url'] : ''" :alt="product.name"
+      id="list-left" class="grid-item" />
+              <p>
+                COOLER name:{{ product['cooler'] ? product['cooler']['name'] : '-' }}
+                price
+                {{ product['cooler'] ? product['cooler']['price'] : '-' }}
+              </p>
+              <br />
+              <p>Total Price: {{ product['total-price'] }}</p>
+              <!-- Use the FontAwesomeIcon component with the icon prop -->
+              <font-awesome-icon :icon="['fas', 'pen-to-square']" style="color: #787878;" />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="divider lg:divider-horizontal"></div>
+      <div class="grid flex-grow h-auto card bg-base-300 rounded-box place-items-center">
+        content
+      </div>
+    </div>
+  </div>
   <div class="grid-container" v-if="!isLoading">
-    <img
-      :src="product['cpu'] ? product['cpu']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-      @click="findByComponentName(product['cpu']['name'],'cpu')"
-    />
-    <img
-      :src="product['ram'] ? product['ram']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['gpu'] ? product['gpu']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['ssd'] ? product['ssd']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['hdd'] ? product['hdd']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['psu'] ? product['psu']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['case'] ? product['case']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['monitor'] ? product['monitor']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['mainboard'] ? product['mainboard']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
-    <img
-      :src="product['cooler'] ? product['cooler']['image-url'] : ''"
-      :alt="product.name"
-      style="max-width: 200px; max-height: 200px"
-      class="grid-item"
-    />
+    <img :src="product['cpu'] ? product['cpu']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item"
+      @click="findByComponentName(product['cpu']['name'], 'cpu')" />
+    <img :src="product['ram'] ? product['ram']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['gpu'] ? product['gpu']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['ssd'] ? product['ssd']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['hdd'] ? product['hdd']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['psu'] ? product['psu']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['case'] ? product['case']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['monitor'] ? product['monitor']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['mainboard'] ? product['mainboard']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
+    <img :src="product['cooler'] ? product['cooler']['image-url'] : ''" :alt="product.name"
+      id="list-center" class="grid-item" />
     <div class="grid-info grid-item">
       <p>
         CPU name:{{ product['cpu'] ? product['cpu']['name'] : '-' }} price
@@ -208,8 +264,8 @@ const patchPcSet = async (data,newValue,type) => {
       <!-- เว้นบรรทัดด้วยแท็ก <br> -->
       <p>
         MAINBOARD name:{{
-        product['mainboard'] ? product['mainboard']['name'] : '-'
-        }}
+                  product['mainboard'] ? product['mainboard']['name'] : '-'
+                }}
         price
         {{ product['mainboard'] ? product['mainboard']['price'] : '-' }}
       </p>
@@ -224,7 +280,7 @@ const patchPcSet = async (data,newValue,type) => {
       <p>Total Price: {{ product['total-price'] }}</p>
     </div>
   </div>
-  <button @click="patchPcSet(product,component,'cpu')">update</button>
+  <button @click="patchPcSet(product, component, 'cpu')">update</button>
 </template>
 
 <style scoped>
@@ -252,5 +308,11 @@ const patchPcSet = async (data,newValue,type) => {
   grid-template-columns: auto auto auto auto;
   margin: 0 auto;
   /* Center the grid horizontally */
+}
+#list-left{
+  max-width: 200px; max-height: 200px
+}
+#list-center{
+  max-width: 200px; max-height: 200px
 }
 </style>
