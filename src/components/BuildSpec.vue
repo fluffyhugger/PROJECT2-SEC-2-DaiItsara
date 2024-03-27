@@ -61,6 +61,16 @@ const postData = async () => {
 onMounted(async () => {
   await fetchData() // Fetch initial data when component is mounted
 })
+
+// Sync Data In localStorage by not need to refresh
+const syncCartData = () => {
+  cart = JSON.parse(localStorage.getItem('cart')) || {}
+}
+
+const toggleShowCartPopup = () => {
+  showCartPopup.value = !showCartPopup.value
+  syncCartData()
+}
 </script>
 
 <template>
@@ -98,7 +108,7 @@ onMounted(async () => {
     ></ItemsCard>
     <!-- Button to show cart pop-up -->
     <button
-      @click="showCartPopup = !showCartPopup"
+      @click="toggleShowCartPopup"
       class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded"
     >
       Show Cart
