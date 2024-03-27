@@ -7,9 +7,8 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"; // Corrected 
 library.add(faPenToSquare); // Add the icon to the library
 
 const props = defineProps({
-    selectedOption: String,
-    products: Array,
-    isLoading: Boolean,
+    components : Array,
+
 });
 </script>
 
@@ -18,8 +17,8 @@ const props = defineProps({
         <div class="flex flex-col w-full lg:flex-row">
             <div class="grid flex-grow h-auto card bg-white rounded-box ">
                 <ul>
-                    <li class="">
-                        <div class="flex flex-row border solid 1px border-yellow-400 w-fit h-fit ">
+                    <li v-for="(product, index) in props.products" :key="product.id">
+                        <div class="flex flex-row border solid 1px border-yellow-400 rounded-md w-fit h-fit ">
                             <img src="" alt="pic">
                             <p> CPU NAME </p>
                             <p> Price </p>
