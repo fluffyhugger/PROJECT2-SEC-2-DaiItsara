@@ -6,6 +6,8 @@ const props = defineProps({
   listName: String,
 })
 
+const emit = defineEmits(['itemAddedToCart']);
+
 const cart = ref(JSON.parse(localStorage.getItem('cart')) || {})
 
 let builderName = ''
@@ -77,10 +79,9 @@ const addToSpec = (listName, component) => {
     default:
       console.error('Invalid listName:', listName)
   }
-
   // Update localStorage with the updated cart data
   localStorage.setItem('cart', JSON.stringify(cart.value))
-
+  emit('itemAddedToCart', true);
   alert('Component added to cart!')
 }
 

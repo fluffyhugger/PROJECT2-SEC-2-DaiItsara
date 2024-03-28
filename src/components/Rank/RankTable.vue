@@ -1,5 +1,6 @@
 <script setup>
 import { ref, defineProps } from 'vue';
+import {getComponentProperty} from "./enum"
 const props = defineProps({
     selectedOption: String,
     products: Array,
@@ -88,7 +89,7 @@ const formatPrice = (price) => {
                     :class="{ 'bg-gray-100': index % 2 === 0 }">
                     <td class="text-center font-semibold">{{ index + 1 }}</td>
                     <td>
-                        <img :src="product.case['image-url']" :alt="product.name" class="product-image w-24 h-24" />
+                        <img :src="getComponentProperty(product,'case','image-url')" :alt="product.name" class="product-image w-24 h-24" />
                         {{ product.cpu['name'] }}{{ product.gpu['name'] }}
                     </td>
                     <td> <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link></td>
