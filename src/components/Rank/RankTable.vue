@@ -90,7 +90,7 @@ const formatPrice = (price) => {
                     <td class="text-center font-semibold">{{ index + 1 }}</td>
                     <td>
                         <img :src="getComponentProperty(product,'case','image-url')" :alt="product.name" class="product-image w-24 h-24" />
-                        {{ product.cpu['name'] }}{{ product.gpu['name'] }}
+                        {{ getComponentProperty(product,'cpu','name') }}{{ getComponentProperty(product,'gpu','name') }}
                     </td>
                     <td> <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link></td>
                     <td>{{ product["builder-name"] }}</td>
@@ -100,6 +100,7 @@ const formatPrice = (price) => {
             </tbody>
         </table>
     </div>
+    <hr />
 </template>
 
 <style scoped>
@@ -126,8 +127,8 @@ const formatPrice = (price) => {
 }
 
 .product-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 </style>

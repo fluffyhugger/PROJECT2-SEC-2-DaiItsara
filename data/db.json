@@ -133,27 +133,65 @@
       }
     },
     {
-      "id": "4896p",
-      "builder-id": "mrrf76",
-      "builder-name": "สมชายทลายดง",
-      "build-date": "2024-03-27T16:24:27.497Z",
+      "id": "yvuh",
+      "builder-id": "v83bww",
+      "builder-name": "Ing",
+      "build-date": "2024-03-28T06:46:08.223Z",
       "cpu": {
-        "id": "CPU_00002",
-        "name": "AMD Ryzen 5 5600G",
-        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
-        "price": 5290
+        "name": "Intel Core i7 12700K",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
+        "price": 11840
       },
       "ram": {
-        "id": "RAM_00002",
         "name": "PNY XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
         "image-url": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947",
         "price": 4600
       },
       "gpu": {
-        "id": "GPU_00002",
-        "name": "GIGABYTE Radeon RX 7000 Series Radeon RX 7600 Gaming OC 8G",
-        "image-url": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png",
-        "price": 9800
+        "name": "Zotac GeForce RTX 30 Series GeForce RTX 3080 Trinity OC",
+        "image-url": "https://notebookspec.com/storage/pc-vga/vga_1292_20201006-104957_1.png",
+        "price": 29230
+      },
+      "ssd": {
+        "name": "CORSAIR Force Series MP600 Pro LPX Black 1TB",
+        "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+        "price": 3790
+      },
+      "hdd": {
+        "name": "Seagate IronWolf 4TB",
+        "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+        "price": 4250
+      },
+      "psu": {
+        "name": "AEROCOOL Superb Superb 600W",
+        "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+        "price": 790
+      },
+      "case": {
+        "name": "Cooler Master MasterBox Q300L",
+        "image-url": "https://i.ibb.co/54fgFF3/CASE-00006.png",
+        "price": 1990
+      },
+      "monitor": {
+        "name": "SAMSUNG LS28 LS28BG700EEXXT",
+        "image-url": "https://www.neoshop.co.th/wp-content/uploads/2023/08/th-gaming-ls32bg702eexxt-ls-bg-e.webp",
+        "price": 16500
+      }
+    },
+    {
+      "id": "1pqwo",
+      "builder-id": "xhw08o",
+      "builder-name": "Sirpob",
+      "build-date": "2024-03-28T06:53:08.511Z",
+      "cpu": {
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      },
+      "ram": {
+        "name": "PNY XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
+        "image-url": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947",
+        "price": 4600
       }
     }
   ],

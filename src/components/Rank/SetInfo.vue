@@ -69,6 +69,7 @@ const patchPcSet = async (data) => {
     });
     if (response.ok) {
       console.log('Data updated successfully', response)
+      location.reload();
     } else {
       // Handle different HTTP status codes
       if (response.status === 400) {
