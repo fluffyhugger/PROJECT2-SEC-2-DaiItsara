@@ -1024,27 +1024,30 @@
       }
     },
     {
-      "id": "4896p",
-      "builder-id": "mrrf76",
-      "builder-name": "สมชายทลายดง",
-      "build-date": "2024-03-27T16:24:27.497Z",
+      "id": "yvuh",
+      "builder-id": "v83bww",
+      "builder-name": "Ing",
+      "build-date": "2024-03-28T06:46:08.223Z",
       "cpu": {
-        "id": "CPU_00002",
+        "name": "Intel Core i7 12700K",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
+        "price": 11840
+      }
+    },
+    {
+      "id": "1pqwo",
+      "builder-id": "xhw08o",
+      "builder-name": "Sirpob",
+      "build-date": "2024-03-28T06:53:08.511Z",
+      "cpu": {
         "name": "AMD Ryzen 5 5600G",
         "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
         "price": 5290
       },
       "ram": {
-        "id": "RAM_00002",
         "name": "PNY XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
         "image-url": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947",
         "price": 4600
-      },
-      "gpu": {
-        "id": "GPU_00002",
-        "name": "GIGABYTE Radeon RX 7000 Series Radeon RX 7600 Gaming OC 8G",
-        "image-url": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png",
-        "price": 9800
       }
     }
   ],
