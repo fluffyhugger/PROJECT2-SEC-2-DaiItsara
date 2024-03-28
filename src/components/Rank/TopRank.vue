@@ -6,6 +6,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { getComponentProperty } from "./enum"
 import { SortBy } from "./enum";
 
 // child
@@ -15,7 +16,11 @@ let autoSlideInterval;
 const containerRef = ref(null);
 let scrollDirection = 1;
 // Define a prop to receive the selected option from the parent
-const props = defineProps(['selectedOption', 'products', 'isLoading']);
+const props = defineProps({
+  selectedOption: String,
+  products: Array,
+  isLoading: Boolean
+});
 
 const emit = defineEmits(['update:selectedOption']);
 // Define a reactive property to hold the selected option
@@ -87,20 +92,24 @@ onMounted(() => {
         <div class="container" @mouseenter="stopAutoSlide()" @mouseleave="startAutoSlide()" ref="containerRef">
           <div v-for="product in props.products.slice(0, 3)" :key="product.id" class="card">
             <figure>
-              <img :src="product.case['image-url']" alt="car!" />
+              <div class="image-container">
+                <img
+                  :src=" getComponentProperty (product,'case','image-url')"
+                  alt="car!" />
+                  </div>
             </figure>
-            <div class="card-body">
-              <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>
-              <div v-if="selectedOption === SortBy.Price">
-                price : {{ product['total-price'] }}
-              </div>
-              <div v-else-if="selectedOption === SortBy.Latest">
-                build-date : {{ new Date(product['build-date']) }}
-              </div>
-              <div class="card-actions justify-end">
-                <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
-              </div>
+          <div class="card-body">
+            <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>
+            <div v-if="selectedOption === SortBy.Price">
+              price : {{ product['total-price'] }}
             </div>
+            <div v-else-if="selectedOption === SortBy.Latest">
+              build-date : {{ new Date(product['build-date']) }}
+            </div>
+            <div class="card-actions justify-end">
+              <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -223,6 +232,10 @@ select {
   .card {
     max-width: 200px;
   }
+}
+
+.image-container {
+  max-width: 20vw; /* 20% of the viewport width */
 }
 
 .head-toprank-container {
