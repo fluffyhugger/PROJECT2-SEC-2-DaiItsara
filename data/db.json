@@ -834,6 +834,218 @@
         "image-url": "https://storage.googleapis.com/file-computeandmore/images/52d44178-89e8-40a5-945a-02eb534fda9c.png",
         "price": 2590
       }
+    },
+    {
+      "id": "944c",
+      "builder-id": "589",
+      "builder-name": "ing",
+      "build-date": "2024-03-27T09:39:55",
+      "cpu": {
+        "name": "Intel Core i7 12700K",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
+        "price": 11840
+      },
+      "ram": {
+        "name": "APACER PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
+        "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+        "price": 4290
+      },
+      "gpu": {
+        "name": "ASUS GeForce RTX 40 Series TUF Gaming GeForce RTX 4060 Ti OC",
+        "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+        "price": 16320
+      },
+      "ssd": {
+        "name": "CORSAIR Force Series MP600 Pro LPX Black 1TB",
+        "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+        "price": 3790
+      },
+      "hdd": {
+        "name": "Seagate IronWolf 4TB",
+        "image-url": "https://e-express.co.th/wp-content/uploads/2021/08/ironwolf-pro-4tb.png",
+        "price": 4250
+      },
+      "psu": {
+        "name": "AEROCOOL Superb Superb 600W",
+        "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+        "price": 790
+      },
+      "case": {
+        "name": "NZXT H5 Elite White",
+        "image-url": "https://i.ibb.co/5kH8t0d/CASE-00001.png",
+        "price": 5150
+      },
+      "monitor": {
+        "name": "LG - 24MK600M-B",
+        "image-url": "https://firecom.co.th/image/cache/catalog/Monitor/10900706-588-608/LG%2022MK600M-B%20(3)-550x550.png",
+        "price": 3715
+      },
+      "mainboard": {
+        "name": "GIGABYTE Z790 AORUS Elite",
+        "image-url": "https://img.telemart.ua/501744-640860-product_popup/gigabyte-z790-aorus-elite-ax-w-s1700-intel-z790.png",
+        "price": 9300
+      },
+      "cooler": {
+        "name": "ASUS TUF Gaming TUF Gaming LC 120 ARGB Black",
+        "image-url": "https://dlcdnwebimgs.asus.com/gain/789a93b6-88ea-43a4-a276-6974c1405589/w328",
+        "price": 2650
+      }
+    },
+    {
+      "id": "78qktx",
+      "builder-id": "t27zg",
+      "builder-name": "Test1107",
+      "build-date": "2024-03-27T16:07:36.549Z",
+      "cpu": {
+        "id": "CPU_00003",
+        "name": "Intel Core i5 10400F",
+        "image-url": "https://cdn.inet.se/product/1600x900/5303147_3.jpg",
+        "price": 3830
+      },
+      "ram": {
+        "id": "RAM_00003",
+        "name": "KINGSTON HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
+        "image-url": "https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png",
+        "price": 2300
+      },
+      "gpu": {
+        "id": "GPU_00003",
+        "name": "Zotac GeForce RTX 30 Series GeForce RTX 3080 Trinity OC",
+        "image-url": "https://notebookspec.com/storage/pc-vga/vga_1292_20201006-104957_1.png",
+        "price": 29230
+      },
+      "ssd": {
+        "id": "SSD_00003",
+        "name": "Apacer AS2280Q4U 512GB",
+        "image-url": "https://gzhls.at/i/75/20/2827520-l0.png",
+        "price": 1965
+      },
+      "hdd": {
+        "id": "HDD_00003",
+        "name": "Toshiba X300 Performance 6TB",
+        "image-url": "https://notebookspec.com/storage/pc-hdd/hdd_202_20201012-111555_1.png",
+        "price": 6410
+      },
+      "psu": {
+        "id": "PSU_00001",
+        "name": "AEROCOOL Superb Superb 600W",
+        "image-url": "https://notebookspec.com/storage/pc-psu/psu_617_20210201-104023_1.png",
+        "price": 790
+      },
+      "case": {
+        "id": "CASE_00001",
+        "name": "NZXT H5 Elite White",
+        "image-url": "https://i.ibb.co/5kH8t0d/CASE-00001.png",
+        "price": 5150
+      },
+      "monitor": {
+        "id": "MONITOR-00002",
+        "name": "SAMSUNG LS28 LS28BG700EEXXT",
+        "image-url": "https://www.neoshop.co.th/wp-content/uploads/2023/08/th-gaming-ls32bg702eexxt-ls-bg-e.webp",
+        "price": 16500
+      },
+      "mainboard": {
+        "id": "MAINBOARD-00003",
+        "name": "GIGABYTE B650 Gaming X AX",
+        "image-url": "https://c1.neweggimages.com/BizIntell/item/MB/Motherboards%20-%20AMD/13-145-449/23.jpg",
+        "price": 10890
+      },
+      "cooler": {
+        "id": "COOLER-00003",
+        "name": "COOLER MASTER MasterLiquid MasterLiquid ML240L ARGB Illusion white",
+        "image-url": "https://chininter.co.th/wp-content/uploads/2021/07/masterliquid-ml240-illusion-white-gallery-0-zoom_1000x1000.png",
+        "price": 3890
+      }
+    },
+    {
+      "id": "mzbrm",
+      "builder-id": "q5h8kf",
+      "builder-name": "Tomahawk",
+      "build-date": "2024-03-27T16:23:15.537Z",
+      "cpu": {
+        "id": "CPU_00002",
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      },
+      "ram": {
+        "id": "RAM_00001",
+        "name": "APACER PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
+        "image-url": "https://www.gamingstorekh.com/Content/Upload/Item/addbe756-6732-46e2-b35c-72b92e156ffb.png",
+        "price": 4290
+      },
+      "gpu": {
+        "id": "GPU_00001",
+        "name": "ASUS GeForce RTX 40 Series TUF Gaming GeForce RTX 4060 Ti OC",
+        "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+        "price": 16320
+      },
+      "ssd": {
+        "id": "SSD_00001",
+        "name": "CORSAIR Force Series MP600 Pro LPX Black 1TB",
+        "image-url": "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23CA7V/ae9ac69a13cf4e69abfa573e76f69396.png/f/corsair-mp600-pro-lpx-pcie-gen4-x4-nvme-m-2-ssd-1tb-black.png",
+        "price": 3790
+      },
+      "hdd": {
+        "id": "HDD_00002",
+        "name": "Western Digital Red Plus Nas 4TB",
+        "image-url": "https://notebookspec.com/storage/pc-hdd/hdd_222_20210311-114658_1.png",
+        "price": 4550
+      },
+      "psu": {
+        "id": "PSU_00002",
+        "name": "THERMALTAKE Toughpower GF Toughpower GF 850W",
+        "image-url": "https://www.jib.co.th/img_master/uploads/Content/2310393011/ToughpowerGF_850_1.png",
+        "price": 3650
+      },
+      "case": {
+        "id": "CASE_00003",
+        "name": "THERMALTAKE Core P6 Turquoise",
+        "image-url": "https://i.ibb.co/K9RMVDW/CASE-00003.png",
+        "price": 5890
+      },
+      "monitor": {
+        "id": "MONITOR-00002",
+        "name": "SAMSUNG LS28 LS28BG700EEXXT",
+        "image-url": "https://www.neoshop.co.th/wp-content/uploads/2023/08/th-gaming-ls32bg702eexxt-ls-bg-e.webp",
+        "price": 16500
+      },
+      "mainboard": {
+        "id": "MAINBOARD-00002",
+        "name": "ASUS Prime Z790-A WIFI-CSM",
+        "image-url": "https://storage.googleapis.com/file-computeandmore/images/7b361b3e-bd80-4bcd-bfdb-a718b3a827da.png",
+        "price": 10890
+      },
+      "cooler": {
+        "id": "COOLER-00002",
+        "name": "ASUS ROG Strix ROG Strix LC II 240 RGB White Edition",
+        "image-url": "https://dlcdnwebimgs.asus.com/gain/5831EF72-B837-424D-AE04-7AF9DECDA035/w717/h525",
+        "price": 7390
+      }
+    },
+    {
+      "id": "4896p",
+      "builder-id": "mrrf76",
+      "builder-name": "สมชายทลายดง",
+      "build-date": "2024-03-27T16:24:27.497Z",
+      "cpu": {
+        "id": "CPU_00002",
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      },
+      "ram": {
+        "id": "RAM_00002",
+        "name": "PNY XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
+        "image-url": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947",
+        "price": 4600
+      },
+      "gpu": {
+        "id": "GPU_00002",
+        "name": "GIGABYTE Radeon RX 7000 Series Radeon RX 7600 Gaming OC 8G",
+        "image-url": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png",
+        "price": 9800
+      }
     }
   ],
   "cpu": [
@@ -1947,7 +2159,11 @@
       "color": "Black",
       "weight": "13.1Kg",
       "dimension": "290 x 495 x 466",
-      "i/o-ports": ["1x USB-C 3.1", "2x USB-A 3.0", "1x headphone/microphone"],
+      "i/o-ports": [
+        "1x USB-C 3.1",
+        "2x USB-A 3.0",
+        "1x headphone/microphone"
+      ],
       "cooling-support": {
         "fan-support": {
           "front": "-",
@@ -2020,7 +2236,11 @@
       "color": "Black",
       "weight": "11.2kg",
       "dimension": "520mm x 245mm x 520mm",
-      "i/o-ports": ["1 x USB 3.1 Type-C", "2 x USB 3.0", "1 x Audio/Mic"],
+      "i/o-ports": [
+        "1 x USB 3.1 Type-C",
+        "2 x USB 3.0",
+        "1 x Audio/Mic"
+      ],
       "cooling-support": {
         "fan-support": {
           "front": "3 x 120mm, 2 x 140mm",
@@ -2290,7 +2510,11 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "4x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2326,7 +2550,10 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
+      "usb-ports": [
+        "6x USB 3.2 Type A",
+        "2x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -2352,12 +2579,19 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
+      "pci-slots": [
+        "1 Slot PCI Express 4.0 x16",
+        "2 Slot PCI Express 3.0 x16"
+      ],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "2x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2393,7 +2627,11 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "4x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2428,7 +2666,10 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
+      "usb-ports": [
+        "6x USB 3.2 Type A",
+        "2x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "5x Audio Ports",
       "form-factor": "ATX",
@@ -2454,12 +2695,19 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
+      "pci-slots": [
+        "1 Slot PCI Express 4.0 x16",
+        "2 Slot PCI Express 3.0 x16"
+      ],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "2x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2486,12 +2734,18 @@
       "lan-speed": "10/100/1000/2500Mbps",
       "wireless-lan": "WIFI 6E 2.4/5/6",
       "bluetooth": "Bluetooth 5.2",
-      "pci-slots": ["1 Slot PCI Express 4.0 x16", "1 Slot PCI Express 3.0 x16"],
+      "pci-slots": [
+        "1 Slot PCI Express 4.0 x16",
+        "1 Slot PCI Express 3.0 x16"
+      ],
       "sata3-slots": "4 slot",
       "m.2-slots": "2 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
+      "usb-ports": [
+        "1x USB 3.2 Type C",
+        "2x USB 3.2 Type A"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2527,7 +2781,11 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "4x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2562,7 +2820,10 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
+      "usb-ports": [
+        "1x USB 3.2 Type C",
+        "2x USB 3.2 Type A"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -2619,8 +2880,24 @@
       "model": "TUF Gaming LC 120 ARGB Black",
       "form-factor": "Liquid Cooler",
       "socket-support": {
-        "intel": ["LGA1700", "1366", "1156", "1155", "1151", "1150"],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
+        "intel": [
+          "LGA1700",
+          "1366",
+          "1156",
+          "1155",
+          "1151",
+          "1150"
+        ],
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "AM2",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "150mmx122mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2647,7 +2924,10 @@
           "1151",
           "1150"
         ],
-        "amd": ["TR4/​sTRX4/​sWRX8/​SP3", "AM4"]
+        "amd": [
+          "TR4/​sTRX4/​sWRX8/​SP3",
+          "AM4"
+        ]
       },
       "radiator-dimension": "120mmx272mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2673,7 +2953,15 @@
           "1151",
           "1150"
         ],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "FM2+", "FM2", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "277x119x27 mm.",
       "radiator-material": "Aluminum",
@@ -2698,7 +2986,13 @@
           "LGA2011",
           "LGA2066"
         ],
-        "amd": ["AM4", "AM3", "AM2", "sTR4", "sTRX4"]
+        "amd": [
+          "AM4",
+          "AM3",
+          "AM2",
+          "sTR4",
+          "sTRX4"
+        ]
       },
       "radiator-dimension": "275 x 123 x 30mm",
       "radiator-material": "Aluminum",
@@ -2724,7 +3018,11 @@
           "2011",
           "2066"
         ],
-        "amd": ["AM4", "AM3", "AM2"]
+        "amd": [
+          "AM4",
+          "AM3",
+          "AM2"
+        ]
       },
       "radiator-dimension": "277mm x 120mm x 27mm",
       "radiator-material": "Aluminum",
@@ -2750,7 +3048,16 @@
           "LGA1155",
           "LGA1156"
         ],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "AM2",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "274x120x27mm",
       "radiator-material": "Aluminum",
@@ -2771,7 +3078,13 @@
           "LGA2011-0 & LGA2011-3 (Square ILM)",
           "LGA1200, LGA1156, LGA1155, LGA1151, LGA1150"
         ],
-        "amd": ["AM4", "AM3(+)", "AM2(+)", "FM2(+)", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3(+)",
+          "AM2(+)",
+          "FM2(+)",
+          "FM1"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2791,7 +3104,9 @@
           "LGA 2066 / 2011(-3) square ILM / 1151 / 1150 / 1155 / 1156 / 1200",
           "AM4 / AM4 / AM3(+) / AM2(+) / FM2(+) / FM1"
         ],
-        "amd": ["AM4"]
+        "amd": [
+          "AM4"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2807,8 +3122,12 @@
       "model": "Freezer 34 eSports DUO",
       "form-factor": "Air Cooler",
       "socket-support": {
-        "intel": ["LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"],
-        "amd": ["AM4"]
+        "intel": [
+          "LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"
+        ],
+        "amd": [
+          "AM4"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2835,7 +3154,16 @@
           "LGA1156",
           "LGA1366"
         ],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "AM2",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",

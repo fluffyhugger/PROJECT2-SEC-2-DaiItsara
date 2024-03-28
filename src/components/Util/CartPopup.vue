@@ -16,6 +16,11 @@
           <span>Total:</span>
           <span class="total-price">{{ formatPrice(totalPrice) }}</span>
         </div>
+        <!-- Confirm Build Spec Button -->
+        <button @click="postData" class="confirm-button">
+          Build
+        </button>
+        <!-- Close Button -->
         <button @click="closeCart" class="close-button">Close</button>
       </div>
     </div>
@@ -23,15 +28,42 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, computed } from 'vue'
+import { defineProps, computed, defineEmits } from 'vue'
 
-// Define props and emits
 const props = defineProps(['cart', 'builderName'])
 const emits = defineEmits(['close'])
 
-// Close cart method
-const closeCart = () => {
-  emits('close')
+// Define function to post data to JSON server
+const postData = async () => {
+  const currentDate = new Date().toISOString()
+  const data = {
+    id: Math.random().toString(36).substring(7), // Generate a random ID
+    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
+    'builder-name': props.builderName,
+    'build-date': currentDate,
+    ...props.cart
+  }
+  try {
+    const response = await fetch('http://localhost:5000/pc-build', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    if (response.ok) {
+      console.log('Data posted successfully')
+      // Optionally, you can emit an event to notify the parent component about the successful post
+      localStorage.removeItem('builderId')
+      localStorage.removeItem('builderName')
+      localStorage.removeItem('buildDate')
+      localStorage.removeItem('cart')
+    } else {
+      console.error('Failed to post data')
+    }
+  } catch (error) {
+    console.error('Error posting data:', error)
+  }
 }
 
 // Compute total price
@@ -48,6 +80,11 @@ const totalPrice = computed(() => {
 // Format price
 const formatPrice = (price) => {
   return `${price.toFixed(2)}B`
+}
+
+// Close cart method
+const closeCart = () => {
+  emits('close')
 }
 </script>
 
@@ -134,5 +171,20 @@ const formatPrice = (price) => {
 
 .textHead {
   font-weight: bold;
+}
+
+.confirm-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
 }
 </style>

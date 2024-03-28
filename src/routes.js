@@ -25,6 +25,11 @@ const routes = [
     name: 'ArticlePage',
     component: () => import('./components/articles/ArticleNew.vue'),
   },
+  {
+    path: "/deleting",
+    name: "dataEditing",
+    component: () => import("./components/Util/ListSpec.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -27,12 +27,14 @@ const fetchData = async () => {
   isLoading.value = false
 }
 
-// Function to post data to JSON server
-const postData = async () => {
+// Function to post data to JSON server *******************MOVE TO CartPopup.vue****************
+/*const postData = async () => {
+  const currentDate = new Date().toISOString()
   const data = {
-    'builder-id': builderId,
+    id: Math.random().toString(36).substring(7), // Generate a random ID
+    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
     'builder-name': builderName,
-    'build-date': buildDate,
+    'build-date': currentDate,
     ...cart
   }
   try {
@@ -56,11 +58,22 @@ const postData = async () => {
   } catch (error) {
     console.error('Error posting data:', error)
   }
-}
+}*/
 
 onMounted(async () => {
   await fetchData() // Fetch initial data when component is mounted
 })
+
+// Sync Data In localStorage by not need to refresh
+const syncCartData = () => {
+  cart = JSON.parse(localStorage.getItem('cart')) || {}
+  builderName = localStorage.getItem('builderName') || '' // Update builderName from local storage
+}
+
+const toggleShowCartPopup = () => {
+  showCartPopup.value = !showCartPopup.value
+  syncCartData()
+}
 </script>
 
 <template>
@@ -98,7 +111,7 @@ onMounted(async () => {
     ></ItemsCard>
     <!-- Button to show cart pop-up -->
     <button
-      @click="showCartPopup = !showCartPopup"
+      @click="toggleShowCartPopup"
       class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded"
     >
       Show Cart
@@ -113,13 +126,13 @@ onMounted(async () => {
         @close="showCartPopup = false"
       />
     </teleport>
-    <!-- Button to confirm build spec -->
-    <button
+    <!-- Button to confirm build spec ****************MOVE TO CartPopup**********-->
+    <!-- <button
       @click="postData"
       class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded"
     >
       Confirm Build Spec
-    </button>
+    </button>-->
   </div>
 </template>
 
