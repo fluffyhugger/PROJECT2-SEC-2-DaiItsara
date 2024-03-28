@@ -99,6 +99,7 @@ const handleUpdatePcSet = async (option) => {
   }
 }
 const newTapByIDType = async (id, type) => {
+  console.log(id,type)
   window.open(`/build/${type}/${id}`, '_blank');
 }
 const toggleShowInfo = (option)=>{
@@ -297,7 +298,7 @@ const toggleShowInfo = (option)=>{
         </p>
         <br />
         <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-        <p @click="newTapByIDType(product['cpu'].id, 'cpu')">
+        <p @click="newTapByIDType(product['mainboard'].id, 'mainboard')">
           MAINBOARD name:{{
                   product['mainboard'] ? product['mainboard']['name'] : '-'
                 }}
@@ -306,7 +307,7 @@ const toggleShowInfo = (option)=>{
         </p>
         <br />
         <!-- เว้นบรรทัดด้วยแท็ก <br> -->
-        <p @click="newTapByIDType(product['cpu'].id, 'cpu')">
+        <p @click="newTapByIDType(product['cooler'].id, 'cooler')">
           COOLER name:{{ product['cooler'] ? product['cooler']['name'] : '-' }}
           price
           {{ product['cooler'] ? product['cooler']['price'] : '-' }}
