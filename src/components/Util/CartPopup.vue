@@ -16,22 +16,31 @@
           <span>Total:</span>
           <span class="total-price">{{ formatPrice(totalPrice) }}</span>
         </div>
-        <!-- Confirm Build Spec Button -->
-        <button @click="postData" class="confirm-button">
-          Build
-        </button>
+        <!-- Success Message -->
+        <p v-if="buildSuccessful" class="success-message">
+          BUILD PC SUCCESSFUL <br>
+        </p>
         <!-- Close Button -->
         <button @click="closeCart" class="close-button">Close</button>
+        <!-- Confirm Build Spec Button -->
+        <button v-if="!buildSuccessful" @click="postData" class="confirm-button">
+          Build
+        </button>
+        
+        
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, defineProps, defineEmits, ref } from 'vue'
 
 const props = defineProps(['cart', 'builderName'])
 const emits = defineEmits(['close'])
+
+// Reactive variable for success message
+const buildSuccessful = ref(false)
 
 // Define function to post data to JSON server
 const postData = async () => {
@@ -53,6 +62,8 @@ const postData = async () => {
     })
     if (response.ok) {
       console.log('Data posted successfully')
+      // Set buildSuccessful to true to display the success message
+      buildSuccessful.value = true
       // Optionally, you can emit an event to notify the parent component about the successful post
       localStorage.removeItem('builderId')
       localStorage.removeItem('builderName')
@@ -89,6 +100,18 @@ const closeCart = () => {
 </script>
 
 <style scoped>
+/* Your existing styles */
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.close-button,
+.confirm-button {
+  margin-right: 10px;
+}
+
 .cart-popup-overlay {
   position: fixed;
   top: 0;
@@ -103,7 +126,7 @@ const closeCart = () => {
 
 .cart-popup {
   background-color: white;
-  padding: 20px;
+  padding: 50px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
