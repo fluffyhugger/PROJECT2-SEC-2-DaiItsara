@@ -1,5 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import ArticlePage from './components/articles/ArticleNew.vue'
+import { createRouter, createWebHistory } from "vue-router"
 
 const routes = [
   { path: "/", component: () => import("./components/HomePage.vue") },
@@ -21,16 +20,21 @@ const routes = [
     component: () => import("./components/Util/PcComponentsInfo.vue"),
   },
   {
-    path: '/:articleType',
-    name: 'ArticlePage',
-    component: () => import('./components/articles/ArticleNew.vue'),
+    path: "/:articleType",
+    name: "ArticlePage",
+    component: () => import("./components/articles/ArticleNew.vue"),
   },
   {
     path: "/deleting",
     name: "dataEditing",
     component: () => import("./components/Util/ListSpec.vue"),
   },
-];
+  {
+    path: "/:pathMatch(.*)*",
+    name: "notFound",
+    component: () => import("./components/NotFound.vue"),
+  },
+]
 
 const router = createRouter({
   history: createWebHistory(),
