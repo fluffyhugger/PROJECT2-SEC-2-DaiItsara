@@ -56,7 +56,7 @@
 
 <script setup>
 // Import necessary functions and variables
-import { ref, defineProps } from 'vue';
+import { ref } from 'vue';
 
 // Define props
 const props = defineProps({
