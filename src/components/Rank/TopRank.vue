@@ -33,13 +33,16 @@ watch(selectedOption, (newValue) => {
 
 const slide = (direction) => {
   const container = containerRef.value;
-  const scrollAmount = direction * (container.offsetWidth / 2);
-  const targetScroll = container.scrollLeft + scrollAmount;
-  container.scrollTo({
-    left: targetScroll,
-    behavior: "smooth",
-  });
+  if (container) {
+    const scrollAmount = direction * (container.offsetWidth / 2);
+    const targetScroll = container.scrollLeft + scrollAmount;
+    container.scrollTo({
+      left: targetScroll,
+      behavior: "smooth",
+    });
+  }
 };
+
 
 const startAutoSlide = () => {
   autoSlideInterval = setInterval(() => {
@@ -50,22 +53,27 @@ const startAutoSlide = () => {
 const stopAutoSlide = () => {
   clearInterval(autoSlideInterval);
 };
-
 const handleScroll = () => {
   const container = containerRef.value;
-  const maxScrollLeft = container.scrollWidth - container.clientWidth;
-  if (container.scrollLeft === maxScrollLeft && scrollDirection === 1) {
-    scrollDirection = -1;
-  } else if (container.scrollLeft === 0 && scrollDirection === -1) {
-    scrollDirection = 1;
+  if (container) {
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    if (container.scrollLeft === maxScrollLeft && scrollDirection === 1) {
+      scrollDirection = -1;
+    } else if (container.scrollLeft === 0 && scrollDirection === -1) {
+      scrollDirection = 1;
+    }
   }
 };
-
 onMounted(() => {
   startAutoSlide();
   containerRef.value.addEventListener("scroll", handleScroll);
 });
-
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return `${date.getFullYear()}-${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
+};
 </script>
 <template>
   <div class="top-container pt-5">
@@ -81,11 +89,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="controls-container">
-      <div class="control left" @click="
-            stopAutoSlide();
-          slide(-1);
-          startAutoSlide();
-          ">
+      <div class="control left" @click="stopAutoSlide(); slide(-1); startAutoSlide();">
         <font-awesome-icon :icon="['fas', 'chevron-left']" />
       </div>
       <div class="top">
@@ -93,34 +97,28 @@ onMounted(() => {
           <div v-for="product in props.products.slice(0, 3)" :key="product.id" class="card">
             <figure>
               <div class="image-container">
-                <img
-                  :src=" getComponentProperty (product,'case','image-url')"
-                  alt="car!" />
-                  </div>
+                <img :src="getComponentProperty(product, 'case', 'image-url')" alt="" />
+              </div>
             </figure>
-          <div class="card-body">
-            <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>
-            <div v-if="selectedOption === SortBy.Price">
-              price : {{ product['total-price'] }}
-            </div>
-            <div v-else-if="selectedOption === SortBy.Latest">
-              build-date : {{ new Date(product['build-date']) }}
-            </div>
-            <div class="card-actions justify-end">
-              <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
+            <div class="card-body">
+              <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>
+              <div v-if="selectedOption === SortBy.Price">
+                price : {{ product['total-price'] }}
+              </div>
+              <div v-else-if="selectedOption === SortBy.Latest">
+                build-date : {{ formatDate(new Date(product['build-date'])) }}
+              </div>
+              <div class="card-actions justify-end">
+                <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="control right" @click="
-            stopAutoSlide();
-          slide(1);
-          startAutoSlide();
-          ">
-    <font-awesome-icon :icon="['fas', 'chevron-right']" />
-  </div>
+    <div class="control right" @click="stopAutoSlide(); slide(1); startAutoSlide();">
+      <font-awesome-icon :icon="['fas', 'chevron-right']" />
+    </div>
   </div>
 </template>
 <style scoped>
@@ -143,10 +141,7 @@ select {
   background-color: transparent;
 }
 
-.top-container {
-  display: flex;
-  align-items: center;
-}
+
 
 .top-ranking {
   margin-right: 1rem;
@@ -166,13 +161,27 @@ select {
   margin-right: 1rem;
 }
 
+.top-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Center align horizontally */
+  max-width: 1200px;
+  /* Set maximum width */
+  margin: 0 auto;
+  /* Center align horizontally */
+}
+
 .container {
   display: flex;
   overflow-x: auto;
-  padding: 20 40 50 100 px;
+  padding: 20px 40px 50px 100px;
+  /* Adjust padding */
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   position: relative;
+  max-width: 100%;
+  /* Ensure container doesn't exceed parent width */
 }
 
 .container::-webkit-scrollbar {
@@ -235,7 +244,7 @@ select {
 }
 
 .image-container {
-  max-width: 20vw; /* 20% of the viewport width */
+  max-width: 20vw;
 }
 
 .head-toprank-container {

@@ -334,20 +334,15 @@ const toggleShowInfo = (option)=>{
 
 .grid-item {
   background-color: #f0f0f0;
-  /* Add background color for grid items */
   padding: 20px;
-  /* Add padding for spacing within grid items */
   border-radius: 5px;
-  /* Add border radius for rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Add box shadow for depth */
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
   margin: 0 auto;
-  /* Center the grid horizontally */
 }
 
 #list-left {
