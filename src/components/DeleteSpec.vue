@@ -63,10 +63,10 @@
             />
             <span v-else>No Image Available</span>
             <span v-if="product.cpu && product.cpu['name']">{{
-              product.cpu["name"]
+              product.cpu['name']
             }}</span>
             <span v-if="product.gpu && product.gpu['name']">{{
-              product.gpu["name"]
+              product.gpu['name']
             }}</span>
           </td>
           <td>
@@ -74,9 +74,9 @@
               >xxxxxx</router-link
             >
           </td>
-          <td>{{ product["builder-name"] }}</td>
-          <td>{{ formatDate(product["build-date"]) }}</td>
-          <td>{{ formatPrice(product["total-price"]) }}</td>
+          <td>{{ product['builder-name'] }}</td>
+          <td>{{ formatDate(product['build-date']) }}</td>
+          <td>{{ formatPrice(product['total-price']) }}</td>
           <td>
             <button
               type="button"
@@ -94,21 +94,21 @@
 
 <script setup>
 // Import necessary functions and variables
-import { ref } from 'vue';
+import { ref } from "vue"
 
 // Define props
 const props = defineProps({
   selectedOption: String,
   products: Array,
-  isLoading: Boolean,
+  isLoading: Boolean
 })
 
 // Define reactive variables
-const minPrice = ref("")
-const maxPrice = ref("")
+const minPrice = ref('')
+const maxPrice = ref('')
 const selectedCPUs = ref([])
 const selectedGPUs = ref([])
-const emit = defineEmits(["dataDeleted"])
+const emit = defineEmits(['dataDeleted'])
 // Logic to select CPU
 const selectCPU = (cpu) => {
   // Toggle selection
@@ -150,38 +150,33 @@ const formatDate = (dateString) => {
   const date = new Date(dateString)
   return `${date.getFullYear()}-${(date.getMonth() + 1)
     .toString()
-    .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`
+    .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
 }
 const formatPrice = (price) => {
-  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 
 //Delete Data
 const handleDataDeleted = async (builderId) => {
   try {
-    // Send DELETE request to delete the product with productId
     const response = await fetch(
       `http://localhost:5000/pc-build/${builderId}`,
       {
-        method: "DELETE",
+        method: 'DELETE',
         headers: {
-          "Content-Type": "application/json",
-          // Add any additional headers if needed
-        },
+          'Content-Type': 'application/json'
+        }
       }
     )
-    // Check if deletion was successful
+
     if (response.ok) {
-      // Find and remove the deleted product from the products array
-      props.products = props.products.filter(
-        (product) => product.id !== builderId
-      )
+      // Emit event to notify parent component about deletion
+      emit('dataDeleted', builderId)
     } else {
-      // Handle error response
-      console.error("Error deleting product:", response.statusText)
+      console.error('Error deleting product:', response.statusText)
     }
   } catch (error) {
-    console.error("Error deleting product:", error)
+    console.error('Error deleting product:', error)
   }
 }
 </script>
