@@ -2,12 +2,15 @@
 import DeleteSpec from "../DeleteSpec.vue"
 import { ref, onMounted, computed } from 'vue';
 import { SortBy, TotalPrice } from "../Rank/enum";
+import BuildSpec from "../BuildSpec.vue";
 
 // parent component 
 
 let selectedOption = ref(SortBy.Price);
 let products = ref([]);
 let isLoading = ref(true);
+
+
 
 const componentTypes = [
     "cpu",
@@ -22,6 +25,7 @@ const componentTypes = [
     "cooler",
 ];
 
+// const specList = ref(new SpecManagement())
 onMounted(async () => {
     try {
         const result = await fetch(`http://localhost:5000/pc-build`);
@@ -50,6 +54,9 @@ const sortByProducts = computed(() => {
         return products.value;
     }
 });
+
+
+
 </script>
 
 <template>
@@ -57,7 +64,7 @@ const sortByProducts = computed(() => {
         <h1 class="text-3xl font-bold tracking-wide ">
             PC SPEC LIST
         </h1>
-        <DeleteSpec :selectedOption="selectedOption" :products="sortByProducts" :isLoading="isLoading" />
+        <DeleteSpec :selectedOption="selectedOption" :products="sortByProducts" :isLoading="isLoading" @dataDeleted="handleDataDeleted"/>
     </div>
 </template>
 
