@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 const itemsToShow = ref(4)
@@ -26,6 +26,13 @@ const fetchArticles = async () => {
 
 // Call the fetchArticles function when the component is mounted
 onMounted(fetchArticles)
+
+watch(
+  () => route.params.articleType,
+  () => {
+    fetchArticles()
+  }
+)
 </script>
 <template>
   <div v-if="itemNews">

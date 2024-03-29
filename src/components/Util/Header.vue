@@ -19,7 +19,9 @@
           class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
         >
           <li v-for="articleType in articleTypes" :key="articleType">
-            <RouterLink :to="`/${articleType}`">{{ articleType }}</RouterLink>
+            <RouterLink :to="`/${articleType}`">{{
+              articleType.charAt(0).toLocaleUpperCase() + articleType.slice(1)
+            }}</RouterLink>
           </li>
         </ul>
       </details>
