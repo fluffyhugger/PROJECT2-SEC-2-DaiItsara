@@ -1,3 +1,72 @@
+<template>
+  <div>
+    <div class="flex items-center justify-between p-4 bg-teal-200">
+      <h1 class="text-xl font-bold">Build spec</h1>
+
+      <!-- Button to show cart pop-up -->
+      <div class="relative">
+        <div class="cart-icon-wrapper" @click="toggleShowCartPopup">
+          <img
+            src="../assets/shopping-cart.png"
+            alt="Shopping Cart"
+            class="cursor-pointer cart-icon"
+            :style="{ width: '45px', height: '45px' }"
+          />
+        </div>
+        <!-- Cart pop-up using teleport -->
+        <teleport to="body">
+          <CartPopup
+            v-if="showCartPopup"
+            :cart="cart"
+            :builderName="builderName"
+            @close="showCartPopup = false"
+          />
+        </teleport>
+      </div>
+    </div>
+
+    <div class="p-4">
+      <select
+        v-model="selectedOption"
+        @change="fetchData"
+        name="specTypes"
+        id="specTypes"
+        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400"
+      >
+        <option value="cpu">CPU</option>
+        <option value="ram">Memory</option>
+        <option value="gpu">Graphic Card</option>
+        <option value="ssd">Solid State Drive</option>
+        <option value="hdd">Hard Disk</option>
+        <option value="psu">Power Supply</option>
+        <option value="case">Case</option>
+        <option value="monitor">Monitor</option>
+        <option value="mainboard">Mainboard</option>
+        <option value="cooler">Cooler</option>
+      </select>
+      <h2 class="text-xl font-bold mt-4 mb-4">
+        Select your {{ selectedOption.toUpperCase() }}
+      </h2>
+
+      <!-- Loading indicator -->
+      <div class="max-w-sm mx-auto my-4" v-if="isLoading">
+        <span class="text-2xl font-bold text-indigo-700">Loading...</span>
+      </div>
+
+      <!-- Grid layout for displaying fetched items -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4" v-else>
+        <!-- Items fetched from API -->
+        <ItemsCard
+          v-for="item in itemList"
+          :key="item.id"
+          :item="item"
+          :listName="selectedOption"
+        ></ItemsCard>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { onMounted, ref } from 'vue'
 import ItemsCard from './Util/ItemsCard.vue'
@@ -27,39 +96,6 @@ const fetchData = async () => {
   isLoading.value = false
 }
 
-// Function to post data to JSON server *******************MOVE TO CartPopup.vue****************
-/*const postData = async () => {
-  const currentDate = new Date().toISOString()
-  const data = {
-    id: Math.random().toString(36).substring(7), // Generate a random ID
-    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
-    'builder-name': builderName,
-    'build-date': currentDate,
-    ...cart
-  }
-  try {
-    const response = await fetch('http://localhost:5000/pc-build', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    if (response.ok) {
-      console.log('Data posted successfully')
-      // Optionally, you can clear localStorage after posting the data
-      localStorage.removeItem('builderId')
-      localStorage.removeItem('builderName')
-      localStorage.removeItem('buildDate')
-      localStorage.removeItem('cart')
-    } else {
-      console.error('Failed to post data')
-    }
-  } catch (error) {
-    console.error('Error posting data:', error)
-  }
-}*/
-
 onMounted(async () => {
   await fetchData() // Fetch initial data when component is mounted
 })
@@ -76,64 +112,32 @@ const toggleShowCartPopup = () => {
 }
 </script>
 
-<template>
-  <h1>Build spec</h1>
-  <h1>{{ selectedOption }}</h1>
-  <select
-    v-model="selectedOption"
-    @change="fetchData"
-    name="specTypes"
-    id="specTypes"
-  >
-    <option value="cpu">CPU</option>
-    <option value="ram">Memory</option>
-    <option value="gpu">Graphic Card</option>
-    <option value="ssd">Solid State Drive</option>
-    <option value="hdd">Hard Disk</option>
-    <option value="psu">Power Supply</option>
-    <option value="case">Case</option>
-    <option value="monitor">Monitor</option>
-    <option value="mainboard">Mainboard</option>
-    <option value="cooler">Cooler</option>
-  </select>
-  <!-- Loading indicator -->
-  <div class="max-w-sm mx-auto" v-if="isLoading">
-    <span class="text-2xl font-bold text-indigo-700">Loading...</span>
-  </div>
-  <!-- Grid layout for displaying fetched items -->
-  <div class="grid grid-cols-3 gap-4" v-else>
-    <!-- Items fetched from API -->
-    <ItemsCard
-      v-for="item in itemList"
-      :key="item.id"
-      :item="item"
-      :listName="selectedOption"
-    ></ItemsCard>
-    <!-- Button to show cart pop-up -->
-    <button
-      @click="toggleShowCartPopup"
-      class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded"
-    >
-      Show Cart
-    </button>
+<style scoped>
+.cart-icon-wrapper {
+  background-color: #fdfb88;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition effect for smooth color change */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth effect */
+}
 
-    <!-- Cart pop-up using teleport -->
-    <teleport to="body">
-      <CartPopup
-        v-if="showCartPopup"
-        :cart="cart"
-        :builderName="builderName"
-        @close="showCartPopup = false"
-      />
-    </teleport>
-    <!-- Button to confirm build spec ****************MOVE TO CartPopup**********-->
-    <!-- <button
-      @click="postData"
-      class="bg-gray-500 hover:bg-gray-700 text-white font-bold rounded"
-    >
-      Confirm Build Spec
-    </button>-->
-  </div>
-</template>
+.cart-icon-wrapper:hover {
+  background-color: #18ccae;
+}
 
-<style scoped></style>
+.cart-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 255, 221, 0.2));
+}
+
+.price {
+  background-color: #46ddd9; /* Background color */
+  color: white; /* Text color */
+  padding: 4px 8px; /* Padding */
+  border-radius: 4px; /* Border radius */
+}
+</style>
