@@ -33,13 +33,16 @@ watch(selectedOption, (newValue) => {
 
 const slide = (direction) => {
   const container = containerRef.value;
-  const scrollAmount = direction * (container.offsetWidth / 2);
-  const targetScroll = container.scrollLeft + scrollAmount;
-  container.scrollTo({
-    left: targetScroll,
-    behavior: "smooth",
-  });
+  if (container) {
+    const scrollAmount = direction * (container.offsetWidth / 2);
+    const targetScroll = container.scrollLeft + scrollAmount;
+    container.scrollTo({
+      left: targetScroll,
+      behavior: "smooth",
+    });
+  }
 };
+
 
 const startAutoSlide = () => {
   autoSlideInterval = setInterval(() => {
@@ -50,17 +53,17 @@ const startAutoSlide = () => {
 const stopAutoSlide = () => {
   clearInterval(autoSlideInterval);
 };
-
 const handleScroll = () => {
   const container = containerRef.value;
-  const maxScrollLeft = container.scrollWidth - container.clientWidth;
-  if (container.scrollLeft === maxScrollLeft && scrollDirection === 1) {
-    scrollDirection = -1;
-  } else if (container.scrollLeft === 0 && scrollDirection === -1) {
-    scrollDirection = 1;
+  if (container) {
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    if (container.scrollLeft === maxScrollLeft && scrollDirection === 1) {
+      scrollDirection = -1;
+    } else if (container.scrollLeft === 0 && scrollDirection === -1) {
+      scrollDirection = 1;
+    }
   }
 };
-
 onMounted(() => {
   startAutoSlide();
   containerRef.value.addEventListener("scroll", handleScroll);
