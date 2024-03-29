@@ -6,10 +6,9 @@
       "builder-name": "Test1107",
       "build-date": "2024-03-27T16:07:36.549Z",
       "cpu": {
-        "id": "CPU_00001",
-        "name": "Intel Core i7 12700K",
-        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
-        "price": 11840
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
       },
       "ram": {
         "id": "RAM_00002",
@@ -66,7 +65,6 @@
         "price": 3890
       }
     }
-  
   ],
   "cpu": [
     {
