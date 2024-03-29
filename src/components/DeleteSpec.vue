@@ -79,12 +79,17 @@
           <td>{{ formatPrice(product['total-price']) }}</td>
           <td>
             <button
-              type="button"
-              class="btn bg-red-700 hover:opacity-50 text-white"
-              @click="handleDataDeleted(product.id)"
+              @click="confirmDelete(product.id)"
+              class="btn bg-red-500 hover:opacity-50 text-white"
             >
               Delete
             </button>
+
+            <DeleteConfirmPopup
+              v-if="showDeletePopup"
+              @cancel="cancelDeletePopup"
+              @delete="deleteConfirmed"
+            />
           </td>
         </tr>
       </tbody>
@@ -94,7 +99,8 @@
 
 <script setup>
 // Import necessary functions and variables
-import { ref } from "vue"
+import { ref } from 'vue'
+import DeleteConfirmPopup from './Util/DeleteConfirmPopup.vue'
 
 // Define props
 const props = defineProps({
@@ -103,6 +109,60 @@ const props = defineProps({
   isLoading: Boolean
 })
 
+// Define reactive variables
+const showDeletePopup = ref(false)
+let productToDelete = null
+
+// Function to show the delete confirmation popup
+const confirmDelete = (productId) => {
+  showDeletePopup.value = true
+  productToDelete = productId
+}
+
+// Function to hide the delete confirmation popup
+const cancelDeletePopup = () => {
+  showDeletePopup.value = false
+  productToDelete = null
+}
+
+// Function to handle delete action when confirmed by the user
+const deleteConfirmed = async () => {
+  // Implement your delete logic here
+  await handleDataDeleted(productToDelete)
+  // Hide the popup after deletion
+  cancelDeletePopup()
+}
+
+// Function to handle deletion of data from the JSON file on the server
+const handleDataDeleted = async (builderId) => {
+  try {
+    const response = await fetch(
+      `http://localhost:5000/pc-build/${builderId}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    )
+
+    if (response.ok) {
+      // Emit event to notify parent component about deletion
+      emit('dataDeleted', builderId)
+    } else {
+      console.error('Error deleting product:', response.statusText)
+    }
+  } catch (error) {
+    console.error('Error deleting product:', error)
+  }
+}
+
+// Listen to the event emitted by the DeleteConfirmPopup component
+// and handle the deletion of the product
+const deleteProduct = (builderId) => {
+  // Call the function to handle deletion of data from the JSON file on the server
+  handleDataDeleted(builderId)
+}
 // Define reactive variables
 const minPrice = ref('')
 const maxPrice = ref('')
@@ -154,30 +214,6 @@ const formatDate = (dateString) => {
 }
 const formatPrice = (price) => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-}
-
-//Delete Data
-const handleDataDeleted = async (builderId) => {
-  try {
-    const response = await fetch(
-      `http://localhost:5000/pc-build/${builderId}`,
-      {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-    )
-
-    if (response.ok) {
-      // Emit event to notify parent component about deletion
-      emit('dataDeleted', builderId)
-    } else {
-      console.error('Error deleting product:', response.statusText)
-    }
-  } catch (error) {
-    console.error('Error deleting product:', error)
-  }
 }
 </script>
 
