@@ -100,7 +100,7 @@ const addToSpec = (listName, component) => {
           {{ item.brand }} {{ item.series }} {{ item.model }}
         </h5>
       </RouterLink>
-      <span class="mr-4"> {{ item.price }} Baht</span>
+      <span class="mr-4"> {{ item.price }} Bath</span>
       <label for="my_modal_7" class="btn" @click="addToSpec(listName, item)">
         Add to Spec
       </label>
