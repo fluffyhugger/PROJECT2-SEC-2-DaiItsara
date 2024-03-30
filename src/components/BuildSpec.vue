@@ -49,6 +49,16 @@
         Select your {{ selectedOption.toUpperCase() }}
       </h2>
 
+      <select
+        v-if="selectedOption === 'cpu' || selectedOption === 'mainboard'"
+        v-model="selectedCPUBrand"
+      >
+        <h2 class="text-l font-bold mt-4 mb-4">CPU Socket</h2>
+        <option value="">All</option>
+        <option value="AMD">AMD AM</option>
+        <option value="Intel">Intel LGA</option>
+      </select>
+
       <!-- Loading indicator -->
       <div class="max-w-sm mx-auto my-4" v-if="isLoading">
         <span class="text-2xl font-bold text-indigo-700">Loading...</span>
@@ -69,7 +79,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import ItemsCard from './Util/ItemsCard.vue'
 import CartPopup from './Util/CartPopup.vue'
 
@@ -89,11 +99,46 @@ const selectedOption = ref('cpu')
 const showCartPopup = ref(false)
 
 // Function to fetch data from API based on selected option
+
+const selectedCPUBrand = ref('')
+
 const fetchData = async () => {
   isLoading.value = true
   const result = await fetch(`http://localhost:5000/${selectedOption.value}`)
   const response = await result.json()
-  itemList.value = response
+
+  if (selectedOption.value === 'mainboard') {
+    let filteredMainboards = response
+
+    // Filter mainboard items based on selected CPU brand
+    if (selectedCPUBrand.value === 'AMD') {
+      filteredMainboards = response.filter((mainboard) => {
+        return mainboard['cpu-socket'].startsWith('AMD')
+      })
+    } else if (selectedCPUBrand.value === 'Intel') {
+      filteredMainboards = response.filter((mainboard) => {
+        return mainboard['cpu-socket'].startsWith('INTEL')
+      })
+    }
+
+    itemList.value = filteredMainboards
+  } else if (selectedOption.value === 'cpu') {
+    // Filter CPU items based on selected CPU brand
+    if (
+      selectedCPUBrand.value === 'AMD' ||
+      selectedCPUBrand.value === 'Intel'
+    ) {
+      itemList.value = response.filter((cpu) => {
+        // Filter CPUs based on selected brand
+        return cpu.brand.toLowerCase() === selectedCPUBrand.value.toLowerCase()
+      })
+    } else {
+      itemList.value = response // Show all CPUs if brand is not selected or unknown
+    }
+  } else {
+    itemList.value = response // For other options, show all items
+  }
+
   isLoading.value = false
 }
 
