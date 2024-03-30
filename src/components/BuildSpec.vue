@@ -20,7 +20,7 @@
             :cart="cart"
             :builderName="builderName"
             @close="showCartPopup = false"
-
+            @update-cart="updateCart"
           />
         </teleport>
       </div>
@@ -145,10 +145,12 @@ const toggleShowCartPopup = () => {
   showCartPopup.value = !showCartPopup.value
   syncCartData()
 }
-
-const handleItemDeleted = (key) =>{
-  console.log(key)
+// Function to handle update of cart data
+const updateCart = (updatedCart) => {
+  // Update the cart data in the component
+  showCartPopup.value = !showCartPopup.value
 }
+
 </script>
 
 <style scoped>

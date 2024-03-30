@@ -105,8 +105,9 @@ const deleteItem = (key) => {
   delete updatedCart[key]
   localStorage.setItem('cart', JSON.stringify(updatedCart))
 console.log(updatedCart)
+
   // Emit an event to notify the parent component to update the cart
-  emits('update-cart', updatedCart)
+  emits('update-cart', key)
 }
 
 
