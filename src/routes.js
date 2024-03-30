@@ -30,6 +30,10 @@ const routes = [
     component: () => import('./components/Util/ListSpec.vue'),
   },
   {
+    path: '/contact',
+    component: () => import('./components/Contact.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'notFound',
     component: () => import('./components/NotFound.vue'),
