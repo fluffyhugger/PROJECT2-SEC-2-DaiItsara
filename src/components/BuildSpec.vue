@@ -27,38 +27,6 @@ const fetchData = async () => {
   isLoading.value = false
 }
 
-// Function to post data to JSON server *******************MOVE TO CartPopup.vue****************
-/*const postData = async () => {
-  const currentDate = new Date().toISOString()
-  const data = {
-    id: Math.random().toString(36).substring(7), // Generate a random ID
-    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
-    'builder-name': builderName,
-    'build-date': currentDate,
-    ...cart
-  }
-  try {
-    const response = await fetch('http://localhost:5000/pc-build', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    if (response.ok) {
-      console.log('Data posted successfully')
-      // Optionally, you can clear localStorage after posting the data
-      localStorage.removeItem('builderId')
-      localStorage.removeItem('builderName')
-      localStorage.removeItem('buildDate')
-      localStorage.removeItem('cart')
-    } else {
-      console.error('Failed to post data')
-    }
-  } catch (error) {
-    console.error('Error posting data:', error)
-  }
-}*/
 
 onMounted(async () => {
   await fetchData() // Fetch initial data when component is mounted
@@ -69,6 +37,8 @@ const syncCartData = () => {
   cart = JSON.parse(localStorage.getItem('cart')) || {}
   builderName = localStorage.getItem('builderName') || '' // Update builderName from local storage
 }
+// Call syncCartData when the component is mounted
+
 
 const toggleShowCartPopup = () => {
   showCartPopup.value = !showCartPopup.value

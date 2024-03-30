@@ -734,9 +734,9 @@
       "builder-name": "ing",
       "build-date": "2024-03-27T09:39:55",
       "cpu": {
-        "name": "Intel Core i7 12700K",
-        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
-        "price": 11840
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
       },
       "ram": {
         "name": "APACER PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
@@ -914,6 +914,22 @@
         "name": "ASUS ROG Strix ROG Strix LC II 240 RGB White Edition",
         "image-url": "https://dlcdnwebimgs.asus.com/gain/5831EF72-B837-424D-AE04-7AF9DECDA035/w717/h525",
         "price": 7390
+      }
+    },
+    {
+      "id": "mdvydw",
+      "builder-id": "9y32r",
+      "builder-name": "ing",
+      "build-date": "2024-03-29T16:47:50.126Z",
+      "cpu": {
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      },
+      "ram": {
+        "name": "PNY XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
+        "image-url": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947",
+        "price": 4600
       }
     }
   ],

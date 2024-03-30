@@ -9,12 +9,14 @@
           <li v-for="(item, key) in cart" :key="key" class="cart-item">
             <span class="item-key">{{ key.toUpperCase() }}:</span>
             <span class="item-name">{{ item.name }}</span>
+            <button class="underline text-red-700 hover:text-red-400" @click="deleteItem(key)">Delete</button>
             <li><span class="item-price">{{ formatPrice(item.price) }}</span></li>
           </li>
         </ul>
         <div class="cart-total">
           <span>Total:</span>
           <span class="total-price">{{ formatPrice(totalPrice) }}</span>
+          
         </div>
         <!-- Confirm Build Spec Button -->
         <button @click="postData" class="confirm-button">
@@ -31,7 +33,7 @@
 import { computed } from 'vue'
 
 const props = defineProps(['cart', 'builderName'])
-const emits = defineEmits(['close'])
+const emits = defineEmits(['close', 'update-cart'])
 
 // Define function to post data to JSON server
 const postData = async () => {
@@ -86,6 +88,17 @@ const formatPrice = (price) => {
 const closeCart = () => {
   emits('close')
 }
+// Function to delete an item from the cart by its key (ID)
+const deleteItem = (key) => {
+  const updatedCart = { ...props.cart }
+  delete updatedCart[key]
+  localStorage.setItem('cart', JSON.stringify(updatedCart))
+
+  // Emit an event to notify the parent component to update the cart
+  emits('update-cart', updatedCart)
+}
+
+
 </script>
 
 <style scoped>
