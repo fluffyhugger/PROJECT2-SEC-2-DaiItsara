@@ -64,6 +64,85 @@
         "image-url": "https://chininter.co.th/wp-content/uploads/2021/07/masterliquid-ml240-illusion-white-gallery-0-zoom_1000x1000.png",
         "price": 3890
       }
+    },
+    {
+      "id": "r3s0v",
+      "builder-id": "ylfjjo",
+      "builder-name": "MamaOhhh",
+      "build-date": "2024-03-30T12:02:45.633Z",
+      "case": {
+        "name": "THERMALTAKE Core P6 Turquoise",
+        "image-url": "https://i.ibb.co/K9RMVDW/CASE-00003.png",
+        "price": 5890
+      },
+      "cpu": {
+        "name": "Intel Core i7 12700K",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
+        "price": 11840
+      },
+      "gpu": {
+        "name": "GIGABYTE Radeon RX 7000 Series Radeon RX 7600 Gaming OC 8G",
+        "image-url": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png",
+        "price": 9800
+      },
+      "ssd": {
+        "name": "Apacer AS2280Q4U 512GB",
+        "image-url": "https://gzhls.at/i/75/20/2827520-l0.png",
+        "price": 1965
+      },
+      "hdd": {
+        "name": "Western Digital Red Plus Nas 4TB",
+        "image-url": "https://notebookspec.com/storage/pc-hdd/hdd_222_20210311-114658_1.png",
+        "price": 4550
+      },
+      "psu": {
+        "name": "THERMALTAKE Toughpower GF Toughpower GF 850W",
+        "image-url": "https://www.jib.co.th/img_master/uploads/Content/2310393011/ToughpowerGF_850_1.png",
+        "price": 3650
+      },
+      "monitor": {
+        "name": "SAMSUNG LS28 LS28BG700EEXXT",
+        "image-url": "https://www.neoshop.co.th/wp-content/uploads/2023/08/th-gaming-ls32bg702eexxt-ls-bg-e.webp",
+        "price": 16500
+      },
+      "mainboard": {
+        "name": "ASUS Prime Z790-A WIFI-CSM",
+        "image-url": "https://storage.googleapis.com/file-computeandmore/images/7b361b3e-bd80-4bcd-bfdb-a718b3a827da.png",
+        "price": 10890
+      },
+      "cooler": {
+        "name": "COOLER MASTER MasterLiquid MasterLiquid ML240L ARGB Illusion white",
+        "image-url": "https://chininter.co.th/wp-content/uploads/2021/07/masterliquid-ml240-illusion-white-gallery-0-zoom_1000x1000.png",
+        "price": 3890
+      }
+    },
+    {
+      "id": "wgszel",
+      "builder-id": "37yka",
+      "builder-name": "Mako",
+      "build-date": "2024-03-30T12:14:48.542Z"
+    },
+    {
+      "id": "91kcp",
+      "builder-id": "kaoljp",
+      "builder-name": "ds",
+      "build-date": "2024-03-30T12:25:57.804Z",
+      "cpu": {
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      }
+    },
+    {
+      "id": "3x8hz",
+      "builder-id": "8i1dn",
+      "builder-name": "Jojo",
+      "build-date": "2024-03-30T12:47:08.280Z",
+      "cpu": {
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      }
     }
   ],
   "cpu": [
@@ -1736,7 +1815,7 @@
       "brand": "ASROCK",
       "model": "B650 Steel Legend",
       "chipset": "Intel B650",
-      "cpu-socket": "Intel LGA1700",
+      "cpu-socket": "INTEL LGA1700",
       "cpu-support": "Intel 12th Generation Intel Core / Intel 13th Generation Intel Core / Pentium / Celeron processors",
       "memory-slots": "4 Slots",
       "memory-max": "128GB",
@@ -1771,7 +1850,7 @@
       "brand": "MSI",
       "model": "MAG B650 TOMAHAWK WIFI",
       "chipset": "Intel B650",
-      "cpu-socket": "Intel LGA1700",
+      "cpu-socket": "INTEL LGA1700",
       "cpu-support": "Intel 12th Generation Intel Core / Intel 13th Generation Intel Core / Pentium / Celeron processors",
       "memory-slots": "4 Slots",
       "memory-max": "128GB",
@@ -1806,7 +1885,7 @@
       "brand": "ASUS",
       "model": "ROG STRIX B650-F GAMING WIFI",
       "chipset": "Intel B650",
-      "cpu-socket": "Intel LGA1700",
+      "cpu-socket": "INTEL LGA1700",
       "cpu-support": "Intel 12th Generation Intel Core / Intel 13th Generation Intel Core / Pentium / Celeron processors",
       "memory-slots": "4 Slots",
       "memory-max": "128GB",
