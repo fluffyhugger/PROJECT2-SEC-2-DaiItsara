@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from "vue"
+import { ref, computed, onMounted } from 'vue';
 import { getComponentProperty } from "./enum"
 const props = defineProps({
   selectedOption: String,

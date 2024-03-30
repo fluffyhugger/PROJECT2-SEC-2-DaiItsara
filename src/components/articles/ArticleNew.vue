@@ -36,20 +36,84 @@ watch(
 </script>
 <template>
   <div v-if="itemNews">
-    <div
-      v-for="(article, index) in itemNews.articles"
-      :key="index"
-      class="flex ml-32 h-30 mt-12"
-    >
-      <img :src="article.image" class="w-64 h-40" />
-      <div class="mt-5">
-        <h1 class="font-bold text-orange-500 ml-10">
-          {{ article.type.toUpperCase() }} NEWS
-        </h1>
-        <h1 class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2">
-          {{ article.title }}
-        </h1>
-        <h1 class="ml-10 mt-3 font-bold text-sm">{{ article.date }}</h1>
+    <div class="grid grid-cols-7 gap-2 mt-16 ml-16">
+      <div class="bg-white col-span-3 row-span-1">
+        <div class="image-container">
+          <img
+            :src="itemNews.articles[0].image"
+            alt=""
+            class="image-style"
+            style="height: 450px"
+          />
+          <div class="image-overlay">
+            <div class="image-text text-orange-400 font-extrabold text-9xl">
+              {{ itemNews.articles[0].title }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white col-span-2 row-span-1">
+        <div class="image-container">
+          <img
+            :src="itemNews.articles[1].image"
+            alt=""
+            class="image-style"
+            style="height: 450px"
+          />
+          <div class="image-overlay">
+            <div class="image-text text-red-800 font-extrabold text-9xl">
+              {{ itemNews.articles[1].title }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <div class="image-container">
+          <img
+            :src="itemNews.articles[2].image"
+            alt=""
+            class="image-style"
+            style="height: 250px; width: 300px"
+          />
+          <div class="image-overlay" style="width: 70%">
+            <div class="image-text text-green-600 font-extrabold text-9xl">
+              {{ itemNews.articles[2].title }}
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img
+            :src="itemNews.articles[3].image"
+            alt=""
+            class="image-style"
+            style="height: 200px; width: 300px"
+          />
+          <div class="image-overlay" style="width: 70%">
+            <div class="image-text text-white font-extrabold text-9xl">
+              {{ itemNews.articles[3].title }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        v-for="(article, index) in itemNews.articles"
+        :key="index"
+        class="flex ml-32 h-30 mt-12"
+      >
+        <img :src="article.image" class="w-64 h-40" />
+        <div class="mt-5">
+          <h1 class="font-bold text-orange-500 ml-10">
+            {{ article.type.toUpperCase() }} NEWS
+          </h1>
+          <h1
+            class="font-extrabold text-black ml-10 mt-3 text-xl w-1/2 :hover cursor-pointer"
+          >
+            {{ article.title }}
+          </h1>
+          <h1 class="ml-10 mt-3 font-bold text-sm">{{ article.date }}</h1>
+        </div>
       </div>
     </div>
   </div>
@@ -96,7 +160,6 @@ watch(
   grid-row: span 1;
 }
 
-/* Animation and Text */
 .image-container {
   position: relative;
   overflow: hidden;
@@ -120,13 +183,11 @@ watch(
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-/* Text Style */
 .image-text {
   text-align: center;
   font-size: 1.2rem;
 }
 
-/* Image Style */
 .image-style {
   width: 100%;
   height: auto;

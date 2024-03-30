@@ -63,10 +63,10 @@
             />
             <span v-else>No Image Available</span>
             <span v-if="product.cpu && product.cpu['name']">{{
-              product.cpu["name"]
+              product.cpu['name']
             }}</span>
             <span v-if="product.gpu && product.gpu['name']">{{
-              product.gpu["name"]
+              product.gpu['name']
             }}</span>
           </td>
           <td>
@@ -74,17 +74,22 @@
               >xxxxxx</router-link
             >
           </td>
-          <td>{{ product["builder-name"] }}</td>
-          <td>{{ formatDate(product["build-date"]) }}</td>
-          <td>{{ formatPrice(product["total-price"]) }}</td>
+          <td>{{ product['builder-name'] }}</td>
+          <td>{{ formatDate(product['build-date']) }}</td>
+          <td>{{ formatPrice(product['total-price']) }}</td>
           <td>
             <button
-              type="button"
-              class="btn bg-red-700 hover:opacity-50 text-white"
-              @click="handleDataDeleted(product.id)"
+              @click="confirmDelete(product.id)"
+              class="btn bg-red-500 hover:opacity-50 text-white"
             >
               Delete
             </button>
+
+            <DeleteConfirmPopup
+              v-if="showDeletePopup"
+              @cancel="cancelDeletePopup"
+              @delete="deleteConfirmed"
+            />
           </td>
         </tr>
       </tbody>
@@ -94,21 +99,76 @@
 
 <script setup>
 // Import necessary functions and variables
-import { ref } from "vue"
+import { ref } from 'vue'
+import DeleteConfirmPopup from './Util/DeleteConfirmPopup.vue'
 
 // Define props
 const props = defineProps({
   selectedOption: String,
   products: Array,
-  isLoading: Boolean,
+  isLoading: Boolean
 })
 
 // Define reactive variables
-const minPrice = ref("")
-const maxPrice = ref("")
+const showDeletePopup = ref(false)
+let productToDelete = null
+
+// Function to show the delete confirmation popup
+const confirmDelete = (productId) => {
+  showDeletePopup.value = true
+  productToDelete = productId
+}
+
+// Function to hide the delete confirmation popup
+const cancelDeletePopup = () => {
+  showDeletePopup.value = false
+  productToDelete = null
+}
+
+// Function to handle delete action when confirmed by the user
+const deleteConfirmed = async () => {
+  // Implement your delete logic here
+  await handleDataDeleted(productToDelete)
+  // Hide the popup after deletion
+  cancelDeletePopup()
+}
+
+// Function to handle deletion of data from the JSON file on the server
+const handleDataDeleted = async (builderId) => {
+  try {
+    const response = await fetch(
+      `http://localhost:5000/pc-build/${builderId}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    )
+
+    if (response.ok) {
+      // Emit event to notify parent component about deletion
+      emit('dataDeleted', builderId)
+    } else {
+      console.error('Error deleting product:', response.statusText)
+    }
+  } catch (error) {
+    console.error('Error deleting product:', error)
+  }
+}
+
+// Listen to the event emitted by the DeleteConfirmPopup component
+// and handle the deletion of the product
+const deleteProduct = (builderId) => {
+  // Call the function to handle deletion of data from the JSON file on the server
+  handleDataDeleted(builderId)
+}
+// Define reactive variables
+const minPrice = ref('')
+const maxPrice = ref('')
 const selectedCPUs = ref([])
 const selectedGPUs = ref([])
-const emit = defineEmits(["dataDeleted"])
+const emit = defineEmits(['dataDeleted'])
 // Logic to select CPU
 const selectCPU = (cpu) => {
   // Toggle selection
@@ -150,39 +210,10 @@ const formatDate = (dateString) => {
   const date = new Date(dateString)
   return `${date.getFullYear()}-${(date.getMonth() + 1)
     .toString()
-    .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`
+    .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
 }
 const formatPrice = (price) => {
-  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-}
-
-//Delete Data
-const handleDataDeleted = async (builderId) => {
-  try {
-    // Send DELETE request to delete the product with productId
-    const response = await fetch(
-      `http://localhost:5000/pc-build/${builderId}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          // Add any additional headers if needed
-        },
-      }
-    )
-    // Check if deletion was successful
-    if (response.ok) {
-      // Find and remove the deleted product from the products array
-      props.products = props.products.filter(
-        (product) => product.id !== builderId
-      )
-    } else {
-      // Handle error response
-      console.error("Error deleting product:", response.statusText)
-    }
-  } catch (error) {
-    console.error("Error deleting product:", error)
-  }
+  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 </script>
 

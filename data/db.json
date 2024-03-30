@@ -734,9 +734,9 @@
       "builder-name": "ing",
       "build-date": "2024-03-27T09:39:55",
       "cpu": {
-        "name": "AMD Ryzen 5 5600G",
-        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
-        "price": 5290
+        "name": "Intel Core i7 12700K",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_443_20220124-132555_1.png",
+        "price": 11840
       },
       "ram": {
         "name": "APACER PANTHER RGB DDR5 32GB (16GBx2) 5200 Black",
@@ -790,22 +790,21 @@
       "builder-name": "Test1107",
       "build-date": "2024-03-27T16:07:36.549Z",
       "cpu": {
-        "id": "CPU_00003",
-        "name": "Intel Core i5 10400F",
-        "image-url": "https://cdn.inet.se/product/1600x900/5303147_3.jpg",
-        "price": 3830
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
       },
       "ram": {
-        "id": "RAM_00003",
-        "name": "KINGSTON HyperX FURY RGB DDR4 16GB (16GBx1) 3200",
-        "image-url": "https://notebookspec.com/storage/pc-ram/ram_929_20191104-142836_KINGSTON_HyperX_FURY_RGB.png",
-        "price": 2300
+        "id": "RAM_00002",
+        "name": "PNY XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
+        "image-url": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947",
+        "price": 4600
       },
       "gpu": {
-        "id": "GPU_00003",
-        "name": "Zotac GeForce RTX 30 Series GeForce RTX 3080 Trinity OC",
-        "image-url": "https://notebookspec.com/storage/pc-vga/vga_1292_20201006-104957_1.png",
-        "price": 29230
+        "id": "GPU_00002",
+        "name": "GIGABYTE Radeon RX 7000 Series Radeon RX 7600 Gaming OC 8G",
+        "image-url": "https://www.autonetpc.com/wp-content/uploads/2023/05/Radeon™-RX-7600-GAMING-OC-8G-01.png",
+        "price": 9800
       },
       "ssd": {
         "id": "SSD_00003",
@@ -914,22 +913,6 @@
         "name": "ASUS ROG Strix ROG Strix LC II 240 RGB White Edition",
         "image-url": "https://dlcdnwebimgs.asus.com/gain/5831EF72-B837-424D-AE04-7AF9DECDA035/w717/h525",
         "price": 7390
-      }
-    },
-    {
-      "id": "mdvydw",
-      "builder-id": "9y32r",
-      "builder-name": "ing",
-      "build-date": "2024-03-29T16:47:50.126Z",
-      "cpu": {
-        "name": "AMD Ryzen 5 5600G",
-        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
-        "price": 5290
-      },
-      "ram": {
-        "name": "PNY XLR8 Gaming MAKO Epix-X RGB DDR5 32GB (16GBx2) 6000 White",
-        "image-url": "https://image.makewebeasy.net/makeweb/0/kflenu7tR/DefaultData/en_catalog_list_23k24_s3k6jkqbt2.png?v=202012190947",
-        "price": 4600
       }
     }
   ],
@@ -2044,11 +2027,7 @@
       "color": "Black",
       "weight": "13.1Kg",
       "dimension": "290 x 495 x 466",
-      "i/o-ports": [
-        "1x USB-C 3.1",
-        "2x USB-A 3.0",
-        "1x headphone/microphone"
-      ],
+      "i/o-ports": ["1x USB-C 3.1", "2x USB-A 3.0", "1x headphone/microphone"],
       "cooling-support": {
         "fan-support": {
           "front": "-",
@@ -2121,11 +2100,7 @@
       "color": "Black",
       "weight": "11.2kg",
       "dimension": "520mm x 245mm x 520mm",
-      "i/o-ports": [
-        "1 x USB 3.1 Type-C",
-        "2 x USB 3.0",
-        "1 x Audio/Mic"
-      ],
+      "i/o-ports": ["1 x USB 3.1 Type-C", "2 x USB 3.0", "1 x Audio/Mic"],
       "cooling-support": {
         "fan-support": {
           "front": "3 x 120mm, 2 x 140mm",
@@ -2395,11 +2370,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "4x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2435,10 +2406,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "6x USB 3.2 Type A",
-        "2x USB 3.2 Type C"
-      ],
+      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -2464,19 +2432,12 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": [
-        "1 Slot PCI Express 4.0 x16",
-        "2 Slot PCI Express 3.0 x16"
-      ],
+      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "2x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2512,11 +2473,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "4x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2551,10 +2508,7 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "6x USB 3.2 Type A",
-        "2x USB 3.2 Type C"
-      ],
+      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "5x Audio Ports",
       "form-factor": "ATX",
@@ -2580,19 +2534,12 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": [
-        "1 Slot PCI Express 4.0 x16",
-        "2 Slot PCI Express 3.0 x16"
-      ],
+      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "2x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2619,18 +2566,12 @@
       "lan-speed": "10/100/1000/2500Mbps",
       "wireless-lan": "WIFI 6E 2.4/5/6",
       "bluetooth": "Bluetooth 5.2",
-      "pci-slots": [
-        "1 Slot PCI Express 4.0 x16",
-        "1 Slot PCI Express 3.0 x16"
-      ],
+      "pci-slots": ["1 Slot PCI Express 4.0 x16", "1 Slot PCI Express 3.0 x16"],
       "sata3-slots": "4 slot",
       "m.2-slots": "2 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "1x USB 3.2 Type C",
-        "2x USB 3.2 Type A"
-      ],
+      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2666,11 +2607,7 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "4x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2705,10 +2642,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "1x USB 3.2 Type C",
-        "2x USB 3.2 Type A"
-      ],
+      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -2765,24 +2699,8 @@
       "model": "TUF Gaming LC 120 ARGB Black",
       "form-factor": "Liquid Cooler",
       "socket-support": {
-        "intel": [
-          "LGA1700",
-          "1366",
-          "1156",
-          "1155",
-          "1151",
-          "1150"
-        ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "AM2",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "intel": ["LGA1700", "1366", "1156", "1155", "1151", "1150"],
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "150mmx122mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2809,10 +2727,7 @@
           "1151",
           "1150"
         ],
-        "amd": [
-          "TR4/​sTRX4/​sWRX8/​SP3",
-          "AM4"
-        ]
+        "amd": ["TR4/​sTRX4/​sWRX8/​SP3", "AM4"]
       },
       "radiator-dimension": "120mmx272mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2838,15 +2753,7 @@
           "1151",
           "1150"
         ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "277x119x27 mm.",
       "radiator-material": "Aluminum",
@@ -2871,13 +2778,7 @@
           "LGA2011",
           "LGA2066"
         ],
-        "amd": [
-          "AM4",
-          "AM3",
-          "AM2",
-          "sTR4",
-          "sTRX4"
-        ]
+        "amd": ["AM4", "AM3", "AM2", "sTR4", "sTRX4"]
       },
       "radiator-dimension": "275 x 123 x 30mm",
       "radiator-material": "Aluminum",
@@ -2903,11 +2804,7 @@
           "2011",
           "2066"
         ],
-        "amd": [
-          "AM4",
-          "AM3",
-          "AM2"
-        ]
+        "amd": ["AM4", "AM3", "AM2"]
       },
       "radiator-dimension": "277mm x 120mm x 27mm",
       "radiator-material": "Aluminum",
@@ -2933,16 +2830,7 @@
           "LGA1155",
           "LGA1156"
         ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "AM2",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "274x120x27mm",
       "radiator-material": "Aluminum",
@@ -2963,13 +2851,7 @@
           "LGA2011-0 & LGA2011-3 (Square ILM)",
           "LGA1200, LGA1156, LGA1155, LGA1151, LGA1150"
         ],
-        "amd": [
-          "AM4",
-          "AM3(+)",
-          "AM2(+)",
-          "FM2(+)",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3(+)", "AM2(+)", "FM2(+)", "FM1"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2989,9 +2871,7 @@
           "LGA 2066 / 2011(-3) square ILM / 1151 / 1150 / 1155 / 1156 / 1200",
           "AM4 / AM4 / AM3(+) / AM2(+) / FM2(+) / FM1"
         ],
-        "amd": [
-          "AM4"
-        ]
+        "amd": ["AM4"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -3007,12 +2887,8 @@
       "model": "Freezer 34 eSports DUO",
       "form-factor": "Air Cooler",
       "socket-support": {
-        "intel": [
-          "LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"
-        ],
-        "amd": [
-          "AM4"
-        ]
+        "intel": ["LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"],
+        "amd": ["AM4"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -3039,16 +2915,7 @@
           "LGA1156",
           "LGA1366"
         ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "AM2",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -3065,6 +2932,7 @@
       "routeParams": "{{ route.params.articleType }}",
       "articles": [
         {
+          "id": 1,
           "title": "MeowBook",
           "image": "https://gadgettendency.com/wp-content/uploads/2024/03/Colorfuls-Meowbook-goes-on-sale-25K-165Hz-screen-Ryzen-7.jpg",
           "content": "Content for MeowBook",
@@ -3072,6 +2940,7 @@
           "type": "news"
         },
         {
+          "id": 2,
           "title": "XiaomiBook",
           "image": "https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-book-14/PC/6dd1847299283852d1d866376f265cc0.jpg",
           "content": "Content for XiaomiBook",
@@ -3079,6 +2948,7 @@
           "type": "news"
         },
         {
+          "id": 3,
           "title": "GeforeRTX 4060 TI",
           "image": "https://img.advice.co.th/images_nas/pic_product4/A0151476/A0151476OK_BIG_1.jpg",
           "content": "Content for GeforeRTX 4060 TI",
@@ -3086,6 +2956,7 @@
           "type": "news"
         },
         {
+          "id": 4,
           "title": "Macbook",
           "image": "https://media.studio7thailand.com/4290/Apple-MacBook-Air-13-M1-chip8C-CPU-7C-GPU-8GB-256GB-Space-Grey-2020-1-square_medium.jpg",
           "content": "Content for Macbook",
@@ -3103,6 +2974,7 @@
       "routeParams": "{{ route.params.articleType }}",
       "articles": [
         {
+          "id": 1,
           "title": "MSI Promotion",
           "image": "https://notebookspec.com/web/wp-content/uploads/2021/03/MSI-Commart-Promotion-m5.jpg",
           "content": "Content for MSI",
@@ -3110,6 +2982,7 @@
           "type": "promotion"
         },
         {
+          "id": 2,
           "title": "Printer Promotion",
           "image": "https://mediaserver.goepson.com/ImConvServlet/imconv/67039053eaf14f1f63c44d553b7feeaf1a36bbcc/original?use=banner&assetDescr=ethepson",
           "content": "Content for Printer",
@@ -3117,6 +2990,7 @@
           "type": "promotion"
         },
         {
+          "id": 3,
           "title": "RAM Promotion",
           "image": "https://www.commartthailand.com/wp-content/uploads/2023/07/corsair0.jpg",
           "content": "Content for Ram",
@@ -3124,6 +2998,7 @@
           "type": "promotion"
         },
         {
+          "id": 4,
           "title": "Macbook Promotion",
           "image": "https://www.commartthailand.com/wp-content/uploads/2021/11/Com7.jpg",
           "content": "Content for Macbook",
@@ -3141,6 +3016,7 @@
       "routeParams": "{{ route.params.articleType }}",
       "articles": [
         {
+          "id": 1,
           "title": "8 แอพแปลภาษาด้วยเสียง",
           "image": "https://notebookspec.com/web/wp-content/uploads/2023/12/8_app_voice_translate_2024.jpg",
           "content": "Content for MeowBook",
@@ -3148,6 +3024,7 @@
           "type": "howto"
         },
         {
+          "id": 2,
           "title": "คอมเปิดไม่ติด 7 วิธีที่ช่วยเช็ค",
           "image": "https://notebookspec.com/web/wp-content/uploads/2023/12/fixed_pc_can_not_boot_2023.jpg",
           "content": "Content for XiaomiBook",
@@ -3155,6 +3032,7 @@
           "type": "howto"
         },
         {
+          "id": 3,
           "title": "โปรแกรมแปลงไฟล์ pdf เป็น word ไม่เพี้ยน",
           "image": "https://notebookspec.com/web/wp-content/uploads/2023/11/convert_pdf_to_wod_2023_cov-1.jpg",
           "content": "Content for GeforeRTX 4060 TI",
@@ -3162,6 +3040,7 @@
           "type": "howto"
         },
         {
+          "id": 4,
           "title": "Overclock คืออะไร",
           "image": "https://notebookspec.com/web/wp-content/uploads/2023/10/liquid-cooled-gaming-pc-build.jpg",
           "content": "Content for Macbook",
@@ -3179,6 +3058,7 @@
       "routeParams": "{{ route.params.articleType }}",
       "articles": [
         {
+          "id": 1,
           "title": "แนะนำ 3 วิธีอัดหน้าจอคอม Windows 11",
           "image": "https://notebookspec.com/web/wp-content/uploads/2024/03/CapVedio2024.jpg",
           "content": "Content for MeowBook",
@@ -3186,6 +3066,7 @@
           "type": "tipstrick"
         },
         {
+          "id": 2,
           "title": "8 วิธีแคปหน้าจอคอม",
           "image": "https://notebookspec.com/web/wp-content/uploads/2022/05/NBS-200819_thumb_NBS-1-4-1s-1024x576.jpg",
           "content": "Content for XiaomiBook",
@@ -3193,6 +3074,7 @@
           "type": "tipstrick"
         },
         {
+          "id": 3,
           "title": "200 แคปชั่นน่ารัก 2024 โพสต์อ้อน เรียกยอดไลค์ ไม่ใช้ไม่ได้แล้ว",
           "image": "https://notebookspec.com/web/wp-content/uploads/2024/03/CuteCaption2024.jpg",
           "content": "Content for GeforeRTX 4060 TI",
@@ -3200,6 +3082,7 @@
           "type": "tipstrick"
         },
         {
+          "id": 4,
           "title": "รวมซิมเน็ตรายปี",
           "image": "https://notebookspec.com/web/wp-content/uploads/2024/03/AISTureDtec.jpg",
           "content": "Content for Macbook",
