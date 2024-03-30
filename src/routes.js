@@ -31,7 +31,6 @@ const routes = [
   },
   {
     path: '/contact',
-    name: 'notFound',
     component: () => import('./components/Contact.vue'),
   },
   {
