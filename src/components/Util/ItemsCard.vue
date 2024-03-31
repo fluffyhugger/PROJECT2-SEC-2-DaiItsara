@@ -38,6 +38,7 @@ const addToSpec = (listName, component) => {
   // Extract the required fields from the component
   const { id, brand, series, model, picture, price } = component
   const newItem = {
+    id : id,
     name: `${brand}${series ? ` ${series}` : ''} ${model}`,
     'image-url': picture,
     price: price,

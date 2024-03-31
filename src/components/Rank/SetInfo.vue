@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onBeforeMount, onMounted } from 'vue'
+import { ref, onBeforeMount, onUnmounted } from 'vue'
 import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
 import { useRouter } from 'vue-router'
 import { TotalPrice } from './enum'
@@ -114,7 +114,9 @@ const toggleShowInfo = (option)=>{
   }
  
 }
-
+onUnmounted(()=>{
+  localStorage.clear()
+})
 </script>
 
 <template>
