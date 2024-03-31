@@ -37,24 +37,25 @@ const filteredProducts = computed(() => {
     })
   }
 
-  // Filter CPUs by brand
-  if (selectedCPUs.value !== "default") {
-    filtered = filtered.filter((product) => {
-      const cpu = cpus.value.find((cpu) => cpu.brand === selectedCPUs.value)
-      return cpu && product.cpu.id === cpu.id
-    })
-  }
+// Filter CPUs by brand
+if (selectedCPUs.value !== "default") {
+  filtered = filtered.filter((product) => {
+    const matchingCPUs = cpus.value.filter((cpu) => cpu.brand.toLowerCase() === selectedCPUs.value.toLowerCase());
+    return matchingCPUs.some(cpu => cpu.id === product.cpu.id);
+  });
+ 
+}
 
-  // Filter GPUs by GPU chipset
-  if (selectedGPUs.value !== "default") {
-    filtered = filtered.filter((product) => {
-      const gpu = gpus.value.find(
-        (gpu) => gpu["gpu-chipset"] === selectedGPUs.value
-      )
-      return gpu && product.gpu.id === gpu.id
-    })
-  }
 
+// // Filter GPUs by GPU chipset
+if (selectedGPUs.value !== "default") {
+  console.log("before",filtered)
+  filtered = filtered.filter((product) => {
+    const matchingGPUs = gpus.value.filter((gpu) => gpu['gpu-chipset'].toLowerCase() === selectedGPUs.value.toLowerCase());
+    return matchingGPUs.some(gpu => gpu.id === product.gpu.id);
+  });
+  console.log("after",filtered)
+}
   return filtered
 })
 onMounted(async () => {
@@ -131,8 +132,8 @@ onMounted(async () => {
         v-model="selectedGPUs"
       >
         <option disabled value="default">GPU</option>
-        <option value="AMD">AMD</option>
         <option value="NVIDIA">NVIDIA</option>
+        <option value="AMD">AMD</option>
       </select>
     </div>
     <hr />
