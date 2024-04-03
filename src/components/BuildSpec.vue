@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Header -->
     <div class="flex items-center justify-between p-4 bg-teal-200">
       <h1 class="text-xl font-bold">Build spec</h1>
 
@@ -26,7 +27,11 @@
       </div>
     </div>
 
+    <!-- Content -->
     <div class="p-4">
+      <h2 class="text-xl font-bold mt-4 mb-4">
+        Select your {{ selectedOption.toUpperCase() }}
+      </h2>
       <select
         v-model="selectedOption"
         @change="fetchData"
@@ -45,33 +50,38 @@
         <option value="mainboard">Mainboard</option>
         <option value="cooler">Cooler</option>
       </select>
-      <h2 class="text-xl font-bold mt-4 mb-4">
-        Select your {{ selectedOption.toUpperCase() }}
-      </h2>
 
+      <h4
+        v-if="selectedOption === 'cpu' || selectedOption === 'mainboard'"
+        class="text-l font-bold mt-4 mb-4"
+      >
+        Select your {{ selectedOption.toUpperCase() }} Socket
+      </h4>
       <select
         v-if="selectedOption === 'cpu' || selectedOption === 'mainboard'"
         v-model="selectedCPUBrand"
+        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400"
       >
-        <h2 class="text-l font-bold mt-4 mb-4">CPU Socket</h2>
         <option value="">All</option>
         <option value="AMD">AMD AM</option>
         <option value="Intel">Intel LGA</option>
       </select>
 
+      <br />
       <!-- Loading indicator -->
       <div class="max-w-sm mx-auto my-4" v-if="isLoading">
         <span class="text-2xl font-bold text-indigo-700">Loading...</span>
       </div>
 
       <!-- Grid layout for displaying fetched items -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4" v-else>
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4" v-else>
         <!-- Items fetched from API -->
         <ItemsCard
           v-for="item in itemList"
           :key="item.id"
           :item="item"
           :listName="selectedOption"
+          class="w-full"
         ></ItemsCard>
       </div>
     </div>
@@ -97,11 +107,10 @@ const isLoading = ref(true)
 const selectedOption = ref('cpu')
 // Define reactive variable to control visibility of cart items
 const showCartPopup = ref(false)
-
-// Function to fetch data from API based on selected option
-
+// Define reactive variable to hold selected CPU brand
 const selectedCPUBrand = ref('')
 
+// Function to fetch data from API based on selected option
 const fetchData = async () => {
   isLoading.value = true
   const result = await fetch(`http://localhost:5000/${selectedOption.value}`)
@@ -142,60 +151,31 @@ const fetchData = async () => {
   isLoading.value = false
 }
 
-// Function to post data to JSON server *******************MOVE TO CartPopup.vue****************
-/*const postData = async () => {
-  const currentDate = new Date().toISOString()
-  const data = {
-    id: Math.random().toString(36).substring(7), // Generate a random ID
-    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
-    'builder-name': builderName,
-    'build-date': currentDate,
-    ...cart
-  }
-  try {
-    const response = await fetch('http://localhost:5000/pc-build', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    if (response.ok) {
-      console.log('Data posted successfully')
-      // Optionally, you can clear localStorage after posting the data
-      localStorage.removeItem('builderId')
-      localStorage.removeItem('builderName')
-      localStorage.removeItem('buildDate')
-      localStorage.removeItem('cart')
-    } else {
-      console.error('Failed to post data')
-    }
-  } catch (error) {
-    console.error('Error posting data:', error)
-  }
-}*/
-
-onMounted(async () => {
-  await fetchData() // Fetch initial data when component is mounted
+watch(selectedCPUBrand, () => {
+  fetchData()
 })
 
-// Sync Data In localStorage by not need to refresh
+// Fetch initial data when component is mounted
+onMounted(async () => {
+  await fetchData()
+})
+
+// Function to sync cart data from localStorage
 const syncCartData = () => {
   cart = JSON.parse(localStorage.getItem('cart')) || {}
-  builderName = localStorage.getItem('builderName') || '' // Update builderName from local storage
+  builderName = localStorage.getItem('builderName') || ''
 }
 
-
+// Function to toggle visibility of cart popup
 const toggleShowCartPopup = () => {
   showCartPopup.value = !showCartPopup.value
   syncCartData()
 }
+
 // Function to handle update of cart data
 const updateCart = (updatedCart) => {
-  // Update the cart data in the component
   showCartPopup.value = !showCartPopup.value
 }
-
 </script>
 
 <style scoped>
@@ -225,5 +205,48 @@ const updateCart = (updatedCart) => {
   color: white; /* Text color */
   padding: 4px 8px; /* Padding */
   border-radius: 4px; /* Border radius */
+}
+
+/* Adjustments for select elements */
+select {
+  appearance: none; /* Remove default appearance */
+  padding: 0.5rem 1rem; /* Padding */
+  font-size: 1rem; /* Font size */
+  border-radius: 0.25rem; /* Border radius */
+  border: 1px solid #e5e5e5; /* Border */
+  background-color: #fff; /* Background color */
+  cursor: pointer; /* Cursor */
+  transition: border-color 0.3s ease; /* Transition effect for smooth color change */
+}
+
+select:focus {
+  outline: none; /* Remove outline on focus */
+  border-color: #46ddd9; /* Border color on focus */
+}
+
+/* Adjustments for options in select elements */
+option {
+  padding: 0.5rem 1rem; /* Padding */
+}
+
+/* Adjustments for loading indicator */
+.max-w-sm {
+  max-width: 20rem; /* Maximum width */
+  margin-left: auto; /* Margin left */
+  margin-right: auto; /* Margin right */
+}
+
+.mx-auto {
+  margin-left: auto; /* Margin left */
+  margin-right: auto; /* Margin right */
+}
+
+.my-4 {
+  margin-top: 1rem; /* Margin top */
+  margin-bottom: 1rem; /* Margin bottom */
+}
+
+.text-indigo-700 {
+  color: #4f46e5; /* Text color */
 }
 </style>

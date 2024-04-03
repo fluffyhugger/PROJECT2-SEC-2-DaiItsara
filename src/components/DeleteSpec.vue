@@ -1,40 +1,6 @@
 <template>
   <div class="mt-10 mb-10">
-    <div
-      class="border-t solid 0.5px border-gray-300 p-4 flex flex-row items-center"
-    >
-      <div class="mr-4">filter:</div>
-      <div class="mr-4">
-        <span>Price Range: </span>
-        <label for="min-price" class="mr-2">Min</label>
-        <input
-          type="text"
-          name="min-price"
-          id="min-price"
-          v-model="minPrice"
-          class="w-20 border rounded-md p-1 bg-slate-50"
-        />
-        <label for="max-price" class="mx-2">Max</label>
-        <input
-          type="text"
-          name="max-price"
-          id="max-price"
-          v-model="maxPrice"
-          class="w-20 border rounded-md p-1 bg-slate-50"
-        />
-      </div>
-      <select class="select select-secondary w-full max-w-xs">
-        <option disabled selected>CPU</option>
-        <option>INTEL</option>
-        <option>AMD</option>
-      </select>
-      <select class="select select-secondary w-full max-w-xs">
-        <option disabled selected>GPU</option>
-        <option>AMD</option>
-        <option>NVIDIA</option>
-      </select>
-    </div>
-    <hr />
+    
     <table class="table">
       <thead class="font-bold text-xl">
         <tr>
@@ -163,49 +129,9 @@ const deleteProduct = (builderId) => {
   // Call the function to handle deletion of data from the JSON file on the server
   handleDataDeleted(builderId)
 }
-// Define reactive variables
-const minPrice = ref('')
-const maxPrice = ref('')
-const selectedCPUs = ref([])
-const selectedGPUs = ref([])
 const emit = defineEmits(['dataDeleted'])
-// Logic to select CPU
-const selectCPU = (cpu) => {
-  // Toggle selection
-  const index = selectedCPUs.value.indexOf(cpu)
-  if (index === -1) {
-    selectedCPUs.value.push(cpu)
-  } else {
-    selectedCPUs.value.splice(index, 1)
-  }
-  // Sort products based on selected CPU
-  sortProducts()
-}
 
-// Logic to select GPU
-const selectGPU = (gpu) => {
-  const index = selectedGPUs.value.indexOf(gpu)
-  if (index === -1) {
-    selectedGPUs.value.push(gpu)
-  } else {
-    selectedGPUs.value.splice(index, 1)
-  }
-  sortProducts()
-}
-const sortProducts = () => {
-  let sortedProducts = [...props.products]
-  if (selectedCPUs.value.length > 0) {
-    sortedProducts = sortedProducts.filter((product) =>
-      selectedCPUs.value.includes(product.cpu.name)
-    )
-  }
-  if (selectedGPUs.value.length > 0) {
-    sortedProducts = sortedProducts.filter((product) =>
-      selectedGPUs.value.includes(product.gpu.name)
-    )
-  }
-  props.products = sortedProducts
-}
+
 const formatDate = (dateString) => {
   const date = new Date(dateString)
   return `${date.getFullYear()}-${(date.getMonth() + 1)
