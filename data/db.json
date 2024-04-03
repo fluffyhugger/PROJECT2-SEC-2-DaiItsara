@@ -265,6 +265,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "j6obo",
       "builder-id": "3cgifd",
       "builder-name": "fw",
@@ -281,6 +282,8 @@
       }
     },
     {
+=======
+>>>>>>> c02ea11f253c31def4bcc6f7c8b4580db1316d3a
       "id": "q515r",
       "builder-id": "81ism",
       "builder-name": "Anonymous",
@@ -2546,10 +2549,13 @@
       "password": "123"
     }
   ],
+<<<<<<< HEAD
   "guest": {
     "username": "guest",
     "password": ""
   },
+=======
+>>>>>>> c02ea11f253c31def4bcc6f7c8b4580db1316d3a
   "news": [
     {
       "itemsToShow": 4,

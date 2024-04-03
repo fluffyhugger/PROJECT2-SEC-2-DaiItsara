@@ -16,7 +16,6 @@
         <div class="cart-total">
           <span>Total:</span>
           <span class="total-price">{{ formatPrice(totalPrice) }}</span>
-          
         </div>
         <!-- Success Message -->
         <p v-if="buildSuccessful" class="success-message">
@@ -25,11 +24,11 @@
         <!-- Close Button -->
         <button @click="closeCart" class="close-button">Close</button>
         <!-- Confirm Build Spec Button -->
-        <button v-if="!buildSuccessful" @click="postData" class="confirm-button">
+        <button v-if="!buildSuccessful" @click="postAndNavigate" class="confirm-button">
           Build
         </button>
-        
-        
+        <!-- View Button -->
+        <router-link v-if="buildSuccessful" :to="{ path: '/ranking' }" class="view-button">View</router-link>
       </div>
     </div>
   </div>
@@ -37,15 +36,18 @@
 
 <script setup>
 import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const props = defineProps(['cart', 'builderName'])
 const emits = defineEmits(['close', 'update-cart'])
+
+const router = useRouter()
 
 // Reactive variable for success message
 const buildSuccessful = ref(false)
 
 // Define function to post data to JSON server
-const postData = async () => {
+const postAndNavigate = async () => {
   const currentDate = new Date().toISOString()
   const data = {
     id: Math.random().toString(36).substring(7), // Generate a random ID
@@ -99,18 +101,17 @@ const formatPrice = (price) => {
 const closeCart = () => {
   emits('close')
 }
+
 // Function to delete an item from the cart by its key (ID)
 const deleteItem = (key) => {
   const updatedCart = { ...props.cart }
   delete updatedCart[key]
   localStorage.setItem('cart', JSON.stringify(updatedCart))
-console.log(updatedCart)
+  console.log(updatedCart)
 
   // Emit an event to notify the parent component to update the cart
   emits('update-cart', key)
 }
-
-
 </script>
 
 <style scoped>
@@ -211,7 +212,7 @@ console.log(updatedCart)
 }
 
 .confirm-button {
-  background-color: #4caf50;
+  background-color: #46ddd9;
   color: white;
   border: none;
   border-radius: 3px;
@@ -222,6 +223,21 @@ console.log(updatedCart)
 }
 
 .confirm-button:hover {
-  background-color: #45a049;
+  background-color: #304456;
+}
+
+.view-button {
+  background-color: #46ddd9;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.view-button:hover {
+  background-color: #304456;
 }
 </style>
