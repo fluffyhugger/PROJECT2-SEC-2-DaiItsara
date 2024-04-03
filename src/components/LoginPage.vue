@@ -11,13 +11,7 @@
         </div>
         <div class="flex justify-between">
           <button @click="login" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:bg-teal-600">Login</button>
-          <button
-            class="text-gray-300 py-2 px-4 rounded-md hover:text-gray-400 focus:outline-none focus:text-gray-400"
-            >
-              <router-link to="/">
-                Continue as guest
-              </router-link>            
-          </button>
+          
         </div>
       </div>
     </div>
@@ -52,7 +46,7 @@ export default {
         alert('An error occurred. Please try again later.')
       }
     }
-  }
+  },
 }
 </script>
 
