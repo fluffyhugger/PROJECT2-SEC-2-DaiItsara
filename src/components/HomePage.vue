@@ -1,6 +1,6 @@
 <script setup>
 import ArticleNew from './articles/ArticleNew.vue';
-import Login from './Login.vue';
+import LoginPage from './LoginPage.vue';
 import { ref } from 'vue';
 
 </script>
