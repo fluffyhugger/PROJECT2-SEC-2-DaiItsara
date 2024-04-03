@@ -16,7 +16,7 @@ const productId = router.currentRoute.value.params.id
 let product = ref(null)
 const isLoading = ref(true)
 const pcImageText = "pcImage"
-const showInfo = ref(true) // Use ref to make showInfo reactive
+const showInfo = ref(true) 
 let selectedOption = ref(null)
 const componentTypes = [
   'cpu',
@@ -53,15 +53,15 @@ onBeforeMount(async () => {
 
 const calculatePrice = (product)=>{
   const prices = Object.keys(product)
-      .filter((key) => componentTypes.includes(key)) // Filter out non-component keys
-      .map((key) => product[key].price) // Map to the price of each component
-    return TotalPrice(...prices) // Calculate total price
+      .filter((key) => componentTypes.includes(key)) 
+      .map((key) => product[key].price)
+    return TotalPrice(...prices) 
 }
 
 const patchPcSet = async (data) => {
   try {
     const response = await fetch(`http://localhost:5000/pc-build/${data.id}`, {
-      method: 'PATCH', // Changed method to PATCH
+      method: 'PATCH', 
       headers: {
         'Content-Type': 'application/json'
       },
@@ -71,7 +71,6 @@ const patchPcSet = async (data) => {
       console.log('Data updated successfully', response)
       location.reload();
     } else {
-      // Handle different HTTP status codes
       if (response.status === 400) {
         console.error('Bad request: The server did not understand the request.');
       } else if (response.status === 401) {
@@ -214,9 +213,7 @@ onUnmounted(()=>{
                   {{ getComponentProperty(product, 'cooler', 'price') }}
                 </p>
               </div>
-              <!-- Use the FontAwesomeIcon component with the icon prop -->
-              <!-- <font-awesome-icon :icon="['fas', 'pen-to-square']" style="color: #787878;" /> -->
-            </div>
+                 </div>
 
           </li>
         </ul>
@@ -256,19 +253,16 @@ onUnmounted(()=>{
           {{ product['cpu'] ? product['cpu']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['ram'].id, 'ram')">
           Ram name:{{ product['ram'] ? product['ram']['name'] : '-' }} price
           {{ product['ram'] ? product['ram']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['gpu'].id, 'gpu')">
           GPU name:{{ product['gpu'] ? product['gpu']['name'] : '-' }} price
           {{ product['gpu'] ? product['gpu']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['ssd'].id, 'ssd')">
           SSD name:{{ product['ssd'] ? product['ssd']['name'] : '-' }} price
           {{ product['ssd'] ? product['ssd']['price'] : '-' }}
@@ -280,26 +274,22 @@ onUnmounted(()=>{
           {{ product['hdd'] ? product['hdd']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['psu'].id, 'psu')">
           PSU name:{{ product['psu'] ? product['psu']['name'] : '-' }} price
           {{ product['psu'] ? product['psu']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['case'].id, 'case')">
           CASE name:{{ product['case'] ? product['case']['name'] : '-' }} price
           {{ product['case'] ? product['case']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['monitor'].id, 'monitor')">
           MONITOR name:{{ product['monitor'] ? product['monitor']['name'] : '-' }}
           price
           {{ product['monitor'] ? product['monitor']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['mainboard'].id, 'mainboard')">
           MAINBOARD name:{{
                   product['mainboard'] ? product['mainboard']['name'] : '-'
@@ -308,7 +298,6 @@ onUnmounted(()=>{
           {{ product['mainboard'] ? product['mainboard']['price'] : '-' }}
         </p>
         <br />
-        <!-- เว้นบรรทัดด้วยแท็ก <br> -->
         <p @click="newTapByIDType(product['cooler'].id, 'cooler')">
           COOLER name:{{ product['cooler'] ? product['cooler']['name'] : '-' }}
           price
@@ -329,9 +318,7 @@ onUnmounted(()=>{
 .grid-info {
   width: 300;
   grid-column: 4 / 5;
-  /* Position on the 4th column */
   grid-row: 1 / span 3;
-  /* Span 3 rows */
 }
 
 .grid-item {
@@ -407,8 +394,6 @@ onUnmounted(()=>{
   z-index: 1;
   transition: transform 0.3s ease, opacity 0.3s ease, z-index 0s linear 0.3s;
 }
-
-/* Basic button styles */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -417,21 +402,17 @@ onUnmounted(()=>{
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border: 2px solid #007bff; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #007bff; /* Background color */
-  color: #fff; /* Text color */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
+  border: 2px solid #007bff; 
+  border-radius: 5px; 
+  background-color: #007bff; 
+  color: #fff; 
+  transition: background-color 0.3s, color 0.3s; 
 }
-
-/* Hover state */
 .button:hover {
-  background-color: #0056b3; /* Darker background color on hover */
-  color: #fff; /* Text color on hover */
+  background-color: #0056b3; 
+  color: #fff; 
 }
-
-/* Active state */
 .button:active {
-  background-color: #004080; /* Dark background color when button is clicked */
+  background-color: #004080; 
 }
 </style>
