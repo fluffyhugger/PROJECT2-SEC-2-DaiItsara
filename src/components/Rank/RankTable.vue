@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { getComponentProperty } from "./enum"
+import { faL } from '@fortawesome/free-solid-svg-icons';
 const props = defineProps({
   selectedOption: String,
   products: Array,
@@ -25,7 +26,6 @@ const formatPrice = (price) => {
 
 const filteredProducts = computed(() => {
   let filtered = props.products
-  // Filter by price range
   const min = parseFloat(minPrice.value)
   const max = parseFloat(maxPrice.value)
   if (!isNaN(min) && !isNaN(max)) {
@@ -35,24 +35,34 @@ const filteredProducts = computed(() => {
       return price >= min && price <= max
     })
   }
-
-  // Filter CPUs by brand
+  console.log(selectedCPUs.value);
   if (selectedCPUs.value !== "default") {
     filtered = filtered.filter((product) => {
       const matchingCPUs = cpus.value.filter((cpu) => cpu.brand.toLowerCase() === selectedCPUs.value.toLowerCase());
       return matchingCPUs.some(cpu => cpu.id === product.cpu.id);
     });
 
-  }
-
-
-  // // Filter GPUs by GPU chipset
+  } console.log(selectedGPUs.value);
+   
+  console.log("GPUs" , gpus);
   if (selectedGPUs.value !== "default") {
     console.log("before", filtered)
     filtered = filtered.filter((product) => {
       const matchingGPUs = gpus.value.filter((gpu) => gpu['gpu-chipset'].toLowerCase() === selectedGPUs.value.toLowerCase());
-      return matchingGPUs.some(gpu => gpu.id === product.gpu.id);
+      console.log("matchingGPUS" , matchingGPUs);
+      return matchingGPUs.some(gpu => { 
+        //gpu.id === product.gpu.id
+        if(gpu==null || product.gpu == null || gpu == undefined || product.gpu == undefined){
+          return false ; 
+        }else {
+          if(gpu.id === product.gpu.id){
+            return true;
+          } return false ; 
+        }
+      });
+      
     });
+    
     console.log("after", filtered)
   }
   return filtered
@@ -79,12 +89,12 @@ onMounted(async () => {
           class="w-20 border rounded-md p-1 bg-slate-50" />
       </div>
       <select class="select select-secondary w-full max-w-xs" v-model="selectedCPUs">
-        <option value="">All CPUs</option>
+        <option value="default">All CPUs</option>
         <option value="Intel">INTEL</option>
         <option value="AMD">AMD</option>
       </select>
       <select class="select select-secondary w-full max-w-xs" v-model="selectedGPUs">
-        <option value="">All GPUs</option>
+        <option value="default">All GPUs</option>
         <option value="NVIDIA">NVIDIA</option>
         <option value="AMD">AMD</option>
       </select>
