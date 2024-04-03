@@ -357,6 +357,72 @@
         "image-url": "https://storage.googleapis.com/file-computeandmore/images/7b361b3e-bd80-4bcd-bfdb-a718b3a827da.png",
         "price": 10890
       }
+    },
+    {
+      "id": "cesg7k",
+      "builder-id": "qr7iis",
+      "builder-name": "HJo",
+      "build-date": "2024-04-03T12:27:55.844Z",
+      "cpu": {
+        "id": "CPU_00006",
+        "name": "AMD Ryzen 9 5900X",
+        "image-url": "https://www.autonetpc.com/wp-content/uploads/2020/11/20614363-A_Ryzen9_5000_3DPIBWOF_RIGHT_ROW.png",
+        "price": 6990
+      },
+      "ram": {
+        "id": "RAM_00004",
+        "name": "CORSAIR Vengeance RGB Pro DDR4 32GB (16GBx2) 3600 Black",
+        "image-url": "https://notebookspec.com/storage/pc-ram/ram_1040_20201127-111326_1.png",
+        "price": 3990
+      },
+      "gpu": {
+        "id": "GPU_00007",
+        "name": "EVGA GeForce GTX 1600 Series GeForce GTX 1650 SC ULTRA GAMING",
+        "image-url": "https://image.goxip.com/XA9ecpuCxdyOMLXgfG9UpaY45fw=/fit-in/500x500/filters:format(jpg):quality(80):fill(white)/https:%2F%2Fimages.stockx.com%2Fimages%2FNVIDIA-EVGA-SUPER-SC-ULTRA-GAMING-GeForce-GTX-1650-Super-4G-Graphics-Card-04G-P4-1357-KB.jpg",
+        "price": 4300
+      },
+      "ssd": {
+        "id": "SSD_00002",
+        "name": "Addlink S95 1TB M.2",
+        "image-url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fd12fa42-c69e-4166-90cb-46601174cffb.__CR0,0,200,225_PT0_SX200_V1___.png",
+        "price": 8200
+      },
+      "hdd": {
+        "id": "HDD_00002",
+        "name": "Western Digital Red Plus Nas 4TB",
+        "image-url": "https://notebookspec.com/storage/pc-hdd/hdd_222_20210311-114658_1.png",
+        "price": 4550
+      },
+      "psu": {
+        "id": "PSU_00002",
+        "name": "THERMALTAKE Toughpower GF Toughpower GF 850W",
+        "image-url": "https://www.jib.co.th/img_master/uploads/Content/2310393011/ToughpowerGF_850_1.png",
+        "price": 3650
+      },
+      "case": {
+        "id": "CASE_00003",
+        "name": "THERMALTAKE Core P6 Turquoise",
+        "image-url": "https://i.ibb.co/K9RMVDW/CASE-00003.png",
+        "price": 5890
+      },
+      "monitor": {
+        "id": "MONITOR-00003",
+        "name": "GIGABYTE G27F G27F 2",
+        "image-url": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1470/innergigabyteimages//bg1.png",
+        "price": 5690
+      },
+      "mainboard": {
+        "id": "MAINBOARD-00006",
+        "name": "ASUS ROG STRIX B650-F GAMING",
+        "image-url": "https://storage.googleapis.com/file-computeandmore/images/8c549596-79b9-44e9-acc2-ea7296752f1e.png",
+        "price": 9600
+      },
+      "cooler": {
+        "id": "COOLER-00003",
+        "name": "COOLER MASTER MasterLiquid MasterLiquid ML240L ARGB Illusion white",
+        "image-url": "https://chininter.co.th/wp-content/uploads/2021/07/masterliquid-ml240-illusion-white-gallery-0-zoom_1000x1000.png",
+        "price": 3890
+      }
     }
   ],
   "cpu": [
@@ -1470,11 +1536,7 @@
       "color": "Black",
       "weight": "13.1Kg",
       "dimension": "290 x 495 x 466",
-      "i/o-ports": [
-        "1x USB-C 3.1",
-        "2x USB-A 3.0",
-        "1x headphone/microphone"
-      ],
+      "i/o-ports": ["1x USB-C 3.1", "2x USB-A 3.0", "1x headphone/microphone"],
       "cooling-support": {
         "fan-support": {
           "front": "-",
@@ -1547,11 +1609,7 @@
       "color": "Black",
       "weight": "11.2kg",
       "dimension": "520mm x 245mm x 520mm",
-      "i/o-ports": [
-        "1 x USB 3.1 Type-C",
-        "2 x USB 3.0",
-        "1 x Audio/Mic"
-      ],
+      "i/o-ports": ["1 x USB 3.1 Type-C", "2 x USB 3.0", "1 x Audio/Mic"],
       "cooling-support": {
         "fan-support": {
           "front": "3 x 120mm, 2 x 140mm",
@@ -1821,11 +1879,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "4x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -1861,10 +1915,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "6x USB 3.2 Type A",
-        "2x USB 3.2 Type C"
-      ],
+      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -1890,19 +1941,12 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": [
-        "1 Slot PCI Express 4.0 x16",
-        "2 Slot PCI Express 3.0 x16"
-      ],
+      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "2x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -1938,11 +1982,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "4x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -1977,10 +2017,7 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "6x USB 3.2 Type A",
-        "2x USB 3.2 Type C"
-      ],
+      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "5x Audio Ports",
       "form-factor": "ATX",
@@ -2006,19 +2043,12 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": [
-        "1 Slot PCI Express 4.0 x16",
-        "2 Slot PCI Express 3.0 x16"
-      ],
+      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "2x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2045,18 +2075,12 @@
       "lan-speed": "10/100/1000/2500Mbps",
       "wireless-lan": "WIFI 6E 2.4/5/6",
       "bluetooth": "Bluetooth 5.2",
-      "pci-slots": [
-        "1 Slot PCI Express 4.0 x16",
-        "1 Slot PCI Express 3.0 x16"
-      ],
+      "pci-slots": ["1 Slot PCI Express 4.0 x16", "1 Slot PCI Express 3.0 x16"],
       "sata3-slots": "4 slot",
       "m.2-slots": "2 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "1x USB 3.2 Type C",
-        "2x USB 3.2 Type A"
-      ],
+      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2092,11 +2116,7 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "4x USB 2.0",
-        "5x USB 3.2 Type A",
-        "1x USB 3.2 Type C"
-      ],
+      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2131,10 +2151,7 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": [
-        "1x USB 3.2 Type C",
-        "2x USB 3.2 Type A"
-      ],
+      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -2191,24 +2208,8 @@
       "model": "TUF Gaming LC 120 ARGB Black",
       "form-factor": "Liquid Cooler",
       "socket-support": {
-        "intel": [
-          "LGA1700",
-          "1366",
-          "1156",
-          "1155",
-          "1151",
-          "1150"
-        ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "AM2",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "intel": ["LGA1700", "1366", "1156", "1155", "1151", "1150"],
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "150mmx122mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2235,10 +2236,7 @@
           "1151",
           "1150"
         ],
-        "amd": [
-          "TR4/​sTRX4/​sWRX8/​SP3",
-          "AM4"
-        ]
+        "amd": ["TR4/​sTRX4/​sWRX8/​SP3", "AM4"]
       },
       "radiator-dimension": "120mmx272mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2264,15 +2262,7 @@
           "1151",
           "1150"
         ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "277x119x27 mm.",
       "radiator-material": "Aluminum",
@@ -2297,13 +2287,7 @@
           "LGA2011",
           "LGA2066"
         ],
-        "amd": [
-          "AM4",
-          "AM3",
-          "AM2",
-          "sTR4",
-          "sTRX4"
-        ]
+        "amd": ["AM4", "AM3", "AM2", "sTR4", "sTRX4"]
       },
       "radiator-dimension": "275 x 123 x 30mm",
       "radiator-material": "Aluminum",
@@ -2329,11 +2313,7 @@
           "2011",
           "2066"
         ],
-        "amd": [
-          "AM4",
-          "AM3",
-          "AM2"
-        ]
+        "amd": ["AM4", "AM3", "AM2"]
       },
       "radiator-dimension": "277mm x 120mm x 27mm",
       "radiator-material": "Aluminum",
@@ -2359,16 +2339,7 @@
           "LGA1155",
           "LGA1156"
         ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "AM2",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "274x120x27mm",
       "radiator-material": "Aluminum",
@@ -2389,13 +2360,7 @@
           "LGA2011-0 & LGA2011-3 (Square ILM)",
           "LGA1200, LGA1156, LGA1155, LGA1151, LGA1150"
         ],
-        "amd": [
-          "AM4",
-          "AM3(+)",
-          "AM2(+)",
-          "FM2(+)",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3(+)", "AM2(+)", "FM2(+)", "FM1"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2415,9 +2380,7 @@
           "LGA 2066 / 2011(-3) square ILM / 1151 / 1150 / 1155 / 1156 / 1200",
           "AM4 / AM4 / AM3(+) / AM2(+) / FM2(+) / FM1"
         ],
-        "amd": [
-          "AM4"
-        ]
+        "amd": ["AM4"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2433,12 +2396,8 @@
       "model": "Freezer 34 eSports DUO",
       "form-factor": "Air Cooler",
       "socket-support": {
-        "intel": [
-          "LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"
-        ],
-        "amd": [
-          "AM4"
-        ]
+        "intel": ["LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"],
+        "amd": ["AM4"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2465,16 +2424,7 @@
           "LGA1156",
           "LGA1366"
         ],
-        "amd": [
-          "AM4",
-          "AM3+",
-          "AM3",
-          "AM2+",
-          "AM2",
-          "FM2+",
-          "FM2",
-          "FM1"
-        ]
+        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2484,6 +2434,40 @@
       "picture": "https://cdn.coolermaster.com/media/2945/hyper-212-rgb-black-gallery-1-zoom.png"
     }
   ],
+
+
+
+
+
+
+
+
+  
+  
+  "admins": [
+    { "username": "AdminCard", "password": "Daiitsara123" },
+    { "username": "AdminIng", "password": "Daiitsara123" },
+    { "username": "AdminNoey", "password": "Daiitsara123" },
+    { "username": "AdminMatt", "password": "Daiitsara123" },
+    { "username": "AdminPorr", "password": "Daiitsara123" },
+    { "username": "Admin", "password": "123" }
+  ]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ,
   "news": [
     {
       "itemsToShow": 4,

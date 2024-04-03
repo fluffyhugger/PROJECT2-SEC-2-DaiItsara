@@ -97,11 +97,10 @@ const isLoading = ref(true)
 const selectedOption = ref('cpu')
 // Define reactive variable to control visibility of cart items
 const showCartPopup = ref(false)
-
-// Function to fetch data from API based on selected option
-
+// Define reactive variable to hold selected CPU brand
 const selectedCPUBrand = ref('')
 
+// Function to fetch data from API based on selected option
 const fetchData = async () => {
   isLoading.value = true
   const result = await fetch(`http://localhost:5000/${selectedOption.value}`)
@@ -175,27 +174,31 @@ const fetchData = async () => {
   }
 }*/
 
-onMounted(async () => {
-  await fetchData() // Fetch initial data when component is mounted
+watch(selectedCPUBrand, () => {
+  fetchData()
 })
 
-// Sync Data In localStorage by not need to refresh
+// Fetch initial data when component is mounted
+onMounted(async () => {
+  await fetchData()
+})
+
+// Function to sync cart data from localStorage
 const syncCartData = () => {
   cart = JSON.parse(localStorage.getItem('cart')) || {}
-  builderName = localStorage.getItem('builderName') || '' // Update builderName from local storage
+  builderName = localStorage.getItem('builderName') || ''
 }
 
-
+// Function to toggle visibility of cart popup
 const toggleShowCartPopup = () => {
   showCartPopup.value = !showCartPopup.value
   syncCartData()
 }
+
 // Function to handle update of cart data
 const updateCart = (updatedCart) => {
-  // Update the cart data in the component
   showCartPopup.value = !showCartPopup.value
 }
-
 </script>
 
 <style scoped>
