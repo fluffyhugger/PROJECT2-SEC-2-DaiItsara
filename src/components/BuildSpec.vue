@@ -11,6 +11,8 @@
             alt="Shopping Cart"
             class="cursor-pointer cart-icon"
             :style="{ width: '45px', height: '45px' }"
+            @mouseover="cartHover = true"
+            @mouseleave="cartHover = false"
           />
         </div>
         <!-- Cart pop-up using teleport -->
@@ -19,7 +21,7 @@
             v-if="showCartPopup"
             :cart="cart"
             :builderName="builderName"
-            @close="showCartPopup = false"
+            @close="closeCartPopup"
             @update-cart="updateCart"
           />
         </teleport>
@@ -32,7 +34,7 @@
         @change="fetchData"
         name="specTypes"
         id="specTypes"
-        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400"
+        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 transition-colors duration-300"
       >
         <option value="cpu">CPU</option>
         <option value="ram">Memory</option>
@@ -52,6 +54,7 @@
       <select
         v-if="selectedOption === 'cpu' || selectedOption === 'mainboard'"
         v-model="selectedCPUBrand"
+        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 transition-colors duration-300"
       >
         <h2 class="text-l font-bold mt-4 mb-4">CPU Socket</h2>
         <option value="">All</option>
@@ -99,6 +102,8 @@ const selectedOption = ref('cpu')
 const showCartPopup = ref(false)
 // Define reactive variable to hold selected CPU brand
 const selectedCPUBrand = ref('')
+// Define reactive variable to track cart icon hover state
+const cartHover = ref(false)
 
 // Function to fetch data from API based on selected option
 const fetchData = async () => {
@@ -141,39 +146,6 @@ const fetchData = async () => {
   isLoading.value = false
 }
 
-// Function to post data to JSON server *******************MOVE TO CartPopup.vue****************
-/*const postData = async () => {
-  const currentDate = new Date().toISOString()
-  const data = {
-    id: Math.random().toString(36).substring(7), // Generate a random ID
-    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
-    'builder-name': builderName,
-    'build-date': currentDate,
-    ...cart
-  }
-  try {
-    const response = await fetch('http://localhost:5000/pc-build', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    if (response.ok) {
-      console.log('Data posted successfully')
-      // Optionally, you can clear localStorage after posting the data
-      localStorage.removeItem('builderId')
-      localStorage.removeItem('builderName')
-      localStorage.removeItem('buildDate')
-      localStorage.removeItem('cart')
-    } else {
-      console.error('Failed to post data')
-    }
-  } catch (error) {
-    console.error('Error posting data:', error)
-  }
-}*/
-
 watch(selectedCPUBrand, () => {
   fetchData()
 })
@@ -198,6 +170,11 @@ const toggleShowCartPopup = () => {
 // Function to handle update of cart data
 const updateCart = (updatedCart) => {
   showCartPopup.value = !showCartPopup.value
+}
+
+// Function to close cart popup
+const closeCartPopup = () => {
+  showCartPopup.value = false
 }
 </script>
 
@@ -228,5 +205,21 @@ const updateCart = (updatedCart) => {
   color: white; /* Text color */
   padding: 4px 8px; /* Padding */
   border-radius: 4px; /* Border radius */
+}
+
+/* Cart icon hover effect */
+.cart-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Motion transition for select element */
+.select-transition-enter-active,
+.select-transition-leave-active {
+  transition: opacity 0.3s;
+}
+
+.select-transition-enter,
+.select-transition-leave-to {
+  opacity: 0;
 }
 </style>
