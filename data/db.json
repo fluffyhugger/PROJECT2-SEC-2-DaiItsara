@@ -265,6 +265,22 @@
       }
     },
     {
+      "id": "j6obo",
+      "builder-id": "3cgifd",
+      "builder-name": "fw",
+      "build-date": "2024-03-30T16:30:15.650Z",
+      "cpu": {
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
+      },
+      "gpu": {
+        "name": "ASUS GeForce RTX 40 Series TUF Gaming GeForce RTX 4060 Ti OC",
+        "image-url": "https://dlcdnwebimgs.asus.com/files/media/55dac21d-dcc3-4c34-90fe-6e2f2e0efdea/v1/img/kv/pd.png",
+        "price": 16320
+      }
+    },
+    {
       "id": "q515r",
       "builder-id": "81ism",
       "builder-name": "Anonymous",
@@ -2414,6 +2430,7 @@
       "password": "123"
     }
   ],
+
   "news": [
     {
       "itemsToShow": 4,
