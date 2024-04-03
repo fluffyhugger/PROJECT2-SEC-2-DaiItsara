@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Header -->
     <div class="flex items-center justify-between p-4 bg-teal-200">
       <h1 class="text-xl font-bold">Build spec</h1>
 
@@ -11,8 +12,6 @@
             alt="Shopping Cart"
             class="cursor-pointer cart-icon"
             :style="{ width: '45px', height: '45px' }"
-            @mouseover="cartHover = true"
-            @mouseleave="cartHover = false"
           />
         </div>
         <!-- Cart pop-up using teleport -->
@@ -21,20 +20,24 @@
             v-if="showCartPopup"
             :cart="cart"
             :builderName="builderName"
-            @close="closeCartPopup"
+            @close="showCartPopup = false"
             @update-cart="updateCart"
           />
         </teleport>
       </div>
     </div>
 
+    <!-- Content -->
     <div class="p-4">
+      <h2 class="text-xl font-bold mt-4 mb-4">
+        Select your {{ selectedOption.toUpperCase() }}
+      </h2>
       <select
         v-model="selectedOption"
         @change="fetchData"
         name="specTypes"
         id="specTypes"
-        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 transition-colors duration-300"
+        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400"
       >
         <option value="cpu">CPU</option>
         <option value="ram">Memory</option>
@@ -47,34 +50,38 @@
         <option value="mainboard">Mainboard</option>
         <option value="cooler">Cooler</option>
       </select>
-      <h2 class="text-xl font-bold mt-4 mb-4">
-        Select your {{ selectedOption.toUpperCase() }}
-      </h2>
 
+      <h4
+        v-if="selectedOption === 'cpu' || selectedOption === 'mainboard'"
+        class="text-l font-bold mt-4 mb-4"
+      >
+        Select your {{ selectedOption.toUpperCase() }} Socket
+      </h4>
       <select
         v-if="selectedOption === 'cpu' || selectedOption === 'mainboard'"
         v-model="selectedCPUBrand"
-        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 transition-colors duration-300"
+        class="block w-64 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400"
       >
-        <h2 class="text-l font-bold mt-4 mb-4">CPU Socket</h2>
         <option value="">All</option>
         <option value="AMD">AMD AM</option>
         <option value="Intel">Intel LGA</option>
       </select>
 
+      <br />
       <!-- Loading indicator -->
       <div class="max-w-sm mx-auto my-4" v-if="isLoading">
         <span class="text-2xl font-bold text-indigo-700">Loading...</span>
       </div>
 
       <!-- Grid layout for displaying fetched items -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4" v-else>
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4" v-else>
         <!-- Items fetched from API -->
         <ItemsCard
           v-for="item in itemList"
           :key="item.id"
           :item="item"
           :listName="selectedOption"
+          class="w-full"
         ></ItemsCard>
       </div>
     </div>
@@ -102,8 +109,6 @@ const selectedOption = ref('cpu')
 const showCartPopup = ref(false)
 // Define reactive variable to hold selected CPU brand
 const selectedCPUBrand = ref('')
-// Define reactive variable to track cart icon hover state
-const cartHover = ref(false)
 
 // Function to fetch data from API based on selected option
 const fetchData = async () => {
@@ -171,11 +176,6 @@ const toggleShowCartPopup = () => {
 const updateCart = (updatedCart) => {
   showCartPopup.value = !showCartPopup.value
 }
-
-// Function to close cart popup
-const closeCartPopup = () => {
-  showCartPopup.value = false
-}
 </script>
 
 <style scoped>
@@ -207,19 +207,46 @@ const closeCartPopup = () => {
   border-radius: 4px; /* Border radius */
 }
 
-/* Cart icon hover effect */
-.cart-icon:hover {
-  transform: scale(1.1); /* Scale up on hover */
+/* Adjustments for select elements */
+select {
+  appearance: none; /* Remove default appearance */
+  padding: 0.5rem 1rem; /* Padding */
+  font-size: 1rem; /* Font size */
+  border-radius: 0.25rem; /* Border radius */
+  border: 1px solid #e5e5e5; /* Border */
+  background-color: #fff; /* Background color */
+  cursor: pointer; /* Cursor */
+  transition: border-color 0.3s ease; /* Transition effect for smooth color change */
 }
 
-/* Motion transition for select element */
-.select-transition-enter-active,
-.select-transition-leave-active {
-  transition: opacity 0.3s;
+select:focus {
+  outline: none; /* Remove outline on focus */
+  border-color: #46ddd9; /* Border color on focus */
 }
 
-.select-transition-enter,
-.select-transition-leave-to {
-  opacity: 0;
+/* Adjustments for options in select elements */
+option {
+  padding: 0.5rem 1rem; /* Padding */
+}
+
+/* Adjustments for loading indicator */
+.max-w-sm {
+  max-width: 20rem; /* Maximum width */
+  margin-left: auto; /* Margin left */
+  margin-right: auto; /* Margin right */
+}
+
+.mx-auto {
+  margin-left: auto; /* Margin left */
+  margin-right: auto; /* Margin right */
+}
+
+.my-4 {
+  margin-top: 1rem; /* Margin top */
+  margin-bottom: 1rem; /* Margin bottom */
+}
+
+.text-indigo-700 {
+  color: #4f46e5; /* Text color */
 }
 </style>

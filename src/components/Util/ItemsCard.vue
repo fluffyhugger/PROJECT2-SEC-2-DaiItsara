@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-sm bg-primary-100 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+    class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
   >
     <!-- Image section! -->
     <div class="flex justify-center pt-3">
@@ -11,26 +11,26 @@
     <div class="p-5">
       <RouterLink :to="`/build/${listName}/${item.id}`">
         <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-primary-800 dark:text-white"
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
         >
           {{ item.brand }} {{ item.series }} {{ item.model }}
         </h5>
       </RouterLink>
-      <span class="mr-4 text-primary-800"> {{ item.price }} Bath</span>
+      <span class="mr-4"> {{ item.price }} Bath</span>
       <label
         for="my_modal_7"
-        class="btn btn-primary"
+        class="btn dark:bg-gray-700"
         @click="addToSpec(listName, item)"
       >
         Add to Spec
       </label>
       <input type="checkbox" id="my_modal_7" class="modal-toggle" />
       <div class="modal" role="dialog">
-        <div class="modal-box">
-          <h3 class="text-lg font-bold text-primary-800">
+        <div class="modal-box dark:bg-gray-700">
+          <h3 class="text-lg font-bold dark:text-white">
             {{ item.brand }} {{ item.series }} {{ item.model }}
           </h3>
-          <p class="py-4 text-primary-800">Has add to cart!!</p>
+          <p class="py-4 dark:text-white">Has been added to cart!!</p>
         </div>
         <label class="modal-backdrop" for="my_modal_7">Close</label>
       </div>
@@ -144,50 +144,58 @@ const addToSpec = (listName, component) => {
 }
 
 .btn {
-  cursor: pointer;
-  background-color: #46ddd9; /* primary color */
-  color: #ffffff; /* text color */
+  background-color: #46ddd9; /* default button color */
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #304456; /* darken primary color on hover */
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* overlay color */
+  background-color: #304456; /* darker shade on hover */
 }
 
 .modal-box {
-  background-color: #ffffff; /* modal background color */
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 0.5rem;
+  background-color: #ffffff; /* default modal background */
 }
 
 .modal-backdrop {
-  cursor: pointer;
-  color: #ffffff; /* text color */
-  background-color: rgba(0, 0, 0, 0.5); /* backdrop color */
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent backdrop */
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .modal-backdrop:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* darken backdrop color on hover */
+  background-color: #00000021; /* darker shade on hover */
 }
 
-.dark .modal-backdrop {
-  color: #000000; /* text color in dark mode */
+.dark {
+  color: #fff; /* default text color in dark mode */
+}
+
+.dark:hover {
+  color: #b4b4b4; /* lighter shade on hover in dark mode */
+}
+
+.dark.btn {
+  background-color: #304456; /* button color in dark mode */
+}
+
+.dark.btn:hover {
+  background-color: #46ddd9; /* lighter shade on hover in dark mode */
+}
+
+.dark.modal-box {
+  background-color: #304456; /* modal background color in dark mode */
+}
+
+.dark.modal-backdrop {
+  background-color: #46ddd9; /* backdrop color in dark mode */
 }
 </style>
