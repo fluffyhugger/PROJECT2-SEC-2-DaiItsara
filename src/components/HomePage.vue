@@ -1,12 +1,16 @@
 <template>
   <div class="theme font-semibold text-3xl">Welcome To DAIITSARA PC</div>
-  
+  <br>
+  <div class="text-5xl font-semibold text-white">
+    Let's Build PC!!!
+  </div>
   <div class="flex justify-center items-center h-screen">
-    <button id="btn" class="btn btn-large hover:text-teal-500 bg-teal-500 text-blue-950 font-semibold text-lg flex justify-center items-center transition-transform transform hover:translate-x-2 hover:translate-y-2">
-      <router-link to="/build">
-        <label for="btn">Start Build!</label>
-      </router-link>
+  
+    <router-link to="/build">
+    <button  class="btn btn-large hover:text-teal-500 bg-teal-500 text-blue-950 font-semibold text-lg flex justify-center items-center transition-transform transform hover:translate-x-2 hover:translate-y-2">
+        Start Build!
     </button>
+  </router-link>
   </div>
 </template>
 

@@ -1,43 +1,3 @@
-<template>
-  <div
-    class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-  >
-    <!-- Image section! -->
-    <div class="flex justify-center pt-3">
-      <div class="item-image">
-        <img class="rounded-lg" :src="item.picture" :alt="item.series" />
-      </div>
-    </div>
-    <div class="p-5">
-      <RouterLink :to="`/build/${listName}/${item.id}`">
-        <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-          {{ item.brand }} {{ item.series }} {{ item.model }}
-        </h5>
-      </RouterLink>
-      <span class="mr-4"> {{ item.price }} Bath</span>
-      <label
-        for="my_modal_7"
-        class="btn dark:bg-gray-700"
-        @click="addToSpec(listName, item)"
-      >
-        Add to Spec
-      </label>
-      <input type="checkbox" id="my_modal_7" class="modal-toggle" />
-      <div class="modal" role="dialog">
-        <div class="modal-box dark:bg-gray-700">
-          <h3 class="text-lg font-bold dark:text-white">
-            {{ item.brand }} {{ item.series }} {{ item.model }}
-          </h3>
-          <p class="py-4 dark:text-white">Has been added to cart!!</p>
-        </div>
-        <label class="modal-backdrop" for="my_modal_7">Close</label>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -123,6 +83,47 @@ const addToSpec = (listName, component) => {
   emit('itemAddedToCart', true)
 }
 </script>
+
+<template>
+  <div
+    class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+  >
+    <!-- Image section! -->
+    <div class="flex justify-center pt-3">
+      <div class="item-image">
+        <img class="rounded-lg" :src="item.picture" :alt="item.series" />
+      </div>
+    </div>
+    <div class="p-5">
+      <RouterLink :to="`/build/${listName}/${item.id}`">
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ item.brand }} {{ item.series }} {{ item.model }}
+        </h5>
+      </RouterLink>
+      <span class="mr-4"> {{ item.price }} Bath</span>
+      <label
+        for="my_modal_7"
+        class="btn dark:bg-gray-700"
+        @click="addToSpec(listName, item)"
+      >
+        Add to Spec
+      </label>
+      <input type="checkbox" id="my_modal_7" class="modal-toggle" />
+      <div class="modal" role="dialog">
+        <div class="modal-box dark:bg-gray-700">
+          <h3 class="text-lg font-bold dark:text-white">
+            {{ item.brand }} {{ item.series }} {{ item.model }}
+          </h3>
+          <p class="px-28 dark:text-black font-semibold text-xl">Has been added to cart!!</p>
+        </div>
+        <label class="modal-backdrop" for="my_modal_7">Close</label>
+      </div>
+    </div>
+  </div>
+</template>
+
 
 <style scoped>
 .item-image {

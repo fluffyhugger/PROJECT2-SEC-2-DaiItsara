@@ -1,3 +1,92 @@
+<script setup>
+import { onMounted, ref, watch } from 'vue'
+import ItemsCard from './Util/ItemsCard.vue'
+import CartPopup from './Util/CartPopup.vue'
+
+// Define reactive variables to hold builder information and cart data from localStorage
+let builderId = localStorage.getItem('builderId') || ''
+let builderName = localStorage.getItem('builderName') || ''
+let buildDate = localStorage.getItem('buildDate') || ''
+let cart = JSON.parse(localStorage.getItem('cart')) || {}
+
+// Define reactive variable to hold itemList data fetched from API
+const itemList = ref([])
+// Define reactive variable to track loading state
+const isLoading = ref(true)
+// Define reactive variable to track selected option
+const selectedOption = ref('cpu')
+// Define reactive variable to control visibility of cart items
+const showCartPopup = ref(false)
+// Define reactive variable to hold selected CPU brand
+const selectedCPUBrand = ref('')
+
+// Function to fetch data from API based on selected option
+const fetchData = async () => {
+  isLoading.value = true
+  const result = await fetch(`http://localhost:5000/${selectedOption.value}`)
+  const response = await result.json()
+
+  if (selectedOption.value === 'mainboard') {
+    let filteredMainboards = response
+
+    // Filter mainboard items based on selected CPU brand
+    if (selectedCPUBrand.value === 'AMD') {
+      filteredMainboards = response.filter((mainboard) => {
+        return mainboard['cpu-socket'].startsWith('AMD')
+      })
+    } else if (selectedCPUBrand.value === 'Intel') {
+      filteredMainboards = response.filter((mainboard) => {
+        return mainboard['cpu-socket'].startsWith('INTEL')
+      })
+    }
+
+    itemList.value = filteredMainboards
+  } else if (selectedOption.value === 'cpu') {
+    // Filter CPU items based on selected CPU brand
+    if (
+      selectedCPUBrand.value === 'AMD' ||
+      selectedCPUBrand.value === 'Intel'
+    ) {
+      itemList.value = response.filter((cpu) => {
+        // Filter CPUs based on selected brand
+        return cpu.brand.toLowerCase() === selectedCPUBrand.value.toLowerCase()
+      })
+    } else {
+      itemList.value = response // Show all CPUs if brand is not selected or unknown
+    }
+  } else {
+    itemList.value = response // For other options, show all items
+  }
+
+  isLoading.value = false
+}
+
+watch(selectedCPUBrand, () => {
+  fetchData()
+})
+
+// Fetch initial data when component is mounted
+onMounted(async () => {
+  await fetchData()
+})
+
+// Function to sync cart data from localStorage
+const syncCartData = () => {
+  cart = JSON.parse(localStorage.getItem('cart')) || {}
+  builderName = localStorage.getItem('builderName') || ''
+}
+
+// Function to toggle visibility of cart popup
+const toggleShowCartPopup = () => {
+  showCartPopup.value = !showCartPopup.value
+  syncCartData()
+}
+
+// Function to handle update of cart data
+const updateCart = (updatedCart) => { 
+  showCartPopup.value = !showCartPopup.value
+}
+</script>
 <template>
   <div>
     <!-- Header -->
@@ -88,95 +177,7 @@
   </div>
 </template>
 
-<script setup>
-import { onMounted, ref, watch } from 'vue'
-import ItemsCard from './Util/ItemsCard.vue'
-import CartPopup from './Util/CartPopup.vue'
 
-// Define reactive variables to hold builder information and cart data from localStorage
-let builderId = localStorage.getItem('builderId') || ''
-let builderName = localStorage.getItem('builderName') || ''
-let buildDate = localStorage.getItem('buildDate') || ''
-let cart = JSON.parse(localStorage.getItem('cart')) || {}
-
-// Define reactive variable to hold itemList data fetched from API
-const itemList = ref([])
-// Define reactive variable to track loading state
-const isLoading = ref(true)
-// Define reactive variable to track selected option
-const selectedOption = ref('cpu')
-// Define reactive variable to control visibility of cart items
-const showCartPopup = ref(false)
-// Define reactive variable to hold selected CPU brand
-const selectedCPUBrand = ref('')
-
-// Function to fetch data from API based on selected option
-const fetchData = async () => {
-  isLoading.value = true
-  const result = await fetch(`http://localhost:5000/${selectedOption.value}`)
-  const response = await result.json()
-
-  if (selectedOption.value === 'mainboard') {
-    let filteredMainboards = response
-
-    // Filter mainboard items based on selected CPU brand
-    if (selectedCPUBrand.value === 'AMD') {
-      filteredMainboards = response.filter((mainboard) => {
-        return mainboard['cpu-socket'].startsWith('AMD')
-      })
-    } else if (selectedCPUBrand.value === 'Intel') {
-      filteredMainboards = response.filter((mainboard) => {
-        return mainboard['cpu-socket'].startsWith('INTEL')
-      })
-    }
-
-    itemList.value = filteredMainboards
-  } else if (selectedOption.value === 'cpu') {
-    // Filter CPU items based on selected CPU brand
-    if (
-      selectedCPUBrand.value === 'AMD' ||
-      selectedCPUBrand.value === 'Intel'
-    ) {
-      itemList.value = response.filter((cpu) => {
-        // Filter CPUs based on selected brand
-        return cpu.brand.toLowerCase() === selectedCPUBrand.value.toLowerCase()
-      })
-    } else {
-      itemList.value = response // Show all CPUs if brand is not selected or unknown
-    }
-  } else {
-    itemList.value = response // For other options, show all items
-  }
-
-  isLoading.value = false
-}
-
-watch(selectedCPUBrand, () => {
-  fetchData()
-})
-
-// Fetch initial data when component is mounted
-onMounted(async () => {
-  await fetchData()
-})
-
-// Function to sync cart data from localStorage
-const syncCartData = () => {
-  cart = JSON.parse(localStorage.getItem('cart')) || {}
-  builderName = localStorage.getItem('builderName') || ''
-}
-
-// Function to toggle visibility of cart popup
-const toggleShowCartPopup = () => {
-  showCartPopup.value = !showCartPopup.value
-  syncCartData()
-}
-
-// Function to handle update of cart data
-const updateCart = (updatedCart) => {
-  showCartPopup.value = !showCartPopup.value
-}
-</script>
 
 <style scoped>
 .cart-icon-wrapper {
