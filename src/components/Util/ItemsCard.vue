@@ -1,87 +1,86 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue"
 
 const props = defineProps({
   item: Object,
   listName: String,
 })
 
-const emit = defineEmits(['itemAddedToCart'])
+const emit = defineEmits(["itemAddedToCart"])
 
-const cart = ref(JSON.parse(localStorage.getItem('cart')) || {})
+const cart = ref(JSON.parse(localStorage.getItem("cart")) || {})
 
-let builderName = ''
+let builderName = localStorage.getItem("builderName") || "Anonymous"
 
-// Prompt user for builder name when component is mounted
 onMounted(() => {
-  builderName = localStorage.getItem('builderName') || ''
-  if (!builderName) {
-    builderName = window.prompt('Enter builder name:')
-    if (!builderName) {
-      alert('Builder name is required!')
-    } else {
-      localStorage.setItem('builderName', builderName)
-    }
+  if (!localStorage.getItem("builderName")) {
+    promptBuilderName()
   }
 })
+
+const promptBuilderName = () => {
+  const userInput = window.prompt("Enter builder name (optional):", "Anonymous")
+  builderName = userInput || "Anonymous"
+  localStorage.setItem("builderName", builderName)
+}
 
 const addToSpec = (listName, component) => {
   const builderId = Math.floor(Math.random() * 1000) + 1
   // Generate a random builder ID
-  localStorage.setItem('builderId', builderId)
+  localStorage.setItem("builderId", builderId)
   let buildDate = new Date().toISOString()
 
   // Convert the Date object to a string in the specified format
-  buildDate = buildDate.substring(0, 10) + 'T' + buildDate.substring(11, 19)
-  localStorage.setItem('buildDate', buildDate)
+  buildDate = buildDate.substring(0, 10) + "T" + buildDate.substring(11, 19)
+  localStorage.setItem("buildDate", buildDate)
 
   // Extract the required fields from the component
   const { id, brand, series, model, picture, price } = component
   const newItem = {
-    id : id,
-    name: `${brand}${series ? ` ${series}` : ''} ${model}`,
-    'image-url': picture,
+    id: id,
+    name: `${brand}${series ? ` ${series}` : ""} ${model}`,
+    "image-url": picture,
     price: price,
   }
 
   // Add the component to the cart based on the listName
   switch (listName) {
-    case 'cpu':
+    case "cpu":
       cart.value.cpu = newItem
       break
-    case 'ram':
+    case "ram":
       cart.value.ram = newItem
       break
-    case 'gpu':
+    case "gpu":
       cart.value.gpu = newItem
       break
-    case 'ssd':
+    case "ssd":
       cart.value.ssd = newItem
       break
-    case 'hdd':
+    case "hdd":
       cart.value.hdd = newItem
       break
-    case 'psu':
+    case "psu":
       cart.value.psu = newItem
       break
-    case 'case':
+    case "case":
       cart.value.case = newItem
       break
-    case 'monitor':
+    case "monitor":
       cart.value.monitor = newItem
       break
-    case 'mainboard':
+    case "mainboard":
       cart.value.mainboard = newItem
       break
-    case 'cooler':
+    case "cooler":
       cart.value.cooler = newItem
       break
     default:
-      console.error('Invalid listName:', listName)
+      console.error("Invalid listName:", listName)
   }
   // Update localStorage with the updated cart data
-  localStorage.setItem('cart', JSON.stringify(cart.value))
-  emit('itemAddedToCart', true)
+  localStorage.setItem("cart", JSON.stringify(cart.value))
+  emit("itemAddedToCart", true)
 }
 </script>
 
