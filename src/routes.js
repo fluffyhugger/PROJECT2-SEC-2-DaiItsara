@@ -34,11 +34,7 @@ const routes = [
     // Card079 login version *****************************************************
     meta: { requiresAuth: true }
   },
-  {
-    path: '/edit-product',
-    name: 'ProductEditing',
-    component: () => import('./components/EditProduct.vue')
-  },
+
   {
     path: '/contact',
     component: () => import('./components/Contact.vue')
