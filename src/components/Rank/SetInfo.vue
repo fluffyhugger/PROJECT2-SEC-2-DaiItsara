@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onBeforeMount, onUnmounted } from 'vue'
-import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
+import { library } from "@fortawesome/fontawesome-svg-core"; 
 import { useRouter } from 'vue-router'
 import { TotalPrice } from './enum'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";

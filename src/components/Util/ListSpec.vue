@@ -20,20 +20,19 @@ const componentTypes = [
   'case',
   'monitor',
   'mainboard',
-  'cooler'
+  'cooler',
 ]
 
-// const specList = ref(new SpecManagement())
 onMounted(async () => {
   try {
     const result = await fetch(`http://localhost:5000/pc-build`)
     const responses = await result.json()
-    // Filter products based on the component type and calculate total price
+
     responses.forEach((response) => {
       const prices = Object.keys(response)
-        .filter((key) => componentTypes.includes(key)) // Filter out non-component keys
-        .map((key) => response[key].price) // Map to the price of each component
-      response['total-price'] = TotalPrice(...prices) // Calculate total price and add it to the response
+        .filter((key) => componentTypes.includes(key))
+        .map((key) => response[key].price)
+      response['total-price'] = TotalPrice(...prices)
     })
     products.value = responses
     isLoading.value = false
@@ -58,7 +57,6 @@ const sortByProducts = computed(() => {
 })
 
 const handleDataDeleted = (deletedId) => {
-  // Filter out the deleted product from the products array
   products.value = products.value.filter((product) => product.id !== deletedId)
 }
 </script>
