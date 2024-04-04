@@ -4,9 +4,7 @@ import ItemsCard from './Util/ItemsCard.vue'
 import CartPopup from './Util/CartPopup.vue'
 
 // Define reactive variables to hold builder information and cart data from localStorage
-let builderId = localStorage.getItem('builderId') || ''
 let builderName = localStorage.getItem('builderName') || ''
-let buildDate = localStorage.getItem('buildDate') || ''
 let cart = JSON.parse(localStorage.getItem('cart')) || {}
 
 // Define reactive variable to hold itemList data fetched from API

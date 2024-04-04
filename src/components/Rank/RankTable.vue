@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { getComponentProperty } from "./enum"
-import { faL } from '@fortawesome/free-solid-svg-icons';
 const props = defineProps({
   selectedOption: String,
   products: Array,
