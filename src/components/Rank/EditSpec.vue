@@ -35,12 +35,10 @@ const handleAdded = (isAdded) => {
 </script>
 
 <template>
-    
-   
     <div class="max-w-sm mx-auto" v-if="isLoading">
         <span class="text-2xl font-bold text-indigo-700">Loading... </span>
     </div>
-    <div class="grid grid-cols-3 gap-4" v-else>
+    <div class="grid grid-cols-4 gap-4" v-else>
         <ItemsCard v-for="item in itemList" :key="item.id" :item="item" :listName="selectedOption" @itemAddedToCart="handleAdded"></ItemsCard>
     </div>
 </template>
