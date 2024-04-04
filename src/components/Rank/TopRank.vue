@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, watch } from "vue";
-import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
+import { library } from "@fortawesome/fontawesome-svg-core"; 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faChevronLeft,
@@ -9,13 +9,11 @@ import {
 import { getComponentProperty } from "./enum"
 import { SortBy } from "./enum";
 
-// child
 library.add(faChevronLeft, faChevronRight);
 
 let autoSlideInterval;
 const containerRef = ref(null);
 let scrollDirection = 1;
-// Define a prop to receive the selected option from the parent
 const props = defineProps({
   selectedOption: String,
   products: Array,
@@ -23,10 +21,8 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['update:selectedOption']);
-// Define a reactive property to hold the selected option
 const selectedOption = ref(props.selectedOption);
 
-// Watch for changes to the selected option and emit an update
 watch(selectedOption, (newValue) => {
   emit('update:selectedOption', newValue);
 });
@@ -171,11 +167,8 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Center align horizontally */
   max-width: 1200px;
-  /* Set maximum width */
   margin: 0 auto;
-  /* Center align horizontally */
 }
 
 .container {
@@ -255,7 +248,6 @@ select {
 
 .head-toprank-container {
   margin-right: 1rem;
-  /* Adjust as needed */
 }
 
 .controls-container {

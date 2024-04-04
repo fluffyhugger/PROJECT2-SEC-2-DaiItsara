@@ -19,10 +19,11 @@ const fetchData = async () => {
 
 watch( () => props.selectedOption, async (newValue, oldValue) => {
   selectedOption.value = newValue
+  await fetchData() 
 })
 onMounted(async () => {
     console.log("edit spec",selectedOption)
-    await fetchData()
+    await fetchData() 
    
 })
 
@@ -37,7 +38,10 @@ const handleAdded = (isAdded) => {
     <button ></button>
     <h1>Build spec {{ addSuccess }}</h1>
     <h1>Select {{ selectedOption }}</h1>
+<<<<<<< HEAD
    
+=======
+>>>>>>> main
     <div class="max-w-sm mx-auto" v-if="isLoading">
         <span class="text-2xl font-bold text-indigo-700">Loading... </span>
     </div>

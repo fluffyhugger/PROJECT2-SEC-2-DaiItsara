@@ -59,7 +59,6 @@ const filteredProducts = computed(() => {
       const matchingGPUs = gpus.value.filter((gpu) => gpu['gpu-chipset'].toLowerCase() === selectedGPUs.value.toLowerCase());
       console.log("matchingGPUS" , matchingGPUs);
       return matchingGPUs.some(gpu => { 
-        //gpu.id === product.gpu.id
         if(gpu==null || product.gpu == null || gpu == undefined || product.gpu == undefined){
           return false ; 
         }else {

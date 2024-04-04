@@ -1,43 +1,3 @@
-<template>
-  <div
-    class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-  >
-    <!-- Image section! -->
-    <div class="flex justify-center pt-3">
-      <div class="item-image">
-        <img class="rounded-lg" :src="item.picture" :alt="item.series" />
-      </div>
-    </div>
-    <div class="p-5">
-      <RouterLink :to="`/build/${listName}/${item.id}`">
-        <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-          {{ item.brand }} {{ item.series }} {{ item.model }}
-        </h5>
-      </RouterLink>
-      <span class="mr-4"> {{ item.price }} Bath</span>
-      <label
-        for="my_modal_7"
-        class="btn dark:bg-gray-700"
-        @click="addToSpec(listName, item)"
-      >
-        Add to Spec
-      </label>
-      <input type="checkbox" id="my_modal_7" class="modal-toggle" />
-      <div class="modal" role="dialog">
-        <div class="modal-box dark:bg-gray-700">
-          <h3 class="text-lg font-bold dark:text-white">
-            {{ item.brand }} {{ item.series }} {{ item.model }}
-          </h3>
-          <p class="py-4 dark:text-white">Has been added to cart!!</p>
-        </div>
-        <label class="modal-backdrop" for="my_modal_7">Close</label>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -66,11 +26,9 @@ const promptBuilderName = () => {
 
 const addToSpec = (listName, component) => {
   const builderId = Math.floor(Math.random() * 1000) + 1
-  // Generate a random builder ID
   localStorage.setItem('builderId', builderId)
   let buildDate = new Date().toISOString()
 
-  // Convert the Date object to a string in the specified format
   buildDate = buildDate.substring(0, 10) + 'T' + buildDate.substring(11, 19)
   localStorage.setItem('buildDate', buildDate)
 
@@ -83,7 +41,6 @@ const addToSpec = (listName, component) => {
     price: price
   }
 
-  // Add the component to the cart based on the listName
   switch (listName) {
     case 'cpu':
       cart.value.cpu = newItem
@@ -118,20 +75,59 @@ const addToSpec = (listName, component) => {
     default:
       console.error('Invalid listName:', listName)
   }
-  // Update localStorage with the updated cart data
   localStorage.setItem('cart', JSON.stringify(cart.value))
   emit('itemAddedToCart', true)
 }
 </script>
 
+<template>
+  <div
+    class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+  >
+    <div class="flex justify-center pt-3">
+      <div class="item-image">
+        <img class="rounded-lg" :src="item.picture" :alt="item.series" />
+      </div>
+    </div>
+    <div class="p-5">
+      <RouterLink :to="`/build/${listName}/${item.id}`">
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ item.brand }} {{ item.series }} {{ item.model }}
+        </h5>
+      </RouterLink>
+      <span class="mr-4"> {{ item.price }} Bath</span>
+      <label
+        for="my_modal_7"
+        class="btn dark:bg-gray-700"
+        @click="addToSpec(listName, item)"
+      >
+        Add to Spec
+      </label>
+      <input type="checkbox" id="my_modal_7" class="modal-toggle" />
+      <div class="modal" role="dialog">
+        <div class="modal-box dark:bg-gray-700">
+          <h3 class="text-lg font-bold dark:text-white">
+            {{ item.brand }} {{ item.series }} {{ item.model }}
+          </h3>
+          <p class="px-28 dark:text-black font-semibold text-xl">Has been added to cart!!</p>
+        </div>
+        <label class="modal-backdrop" for="my_modal_7">Close</label>
+      </div>
+    </div>
+  </div>
+</template>
+
+
 <style scoped>
 .item-image {
   width: 100%;
   height: 0;
-  padding-top: 100%; /* 1:1 aspect ratio */
+  padding-top: 100%; 
   overflow: hidden;
   position: relative;
-  margin: 1rem; /* Add margin around the image */
+  margin: 1rem; 
 }
 
 .item-image img {
@@ -140,11 +136,11 @@ const addToSpec = (listName, component) => {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensure the image fits within the container without stretching */
+  object-fit: contain; 
 }
 
 .btn {
-  background-color: #46ddd9; /* default button color */
+  background-color: #46ddd9; 
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -153,17 +149,17 @@ const addToSpec = (listName, component) => {
 }
 
 .btn:hover {
-  background-color: #304456; /* darker shade on hover */
+  background-color: #304456;
 }
 
 .modal-box {
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #ffffff; /* default modal background */
+  background-color: #ffffff;
 }
 
 .modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent backdrop */
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -172,30 +168,30 @@ const addToSpec = (listName, component) => {
 }
 
 .modal-backdrop:hover {
-  background-color: #00000021; /* darker shade on hover */
+  background-color: #00000021; 
 }
 
 .dark {
-  color: #fff; /* default text color in dark mode */
+  color: #fff; 
 }
 
 .dark:hover {
-  color: #b4b4b4; /* lighter shade on hover in dark mode */
+  color: #b4b4b4; 
 }
 
 .dark.btn {
-  background-color: #304456; /* button color in dark mode */
+  background-color: #304456; 
 }
 
 .dark.btn:hover {
-  background-color: #46ddd9; /* lighter shade on hover in dark mode */
+  background-color: #46ddd9; 
 }
 
 .dark.modal-box {
-  background-color: #304456; /* modal background color in dark mode */
+  background-color: #304456;
 }
 
 .dark.modal-backdrop {
-  background-color: #46ddd9; /* backdrop color in dark mode */
+  background-color: #46ddd9;
 }
 </style>

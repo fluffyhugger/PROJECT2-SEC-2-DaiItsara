@@ -4,7 +4,6 @@
       <div class="cart-popup-content">
         <h2 class="cart-title">Items in Cart</h2>
         <p class="textHead">Builder: {{ builderName }}</p>
-        <!-- Display the builderName -->
         <ul class="cart-list">
           <li v-for="(item, key) in cart" :key="key" class="cart-item">
             <span class="item-key">{{ key.toUpperCase() }}:</span>
@@ -17,17 +16,13 @@
           <span>Total:</span>
           <span class="total-price">{{ formatPrice(totalPrice) }}</span>
         </div>
-        <!-- Success Message -->
         <p v-if="buildSuccessful" class="success-message">
           BUILD PC SUCCESSFUL <br>
         </p>
-        <!-- Close Button -->
         <button @click="closeCart" class="close-button">Close</button>
-        <!-- Confirm Build Spec Button -->
         <button v-if="!buildSuccessful" @click="postAndNavigate" class="confirm-button">
           Build
         </button>
-        <!-- View Button -->
         <router-link v-if="buildSuccessful" :to="{ path: '/ranking' }" class="view-button">View</router-link>
       </div>
     </div>
@@ -43,15 +38,13 @@ const emits = defineEmits(['close', 'update-cart'])
 
 const router = useRouter()
 
-// Reactive variable for success message
 const buildSuccessful = ref(false)
 
-// Define function to post data to JSON server
 const postAndNavigate = async () => {
   const currentDate = new Date().toISOString()
   const data = {
-    id: Math.random().toString(36).substring(7), // Generate a random ID
-    'builder-id': Math.random().toString(36).substring(7), // Generate a random builder ID
+    id: Math.random().toString(36).substring(7),
+    'builder-id': Math.random().toString(36).substring(7), 
     'builder-name': props.builderName,
     'build-date': currentDate,
     ...props.cart
@@ -66,9 +59,7 @@ const postAndNavigate = async () => {
     })
     if (response.ok) {
       console.log('Data posted successfully')
-      // Set buildSuccessful to true to display the success message
       buildSuccessful.value = true
-      // Optionally, you can emit an event to notify the parent component about the successful post
       localStorage.removeItem('builderId')
       localStorage.removeItem('builderName')
       localStorage.removeItem('buildDate')
@@ -81,7 +72,6 @@ const postAndNavigate = async () => {
   }
 }
 
-// Compute total price
 const totalPrice = computed(() => {
   let total = 0
   for (const itemKey in props.cart) {
@@ -92,30 +82,25 @@ const totalPrice = computed(() => {
   return total
 })
 
-// Format price
 const formatPrice = (price) => {
   return `${price.toFixed(2)}B`
 }
 
-// Close cart method
 const closeCart = () => {
   emits('close')
 }
 
-// Function to delete an item from the cart by its key (ID)
 const deleteItem = (key) => {
   const updatedCart = { ...props.cart }
   delete updatedCart[key]
   localStorage.setItem('cart', JSON.stringify(updatedCart))
   console.log(updatedCart)
 
-  // Emit an event to notify the parent component to update the cart
   emits('update-cart', key)
 }
 </script>
 
 <style scoped>
-/* Your existing styles */
 .success-message {
   color: green;
   font-weight: bold;
@@ -170,7 +155,7 @@ const deleteItem = (key) => {
 
 .item-key {
   font-weight: bold;
-  text-transform: uppercase; /* Convert text to uppercase */
+  text-transform: uppercase; 
 }
 
 .item-name {

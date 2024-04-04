@@ -1,23 +1,3 @@
-<template>
-  <div class="flex justify-center items-center h-screen bg-gray-900">
-    <div class="bg-gray-800 shadow-lg rounded-lg p-6 w-96">
-      <h1 class="text-2xl font-semibold mb-4 text-white">Login</h1>
-      <div class="space-y-4">
-        <div>
-          <input v-model="username" type="text" placeholder="Username" class="border border-gray-700 rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:border-teal-500 bg-gray-700 text-gray-300" />
-        </div>
-        <div>
-          <input v-model="password" type="password" placeholder="Password" class="border border-gray-700 rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:border-teal-500 bg-gray-700 text-gray-300" />
-        </div>
-        <div class="flex justify-between">
-          <button @click="login" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:bg-teal-600">Login</button>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -49,6 +29,27 @@ export default {
   },
 }
 </script>
+<template>
+  <div class="flex justify-center items-center h-screen bg-gray-900">
+    <div class="bg-gray-800 shadow-lg rounded-lg p-6 w-96">
+      <h1 class="text-2xl font-semibold mb-4 text-white">Login</h1>
+      <div class="space-y-4">
+        <div>
+          <input v-model="username" type="text" placeholder="Username" class="border border-gray-700 rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:border-teal-500 bg-gray-700 text-gray-300" />
+        </div>
+        <div>
+          <input v-model="password" type="password" placeholder="Password" class="border border-gray-700 rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:border-teal-500 bg-gray-700 text-gray-300" />
+        </div>
+        <div class="flex justify-between">
+          <button @click="login" class="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 focus:outline-none focus:bg-teal-600">Login</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
 
 <style scoped>
 input:focus {

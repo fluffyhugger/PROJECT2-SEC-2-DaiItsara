@@ -8,17 +8,17 @@ let products = ref([]);
 let isLoading = ref(true);
 
 const componentTypes = [
-    "cpu",
-    "ram",
-    "gpu",
-    "ssd",
-    "hdd",
-    "psu",
-    "case",
-    "monitor",
-    "mainboard",
-    "cooler",
-];
+  'cpu',
+  'ram',
+  'gpu',
+  'ssd',
+  'hdd',
+  'psu',
+  'case',
+  'monitor',
+  'mainboard',
+  'cooler',
+]
 
 onMounted(async () => {
     try {
@@ -38,24 +38,34 @@ onMounted(async () => {
 });
 
 const sortByProducts = computed(() => {
-    if (selectedOption.value === SortBy.Price) {
-        return [...products.value].sort((a, b) => b['total-price'] - a['total-price']);
-    } else if (selectedOption.value === SortBy.Latest) {
-        return [...products.value].sort((a, b) => new Date(b['build-date']) - new Date(a['build-date']));
-    } else {
-        return products.value;
-    }
-});
+  if (selectedOption.value === SortBy.Price) {
+    return [...products.value].sort(
+      (a, b) => b['total-price'] - a['total-price']
+    )
+  } else if (selectedOption.value === SortBy.Latest) {
+    return [...products.value].sort(
+      (a, b) => new Date(b['build-date']) - new Date(a['build-date'])
+    )
+  } else {
+    return products.value
+  }
+})
 </script>
 
 <template>
-    <div class="relative m-12 bg-transparent backdrop-blur-md shadow-lg p-5">
-        <h1 class="text-3xl font-bold tracking-wide ">
-            PC RANKING
-        </h1>
-        <TopRank v-model:selectedOption="selectedOption" :products="sortByProducts" :isLoading="isLoading" />
-        <RankTable :selectedOption="selectedOption" :products="sortByProducts" :isLoading="isLoading" />
-    </div>
+  <div class="relative m-12 bg-transparent backdrop-blur-md shadow-lg p-5">
+    <h1 class="text-3xl font-bold tracking-wide">PC RANKING</h1>
+    <TopRank
+      v-model:selectedOption="selectedOption"
+      :products="sortByProducts"
+      :isLoading="isLoading"
+    />
+    <RankTable
+      :selectedOption="selectedOption"
+      :products="sortByProducts"
+      :isLoading="isLoading"
+    />
+  </div>
 </template>
 
 <style scoped></style>
