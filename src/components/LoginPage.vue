@@ -1,12 +1,15 @@
-
-<script setup>
-import {ref} from 'vue'
-
-const username = ref('');
-const password = ref('');
-
-const login = async () => {try {
-        const response = await fetch('/data/db.json') 
+<script>
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    async login() {
+      try {
+        const response = await fetch('/data/db.json') // Adjust the path here
         const data = await response.json()
 
         const admin = data.admins.find(
@@ -23,9 +26,9 @@ const login = async () => {try {
         alert('An error occurred. Please try again later.')
       }
     }
-  
+  },
+}
 </script>
-
 <template>
   <div class="flex justify-center items-center h-screen bg-gray-900">
     <div class="bg-gray-800 shadow-lg rounded-lg p-6 w-96">
@@ -45,6 +48,8 @@ const login = async () => {try {
     </div>
   </div>
 </template>
+
+
 
 <style scoped>
 input:focus {
