@@ -35,13 +35,8 @@ const handleAdded = (isAdded) => {
 </script>
 
 <template>
-    <button ></button>
-    <h1>Build spec {{ addSuccess }}</h1>
-    <h1>Select {{ selectedOption }}</h1>
-<<<<<<< HEAD
+    
    
-=======
->>>>>>> main
     <div class="max-w-sm mx-auto" v-if="isLoading">
         <span class="text-2xl font-bold text-indigo-700">Loading... </span>
     </div>
