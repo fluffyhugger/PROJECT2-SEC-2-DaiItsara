@@ -377,18 +377,6 @@
         "image-url": "https://chininter.co.th/wp-content/uploads/2021/07/masterliquid-ml240-illusion-white-gallery-0-zoom_1000x1000.png",
         "price": 3890
       }
-    },
-    {
-      "id": "1e4xjk",
-      "builder-id": "roai3n",
-      "builder-name": "Anonymous",
-      "build-date": "2024-04-04T04:50:10.861Z",
-      "cpu": {
-        "id": "CPU_00002",
-        "name": "AMD Ryzen 5 5600G",
-        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
-        "price": 5290
-      }
     }
   ],
   "cpu": [

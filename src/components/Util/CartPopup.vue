@@ -1,34 +1,3 @@
-<template>
-  <div class="cart-popup-overlay">
-    <div class="cart-popup">
-      <div class="cart-popup-content">
-        <h2 class="cart-title">Items in Cart</h2>
-        <p class="textHead">Builder: {{ builderName }}</p>
-        <ul class="cart-list">
-          <li v-for="(item, key) in cart" :key="key" class="cart-item">
-            <span class="item-key">{{ key.toUpperCase() }}:</span>
-            <span class="item-name">{{ item.name }}</span>
-            <button class="underline text-red-700 hover:text-red-400" @click="deleteItem(key)">Delete</button>
-            <li><span class="item-price">{{ formatPrice(item.price) }}</span></li>
-          </li>
-        </ul>
-        <div class="cart-total">
-          <span>Total:</span>
-          <span class="total-price">{{ formatPrice(totalPrice) }}</span>
-        </div>
-        <p v-if="buildSuccessful" class="success-message">
-          BUILD PC SUCCESSFUL <br>
-        </p>
-        <button @click="closeCart" class="close-button">Close</button>
-        <button v-if="!buildSuccessful" @click="postAndNavigate" class="confirm-button">
-          Build
-        </button>
-        <router-link v-if="buildSuccessful" :to="{ path: '/ranking' }" class="view-button">View</router-link>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
@@ -99,6 +68,38 @@ const deleteItem = (key) => {
   emits('update-cart', key)
 }
 </script>
+
+<template>
+  <div class="cart-popup-overlay">
+    <div class="cart-popup">
+      <div class="cart-popup-content">
+        <h2 class="cart-title">Items in Cart</h2>
+        <p class="textHead">Builder: {{ builderName }}</p>
+        <ul class="cart-list">
+          <li v-for="(item, key) in cart" :key="key" class="cart-item">
+            <span class="item-key">{{ key.toUpperCase() }}:</span>
+            <span class="item-name">{{ item.name }}</span>
+            <button class="underline text-red-700 hover:text-red-400" @click="deleteItem(key)">Delete</button>
+            <li><span class="item-price">{{ formatPrice(item.price) }}</span></li>
+          </li>
+        </ul>
+        <div class="cart-total">
+          <span>Total:</span>
+          <span class="total-price">{{ formatPrice(totalPrice) }}</span>
+        </div>
+        <p v-if="buildSuccessful" class="success-message">
+          BUILD PC SUCCESSFUL <br>
+        </p>
+        <button @click="closeCart" class="close-button">Close</button>
+        <button v-if="!buildSuccessful" @click="postAndNavigate" class="confirm-button">
+          Build
+        </button>
+        <router-link v-if="buildSuccessful" :to="{ path: '/ranking' }" class="view-button">View</router-link>
+      </div>
+    </div>
+  </div>
+</template>
+
 
 <style scoped>
 .success-message {

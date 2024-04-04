@@ -1,15 +1,3 @@
-<template>
-  <div class="delete-popup-overlay">
-    <div class="delete-popup">
-      <p>Are you sure you want to delete this product?</p>
-      <div class="button-container">
-        <button class="btn-cancel" @click="cancelDelete">Cancel</button>
-        <button class="btn-delete" @click="deleteProduct">Delete</button>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   methods: {
@@ -22,6 +10,18 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="delete-popup-overlay">
+    <div class="delete-popup">
+      <p>Are you sure you want to delete this product?</p>
+      <div class="button-container">
+        <button class="btn-cancel" @click="cancelDelete">Cancel</button>
+        <button class="btn-delete" @click="deleteProduct">Delete</button>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .delete-popup-overlay {

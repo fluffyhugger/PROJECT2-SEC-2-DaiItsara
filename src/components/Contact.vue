@@ -1,3 +1,18 @@
+<style scoped>
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bg-gray-200 {
+  background-color: #f3f4f6;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+</style>
+
 <template>
   <div class="container mx-auto py-12 text-center">
     <h1 class="text-4xl font-bold mb-8">Contact Us - DAIITSARAPC</h1>
@@ -27,18 +42,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.container {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.bg-gray-200 {
-  background-color: #f3f4f6;
-}
-
-.shadow-md {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-</style>

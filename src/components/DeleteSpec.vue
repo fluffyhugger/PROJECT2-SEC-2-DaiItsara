@@ -1,3 +1,70 @@
+<script setup>
+import { ref } from 'vue'
+import DeleteConfirmPopup from './Util/DeleteConfirmPopup.vue'
+
+const props = defineProps({
+  selectedOption: String,
+  products: Array,
+  isLoading: Boolean
+})
+
+const showDeletePopup = ref(false)
+let productToDelete = null
+
+const confirmDelete = (productId) => {
+  showDeletePopup.value = true
+  productToDelete = productId
+}
+
+const cancelDeletePopup = () => {
+  showDeletePopup.value = false
+  productToDelete = null
+}
+
+const deleteConfirmed = async () => {
+  await handleDataDeleted(productToDelete)
+
+  cancelDeletePopup()
+}
+
+const handleDataDeleted = async (builderId) => {
+  try {
+    const response = await fetch(
+      `http://localhost:5000/pc-build/${builderId}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    )
+
+    if (response.ok) {
+      emit('dataDeleted', builderId)
+    } else {
+      console.error('Error deleting product:', response.statusText)
+    }
+  } catch (error) {
+    console.error('Error deleting product:', error)
+  }
+}
+
+const deleteProduct = (builderId) => {
+  handleDataDeleted(builderId)
+}
+const emit = defineEmits(['dataDeleted'])
+
+const formatDate = (dateString) => {
+  const date = new Date(dateString)
+  return `${date.getFullYear()}-${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
+}
+const formatPrice = (price) => {
+  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+</script>
+
 <template>
   <div class="mt-10 mb-10">
     <table class="table">
@@ -61,73 +128,6 @@
     </table>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import DeleteConfirmPopup from './Util/DeleteConfirmPopup.vue'
-
-const props = defineProps({
-  selectedOption: String,
-  products: Array,
-  isLoading: Boolean,
-})
-
-const showDeletePopup = ref(false)
-let productToDelete = null
-
-const confirmDelete = (productId) => {
-  showDeletePopup.value = true
-  productToDelete = productId
-}
-
-const cancelDeletePopup = () => {
-  showDeletePopup.value = false
-  productToDelete = null
-}
-
-const deleteConfirmed = async () => {
-  await handleDataDeleted(productToDelete)
-
-  cancelDeletePopup()
-}
-
-const handleDataDeleted = async (builderId) => {
-  try {
-    const response = await fetch(
-      `http://localhost:5000/pc-build/${builderId}`,
-      {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    )
-
-    if (response.ok) {
-      emit('dataDeleted', builderId)
-    } else {
-      console.error('Error deleting product:', response.statusText)
-    }
-  } catch (error) {
-    console.error('Error deleting product:', error)
-  }
-}
-
-const deleteProduct = (builderId) => {
-  handleDataDeleted(builderId)
-}
-const emit = defineEmits(['dataDeleted'])
-
-const formatDate = (dateString) => {
-  const date = new Date(dateString)
-  return `${date.getFullYear()}-${(date.getMonth() + 1)
-    .toString()
-    .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
-}
-const formatPrice = (price) => {
-  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-}
-</script>
 
 <style scoped>
 .table {

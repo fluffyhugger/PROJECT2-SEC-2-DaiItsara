@@ -9,7 +9,7 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await fetch('/data/db.json') // Adjust the path here
+        const response = await fetch('/data/db.json') 
         const data = await response.json()
 
         const admin = data.admins.find(

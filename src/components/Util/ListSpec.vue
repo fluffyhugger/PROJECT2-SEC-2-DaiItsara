@@ -4,7 +4,7 @@ import { ref, onMounted, computed } from 'vue'
 import { SortBy, TotalPrice } from '../Rank/enum'
 import BuildSpec from '../BuildSpec.vue'
 
-// parent component
+
 
 let selectedOption = ref(SortBy.Price)
 let products = ref([])

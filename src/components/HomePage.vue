@@ -4,13 +4,11 @@ import TopRank from '@/components/Rank/RankingSpec.vue'
 
 const route = useRoute()
 
-// Determine whether to show introduction section based on the route
 const showIntroduction = route.path !== '/login'
 </script>
 
 <template>
   <div class="homepage">
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
         <div class="row">
@@ -27,12 +25,10 @@ const showIntroduction = route.path !== '/login'
       </div>
     </section>
 
-    <!-- Featured Products (Replaced by ListSpec.vue Component) -->
     <section class="featured-products">
       <TopRank />
     </section>
 
-    <!-- Introduction Section (Optional) -->
     <section v-if="showIntroduction" class="introduction">
       <div class="introduction-content">
         <h2>About Us</h2>
@@ -55,9 +51,8 @@ const showIntroduction = route.path !== '/login'
 </template>
 
 <style scoped>
-/* Styles for Hero Section */
 .hero {
-  background-color: #e5e5e5; /* Adjusted background color */
+  background-color: #e5e5e5;
   padding: 80px 0;
   text-align: center;
 }
@@ -80,17 +75,16 @@ const showIntroduction = route.path !== '/login'
 
 .description {
   font-size: 18px;
-  color: #304456; /* Adjusted description color */
+  color: #304456;
 }
 
-/* Button Styles */
 .btn {
   display: inline-block;
   padding: 12px 24px;
   font-size: 16px;
   border: none;
   border-radius: 4px;
-  background-color: #46ddd9; /* Adjusted button background color */
+  background-color: #46ddd9;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
@@ -102,16 +96,14 @@ const showIntroduction = route.path !== '/login'
 }
 
 .btn:hover {
-  background-color: #b4b4b4; /* Adjusted button hover background color */
+  background-color: #b4b4b4;
 }
 
-/* Featured Products Section Styles */
 .featured-products {
-  background-color: #e5e7eb; /* Adjusted background color */
+  background-color: #e5e7eb;
   padding: 40px 0;
 }
 
-/* Introduction Section Styles */
 .introduction {
   padding: 40px 0;
 }
@@ -128,7 +120,6 @@ const showIntroduction = route.path !== '/login'
 
 .introduction p {
   font-size: 18px;
-  color: #6b7280; /* Adjusted introduction text color */
+  color: #6b7280;
 }
 </style>
-
