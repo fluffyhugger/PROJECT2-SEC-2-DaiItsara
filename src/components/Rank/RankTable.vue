@@ -116,7 +116,7 @@ onMounted(async () => {
       <tbody>
         <tr v-for="(product, index) in filteredProducts" :key="product.id" :class="{ 'bg-gray-100': index % 2 === 0 }">
           <td class="text-center font-semibold">{{ index + 1 }}</td>
-          <td @mouseover="font = 'semibold'" @mouseleave="font = 'normal'" :style="{ fontWeight: font }">
+          <td>
             <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">
               <img :src="getComponentProperty(product, 'case', 'image-url')" :alt="product.name"
                 class="product-image w-24 h-24" />
