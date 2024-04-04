@@ -126,34 +126,27 @@ onUnmounted(() => {
           <li class="">
             <div class="flex flex-col w-fit h-fit controls-container pl-5">
               <div class="flex flex-wrap justify-center gap-4">
-                <div
-                  v-for="component in [
-                    'cpu',
-                    'ram',
-                    'gpu',
-                    'ssd',
-                    'hdd',
-                    'psu',
-                    'case',
-                    'monitor',
-                    'mainboard',
-                    'cooler',
-                  ]"
-                  :key="component"
-                  class="card"
-                  @click="toggleShowInfo(component)"
-                >
-                  <img
-                    :src="getComponentProperty(product, component, 'image-url')"
-                    :alt="`${component} image`"
-                    class="grid-item"
-                  />
-                  <p>
-                    {{ component.toUpperCase() }} name:
-                    {{ getComponentProperty(product, component, "name") }} |
-                    Price:
-                    {{ getComponentProperty(product, component, "price") }}
-                  </p>
+                <div v-for="component in [
+                  'cpu',
+                  'ram',
+                  'gpu',
+                  'ssd',
+                  'hdd',
+                  'psu',
+                  'case',
+                  'monitor',
+                  'mainboard',
+                  'cooler',
+                ]" :key="component" class="card" @click="toggleShowInfo(component)">
+                  <div class="grid-item-wrapper">
+                    <img :src="getComponentProperty(product, component, 'image-url')" :alt="`${component} image`"
+                      class="grid-item" />
+                    <div class="component-details">
+                      {{ component.toUpperCase() }} name: {{ getComponentProperty(product, component, "name") }}
+                      <br>
+                      Price: {{ getComponentProperty(product, component, "price") }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -166,37 +159,10 @@ onUnmounted(() => {
     <!-- Second Section (70%) -->
     <div class="second-section">
       <div class="divider lg:divider-horizontal"></div>
-      <div
-        class="grid flex-grow h-auto card bg-base-300 rounded-box place-items-center p-8"
-      >
+      <div class="grid flex-grow h-auto card bg-base-300 rounded-box place-items-center p-8">
         <div v-if="showInfo">
           <div class="grid-container" v-if="!isLoading">
-            <div
-              v-for="component in [
-                'cpu',
-                'ram',
-                'gpu',
-                'ssd',
-                'hdd',
-                'psu',
-                'case',
-                'monitor',
-                'mainboard',
-                'cooler',
-              ]"
-              :key="component"
-            >
-              <img
-                :src="getComponentProperty(product, component, 'image-url')"
-                :alt="`${component} image`"
-                id="list-center"
-                class="grid-item"
-                @click="newTapByIDType(product[component].id, component)"
-              />
-            </div>
-            <div class="grid-info grid-item">
-              <template
-                v-for="component in [
+            <div v-for="component in [
                   'cpu',
                   'ram',
                   'gpu',
@@ -207,8 +173,23 @@ onUnmounted(() => {
                   'monitor',
                   'mainboard',
                   'cooler',
-                ]"
-              >
+                ]" :key="component">
+              <img :src="getComponentProperty(product, component, 'image-url')" :alt="`${component} image`"
+                id="list-center" class="grid-item" @click="newTapByIDType(product[component].id, component)" />
+            </div>
+            <div class="grid-info grid-item">
+              <template v-for="component in [
+                  'cpu',
+                  'ram',
+                  'gpu',
+                  'ssd',
+                  'hdd',
+                  'psu',
+                  'case',
+                  'monitor',
+                  'mainboard',
+                  'cooler',
+                ]">
                 <p @click="newTapByIDType(product[component].id, component)">
                   {{ component.toUpperCase() }} name:
                   {{ product[component] ? product[component].name : "-" }} |
@@ -222,10 +203,7 @@ onUnmounted(() => {
           </div>
         </div>
         <div v-else-if="!showInfo">
-          <EditSpec
-            :selectedOption="selectedOption"
-            @updatePcSet="handleUpdatePcSet"
-          />
+          <EditSpec :selectedOption="selectedOption" @updatePcSet="handleUpdatePcSet" />
         </div>
       </div>
     </div>
@@ -240,10 +218,44 @@ onUnmounted(() => {
   /* Automatically adjusts height to maintain aspect ratio */
   border-radius: 8px;
   margin-bottom: 8px;
+}.first-section .card {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  justify-content: flex-start;
+  /* Align content to the left */
 }
+
+.first-section .grid-item-wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.first-section .grid-item {
+  max-width: 50;
+  max-height: 60px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.first-section .component-details {
+  flex-grow: 1;
+}
+
+.first-section .component-details p {
+  margin: 0;
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
 .grid-container {
   display: flex;
 }
+
 .first-section {
   flex: 30%;
 }
@@ -275,7 +287,7 @@ onUnmounted(() => {
   padding: 2.5px;
 }
 
-.controls-container > .control {
+.controls-container>.control {
   margin: 0 0.5rem;
 }
 
@@ -314,6 +326,7 @@ onUnmounted(() => {
 .card:hover {
   transform: translateY(-5px);
 }
+
 .button {
   display: block;
   width: 100%;
@@ -368,4 +381,5 @@ p {
   width: 100%;
   padding: 1rem;
 }
+
 </style>

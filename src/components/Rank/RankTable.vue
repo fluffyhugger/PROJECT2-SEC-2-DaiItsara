@@ -39,7 +39,15 @@ const filteredProducts = computed(() => {
   if (selectedCPUs.value !== "default") {
     filtered = filtered.filter((product) => {
       const matchingCPUs = cpus.value.filter((cpu) => cpu.brand.toLowerCase() === selectedCPUs.value.toLowerCase());
-      return matchingCPUs.some(cpu => cpu.id === product.cpu.id);
+      return matchingCPUs.some(cpu =>  {
+        if (cpu == null || product.cpu == null || cpu == undefined || product.cpu == undefined) {
+          return false;
+        } else {
+          if (cpu.id === product.cpu.id) {
+            return true;
+          } return false;
+        }
+      });
     });
 
   } console.log(selectedGPUs.value);
