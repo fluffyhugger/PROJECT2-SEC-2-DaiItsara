@@ -76,6 +76,9 @@ The "Delete" operation enables users to remove a PC specification from the datab
 ## Summary
 - The DAIITSARA ComputerSpecBuilder CRUD Web Application streamlines the process of creating custom computer specifications, offering functionalities for creating, viewing, updating, and deleting specifications. It provides dynamic data fetching, responsive UI, local storage integration, and efficient cart management. Additionally, features like admin management, PC ranking, and articles enhance user experience and functionality, making it a comprehensive tool for PC enthusiasts and builders.
 
+## Video demo:
+[Click Here](https://www.veed.io/view/e9f44592-5f88-4bd2-8890-992752efaafd?panel=share)
+
 ## Contributor:
 
 <table>
