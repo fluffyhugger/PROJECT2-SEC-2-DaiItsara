@@ -376,16 +376,16 @@
         "price": 5890
       },
       "monitor": {
-        "id": "MONITOR-00003",
-        "name": "GIGABYTE G27F G27F 2",
-        "image-url": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1470/innergigabyteimages//bg1.png",
-        "price": 5690
+        "id": "MONITOR-00005",
+        "name": "Acer Nitro VG240YU",
+        "image-url": "https://m.media-amazon.com/images/I/71isD7KA3wL.jpg",
+        "price": 4250
       },
       "mainboard": {
-        "id": "MAINBOARD-00006",
-        "name": "ASUS ROG STRIX B650-F GAMING",
-        "image-url": "https://storage.googleapis.com/file-computeandmore/images/8c549596-79b9-44e9-acc2-ea7296752f1e.png",
-        "price": 9600
+        "id": "MAINBOARD-00004",
+        "name": "MSI MAG Z790 TOMAHAWK",
+        "image-url": "https://storage-asset.msi.com/global/picture/image/feature/mb/Z790/mag_z790_tomahawk_wifi/mag_z790_tomahawk_wifi-block02.png",
+        "price": 9500
       },
       "cooler": {
         "id": "COOLER-00003",
