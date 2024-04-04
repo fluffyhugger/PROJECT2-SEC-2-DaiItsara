@@ -1,12 +1,11 @@
 <script setup>
-import TopRank from './TopRank.vue'
-import RankTable from './RankTable.vue'
-import { ref, onMounted, computed } from 'vue'
-import { SortBy, TotalPrice } from './enum'
-
-let selectedOption = ref(SortBy.Price)
-let products = ref([])
-let isLoading = ref(true)
+import TopRank from "./TopRank.vue";
+import RankTable from "./RankTable.vue"
+import { ref, onMounted, computed } from 'vue';
+import { SortBy, TotalPrice } from "./enum";
+let selectedOption = ref(SortBy.Price);
+let products = ref([]);
+let isLoading = ref(true);
 
 const componentTypes = [
   'cpu',
@@ -22,21 +21,21 @@ const componentTypes = [
 ]
 
 onMounted(async () => {
-  try {
-    const result = await fetch(`http://localhost:5000/pc-build`)
-    const responses = await result.json()
-    responses.forEach((response) => {
-      const prices = Object.keys(response)
-        .filter((key) => componentTypes.includes(key))
-        .map((key) => response[key].price)
-      response['total-price'] = TotalPrice(...prices)
-    })
-    products.value = responses
-    isLoading.value = false
-  } catch (error) {
-    console.error('Error fetching data:', error)
-  }
-})
+    try {
+        const result = await fetch(`http://localhost:5000/pc-build`);
+        const responses = await result.json();
+        responses.forEach(response => {
+            const prices = Object.keys(response)
+                .filter(key => componentTypes.includes(key)) 
+                .map(key => response[key].price); 
+            response['total-price'] = TotalPrice(...prices); 
+        });
+        products.value = responses;
+        isLoading.value = false;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+});
 
 const sortByProducts = computed(() => {
   if (selectedOption.value === SortBy.Price) {

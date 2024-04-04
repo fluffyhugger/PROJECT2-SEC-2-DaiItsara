@@ -97,15 +97,21 @@ const formatDate = (dateString) => {
               </div>
             </figure>
             <div class="card-body">
-              <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>
+              <h2 class="card-title"> Build By : {{ product['builder-name'] }}</h2>
               <div v-if="selectedOption === SortBy.Price">
+                <span class="font-semibold">spec :</span> {{ getComponentProperty(product, "cpu", "name") }}
+                <br>
                 price : {{ product['total-price'] }}
               </div>
               <div v-else-if="selectedOption === SortBy.Latest">
+                spec : {{ getComponentProperty(product, "cpu", "name") }}
+                <br>
                 build-date : {{ formatDate(new Date(product['build-date'])) }}
               </div>
               <div class="card-actions justify-end">
-                <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
+                <router-link :to="`/ranking/pcset-info/${product['builder-id']}`" class="custom-link">
+                  <p>view more</p>
+                </router-link>
               </div>
             </div>
           </div>
@@ -251,5 +257,18 @@ select {
 
 .controls-container>.control {
   margin: 0 0.5rem;
+}
+
+.custom-link {
+  background-color: #304456;
+  color: #46ddd9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.custom-link:hover {
+  background-color: #46ddd9;
+  color: #304456;
 }
 </style>
