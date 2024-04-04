@@ -105,24 +105,22 @@ onMounted(async () => {
         <tr>
           <th></th>
           <th>Spec Details</th>
-          <th>xxxxxx</th>
           <th>Builder</th>
           <th>Build Date</th>
           <th>Price</th>
+
         </tr>
       </thead>
       <tbody>
         <tr v-for="(product, index) in filteredProducts" :key="product.id" :class="{ 'bg-gray-100': index % 2 === 0 }">
           <td class="text-center font-semibold">{{ index + 1 }}</td>
-          <td>
-            <img :src="getComponentProperty(product, 'case', 'image-url')" :alt="product.name"
-              class="product-image w-24 h-24" />
-            {{ getComponentProperty(product, "cpu", "name")
-            }}{{ getComponentProperty(product, "gpu", "name") }}
-          </td>
-          <td>
-            <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
-          </td>
+          <td @mouseover="font = 'semibold'" @mouseleave="font = 'normal'" :style="{ fontWeight: font }">
+            <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">
+              <img :src="getComponentProperty(product, 'case', 'image-url')" :alt="product.name"
+                class="product-image w-24 h-24" />
+              {{ getComponentProperty(product, "cpu", "name") }}{{ getComponentProperty(product, "gpu", "name") }}
+            </router-link>
+            </td>
           <td>{{ product["builder-name"] }}</td>
           <td>{{ formatDate(product["build-date"]) }}</td>
           <td>{{ formatPrice(product["total-price"]) }}</td>
@@ -155,7 +153,9 @@ onMounted(async () => {
 .table-row:hover {
   background-color: #f2f2f2;
 }
-
+td:hover {
+  color: #46ddd9;
+}
 .product-image {
   display: block;
   max-width: 100%;

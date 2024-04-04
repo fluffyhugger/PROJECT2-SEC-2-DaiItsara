@@ -122,26 +122,22 @@ onUnmounted(() => {
   <div>
 
     <div class="flex flex-col w-full lg:flex-row">
-      <div class="grid flex-grow h-auto card bg-white rounded-box ">
-        <ul>
-          <li class="">
-            <div class="flex flex-row border solid 1px border-yellow-400 w-fit h-fit controls-container">
-              <div class="card" @click="toggleShowInfo('cpu')">
-                <img :src="getComponentProperty(product, 'cpu', 'image-url')" :alt="pcImageText" id="list-left"
-                  class="grid-item" />
-                <p>
-                  CPU name:{{ getComponentProperty(product, 'cpu', 'name') }} price
-                  {{ getComponentProperty(product, 'cpu', 'price') }}
-                </p>
-              </div>
-              <div class="card" @click="toggleShowInfo('ram')">
-                <img :src="getComponentProperty(product, 'ram', 'image-url')" :alt="pcImageText" id="list-left"
-                  class="grid-item" />
-                <p>
-                  Ram name:{{ getComponentProperty(product, 'ram', 'name') }} price
-                  {{ getComponentProperty(product, 'ram', 'price') }}
-                </p>
-              </div>
+<div class="grid flex-grow h-auto card bg-white rounded-box ">
+    <ul>
+        <li class="">
+            <div class="flex flex-col border solid 1px border-yellow-400 w-fit h-fit controls-container pl-5">
+                <div class="card" @click="toggleShowInfo('cpu')">
+                    <img :src="getComponentProperty(product, 'cpu', 'image-url')" :alt="pcImageText" id="list-left" class="grid-item" />
+                    <p>
+                        CPU name:{{ getComponentProperty(product, 'cpu', 'name') }} price {{ getComponentProperty(product, 'cpu', 'price') }}
+                    </p>
+                </div>
+                <div class="card" @click="toggleShowInfo('ram')">
+                    <img :src="getComponentProperty(product, 'ram', 'image-url')" :alt="pcImageText" id="list-left" class="grid-item" />
+                    <p>
+                        Ram name:{{ getComponentProperty(product, 'ram', 'name') }} price {{ getComponentProperty(product, 'ram', 'price') }}
+                    </p>
+                </div>
               <div class="card" @click="toggleShowInfo('gpu')">
                 <img :src="getComponentProperty(product, 'gpu', 'image-url')" :alt="pcImageText" id="list-left"
                   class="grid-item" />

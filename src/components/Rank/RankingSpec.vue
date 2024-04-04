@@ -3,9 +3,6 @@ import TopRank from "./TopRank.vue";
 import RankTable from "./RankTable.vue"
 import { ref, onMounted, computed } from 'vue';
 import { SortBy, TotalPrice } from "./enum";
-
-// parent component 
-
 let selectedOption = ref(SortBy.Price);
 let products = ref([]);
 let isLoading = ref(true);
@@ -27,12 +24,11 @@ onMounted(async () => {
     try {
         const result = await fetch(`http://localhost:5000/pc-build`);
         const responses = await result.json();
-        // Filter products based on the component type and calculate total price
         responses.forEach(response => {
             const prices = Object.keys(response)
-                .filter(key => componentTypes.includes(key)) // Filter out non-component keys
-                .map(key => response[key].price); // Map to the price of each component
-            response['total-price'] = TotalPrice(...prices); // Calculate total price and add it to the response
+                .filter(key => componentTypes.includes(key)) 
+                .map(key => response[key].price); 
+            response['total-price'] = TotalPrice(...prices); 
         });
         products.value = responses;
         isLoading.value = false;

@@ -192,10 +192,10 @@
         "price": 10890
       },
       "cooler": {
-        "id": "COOLER-00008",
-        "name": "Be Quiet! Dark Rock Pro 4 Dark Rock Pro 4",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0143299/A0143299OK_BIG_1.jpg",
-        "price": 9690
+        "id": "COOLER-00004",
+        "name": "NZXT Kraken Kraken X63 RGB",
+        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0139556/A0139556OK_BIG_1.jpg",
+        "price": 5990
       }
     },
     {
@@ -1506,7 +1506,11 @@
       "color": "Black",
       "weight": "13.1Kg",
       "dimension": "290 x 495 x 466",
-      "i/o-ports": ["1x USB-C 3.1", "2x USB-A 3.0", "1x headphone/microphone"],
+      "i/o-ports": [
+        "1x USB-C 3.1",
+        "2x USB-A 3.0",
+        "1x headphone/microphone"
+      ],
       "cooling-support": {
         "fan-support": {
           "front": "-",
@@ -1579,7 +1583,11 @@
       "color": "Black",
       "weight": "11.2kg",
       "dimension": "520mm x 245mm x 520mm",
-      "i/o-ports": ["1 x USB 3.1 Type-C", "2 x USB 3.0", "1 x Audio/Mic"],
+      "i/o-ports": [
+        "1 x USB 3.1 Type-C",
+        "2 x USB 3.0",
+        "1 x Audio/Mic"
+      ],
       "cooling-support": {
         "fan-support": {
           "front": "3 x 120mm, 2 x 140mm",
@@ -1849,7 +1857,11 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "4x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -1885,7 +1897,10 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
+      "usb-ports": [
+        "6x USB 3.2 Type A",
+        "2x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -1911,12 +1926,19 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
+      "pci-slots": [
+        "1 Slot PCI Express 4.0 x16",
+        "2 Slot PCI Express 3.0 x16"
+      ],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "2x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -1952,7 +1974,11 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "4x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -1987,7 +2013,10 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["6x USB 3.2 Type A", "2x USB 3.2 Type C"],
+      "usb-ports": [
+        "6x USB 3.2 Type A",
+        "2x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "5x Audio Ports",
       "form-factor": "ATX",
@@ -2013,12 +2042,19 @@
       "lan-speed": "10/100/1000Mbps",
       "wireless-lan": "Yes",
       "bluetooth": "Yes",
-      "pci-slots": ["1 Slot PCI Express 4.0 x16", "2 Slot PCI Express 3.0 x16"],
+      "pci-slots": [
+        "1 Slot PCI Express 4.0 x16",
+        "2 Slot PCI Express 3.0 x16"
+      ],
       "sata3-slots": "4 slot",
       "m.2-slots": "3 slot",
       "m.2-supports-type": "2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["2x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "2x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2045,12 +2081,18 @@
       "lan-speed": "10/100/1000/2500Mbps",
       "wireless-lan": "WIFI 6E 2.4/5/6",
       "bluetooth": "Bluetooth 5.2",
-      "pci-slots": ["1 Slot PCI Express 4.0 x16", "1 Slot PCI Express 3.0 x16"],
+      "pci-slots": [
+        "1 Slot PCI Express 4.0 x16",
+        "1 Slot PCI Express 3.0 x16"
+      ],
       "sata3-slots": "4 slot",
       "m.2-slots": "2 slot",
       "m.2-supports-type": "2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
+      "usb-ports": [
+        "1x USB 3.2 Type C",
+        "2x USB 3.2 Type A"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "ps/2-port": "1x PS/2 Port",
@@ -2086,7 +2128,11 @@
       "m.2-slots": "3 slot",
       "m.2-supports-type": "M Key Type 2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["4x USB 2.0", "5x USB 3.2 Type A", "1x USB 3.2 Type C"],
+      "usb-ports": [
+        "4x USB 2.0",
+        "5x USB 3.2 Type A",
+        "1x USB 3.2 Type C"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "2x Audio Ports",
       "form-factor": "ATX",
@@ -2121,7 +2167,10 @@
       "m.2-slots": "4 slot",
       "m.2-supports-type": "M Key Type 2242/2260/2280/22110",
       "raid-support": "0/1/5/10",
-      "usb-ports": ["1x USB 3.2 Type C", "2x USB 3.2 Type A"],
+      "usb-ports": [
+        "1x USB 3.2 Type C",
+        "2x USB 3.2 Type A"
+      ],
       "hdmi-ports": "1x HDMI",
       "audio-ports": "3x Audio Ports",
       "form-factor": "ATX",
@@ -2178,8 +2227,24 @@
       "model": "TUF Gaming LC 120 ARGB Black",
       "form-factor": "Liquid Cooler",
       "socket-support": {
-        "intel": ["LGA1700", "1366", "1156", "1155", "1151", "1150"],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
+        "intel": [
+          "LGA1700",
+          "1366",
+          "1156",
+          "1155",
+          "1151",
+          "1150"
+        ],
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "AM2",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "150mmx122mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2206,7 +2271,10 @@
           "1151",
           "1150"
         ],
-        "amd": ["TR4/​sTRX4/​sWRX8/​SP3", "AM4"]
+        "amd": [
+          "TR4/​sTRX4/​sWRX8/​SP3",
+          "AM4"
+        ]
       },
       "radiator-dimension": "120mmx272mmx27mm mm.",
       "radiator-material": "Aluminum, copper, plastic",
@@ -2232,7 +2300,15 @@
           "1151",
           "1150"
         ],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "FM2+", "FM2", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "277x119x27 mm.",
       "radiator-material": "Aluminum",
@@ -2257,7 +2333,13 @@
           "LGA2011",
           "LGA2066"
         ],
-        "amd": ["AM4", "AM3", "AM2", "sTR4", "sTRX4"]
+        "amd": [
+          "AM4",
+          "AM3",
+          "AM2",
+          "sTR4",
+          "sTRX4"
+        ]
       },
       "radiator-dimension": "275 x 123 x 30mm",
       "radiator-material": "Aluminum",
@@ -2283,7 +2365,11 @@
           "2011",
           "2066"
         ],
-        "amd": ["AM4", "AM3", "AM2"]
+        "amd": [
+          "AM4",
+          "AM3",
+          "AM2"
+        ]
       },
       "radiator-dimension": "277mm x 120mm x 27mm",
       "radiator-material": "Aluminum",
@@ -2309,7 +2395,16 @@
           "LGA1155",
           "LGA1156"
         ],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "AM2",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "274x120x27mm",
       "radiator-material": "Aluminum",
@@ -2330,7 +2425,13 @@
           "LGA2011-0 & LGA2011-3 (Square ILM)",
           "LGA1200, LGA1156, LGA1155, LGA1151, LGA1150"
         ],
-        "amd": ["AM4", "AM3(+)", "AM2(+)", "FM2(+)", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3(+)",
+          "AM2(+)",
+          "FM2(+)",
+          "FM1"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2350,7 +2451,9 @@
           "LGA 2066 / 2011(-3) square ILM / 1151 / 1150 / 1155 / 1156 / 1200",
           "AM4 / AM4 / AM3(+) / AM2(+) / FM2(+) / FM1"
         ],
-        "amd": ["AM4"]
+        "amd": [
+          "AM4"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2366,8 +2469,12 @@
       "model": "Freezer 34 eSports DUO",
       "form-factor": "Air Cooler",
       "socket-support": {
-        "intel": ["LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"],
-        "amd": ["AM4"]
+        "intel": [
+          "LGA 1200, 115X, 2011-3*, 2066* (*Square ILM)"
+        ],
+        "amd": [
+          "AM4"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2394,7 +2501,16 @@
           "LGA1156",
           "LGA1366"
         ],
-        "amd": ["AM4", "AM3+", "AM3", "AM2+", "AM2", "FM2+", "FM2", "FM1"]
+        "amd": [
+          "AM4",
+          "AM3+",
+          "AM3",
+          "AM2+",
+          "AM2",
+          "FM2+",
+          "FM2",
+          "FM1"
+        ]
       },
       "radiator-dimension": "-",
       "radiator-material": "-",
@@ -2430,7 +2546,6 @@
       "password": "123"
     }
   ],
-
   "news": [
     {
       "itemsToShow": 4,

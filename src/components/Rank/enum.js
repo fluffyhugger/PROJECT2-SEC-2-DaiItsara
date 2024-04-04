@@ -13,12 +13,19 @@ export const TotalPrice =(...prices)=>{
 }
 
 export const getComponentProperty = (component, type, property) => {
-  return component && component[type] && component[type][property]
-    ? component[type][property]
-    : property === 'image-url'
-    ? noImagePath // Default value for image-url
-    : '-'; // Default value for price and name
+  const value =
+    component && component[type] && component[type][property]
+      ? component[type][property]
+      : property === "image-url"
+      ? noImagePath
+      : "-";
+ if (property !== "image-url" && value.length > 25) {
+   return value.substring(0, 25) + "..";
+ }
+
+ return value;
 };
+
 
 export const initializeProduct =() =>{
   return {
