@@ -2,7 +2,7 @@
 
 <template>
   <div class="flex justify-center text-center">
-    <h1>Noooo. Page Not Found</h1>
+    <h1 class="text-white font-bold text-7xl">Noooo. Page Not Found</h1>
   </div>
 </template>
 

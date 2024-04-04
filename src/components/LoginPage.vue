@@ -1,3 +1,31 @@
+
+<script setup>
+import {ref} from 'vue'
+
+const username = ref('');
+const password = ref('');
+
+const login = async () => {try {
+        const response = await fetch('/data/db.json') 
+        const data = await response.json()
+
+        const admin = data.admins.find(
+          (admin) => admin.username === this.username
+        )
+        if (admin && admin.password === this.password) {
+          localStorage.setItem('isAdminAuthenticated', this.username)
+          this.$router.push('/deleting')
+        } else {
+          alert('Invalid username or password')
+        }
+      } catch (error) {
+        console.error('Error fetching admin data:', error)
+        alert('An error occurred. Please try again later.')
+      }
+    }
+  
+</script>
+
 <template>
   <div class="flex justify-center items-center h-screen bg-gray-900">
     <div class="bg-gray-800 shadow-lg rounded-lg p-6 w-96">
@@ -17,38 +45,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      username: '',
-      password: ''
-    }
-  },
-  methods: {
-    async login() {
-      try {
-        const response = await fetch('/data/db.json') // Adjust the path here
-        const data = await response.json()
-
-        const admin = data.admins.find(
-          (admin) => admin.username === this.username
-        )
-        if (admin && admin.password === this.password) {
-          localStorage.setItem('isAdminAuthenticated', this.username)
-          this.$router.push('/deleting')
-        } else {
-          alert('Invalid username or password')
-        }
-      } catch (error) {
-        console.error('Error fetching admin data:', error)
-        alert('An error occurred. Please try again later.')
-      }
-    }
-  },
-}
-</script>
 
 <style scoped>
 input:focus {
