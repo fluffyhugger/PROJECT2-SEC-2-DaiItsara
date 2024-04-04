@@ -88,12 +88,13 @@ onMounted(async () => {
         <input type="text" name="max-price" id="max-price" v-model="maxPrice"
           class="w-20 border rounded-md p-1 bg-slate-50" />
       </div>
-      <select class="select select-secondary w-full max-w-xs" v-model="selectedCPUs">
+      <select class="select my-custom-select" v-model="selectedCPUs ">
         <option value="default">All CPUs</option>
         <option value="Intel">INTEL</option>
         <option value="AMD">AMD</option>
       </select>
-      <select class="select select-secondary w-full max-w-xs" v-model="selectedGPUs">
+
+      <select class="select my-custom-select " v-model="selectedGPUs">
         <option value="default">All GPUs</option>
         <option value="NVIDIA">NVIDIA</option>
         <option value="AMD">AMD</option>
@@ -101,7 +102,7 @@ onMounted(async () => {
     </div>
     <hr />
     <table class="table">
-      <thead class="font-bold text-xl">
+      <thead class=" text-xl">
         <tr>
           <th></th>
           <th>Spec Details</th>
@@ -111,6 +112,7 @@ onMounted(async () => {
 
         </tr>
       </thead>
+
       <tbody>
         <tr v-for="(product, index) in filteredProducts" :key="product.id" :class="{ 'bg-gray-100': index % 2 === 0 }">
           <td class="text-center font-semibold">{{ index + 1 }}</td>
@@ -120,7 +122,7 @@ onMounted(async () => {
                 class="product-image w-24 h-24" />
               {{ getComponentProperty(product, "cpu", "name") }}{{ getComponentProperty(product, "gpu", "name") }}
             </router-link>
-            </td>
+          </td>
           <td>{{ product["builder-name"] }}</td>
           <td>{{ formatDate(product["build-date"]) }}</td>
           <td>{{ formatPrice(product["total-price"]) }}</td>
@@ -145,20 +147,49 @@ onMounted(async () => {
   padding: 12px;
   text-align: left;
 }
-
-.table th {
-  background-color: #f2f2f2;
-}
+ .table th {
+   background-color: #304456;
+   color: #e5e5e5;
+   padding: 15px;
+   text-align: left;
+ }
 
 .table-row:hover {
   background-color: #f2f2f2;
 }
 td:hover {
   color: #46ddd9;
+  font-weight: 400;
 }
 .product-image {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.my-custom-select {
+  border-color: #304456;
+  border-radius: 0.375rem;
+    margin-right: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #e5e5e5;
+
+  &:hover,
+  &:focus {
+    border-color: #46ddd9;
+   
+  }
+
+  option {
+    background-color: #e5e5e5;
+ 
+    color: #304456;
+  }
+
+  option:hover {
+    background-color: #b4b4b4;
+
+    color: #fff;
+  }
 }
 </style>
