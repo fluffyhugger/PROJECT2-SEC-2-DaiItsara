@@ -1,26 +1,25 @@
-# PROJECT2-SEC-2-DaiItsara
-
 # DAIITSARA ComputerSpecBuilder Web Application
 
 ## Description
 The DAIITSARA ComputerSpecBuilder CRUD Web Application is a tool designed to help users build customized computer specifications tailored to their needs. Whether for gaming, content creation, or general use, this application streamlines the process of selecting components for a computer build.
+
 ## CRUD
-### 1. Create (Add) Spec:
+- **Create (Add) Spec:**
 
 **Build PC Spec:**
 The "Create" operation allows users to build a new PC specification by selecting various components like CPU, RAM, GPU, etc., from available options. Users can add components to their PC build, specify the quantity, and configure other relevant details such as price and specifications. Upon completing the selection, users can save the newly created PC specification to the database by clicking the "Build" or "Confirm" button. This action triggers the creation of a new record in the database representing the PC build.
 
-### 2. Read (View) Spec:
+- **Read (View) Spec:**
 
 **View Spec Details:**
 The "Read" operation enables users to view the details of existing PC specifications stored in the database. Users can navigate to a dedicated page or section where they can browse through a list of available PC builds or search for specific builds based on criteria like price, components, etc. Each PC specification is displayed with its detailed components, prices, and other relevant information, allowing users to assess the specifications before making further actions.
 
-### 3. Update (Edit) Spec:
+- **Update (Edit) Spec:**
 
 **Edit Spec Details:**
 The "Update" operation allows users to modify the details of an existing PC specification. Users can edit various attributes of the PC build, such as changing the components, updating prices, modifying quantities, or adjusting specifications based on their requirements. After making the desired changes, users can save the updated PC specification to the database by triggering the "Update" or "Save" action. This action updates the corresponding record in the database with the new information.
 
-### 4. Delete Spec:
+- **Delete Spec:**
 
 **Delete Spec from Database:**
 The "Delete" operation enables users to remove a PC specification from the database. Users can select a specific PC build they wish to delete and initiate the deletion process by clicking the "Delete" button or similar UI element. Upon confirmation, the application executes the deletion operation, removing the corresponding record from the database permanently. As a result, the deleted PC build is no longer accessible or visible to users within the application.
@@ -34,9 +33,7 @@ The "Delete" operation enables users to remove a PC specification from the datab
 - **User Interface**: Users can easily select different components and filter mainboards by CPU brand, with the UI adapting accordingly.
 - **Loading Indicator**: A visual cue informs users when data is being fetched, enhancing user experience.
 - **Cart Management**: Users can easily manage their cart, with changes reflected in real-time, improving usability.
-- **Data Posting**
-  - Posts the cart data to the server to finalize the PC build process.
-  - Clears local storage upon successful posting.
+- **Data Posting**: Posts the cart data to the server to finalize the PC build process and clears local storage upon successful posting.
     
 ## AdminManagement
 ### Features
@@ -87,6 +84,7 @@ The "Delete" operation enables users to remove a PC specification from the datab
       <th>Name</th>
       <th>StudentID</th>
       <th>Github</th>
+      <th>Contribute</th>
     </tr>
   </thead>
   <tbody>
@@ -94,26 +92,33 @@ The "Delete" operation enables users to remove a PC specification from the datab
       <td>Sirakran Kranjanawilasgul</td>
       <td>65130500079</td>
       <td>Chocolaz</td>
+      <td>20%</td>
     </tr>
     <tr>
       <td>Sirapob Wuthithein</td>
       <td>65130500085</td>
       <td>fluffyhugger</td>
+      <td>20%</td>
     </tr>
     <tr>
       <td>Aismat Boonmalert</td>
       <td>65130500091</td>
       <td>mattiiee</td>
+      <td>20%</td>
     </tr>
     <tr>
       <td>Nisarat Aunrueanngam</td>
       <td>65130500107</td>
       <td>Nisarat-A</td>
+      <td>20%</td>
     </tr>
     <tr>
       <td>Threepoom Ngamsirisomsakul</td>
       <td>65130500122</td>
       <td>Threepoom</td>
+      <td>20%</td>
     </tr>
   </tbody>
 </table>
+
+Note that: Each team member contributes with the lead on specific features. Meanwhile, there is a collaborative effort across the team, where everyone actively supports each other by adding valuable contributions to each other features of the project.
