@@ -8,7 +8,6 @@ const route = useRoute()
 
 const itemComponent = ref(null)
 
-// Define an async function to use await inside the setup
 const fetchData = async () => {
   console.log(route.params.type)
   try {
@@ -26,7 +25,6 @@ const fetchData = async () => {
     isLoading.value = false
   } catch (error) {
     console.error('Error fetching item data:', error)
-    // Optionally, you can set an error message or handle the error in your UI
   }
 }
 

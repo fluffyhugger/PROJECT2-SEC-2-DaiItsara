@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, watch } from "vue";
-import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
+import { library } from "@fortawesome/fontawesome-svg-core"; 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faChevronLeft,
@@ -9,13 +9,11 @@ import {
 import { getComponentProperty } from "./enum"
 import { SortBy } from "./enum";
 
-// child
 library.add(faChevronLeft, faChevronRight);
 
 let autoSlideInterval;
 const containerRef = ref(null);
 let scrollDirection = 1;
-// Define a prop to receive the selected option from the parent
 const props = defineProps({
   selectedOption: String,
   products: Array,
@@ -23,10 +21,8 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['update:selectedOption']);
-// Define a reactive property to hold the selected option
 const selectedOption = ref(props.selectedOption);
 
-// Watch for changes to the selected option and emit an update
 watch(selectedOption, (newValue) => {
   emit('update:selectedOption', newValue);
 });
@@ -101,15 +97,21 @@ const formatDate = (dateString) => {
               </div>
             </figure>
             <div class="card-body">
-              <h2 class="card-title"> builder name : {{ product['builder-name'] }}</h2>
+              <h2 class="card-title"> Build By : {{ product['builder-name'] }}</h2>
               <div v-if="selectedOption === SortBy.Price">
+                <span class="font-semibold">spec :</span> {{ getComponentProperty(product, "cpu", "name") }}
+                <br>
                 price : {{ product['total-price'] }}
               </div>
               <div v-else-if="selectedOption === SortBy.Latest">
+                spec : {{ getComponentProperty(product, "cpu", "name") }}
+                <br>
                 build-date : {{ formatDate(new Date(product['build-date'])) }}
               </div>
               <div class="card-actions justify-end">
-                <router-link :to="`/ranking/pcset-info/${product['builder-id']}`">xxxxxx</router-link>
+                <router-link :to="`/ranking/pcset-info/${product['builder-id']}`" class="custom-link">
+                  <p>view more</p>
+                </router-link>
               </div>
             </div>
           </div>
@@ -165,11 +167,8 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Center align horizontally */
   max-width: 1200px;
-  /* Set maximum width */
   margin: 0 auto;
-  /* Center align horizontally */
 }
 
 .container {
@@ -249,7 +248,6 @@ select {
 
 .head-toprank-container {
   margin-right: 1rem;
-  /* Adjust as needed */
 }
 
 .controls-container {
@@ -259,5 +257,18 @@ select {
 
 .controls-container>.control {
   margin: 0 0.5rem;
+}
+
+.custom-link {
+  background-color: #304456;
+  color: #46ddd9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.custom-link:hover {
+  background-color: #46ddd9;
+  color: #304456;
 }
 </style>

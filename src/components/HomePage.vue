@@ -131,3 +131,4 @@ const showIntroduction = route.path !== '/login'
   color: #6b7280; /* Adjusted introduction text color */
 }
 </style>
+

@@ -1,6 +1,5 @@
 <template>
   <div class="mt-10 mb-10">
-    
     <table class="table">
       <thead class="font-bold text-xl">
         <tr>
@@ -64,42 +63,34 @@
 </template>
 
 <script setup>
-// Import necessary functions and variables
 import { ref } from 'vue'
 import DeleteConfirmPopup from './Util/DeleteConfirmPopup.vue'
 
-// Define props
 const props = defineProps({
   selectedOption: String,
   products: Array,
-  isLoading: Boolean
+  isLoading: Boolean,
 })
 
-// Define reactive variables
 const showDeletePopup = ref(false)
 let productToDelete = null
 
-// Function to show the delete confirmation popup
 const confirmDelete = (productId) => {
   showDeletePopup.value = true
   productToDelete = productId
 }
 
-// Function to hide the delete confirmation popup
 const cancelDeletePopup = () => {
   showDeletePopup.value = false
   productToDelete = null
 }
 
-// Function to handle delete action when confirmed by the user
 const deleteConfirmed = async () => {
-  // Implement your delete logic here
   await handleDataDeleted(productToDelete)
-  // Hide the popup after deletion
+
   cancelDeletePopup()
 }
 
-// Function to handle deletion of data from the JSON file on the server
 const handleDataDeleted = async (builderId) => {
   try {
     const response = await fetch(
@@ -107,13 +98,12 @@ const handleDataDeleted = async (builderId) => {
       {
         method: 'DELETE',
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
       }
     )
 
     if (response.ok) {
-      // Emit event to notify parent component about deletion
       emit('dataDeleted', builderId)
     } else {
       console.error('Error deleting product:', response.statusText)
@@ -123,14 +113,10 @@ const handleDataDeleted = async (builderId) => {
   }
 }
 
-// Listen to the event emitted by the DeleteConfirmPopup component
-// and handle the deletion of the product
 const deleteProduct = (builderId) => {
-  // Call the function to handle deletion of data from the JSON file on the server
   handleDataDeleted(builderId)
 }
 const emit = defineEmits(['dataDeleted'])
-
 
 const formatDate = (dateString) => {
   const date = new Date(dateString)

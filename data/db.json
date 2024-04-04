@@ -192,10 +192,10 @@
         "price": 10890
       },
       "cooler": {
-        "id": "COOLER-00008",
-        "name": "Be Quiet! Dark Rock Pro 4 Dark Rock Pro 4",
-        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0143299/A0143299OK_BIG_1.jpg",
-        "price": 9690
+        "id": "COOLER-00004",
+        "name": "NZXT Kraken Kraken X63 RGB",
+        "image-url": "https://img.advice.co.th/images_nas/pic_product4/A0139556/A0139556OK_BIG_1.jpg",
+        "price": 5990
       }
     },
     {
@@ -376,6 +376,18 @@
         "name": "COOLER MASTER MasterLiquid MasterLiquid ML240L ARGB Illusion white",
         "image-url": "https://chininter.co.th/wp-content/uploads/2021/07/masterliquid-ml240-illusion-white-gallery-0-zoom_1000x1000.png",
         "price": 3890
+      }
+    },
+    {
+      "id": "1e4xjk",
+      "builder-id": "roai3n",
+      "builder-name": "Anonymous",
+      "build-date": "2024-04-04T04:50:10.861Z",
+      "cpu": {
+        "id": "CPU_00002",
+        "name": "AMD Ryzen 5 5600G",
+        "image-url": "https://notebookspec.com/storage/pc-cpu/cpu_438_20210602-164928_1.png",
+        "price": 5290
       }
     }
   ],
@@ -2507,27 +2519,33 @@
   "admins": [
     {
       "username": "AdminCard",
-      "password": "Daiitsara123"
+      "password": "Daiitsara123",
+      "id": "63be"
     },
     {
       "username": "AdminIng",
-      "password": "Daiitsara123"
+      "password": "Daiitsara123",
+      "id": "3563"
     },
     {
       "username": "AdminNoey",
-      "password": "Daiitsara123"
+      "password": "Daiitsara123",
+      "id": "a78c"
     },
     {
       "username": "AdminMatt",
-      "password": "Daiitsara123"
+      "password": "Daiitsara123",
+      "id": "d6bf"
     },
     {
       "username": "AdminPorr",
-      "password": "Daiitsara123"
+      "password": "Daiitsara123",
+      "id": "d0c9"
     },
     {
       "username": "Admin",
-      "password": "123"
+      "password": "123",
+      "id": "af31"
     }
   ],
   "news": [
