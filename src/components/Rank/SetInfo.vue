@@ -326,7 +326,6 @@ onUnmounted(() => {
 .card:hover {
   transform: translateY(-5px);
 }
-
 .button {
   display: block;
   width: 100%;
@@ -336,21 +335,21 @@ onUnmounted(() => {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border: 2px solid #007bff;
+  border: 2px solid #304456;
+  /* Dark blue-grey */
   border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
+  background-color:#304456;
+  /* Turquoise */
+  color: #46ddd9;
+  /* White */
   transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover {
-  background-color: #0056b3;
-  color: #fff;
+  background-color: #46ddd9;
+  color: #304456;
 }
 
-.button:active {
-  background-color: #004080;
-}
 
 .grid-item {
   width: 100%;
